@@ -4,7 +4,7 @@ import styles from '../styles/Home.module.css'
 import React, { useState } from "react";
 import { Theme } from "../styles/theme";
 import Projects from "../comps/Projects.js"
-import { projects } from './data';
+import { projects_data } from '../public/data.js';
 
 export default function Home() {
 	const [bgColor, setBgColor] = useState(Theme.colors.white);
@@ -49,7 +49,9 @@ export default function Home() {
 					gridRowGap: "0px",
 					border: "1px solid gold"
 				}}>
-					{projects.map((o) => {
+					{/* work */}
+					{/* personal projects */}
+					{projects_data.map((o) => {
 						return (
 							<Projects
 								key={o.id}
