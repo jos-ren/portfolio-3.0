@@ -4,12 +4,22 @@ import styles from '../styles/Home.module.css'
 import React, { useState } from "react";
 import { Theme } from "../styles/theme";
 import Projects from "../comps/Projects.js"
+import Img from "../comps/Img.js"
 import { projects_data } from '../public/data.js';
+import { motion } from "framer-motion"
+
+// todos:
+// - add theme changer (fonts, colors, etc)
+// - add header 
+// - add footers
+// - sidebar (socials, bio, photo, ) 
+
 
 export default function Home() {
 	const [bgColor, setBgColor] = useState(Theme.colors.white);
 	const [fontColor, setFontColor] = useState(Theme.colors.black);
 	const [shape, setShape] = useState(false);
+	const [isVisible, setIsVisible] = useState(true);
 
 	// needs to be global
 	const toggleBgColor = () => {
@@ -23,7 +33,8 @@ export default function Home() {
 	};
 
 	const toggleShape = () => {
-		setShape(!shape)
+		setShape(!shape);
+		setIsVisible(!isVisible);
 		// use motion for animations
 	};
 
@@ -38,8 +49,13 @@ export default function Home() {
 				<button onClick={toggleBgColor}>toggle theme</button>
 				<button onClick={toggleShape}>toggle shape</button>
 				<div>shape: {shape}</div>
-				side
+				{/* <Img img_src={"/profile.jpg"} height={100} width={100}>image</Img> */}
+				<div>socials</div>
+				<div>summary</div>
+				<div><a>resume</a></div>
+				{/* <div><a>resume</a></div> */}
 			</div>
+			{/* <motion.div animate={{ opacity: isVisible ? false : true }}>test </motion.div> */}
 			<div className={styles.main}>
 				<div style={shape ? {} : {
 					display: "grid",
