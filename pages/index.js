@@ -4,7 +4,6 @@ import styles from '../styles/Home.module.css'
 import React, { useState } from "react";
 import { Theme } from "../styles/theme";
 import Projects from "../comps/Projects.js"
-import Img from "../comps/Img.js"
 import { projects_data } from '../public/data.js';
 import { school_data } from '../public/data.js';
 import { design_data } from '../public/data.js';
@@ -52,6 +51,7 @@ export default function Home() {
 			</Head>
 
 			<div className={styles.side}>
+				
 				{/* <button onClick={toggleBgColor}>toggle theme</button> */}
 				{/* <button onClick={toggleShape}>toggle shape</button> */}
 
@@ -59,14 +59,14 @@ export default function Home() {
 					<img style={{ width: "100px", height: "100px", objectFit: "cover", borderRadius: "50%" }} src={"./profile.jpg"} />
 				</div>
 
+				<h1>Josh Renema</h1>
 				<div>socials</div>
-				<div><a>resume</a></div>
+				<div><a href="https://drive.google.com/file/d/1zH8T0XU913RQCSfOq5ps4SPHl8En4zF7/view?usp=sharing" target="_blank">Resume</a></div>
 
-				<h2>Josh Renema</h2>
-				<p>I'm a Full Stack Developer and Designer, currently living in Surrey, Canada. I enjoy creating projects that live on the internet, whether that be websites, applications, or anything in between. I always strive for my projects to provide real world value.</p>
+				{/* <p>I'm a Full Stack Developer and Designer, currently living in Surrey, Canada. I enjoy creating projects that live on the internet, whether that be websites, applications, or anything in between. I always strive for my projects to provide real world value.</p>
 				<p>I’ve just wrapped up my diploma at the Digital Design and Development program at BCIT, where I’ve learned how to develop and design responsive, cross-platform applications.</p>
 				<p>I’m currently working as a Full Stack Developer at Techies of Tommorow, a tech talent incubator that empowers recent BC tech graduates to work on real industry projects that require high-quality and cost-effective solutions.</p>
-				<p>When I’m not spending my days coding and designing, you’ll probably find me riding my jeep out in the mountains, trying out new food with friends, or testing out my Nikon film camera. Feel free to checkout my projects below or browse to your heart's content!</p>
+				<p>When I’m not spending my days coding and designing, you’ll probably find me riding my jeep out in the mountains, trying out new food with friends, or testing out my Nikon film camera. Feel free to checkout my projects below or browse to your heart's content!</p> */}
 
 
 			</div>
@@ -104,7 +104,7 @@ export default function Home() {
 					<br />
 					<br />
 
-					<h1>Design Work</h1>
+					<h1>Design</h1>
 					{/* design  */}
 					{design_data.map((o) => {
 						return (

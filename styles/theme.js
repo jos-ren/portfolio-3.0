@@ -1,16 +1,24 @@
 export const Theme = {
     colors: {
-        navyBlue: "#0A192F",
-        blue: "#49A6AC",
-        darkBlue: "#3B7D84",
-        green: "#51BD89",
-        red: "#ED2046",
-        orange: "#F05533",
-        black: "#212121",
-        white: "#F7F7F7",
-    },
-    fontColors: {
-        black: "#212121",
-        white: "#F7F7F7",
+        bg: "#0C0032",
+        button: "#3500D3",
+        modal: "#282828",
+        text: "#FFFFFF",
     }
 };
+
+// const darkPalette = {
+//     primary: {
+//         bg: "#0C0032",
+//         button: "#3500D3",
+//         modal: "#282828",
+//         text: "#FFFFFF",
+//     },
+// };
+
+// export const darkTheme = {
+//     primary: {
+//         text: darkPalette.primary.text,
+//         background: darkPalette.primary.bg,
+//     },
+// };

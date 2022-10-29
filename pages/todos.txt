@@ -3,7 +3,9 @@ TO DOS
 1. add animations when switching shapes
 2. animations when modal expands
 2.5 hover on tiles slightly makes it bigger?
-3. get theme for bg and text working / uiniversal
+3. get theme for bg and text working / universal
+    3.1 color palletes
+    3.2 theme switcher
 4. footer and header
 5. sidebar with summary info
     5.1 profile image

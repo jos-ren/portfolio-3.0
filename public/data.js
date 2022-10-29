@@ -2,8 +2,8 @@ export const projects_data = [
 	{
 		id: 0,
 		title: "Smart City Media",
-		desc:"",
-		icon: "/icons/cog.svg",
+		desc:"description",
+		icon: "../icons/poman.png",
 		href: "/projects/crm",
 		github_link: "",
 		link: "https://smartcitymedia.com/stock/browse/",
@@ -12,7 +12,7 @@ export const projects_data = [
 		id: 1,
 		title: "BCIT CRM",
 		desc:"A CRM with the options to text, email, and send updates to contacts",
-		icon: "/icons/cog.svg",
+		icon: "../icons/poman.png",
 		href: "/projects/crm",
 		github_link: "",
 		link: "https://crm.techiesoftomorrow.com/",
@@ -21,7 +21,7 @@ export const projects_data = [
 		id: 2,
 		title: "Petsave",
 		desc: "A social media app for animal rehabilitation centers",
-		icon: "/icons/bone.svg",
+		icon: "../icons/poman.png",
 		href: "/projects/petsave",
 		github_link: "https://github.com/jos-ren/petsave-frontend",
 		link: null,
@@ -30,7 +30,7 @@ export const projects_data = [
 		id: 3,
 		title: "Pantro",
 		desc: "A pantry app which tracks food expiration dates",
-		icon: "/icons/apple.svg",
+		icon: "../icons/poman.png",
 		href: "/projects/pantro",
 		github_link: "https://github.com/jos-ren/bcitd3_pantro",
 		link: null,
@@ -48,11 +48,11 @@ export const projects_data = [
 		id: 5,
 		title: "Get'em",
 		desc: "An app for the delivery of everyday items",
-		icon: "/icons/truck.svg",
+		icon: "../icons/poman.png",
 		href: "/projects/getem",
 		github_link: "/",
 		link: null,
-	  },
+	},
 ]
 
 export const design_data = [
@@ -60,13 +60,15 @@ export const design_data = [
 		id: 0,
 		title: "Digital Art",
 		desc: "Some of my design work throught the years",
-		link: "https://www.behance.net/joshrenema"
+		link: "https://www.behance.net/joshrenema",
+		icon: "../icons/rt.png",
 	},
 	{
 		id: 1,
 		title: "Icons",
 		desc: "vr icons, poman, recycle toss, budding writers?, petsave, ",
-		link:"(post these on dribble)"
+		link:"(post these on dribble)",
+		icon: "../icons/rt.png",
 	}
 ]
 
