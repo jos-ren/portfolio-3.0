@@ -1,0 +1,11 @@
+TO DOS
+
+1. add animations when switching shapes
+2. animations when modal expands
+3. get theme for bg and text working / uiniversal
+4. footer and header
+5. sidebar with summary info
+    5.1 profile image
+    5.2 all social link icons
+    5.3 text
+7. 

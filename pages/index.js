@@ -49,11 +49,29 @@ export default function Home() {
 				<button onClick={toggleBgColor}>toggle theme</button>
 				<button onClick={toggleShape}>toggle shape</button>
 				<div>shape: {shape}</div>
+
+				
 				{/* <Img img_src={"/profile.jpg"} height={100} width={100}>image</Img> */}
+
+
 				<div>socials</div>
 				<div>summary</div>
 				<div><a>resume</a></div>
 				{/* <div><a>resume</a></div> */}
+
+	{/* // 	id: 0,
+	// 	title: "Hello",
+	// 	sub: "I'm Josh Renema",
+	// 	text:""
+	// 	// `I'm a Full Stack Developer and Designer, currently living in Surrey, Canada. I enjoy creating projects that live on the internet, whether that be websites, applications, or anything in between. I always strive for my projects to provide real world value.`
+
+	// 	// `I’ve just wrapped up my diploma at the Digital Design and Development program at BCIT, where I’ve learned how to develop and design responsive, cross-platform applications.`
+		
+	// 	// `I’m currently working as a Full Stack Developer at Techies of Tommorow, a tech talent incubator that empowers recent BC tech graduates to work on real industry projects that require high-quality and cost-effective solutions.`
+		
+	// 	// `When I’m not spending my days coding and designing, you’ll probably find me riding my jeep out in the mountains, trying out new food with friends, or testing out my Nikon film camera. Feel free to checkout my projects below or browse to your heart's content!` */}
+
+
 			</div>
 			{/* <motion.div animate={{ opacity: isVisible ? false : true }}>test </motion.div> */}
 			<div className={styles.main}>
@@ -76,6 +94,9 @@ export default function Home() {
 							/>
 						);
 					})}
+
+					{/* on click expand to a modal (above) */}
+
 				</div>
 			</div>
 		</div >
