@@ -51,7 +51,7 @@ export default function Home() {
 			</Head>
 
 			<div className={styles.side}>
-				
+
 				{/* <button onClick={toggleBgColor}>toggle theme</button> */}
 				{/* <button onClick={toggleShape}>toggle shape</button> */}
 
@@ -63,6 +63,7 @@ export default function Home() {
 				<div>socials</div>
 				<div><a href="https://drive.google.com/file/d/1zH8T0XU913RQCSfOq5ps4SPHl8En4zF7/view?usp=sharing" target="_blank">Resume</a></div>
 
+				{/* about me */}
 				{/* <p>I'm a Full Stack Developer and Designer, currently living in Surrey, Canada. I enjoy creating projects that live on the internet, whether that be websites, applications, or anything in between. I always strive for my projects to provide real world value.</p>
 				<p>I’ve just wrapped up my diploma at the Digital Design and Development program at BCIT, where I’ve learned how to develop and design responsive, cross-platform applications.</p>
 				<p>I’m currently working as a Full Stack Developer at Techies of Tommorow, a tech talent incubator that empowers recent BC tech graduates to work on real industry projects that require high-quality and cost-effective solutions.</p>
