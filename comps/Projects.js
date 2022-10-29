@@ -13,15 +13,19 @@ const List = styled.div`
 	border:1px solid blue;
 `;
 
-const Projects = ({ shape }) => {
+const Projects = ({ shape, title }) => {
 	return (
-		<>
+		<div>
 			{
 				shape ?
-					<List>list</List> :
-					<Card>shape</Card>
+					<List>
+						{title}
+					</List> :
+					<Card>
+						{title}
+					</Card>
 			}
-		</>
+		</div>
 	);
 };
 
