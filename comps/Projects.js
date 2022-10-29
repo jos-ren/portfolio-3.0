@@ -11,38 +11,51 @@ const List = styled.div`
 	width:100%;
 	height:100px;
 	border:1px solid blue;
-`;
-
-const Img = styled.div`
-	width:50px;
-	height:50px;
-	border:1px solid blue;
+	display:flex;
+	* {
+		// border: 1px solid purple;
+	}
 `;
 
 const Projects = ({ shape, title, img_src, desc }) => {
 	return (
 		<div>
-			{
+			{/* SCRAPPING THE SHAPE CHANGE FUNC FOR NOW */}
+			{/* {
 				shape ?
 					<List>
+						<img style={{
+							width: "50px",
+							height: "50px",
+							objectFit: "contain",
+							border: "1px solid blue"
+						}} src={img_src} />
 						{title}
-						<br/>
+						<br />
 						{desc}
 					</List> :
 					<Card>
 						{title}
-						<br/>
+						<br />
 						{desc}
 					</Card>
-			}
+			} */}
 
-			<Img>
-				<img style={{ 
-					width:"50px",
-					height:"50px",
-					objectFit: "contain"
+			<List>
+				<div style={{marginRight:"20px"}}>
+					<img style={{
+						width: "50px",
+						height: "50px",
+						objectFit: "contain",
+						border: "1px solid red"
 					}} src={img_src} />
-			</Img>
+				</div>
+
+				<div style={{display:"flex", flexDirection:"column"}}>
+					<div>{title}</div>
+					<div>{desc}</div>
+				</div>
+			</List>
 		</div>
 	);
 };
