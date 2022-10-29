@@ -2,7 +2,7 @@ export const projects_data = [
 	{
 		id: 0,
 		title: "Smart City Media",
-		description:"",
+		desc:"",
 		img_src: "/icons/cog.svg",
 		href: "/projects/crm",
 		github_link: "",
@@ -11,7 +11,7 @@ export const projects_data = [
 	  {
 		id: 1,
 		title: "BCIT CRM",
-		description:"A CRM with the options to text, email, and send updates to contacts",
+		desc:"A CRM with the options to text, email, and send updates to contacts",
 		img_src: "/icons/cog.svg",
 		href: "/projects/crm",
 		github_link: "",
@@ -20,7 +20,7 @@ export const projects_data = [
 	  {
 		id: 2,
 		title: "Petsave",
-		description: "A social media app for animal rehabilitation centers",
+		desc: "A social media app for animal rehabilitation centers",
 		img_src: "/icons/bone.svg",
 		href: "/projects/petsave",
 		github_link: "https://github.com/jos-ren/petsave-frontend",
@@ -29,7 +29,7 @@ export const projects_data = [
 	  {
 		id: 3,
 		title: "Pantro",
-		description: "A pantry app which tracks food expiration dates",
+		desc: "A pantry app which tracks food expiration dates",
 		img_src: "/icons/apple.svg",
 		href: "/projects/pantro",
 		github_link: "https://github.com/jos-ren/bcitd3_pantro",
@@ -38,7 +38,7 @@ export const projects_data = [
 	  {
 		id: 4,
 		title: "Poman",
-		description: "A foodie social network app",
+		desc: "A foodie social network app",
 		img_src: "/icons/spoon.svg",
 		href: "/projects/poman",
 		github_link: "/",
@@ -47,7 +47,7 @@ export const projects_data = [
 	  {
 		id: 5,
 		title: "Get'em",
-		description: "An app for the delivery of everyday items",
+		desc: "An app for the delivery of everyday items",
 		img_src: "/icons/truck.svg",
 		href: "/projects/getem",
 		github_link: "/",
@@ -64,8 +64,25 @@ export const design_data = [
 	},
 	{
 		id: 1,
-		title: "icons",
+		title: "Icons",
 		desc: "vr icons, poman, recycle toss, budding writers?, petsave, ",
 		link:"(post these on dribble)"
 	}
+]
+
+export const school_data = [
+	{
+		id: 0,
+		title: "BCIT",
+		desc: "Digital Design & Development",
+		link: "https://www.bcit.ca/programs/digital-design-and-development-diploma-full-time-6515dipma/",
+		icon: "../icons/bcit.png"
+	},
+	{
+		id: 0,
+		title: "Harvard",
+		desc: "CS50P ",
+		link: "https://cs50.harvard.edu/python/2022/",
+		icon: "../icons/harvard.png"
+	},
 ]

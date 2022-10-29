@@ -13,18 +13,36 @@ const List = styled.div`
 	border:1px solid blue;
 `;
 
-const Projects = ({ shape, title }) => {
+const Img = styled.div`
+	width:50px;
+	height:50px;
+	border:1px solid blue;
+`;
+
+const Projects = ({ shape, title, img_src, desc }) => {
 	return (
 		<div>
 			{
 				shape ?
 					<List>
 						{title}
+						<br/>
+						{desc}
 					</List> :
 					<Card>
 						{title}
+						<br/>
+						{desc}
 					</Card>
 			}
+
+			<Img>
+				<img style={{ 
+					width:"50px",
+					height:"50px",
+					objectFit: "contain"
+					}} src={img_src} />
+			</Img>
 		</div>
 	);
 };

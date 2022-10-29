@@ -6,6 +6,8 @@ import { Theme } from "../styles/theme";
 import Projects from "../comps/Projects.js"
 import Img from "../comps/Img.js"
 import { projects_data } from '../public/data.js';
+import { school_data } from '../public/data.js';
+import { design_data } from '../public/data.js';
 import { motion } from "framer-motion"
 
 // todos:
@@ -50,7 +52,7 @@ export default function Home() {
 				<button onClick={toggleShape}>toggle shape</button>
 				<div>shape: {shape}</div>
 
-				
+
 				{/* <Img img_src={"/profile.jpg"} height={100} width={100}>image</Img> */}
 
 
@@ -59,7 +61,7 @@ export default function Home() {
 				<div><a>resume</a></div>
 				{/* <div><a>resume</a></div> */}
 
-	{/* // 	id: 0,
+				{/* // 	id: 0,
 	// 	title: "Hello",
 	// 	sub: "I'm Josh Renema",
 	// 	text:""
@@ -83,19 +85,50 @@ export default function Home() {
 					gridRowGap: "0px",
 					border: "1px solid gold"
 				}}>
-					{/* work */}
-					{/* personal projects */}
+
+					{/* projects */}
 					{projects_data.map((o) => {
 						return (
 							<Projects
 								key={o.id}
 								title={o.title}
+								desc={o.desc}
+								shape={shape}
+							/>
+						);
+					})}
+					{/* on click, expand to a modal (above) */}
+
+					<br />
+					<br />
+
+					{/* design  */}
+					{design_data.map((o) => {
+						return (
+							<Projects
+								key={o.id}
+								title={o.title}
+								desc={o.desc}
 								shape={shape}
 							/>
 						);
 					})}
 
-					{/* on click expand to a modal (above) */}
+					<br />
+					<br />
+
+					{/* school */}
+					{school_data.map((o) => {
+						return (
+							<Projects
+								key={o.id}
+								title={o.title}
+								desc={o.desc}
+								shape={shape}
+								img_src={o.icon}
+							/>
+						);
+					})}
 
 				</div>
 			</div>

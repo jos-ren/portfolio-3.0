@@ -2,13 +2,13 @@
   border: 1px solid red;
   display: flex;
   min-height: 100vh;
-  padding: 0 2rem;
+  padding: 0 4rem;
 }
 
 .side {
   border: 1px solid orange;
   min-height: 100vh;
-  flex-grow: 2;
+  flex-grow: 3;
   display: flex;
   flex-direction: column;
   justify-content: center;
