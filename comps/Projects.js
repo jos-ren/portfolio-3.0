@@ -17,7 +17,7 @@ const List = styled.div`
 	}
 `;
 
-const Projects = ({ shape, title, img_src, desc }) => {
+const Projects = ({ shape, title, img_src, desc, link }) => {
 	return (
 		<div>
 			{/* SCRAPPING THE SHAPE CHANGE FUNC FOR NOW */}
@@ -54,6 +54,7 @@ const Projects = ({ shape, title, img_src, desc }) => {
 				<div style={{display:"flex", flexDirection:"column"}}>
 					<div>{title}</div>
 					<div>{desc}</div>
+					<a>{link}</a>
 				</div>
 			</List>
 		</div>

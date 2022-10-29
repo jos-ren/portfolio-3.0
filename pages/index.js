@@ -93,6 +93,8 @@ export default function Home() {
 								key={o.id}
 								title={o.title}
 								desc={o.desc}
+								link={o.link}
+								img_src={o.icon}
 							// shape={shape}
 							/>
 						);
@@ -110,6 +112,7 @@ export default function Home() {
 								key={o.id}
 								title={o.title}
 								desc={o.desc}
+								link={o.link}
 							// shape={shape}
 							/>
 						);
@@ -126,6 +129,7 @@ export default function Home() {
 								key={o.id}
 								title={o.title}
 								desc={o.desc}
+								link={o.link}
 								// shape={shape}
 								img_src={o.icon}
 							/>
