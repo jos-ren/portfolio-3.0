@@ -62,7 +62,7 @@ const Projects = ({ shape, title, img_src, desc, link }) => {
 					// height: "100%",
 					backgroundColor: "#3500D3",
 					color: "white"
-				}} href={link} target="_blank">View</a> */}
+				}} href={link} target="_blank" rel="noreferrer">View</a> */}
 			</div>
 		</List>
 	);
