@@ -41,19 +41,33 @@ const Projects = ({ shape, title, img_src, desc, link }) => {
 		// } */}
 
 		<List>
-			<div style={{ marginRight: "20px" }}>
+			<div style={{
+				marginRight: "25px",
+				marginTop: "25px",
+				marginLeft: "25px"
+			}}>
 				<img style={{
 					width: "50px",
 					height: "50px",
 					objectFit: "contain",
-					border: "1px solid red"
+					// border: "1px solid red"
 				}} src={img_src} />
 			</div>
 
 			<div style={{ display: "flex", flexDirection: "column" }}>
-				<div>{title}</div>
+				<h3>{title}</h3>
 				<div>{desc}</div>
-				<button><a href={link} target="_blank">View</a></button>
+
+				{/* 
+				maybe instead of a view button, have a hover effect which makes peoiple click anmd open modal
+				for external links, some sort of buitton will still be needed
+				 */}
+				{/* <a style={{
+					width: "200px",
+					// height: "100%",
+					backgroundColor: "#3500D3",
+					color: "white"
+				}} href={link} target="_blank">View</a> */}
 			</div>
 		</List>
 	);
