@@ -7,6 +7,10 @@ export const Theme = {
     }
 };
 
+// 7da2a9
+// f7f7f7
+// 000000
+
 // const darkPalette = {
 //     primary: {
 //         bg: "#0C0032",

@@ -8,6 +8,7 @@ import { projects_data } from '../public/data.js';
 import { school_data } from '../public/data.js';
 import { design_data } from '../public/data.js';
 import { motion } from "framer-motion"
+import IconButton from '../comps/IconButton';
 
 // todos:
 // - add theme changer (fonts, colors, etc)
@@ -56,12 +57,16 @@ export default function Home() {
 				{/* <button onClick={toggleShape}>toggle shape</button> */}
 
 				<div>
-					<Image height="100px" width="100px" objectFit="cover" src={"/profile.jpg"} style={{ borderRadius: "50%" }} />
+					{/* <Image height="100px" width="100px" objectFit="cover" src={"/profile.jpg"} style={{ borderRadius: "50%" }} /> */}
 				</div>
 
 				<h1>Josh Renema</h1>
-				<div>socials</div>
-				<div><a href="https://drive.google.com/file/d/1zH8T0XU913RQCSfOq5ps4SPHl8En4zF7/view?usp=sharing" target="_blank" rel="noreferrer">Resume</a></div>
+				<div style={{ display: "flex" }}>
+					<IconButton href={""} img_src={"/icons/github.svg"} />
+					<IconButton href={""} img_src={"/icons/github.svg"} />
+					<IconButton href={""} img_src={"/icons/github.svg"} />
+					<div><a href="https://drive.google.com/file/d/1zH8T0XU913RQCSfOq5ps4SPHl8En4zF7/view?usp=sharing" target="_blank" rel="noreferrer">Resume</a></div>
+				</div>
 
 				{/* about me */}
 				{/* <p>I'm a Full Stack Developer and Designer, currently living in Surrey, Canada. I enjoy creating projects that live on the internet, whether that be websites, applications, or anything in between. I always strive for my projects to provide real world value.</p>
