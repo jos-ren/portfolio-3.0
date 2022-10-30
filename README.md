@@ -1,6 +1,6 @@
 <h1> Josh Renema - Full Stack Developer </h1>
 
-This is my personal portflio website, I made it to display my work and personal projects to employers or anyone who would find it interesting
+This is my personal portfolio website, I made it to display my work and personal projects to employers or anyone who would find it interesting
 
 <h2>Technologies</h2>
 
