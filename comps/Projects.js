@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-
+import Image from "next/image"
 // const Card = styled.div`
 // 	width:100px;
 // 	height:100px;
@@ -46,12 +46,7 @@ const Projects = ({ shape, title, img_src, desc, link }) => {
 				marginTop: "25px",
 				marginLeft: "25px"
 			}}>
-				<img style={{
-					width: "50px",
-					height: "50px",
-					objectFit: "contain",
-					// border: "1px solid red"
-				}} src={img_src} />
+				<Image height="50px" width="50px" objectFit="contain" src={img_src} />
 			</div>
 
 			<div style={{ display: "flex", flexDirection: "column" }}>
@@ -67,7 +62,7 @@ const Projects = ({ shape, title, img_src, desc, link }) => {
 					// height: "100%",
 					backgroundColor: "#3500D3",
 					color: "white"
-				}} href={link} target="_blank">View</a> */}
+				}} href={link} target="_blank" rel="noreferrer">View</a> */}
 			</div>
 		</List>
 	);

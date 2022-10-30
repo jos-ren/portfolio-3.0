@@ -56,12 +56,12 @@ export default function Home() {
 				{/* <button onClick={toggleShape}>toggle shape</button> */}
 
 				<div>
-					<img style={{ width: "100px", height: "100px", objectFit: "cover", borderRadius: "50%" }} src={"./profile.jpg"} />
+					<Image height="100px" width="100px" objectFit="cover" src={"/profile.jpg"} style={{ borderRadius: "50%" }} />
 				</div>
 
 				<h1>Josh Renema</h1>
 				<div>socials</div>
-				<div><a href="https://drive.google.com/file/d/1zH8T0XU913RQCSfOq5ps4SPHl8En4zF7/view?usp=sharing" target="_blank">Resume</a></div>
+				<div><a href="https://drive.google.com/file/d/1zH8T0XU913RQCSfOq5ps4SPHl8En4zF7/view?usp=sharing" target="_blank" rel="noreferrer">Resume</a></div>
 
 				{/* about me */}
 				{/* <p>I'm a Full Stack Developer and Designer, currently living in Surrey, Canada. I enjoy creating projects that live on the internet, whether that be websites, applications, or anything in between. I always strive for my projects to provide real world value.</p>
