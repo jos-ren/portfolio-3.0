@@ -56,7 +56,7 @@ export default function Home() {
 				{/* <button onClick={toggleShape}>toggle shape</button> */}
 
 				<div>
-					<img style={{ width: "100px", height: "100px", objectFit: "cover", borderRadius: "50%" }} src={"./profile.jpg"} />
+					<Image height="100px" width="100px" objectFit="cover" src={"/profile.jpg"} style={{ borderRadius: "50%" }} />
 				</div>
 
 				<h1>Josh Renema</h1>
