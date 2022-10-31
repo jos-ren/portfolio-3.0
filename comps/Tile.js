@@ -12,12 +12,9 @@ const List = styled.div`
 	height:100px;
 	border:1px solid green;
 	display:flex;
-	* {
-		// border: 1px solid purple;
-	}
 `;
 
-const Projects = ({ shape, title, img_src, desc, link }) => {
+const Tile = ({ shape, title, img_src, desc, link }) => {
 	return (
 		// {/* SCRAPPING THE SHAPE CHANGE FUNC FOR NOW */}
 		// {/* {
@@ -40,7 +37,12 @@ const Projects = ({ shape, title, img_src, desc, link }) => {
 		// 		</Card>
 		// } */}
 
-		<List>
+		<div style={{
+			width: "100%",
+			height: "100px",
+			border: "1px solid green",
+			display: "flex",
+		}}>
 			<div style={{
 				marginRight: "25px",
 				marginTop: "25px",
@@ -64,8 +66,8 @@ const Projects = ({ shape, title, img_src, desc, link }) => {
 					color: "white"
 				}} href={link} target="_blank" rel="noreferrer">View</a> */}
 			</div>
-		</List>
+		</div>
 	);
 };
 
-export default Projects;
+export default Tile;
