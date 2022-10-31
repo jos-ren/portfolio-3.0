@@ -26,7 +26,7 @@ export default function Home() {
 			<div className={styles.side}>
 
 				<div>
-					<Image height="100px" width="100px" objectFit="cover" src={"/profile.jpg"} style={{ borderRadius: "50%" }} />
+					{/* <Image height="100px" width="100px" objectFit="cover" src={"/profile.jpg"} style={{ borderRadius: "50%" }} /> */}
 				</div>
 
 				<h1>Josh Renema</h1>
@@ -57,35 +57,54 @@ export default function Home() {
 					{/* add space for short summary of prject  */}
 					{/* add chips for small descriptors of project, like python, react, ui, etc. */}
 					{/* add a view more button on each expanded, to redirect to website to see more (BCIT, harvard, behance, etc)*/}
+					{/* eventually try and fix all warning in vercel */}
+					{/* perhaps move bio to main, above projects? */}
+					{/* resize pngs and get rid of padding inside image */}
+
+					{/* 1. add animations when switching shapes
+					2. animations when modal expands
+					2.5 hover on tiles slightly makes it bigger?
+					3. get theme for bg and text working / universal
+						3.1 color palletes
+							3.1.1 light theme
+							3.1.2 dark theme
+							3.1.3 fun theme
+						3.2 theme switcher
+						3.3 import custom fonts
+					4. footer and header
+					5. sidebar with summary info
+						5.2 all social link icons
+						5.3 text
+					6. project/tile infos */}
 
 					<h1>Projects</h1>
 					<Accordion>
 						{projects_data.map((o) => {
 							return (
-								<AccordionItem 
-								key={o.id}
-								title={
-									<div style={{
-										cursor: "pointer",
-										width: "100%",
-										height: "100px",
-										border: "1px solid green",
-										display: "flex",
-									}}>
+								<AccordionItem
+									key={o.id}
+									title={
 										<div style={{
-											marginRight: "25px",
-											marginTop: "25px",
-											marginLeft: "25px"
+											cursor: "pointer",
+											width: "100%",
+											height: "100px",
+											border: "1px solid green",
+											display: "flex",
 										}}>
-											<Image height="50px" width="50px" objectFit="contain" src={o.icon} />
-										</div>
+											<div style={{
+												marginRight: "25px",
+												marginTop: "25px",
+												marginLeft: "25px"
+											}}>
+												<Image height="50px" width="50px" objectFit="contain" src={o.icon} />
+											</div>
 
-										<div style={{ display: "flex", flexDirection: "column" }}>
-											<h3>{o.title}</h3>
-											<div>{o.desc}</div>
+											<div style={{ display: "flex", flexDirection: "column" }}>
+												<h3>{o.title}</h3>
+												<div>{o.desc}</div>
+											</div>
 										</div>
-									</div>
-								}>
+									}>
 									<TileContent />
 								</AccordionItem>
 							);

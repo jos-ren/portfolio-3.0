@@ -21,7 +21,7 @@ export const projects_data = [
 		id: 2,
 		title: "Petsave",
 		desc: "A social media app for animal rehabilitation centers",
-		icon: "/icons/ps.png",
+		icon: "/icons/petsave.png",
 		href: "/projects/petsave",
 		github_link: "https://github.com/jos-ren/petsave-frontend",
 		link: null,
