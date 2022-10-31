@@ -34,7 +34,7 @@ export default function Home() {
 					<IconButton href={""} img_src={"/icons/github.svg"} />
 					<IconButton href={""} img_src={"/icons/linkedin.svg"} />
 					<IconButton href={""} img_src={"/icons/mail.svg"} />
-					<Button href="https://drive.google.com/file/d/1zH8T0XU913RQCSfOq5ps4SPHl8En4zF7/view?usp=sharing" text="Resume"/>
+					<Button href="https://drive.google.com/file/d/1zH8T0XU913RQCSfOq5ps4SPHl8En4zF7/view?usp=sharing" text="Resume" />
 				</div>
 
 				{/* about me */}
@@ -62,7 +62,9 @@ export default function Home() {
 					<Accordion>
 						{projects_data.map((o) => {
 							return (
-								<AccordionItem title={
+								<AccordionItem 
+								key={o.id}
+								title={
 									<div style={{
 										cursor: "pointer",
 										width: "100%",
@@ -97,28 +99,30 @@ export default function Home() {
 					<Accordion>
 						{design_data.map((o) => {
 							return (
-								<AccordionItem title={
-									<div style={{
-										cursor: "pointer",
-										width: "100%",
-										height: "100px",
-										border: "1px solid green",
-										display: "flex",
-									}}>
+								<AccordionItem
+									key={o.id}
+									title={
 										<div style={{
-											marginRight: "25px",
-											marginTop: "25px",
-											marginLeft: "25px"
+											cursor: "pointer",
+											width: "100%",
+											height: "100px",
+											border: "1px solid green",
+											display: "flex",
 										}}>
-											<Image height="50px" width="50px" objectFit="contain" src={o.icon} />
-										</div>
+											<div style={{
+												marginRight: "25px",
+												marginTop: "25px",
+												marginLeft: "25px"
+											}}>
+												<Image height="50px" width="50px" objectFit="contain" src={o.icon} />
+											</div>
 
-										<div style={{ display: "flex", flexDirection: "column" }}>
-											<h3>{o.title}</h3>
-											<div>{o.desc}</div>
+											<div style={{ display: "flex", flexDirection: "column" }}>
+												<h3>{o.title}</h3>
+												<div>{o.desc}</div>
+											</div>
 										</div>
-									</div>
-								}>
+									}>
 									<TileContent />
 								</AccordionItem>
 							);
@@ -132,28 +136,30 @@ export default function Home() {
 					<Accordion>
 						{school_data.map((o) => {
 							return (
-								<AccordionItem title={
-									<div style={{
-										cursor: "pointer",
-										width: "100%",
-										height: "100px",
-										border: "1px solid green",
-										display: "flex",
-									}}>
+								<AccordionItem
+									key={o.id}
+									title={
 										<div style={{
-											marginRight: "25px",
-											marginTop: "25px",
-											marginLeft: "25px"
+											cursor: "pointer",
+											width: "100%",
+											height: "100px",
+											border: "1px solid green",
+											display: "flex",
 										}}>
-											<Image height="50px" width="50px" objectFit="contain" src={o.icon} />
-										</div>
+											<div style={{
+												marginRight: "25px",
+												marginTop: "25px",
+												marginLeft: "25px"
+											}}>
+												<Image height="50px" width="50px" objectFit="contain" src={o.icon} />
+											</div>
 
-										<div style={{ display: "flex", flexDirection: "column" }}>
-											<h3>{o.title}</h3>
-											<div>{o.desc}</div>
+											<div style={{ display: "flex", flexDirection: "column" }}>
+												<h3>{o.title}</h3>
+												<div>{o.desc}</div>
+											</div>
 										</div>
-									</div>
-								}>
+									}>
 									<TileContent />
 								</AccordionItem>
 							);
@@ -162,6 +168,8 @@ export default function Home() {
 
 					<br />
 					<br />
+
+					<footer>hello</footer>
 
 				</div>
 			</div>
