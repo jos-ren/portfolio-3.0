@@ -29,3 +29,11 @@
   left: 30vw;
   width: 60vw;
 }
+
+.socials{
+  display:flex;
+}
+
+.socials *{
+  margin-right:10px;
+}

@@ -10,6 +10,7 @@ import { school_data } from '../public/data.js';
 import { design_data } from '../public/data.js';
 import { motion } from "framer-motion"
 import IconButton from '../comps/IconButton';
+import Button from '../comps/Button';
 import { Accordion, AccordionItem } from 'react-sanfona';
 
 export default function Home() {
@@ -25,15 +26,15 @@ export default function Home() {
 			<div className={styles.side}>
 
 				<div>
-					{/* <Image height="100px" width="100px" objectFit="cover" src={"/profile.jpg"} style={{ borderRadius: "50%" }} /> */}
+					<Image height="100px" width="100px" objectFit="cover" src={"/profile.jpg"} style={{ borderRadius: "50%" }} />
 				</div>
 
 				<h1>Josh Renema</h1>
-				<div style={{ display: "flex" }}>
+				<div className={styles.socials}>
 					<IconButton href={""} img_src={"/icons/github.svg"} />
-					<IconButton href={""} img_src={"/icons/github.svg"} />
-					<IconButton href={""} img_src={"/icons/github.svg"} />
-					<div><a href="https://drive.google.com/file/d/1zH8T0XU913RQCSfOq5ps4SPHl8En4zF7/view?usp=sharing" target="_blank" rel="noreferrer">Resume</a></div>
+					<IconButton href={""} img_src={"/icons/linkedin.svg"} />
+					<IconButton href={""} img_src={"/icons/mail.svg"} />
+					<Button href="https://drive.google.com/file/d/1zH8T0XU913RQCSfOq5ps4SPHl8En4zF7/view?usp=sharing" text="Resume"/>
 				</div>
 
 				{/* about me */}
@@ -47,22 +48,7 @@ export default function Home() {
 
 			<div className={styles.main}>
 
-				<div
-				>
-
-					<Accordion>
-						{[1, 2, 3, 4, 5].map(item => {
-							return (
-								<AccordionItem title={`Item ${item}`} expanded={item === 0}>
-									<div>
-										{`Item ${item} content`}
-									</div>
-								</AccordionItem>
-							);
-						})}
-					</Accordion>
-
-
+				<div>
 
 					{/* NOTES */}
 					{/* need to turn accordians into components */}
