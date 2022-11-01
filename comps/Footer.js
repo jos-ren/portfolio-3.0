@@ -10,6 +10,9 @@ const Container = styled.div`
     align-items:center;
     justify-content:center;
     background-color:#e2e8f0;
+    position: relative;
+    right: 4rem;
+    width: calc(100% + 8rem)
 `;
 const Footer = ({ }) => {
     return (
