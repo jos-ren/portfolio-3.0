@@ -3,17 +3,19 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import React, { useState } from "react";
 import { Theme } from "../styles/theme";
-import Tile from "../comps/Tile.js"
 import TileContent from "../comps/TileContent.js"
 import { projects_data } from '../public/data.js';
 import { school_data } from '../public/data.js';
 import { design_data } from '../public/data.js';
+
 import { motion } from "framer-motion"
+import { Accordion, AccordionItem } from 'react-sanfona';
+
+import Tile from "../comps/Tile.js"
 import IconButton from '../comps/IconButton';
 import CopyButton from '../comps/CopyButton';
 import Button from '../comps/Button';
 import Footer from '../comps/Footer';
-import { Accordion, AccordionItem } from 'react-sanfona';
 
 export default function Home() {
 
