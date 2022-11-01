@@ -32,7 +32,7 @@ export default function Home() {
 			<div className={styles.side}>
 
 				<div>
-					<Image height="100px" width="100px" objectFit="cover" src={"/profile.jpg"} style={{ borderRadius: "50%" }} />
+					{/* <Image height="100px" width="100px" objectFit="cover" src={"/profile.jpg"} style={{ borderRadius: "50%" }} /> */}
 				</div>
 
 				<h1 onClick={() => { console.log("test") }}>Josh Renema</h1>

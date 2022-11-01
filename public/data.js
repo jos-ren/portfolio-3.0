@@ -56,7 +56,7 @@ export const design_data = [
 		title: "Digital Art",
 		desc: "Some of my design work throught the years",
 		link: "https://www.behance.net/joshrenema",
-		icon: "/icons/rt.png",
+		icon: "/icons/joker.png",
 	},
 	{
 		id: 1,
