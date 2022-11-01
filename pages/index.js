@@ -2,24 +2,22 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import React, { useState } from "react";
+
 import { Theme } from "../styles/theme";
-import TileContent from "../comps/TileContent.js"
 import { projects_data } from '../public/data.js';
 import { school_data } from '../public/data.js';
 import { design_data } from '../public/data.js';
 
-import { motion } from "framer-motion"
-import { Accordion, AccordionItem } from 'react-sanfona';
-
-import Tile from "../comps/Tile.js"
+import AccSection from "../comps/AccSection.js"
 import IconButton from '../comps/IconButton';
-import CopyButton from '../comps/CopyButton';
 import Button from '../comps/Button';
 import Footer from '../comps/Footer';
 
 export default function Home() {
 
 	const [copied, setCopied] = useState(true);
+	// const [copied, setCopied] = useState(true);
+	const [show, setShow] = useState(false);
 
 	return (
 		<div className={styles.container}>
@@ -43,6 +41,7 @@ export default function Home() {
 					<Button href="https://drive.google.com/file/d/1zH8T0XU913RQCSfOq5ps4SPHl8En4zF7/view?usp=sharing" text="Resume" />
 				</div>
 
+
 				{/* about me */}
 				{/* <p>I'm a Full Stack Developer and Designer, currently living in Surrey, Canada. I enjoy creating projects that live on the internet, whether that be websites, applications, or anything in between. I always strive for my projects to provide real world value.</p>
 				<p>I’ve just wrapped up my diploma at the Digital Design and Development program at BCIT, where I’ve learned how to develop and design responsive, cross-platform applications.</p>
@@ -57,16 +56,18 @@ export default function Home() {
 				<div>
 
 					{/* NOTES */}
+
 					{/* need to turn accordians into components */}
 					{/* add a dropdown arrow into accordian, which flips when pressed */}
 					{/* add a carousel into tile content for viewing images */}
 					{/* add space for short summary of prject  */}
 					{/* add chips for small descriptors of project, like python, react, ui, etc. */}
 					{/* add a view more button on each expanded, to redirect to website to see more (BCIT, harvard, behance, etc)*/}
+					{/* rounded corners on accordians 4px  */}
+
 					{/* eventually try and fix all warning in vercel */}
 					{/* perhaps move bio to main, above projects? */}
 					{/* resize pngs and get rid of padding inside image */}
-					{/* rounded corners on accordians 4px  */}
 
 					{/* get copy email button working */}
 
@@ -81,120 +82,17 @@ export default function Home() {
 						3.2 theme switcher
 						3.3 import custom fonts
 					4. footer and header
-					5. sidebar with summary info
-						5.2 all social link icons
-						5.3 text
-					6. project/tile infos */}
+					 */}
 
 					<h1>Projects</h1>
-					<Accordion > 
-						{projects_data.map((o) => {
-							return (
-								<AccordionItem
-									key={o.id}
-									title={
-										<div style={{
-											cursor: "pointer",
-											width: "100%",
-											height: "100px",
-											border: "1px solid green",
-											display: "flex",
-											// backgroundColor: '#e2e8f0',
-											// borderRadius:"8px"
-										}}>
-											<div style={{
-												marginRight: "25px",
-												marginTop: "25px",
-												marginLeft: "25px"
-											}}>
-												<Image height="50px" width="50px" objectFit="contain" src={o.icon} />
-											</div>
-
-											<div style={{ display: "flex", flexDirection: "column" }}>
-												<h3>{o.title}</h3>
-												<div>{o.desc}</div>
-											</div>
-										</div>
-									}>
-									<TileContent />
-								</AccordionItem>
-							);
-						})}
-					</Accordion>
-
-					<br />
-					<br />
+					<AccSection data={projects_data}/>
 
 					<h1>Design</h1>
-					<Accordion>
-						{design_data.map((o) => {
-							return (
-								<AccordionItem
-									key={o.id}
-									title={
-										<div style={{
-											cursor: "pointer",
-											width: "100%",
-											height: "100px",
-											border: "1px solid green",
-											display: "flex",
-										}}>
-											<div style={{
-												marginRight: "25px",
-												marginTop: "25px",
-												marginLeft: "25px"
-											}}>
-												<Image height="50px" width="50px" objectFit="contain" src={o.icon} />
-											</div>
-
-											<div style={{ display: "flex", flexDirection: "column" }}>
-												<h3>{o.title}</h3>
-												<div>{o.desc}</div>
-											</div>
-										</div>
-									}>
-									<TileContent />
-								</AccordionItem>
-							);
-						})}
-					</Accordion>
-
-					<br />
-					<br />
+					<AccSection data={design_data}/>
 
 					<h1>Education</h1>
-					<Accordion>
-						{school_data.map((o) => {
-							return (
-								<AccordionItem
-									key={o.id}
-									title={
-										<div style={{
-											cursor: "pointer",
-											width: "100%",
-											height: "100px",
-											border: "1px solid green",
-											display: "flex",
-										}}>
-											<div style={{
-												marginRight: "25px",
-												marginTop: "25px",
-												marginLeft: "25px"
-											}}>
-												<Image height="50px" width="50px" objectFit="contain" src={o.icon} />
-											</div>
-
-											<div style={{ display: "flex", flexDirection: "column" }}>
-												<h3>{o.title}</h3>
-												<div>{o.desc}</div>
-											</div>
-										</div>
-									}>
-									<TileContent />
-								</AccordionItem>
-							);
-						})}
-					</Accordion>
+					<AccSection data={school_data}/>
+			
 
 					<Footer />
 

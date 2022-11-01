@@ -12,13 +12,13 @@ import { projects_data } from '../public/data.js';
 const TileContent = ({ }) => {
     return (
         <Container>
-            <Carousel itemsToShow={5}>
+            {/* <Carousel itemsToShow={5}>
                 {projects_data.map((o, i) => {
                     return (
                         <div key={i}>{o.id}</div>
                     );
                 })}
-            </Carousel>
+            </Carousel> */}
         </Container>
     );
 };
