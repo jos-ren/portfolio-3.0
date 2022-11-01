@@ -13,7 +13,7 @@ const Container = styled.button`
   transition: background-color 0.2s ease-in;
   cursor: pointer;
   border: 0;
-  margin-right: 20px;
+  // margin-right: 20px;
   border-radius: 4px;
   font-weight: 500;
   // background-color: var(--secondary-bg);

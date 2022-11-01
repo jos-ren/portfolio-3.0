@@ -7,6 +7,9 @@ export const Theme = {
     }
 };
 
+// bg1, bg2, button, text, textaccent, 
+
+
 // 7da2a9
 // f7f7f7
 // 000000

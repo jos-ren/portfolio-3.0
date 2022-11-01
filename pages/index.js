@@ -10,10 +10,14 @@ import { school_data } from '../public/data.js';
 import { design_data } from '../public/data.js';
 import { motion } from "framer-motion"
 import IconButton from '../comps/IconButton';
+import CopyButton from '../comps/CopyButton';
 import Button from '../comps/Button';
+import Footer from '../comps/Footer';
 import { Accordion, AccordionItem } from 'react-sanfona';
 
 export default function Home() {
+
+	const [copied, setCopied] = useState(true);
 
 	return (
 		<div className={styles.container}>
@@ -29,11 +33,19 @@ export default function Home() {
 					{/* <Image height="100px" width="100px" objectFit="cover" src={"/profile.jpg"} style={{ borderRadius: "50%" }} /> */}
 				</div>
 
-				<h1>Josh Renema</h1>
+				<h1 onClick={() => { console.log("test") }}>Josh Renema</h1>
 				<div className={styles.socials}>
-					<IconButton href={""} img_src={"/icons/github.svg"} />
-					<IconButton href={""} img_src={"/icons/linkedin.svg"} />
-					<IconButton href={""} img_src={"/icons/mail.svg"} />
+					<IconButton href={"https://github.com/jos-ren"} img_src={"/icons/github.svg"} />
+					<IconButton href={"https://www.linkedin.com/in/josh-renema/"} img_src={"/icons/linkedin.svg"} />
+					<CopyButton
+						isCopied={copied}
+						img_src={"/icons/mail.svg"}
+						onClick={() => { console.log("test") }}
+
+					// navigator.clipboard.writeText('josh.renema@protonmail.com')
+					// setCopied(!copied)
+
+					/>
 					<Button href="https://drive.google.com/file/d/1zH8T0XU913RQCSfOq5ps4SPHl8En4zF7/view?usp=sharing" text="Resume" />
 				</div>
 
@@ -60,6 +72,9 @@ export default function Home() {
 					{/* eventually try and fix all warning in vercel */}
 					{/* perhaps move bio to main, above projects? */}
 					{/* resize pngs and get rid of padding inside image */}
+					{/* rounded corners on accordians 4px  */}
+
+					{/* get copy email button working */}
 
 					{/* 1. add animations when switching shapes
 					2. animations when modal expands
@@ -78,7 +93,7 @@ export default function Home() {
 					6. project/tile infos */}
 
 					<h1>Projects</h1>
-					<Accordion>
+					<Accordion > 
 						{projects_data.map((o) => {
 							return (
 								<AccordionItem
@@ -90,6 +105,8 @@ export default function Home() {
 											height: "100px",
 											border: "1px solid green",
 											display: "flex",
+											// backgroundColor: '#e2e8f0',
+											// borderRadius:"8px"
 										}}>
 											<div style={{
 												marginRight: "25px",
@@ -185,10 +202,7 @@ export default function Home() {
 						})}
 					</Accordion>
 
-					<br />
-					<br />
-
-					<footer>hello</footer>
+					<Footer />
 
 				</div>
 			</div>

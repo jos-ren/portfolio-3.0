@@ -10,7 +10,7 @@ import Image from "next/image"
 const List = styled.div`
 	width:100%;
 	height:100px;
-	border:1px solid green;
+	// border:1px solid green;
 	display:flex;
 `;
 
@@ -40,7 +40,7 @@ const Tile = ({ shape, title, img_src, desc, link }) => {
 		<div style={{
 			width: "100%",
 			height: "100px",
-			border: "1px solid green",
+			// border: "1px solid green",
 			display: "flex",
 		}}>
 			<div style={{
