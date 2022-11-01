@@ -32,22 +32,14 @@ export default function Home() {
 			<div className={styles.side}>
 
 				<div>
-					{/* <Image height="100px" width="100px" objectFit="cover" src={"/profile.jpg"} style={{ borderRadius: "50%" }} /> */}
+					<Image height="100px" width="100px" objectFit="cover" src={"/profile.jpg"} style={{ borderRadius: "50%" }} />
 				</div>
 
 				<h1 onClick={() => { console.log("test") }}>Josh Renema</h1>
 				<div className={styles.socials}>
 					<IconButton href={"https://github.com/jos-ren"} img_src={"/icons/github.svg"} />
 					<IconButton href={"https://www.linkedin.com/in/josh-renema/"} img_src={"/icons/linkedin.svg"} />
-					<CopyButton
-						isCopied={copied}
-						img_src={"/icons/mail.svg"}
-						onClick={() => { console.log("test") }}
-
-					// navigator.clipboard.writeText('josh.renema@protonmail.com')
-					// setCopied(!copied)
-
-					/>
+					<IconButton href={"mailto:josh.renema@protonmail.com"} img_src={"/icons/mail.svg"} />
 					<Button href="https://drive.google.com/file/d/1zH8T0XU913RQCSfOq5ps4SPHl8En4zF7/view?usp=sharing" text="Resume" />
 				</div>
 
