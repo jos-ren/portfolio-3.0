@@ -3,6 +3,8 @@ import styled from "styled-components";
 import { Accordion, AccordionItem } from 'react-sanfona';
 import TileContent from "../comps/TileContent.js"
 import Image from 'next/image'
+import { useSpring, a } from "react-spring";
+import { FiChevronDown } from "react-icons/fi";
 
 const Container = styled.div`
     margin-bottom:50px;
@@ -20,16 +22,34 @@ const ItemTitle = styled.div`
 
 
 const AccSection = ({ data }) => {
-    const [flipped, setFlipped] = useState(false);
+    // const [flipped, setFlipped] = useState(false);
+    const [isOpen, setOpen] = useState(false);
+    const { transform2 } = useSpring({
+        from: {
+            transform2: "rotate(-90deg)",
+        },
+        to: {
+            transform2: `rotate(${isOpen ? 0 : -90}deg) translateX(${isOpen ? 0 : 3}px)`,
+        },
+    });
+    const [expanded, setExpanded] = useState(-1);
+    console.log(expanded, "yo");
+
+    const HandleOpenExpand = (open, id) => {
+        console.log(open, id)
+        setOpen(open);
+        setExpanded(id);
+    };
+
+
     return (
         <Container>
             <Accordion >
-                {data.map((o) => {
+                {data.map((o, idx) => {
                     return (
                         <AccordionItem
-                            duration={300}
-                            onExpand={() => { console.log("expand", o.id), setFlipped(true) }}
-                            // onClose={() => { setFlipped(false) }}
+                            onExpand={() => HandleOpenExpand(true, idx)}
+                            onClose={() => HandleOpenExpand(false, -1)}
                             key={o.id}
                             title={
                                 <ItemTitle>
@@ -50,11 +70,14 @@ const AccSection = ({ data }) => {
                                         marginRight: "25px",
                                         marginTop: "35px",
                                     }}>
-                                        {/* have img flip on click, and on close */}
-                                        {flipped
-                                            ? <Image width={"30px"} height={"30px"} src={"/icons/chevron-up.svg"} />
-                                            : <Image width={"30px"} height={"30px"} src={"/icons/chevron-down.svg"} />
-                                        }
+                                        <a.div
+                                            id={idx}
+                                            style={{
+                                                transform: transform2,
+                                            }}
+                                        >
+                                            <FiChevronDown size={30} />
+                                        </a.div>
                                     </div>
                                 </ItemTitle>
                             }>

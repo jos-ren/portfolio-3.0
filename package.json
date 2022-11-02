@@ -17,6 +17,7 @@
     "react-elastic-carousel": "^0.11.5",
     "react-icons": "^4.6.0",
     "react-sanfona": "^1.5.0",
+    "react-spring": "^9.5.5",
     "styled-components": "^5.3.5"
   },
   "devDependencies": {
