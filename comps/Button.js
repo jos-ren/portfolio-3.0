@@ -14,10 +14,11 @@ const Container = styled.button`
   cursor: pointer;
   border: 0;
   // margin-right: 20px;
-  border-radius: 4px;
+  border-radius: 6px;
   font-weight: 500;
   // background-color: var(--secondary-bg);
   // background-color: #e2e8f0;
+  background-color: #f0f2f4;
   // color: var(--headings);
   color: #000;
   font-weight: 500;

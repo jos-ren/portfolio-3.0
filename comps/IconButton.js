@@ -4,14 +4,15 @@ import Image from "next/image";
 
 const Container = styled.button`
   border: 0;
-  border-radius: 4px;
+  border-radius: 6px;
   height: 45px;
   min-width: 45px;
   display: flex;
   justify-content: center;
   align-items: center;
   // background-color: var(--secondary-bg);
-  background-color: v#e2e8f0;
+  // background-color: #e2e8f0;
+  background-color: #f0f2f4;
   transition: background-color 0.2s ease-in;
   cursor: pointer;
   // color: var(--headings);

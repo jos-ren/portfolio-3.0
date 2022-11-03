@@ -35,10 +35,12 @@ export default function Home() {
 
 				<h1 onClick={() => { console.log("test") }}>Josh Renema</h1>
 				<div className={styles.socials}>
-					<IconButton href={"https://github.com/jos-ren"} img_src={"/icons/github.svg"} />
+					<IconButton href={"https://github.com/jos-ren"} img_src={"/icons/github-3.svg"} />
 					<IconButton href={"https://www.linkedin.com/in/josh-renema/"} img_src={"/icons/linkedin.svg"} />
-					<IconButton href={"mailto:josh.renema@protonmail.com"} img_src={"/icons/mail.svg"} />
+					<IconButton href={"mailto:josh.renema@protonmail.com"} img_src={"/icons/mail-2.svg"} />
 					<Button href="https://drive.google.com/file/d/1zH8T0XU913RQCSfOq5ps4SPHl8En4zF7/view?usp=sharing" text="Resume" />
+					<IconButton href={"mailto:josh.renema@protonmail.com"} img_src={"/icons/sun-2.svg"} />
+					<IconButton href={"mailto:josh.renema@protonmail.com"} img_src={"/icons/moon-2.svg"} />
 				</div>
 
 
@@ -63,7 +65,7 @@ export default function Home() {
 					{/* add space for short summary of prject  */}
 					{/* add chips for small descriptors of project, like python, react, ui, etc. */}
 					{/* add a view more button on each expanded, to redirect to website to see more (BCIT, harvard, behance, etc)*/}
-					{/* rounded corners on accordians 4px  */}
+					{/* rounded corners on accordians 6px  */}
 
 					{/* eventually try and fix all warning in vercel */}
 					{/* perhaps move bio to main, above projects? */}
@@ -85,14 +87,14 @@ export default function Home() {
 					 */}
 
 					<h1>Projects</h1>
-					<AccSection data={projects_data}/>
+					<AccSection data={projects_data} />
 
 					<h1>Design</h1>
-					<AccSection data={design_data}/>
+					<AccSection data={design_data} />
 
 					<h1>Education</h1>
-					<AccSection data={school_data}/>
-			
+					<AccSection data={school_data} />
+
 
 					<Footer />
 

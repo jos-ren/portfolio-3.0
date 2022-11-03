@@ -4,12 +4,12 @@ import Carousel from 'react-elastic-carousel';
 
 const Container = styled.div`
     height:300px;
-    border:1px solid red;
-    // background-color:#e2e8f0;
+    // border:1px solid red;
+    background:#e2e8f0;
 `;
 import { projects_data } from '../public/data.js';
 
-const TileContent = ({ }) => {
+const ItemContent = ({ }) => {
     return (
         <Container>
             {/* <Carousel itemsToShow={5}>
@@ -23,4 +23,4 @@ const TileContent = ({ }) => {
     );
 };
 
-export default TileContent;
+export default ItemContent;

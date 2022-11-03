@@ -1,20 +1,23 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { Accordion, AccordionItem } from 'react-sanfona';
-import TileContent from "../comps/TileContent.js"
+import ItemContent from "../comps/ItemContent.js"
 import Image from 'next/image'
 import { useSpring, a } from "react-spring";
 import { FiChevronDown } from "react-icons/fi";
 
 const Container = styled.div`
     margin-bottom:50px;
+    border-radius:8px;
+    // border: 1px solid green;
+    background:#f0f2f4;
 `;
 
 const ItemTitle = styled.div`
     cursor: pointer;
     width: 100%;
     height: 100px;
-    border: 1px solid green;
+    // border: 1px solid green;
     // background:black;
     display: flex;
     justify-content: space-between;
@@ -33,10 +36,10 @@ const AccSection = ({ data }) => {
         },
     });
     const [expanded, setExpanded] = useState(-1);
-    console.log(expanded, "yo");
+    // console.log(expanded, "yo");
 
     const HandleOpenExpand = (open, id) => {
-        console.log(open, id)
+        // console.log(open, id)
         setOpen(open);
         setExpanded(id);
     };
@@ -81,7 +84,7 @@ const AccSection = ({ data }) => {
                                     </div>
                                 </ItemTitle>
                             }>
-                            <TileContent />
+                            <ItemContent />
                         </AccordionItem>
                     );
                 })}
