@@ -12,6 +12,30 @@
       rgba(26, 117, 135, 1) 100%);
 }
 
+/* .light-theme {
+  --button-bg: #e2e8f0;
+  --button-bg-hover: #cdd7e5;
+  --background: #fff;
+  --headings: #000;
+  --text: #38393e;
+}
+
+.dark-theme {
+  --button-bg: rgb(255 255 255 / 0.08);
+  --button-bg-hover: rgb(255 255 255 / 0.16);
+  --background: #171923;
+  --headings: #f9fafa;
+  --text: #a0aec0;
+}
+
+.funky {
+  --button-bg: #1f2833;
+  --button-bg-hover: #425069;
+  --background: #0b0c10;
+  --headings: #66fcf1;
+  --text: #e647ff;
+} */
+
 html,
 body {
   padding: 0;

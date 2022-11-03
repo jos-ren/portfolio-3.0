@@ -1,12 +1,13 @@
-import Document, { Html, Head, Main, NextScript } from 'next/document';
+import Document, { Head, Html, Main, NextScript } from 'next/document';
 
-class MyDocument extends Document {
+class _Document extends Document {
   render() {
     return (
       <Html>
-        <Head />
+        <Head>
+        </Head>
         <body>
-          <script src="noflash.js" />
+          <script src="./colorTheme.js" />
           <Main />
           <NextScript />
         </body>
@@ -15,4 +16,4 @@ class MyDocument extends Document {
   }
 }
 
-export default MyDocument;
+export default _Document;
