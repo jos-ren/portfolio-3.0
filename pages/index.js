@@ -38,9 +38,14 @@ export default function Home() {
 					<IconButton href={"https://github.com/jos-ren"} img_src={"/icons/github-3.svg"} />
 					<IconButton href={"https://www.linkedin.com/in/josh-renema/"} img_src={"/icons/linkedin.svg"} />
 					<IconButton href={"mailto:josh.renema@protonmail.com"} img_src={"/icons/mail-2.svg"} />
-					<Button href="https://drive.google.com/file/d/1zH8T0XU913RQCSfOq5ps4SPHl8En4zF7/view?usp=sharing" text="Resume" />
+					<IconButton href="https://drive.google.com/file/d/1zH8T0XU913RQCSfOq5ps4SPHl8En4zF7/view?usp=sharing" img_src={"/icons/file-text.svg"} />
+					{/* <Button href="https://drive.google.com/file/d/1zH8T0XU913RQCSfOq5ps4SPHl8En4zF7/view?usp=sharing" text="Resume" /> */}
+					{/* <IconButton href={"https://instagram.com/jos-ren"} img_src={"/icons/instagram.svg"} /> */}
+					{/* <IconButton href={"mailto:josh.renema@protonmail.com"} img_src={"/icons/grid-four.svg"} /> */}
+					{/* <IconButton href={"mailto:josh.renema@protonmail.com"} img_src={"/icons/hard-drives.svg"} /> */}
 					<IconButton href={"mailto:josh.renema@protonmail.com"} img_src={"/icons/sun-2.svg"} />
 					<IconButton href={"mailto:josh.renema@protonmail.com"} img_src={"/icons/moon-2.svg"} />
+					{/* <IconButton href={"mailto:josh.renema@protonmail.com"} img_src={"/icons/discord.svg"} /> */}
 				</div>
 
 

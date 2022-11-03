@@ -17,12 +17,11 @@ const ItemTitle = styled.div`
     cursor: pointer;
     width: 100%;
     height: 100px;
-    // border: 1px solid green;
     // background:black;
     display: flex;
     justify-content: space-between;
+    border-bottom:1px solid green;
 `;
-
 
 const AccSection = ({ data }) => {
     // const [flipped, setFlipped] = useState(false);
@@ -47,7 +46,7 @@ const AccSection = ({ data }) => {
 
     return (
         <Container>
-            <Accordion >
+            <Accordion>
                 {data.map((o, idx) => {
                     return (
                         <AccordionItem
@@ -89,7 +88,7 @@ const AccSection = ({ data }) => {
                     );
                 })}
             </Accordion>
-        </Container>
+        </Container >
     );
 };
 

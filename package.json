@@ -18,7 +18,8 @@
     "react-icons": "^4.6.0",
     "react-sanfona": "^1.5.0",
     "react-spring": "^9.5.5",
-    "styled-components": "^5.3.5"
+    "styled-components": "^5.3.5",
+    "use-color-theme": "^1.1.2"
   },
   "devDependencies": {
     "eslint": "8.20.0",
