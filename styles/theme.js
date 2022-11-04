@@ -1,28 +1,20 @@
-export const Theme = {
+export const LightTheme = {
     colors: {
-        bg: "#0C0032",
-        button: "#3500D3",
-        modal: "#282828",
+        primary: "#fafafa",
+        secondary: "#f0f2f4",
+        tertiary: "#e2e8f0",
         text: "#FFFFFF",
+        subText: "#727175",
+        gradiant:"background: linear-gradient(90deg, hsla(152, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%)"
     }
 };
 
-// 7da2a9
-// f7f7f7
-// 000000
-
-// const darkPalette = {
-//     primary: {
-//         bg: "#0C0032",
-//         button: "#3500D3",
-//         modal: "#282828",
-//         text: "#FFFFFF",
-//     },
-// };
-
-// export const darkTheme = {
-//     primary: {
-//         text: darkPalette.primary.text,
-//         background: darkPalette.primary.bg,
-//     },
-// };
+export const DarkTheme = {
+    colors: {
+        primary: "#1b1a22",
+        secondary: "#2b2b37",
+        text: "#000000",
+        subText: "#727175",
+        gradiant:"background: linear-gradient(90deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%)"
+    }
+};

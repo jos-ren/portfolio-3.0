@@ -2,18 +2,50 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import React, { useState } from "react";
+
 import { Theme } from "../styles/theme";
-import Tile from "../comps/Tile.js"
-import TileContent from "../comps/TileContent.js"
 import { projects_data } from '../public/data.js';
 import { school_data } from '../public/data.js';
 import { design_data } from '../public/data.js';
-import { motion } from "framer-motion"
+
+import AccSection from "../comps/AccSection.js"
 import IconButton from '../comps/IconButton';
 import Button from '../comps/Button';
-import { Accordion, AccordionItem } from 'react-sanfona';
+import Footer from '../comps/Footer';
+
+import useColorTheme from "use-color-theme";
 
 export default function Home() {
+
+	const [copied, setCopied] = useState(true);
+	// const [copied, setCopied] = useState(true);
+	const [show, setShow] = useState(false);
+
+	const colorTheme = useColorTheme("dark-theme", {
+		classNames: ["light-theme", "dark-theme"],
+	});
+
+	let sun_moon = "";
+	let github = "";
+	let linkedin = "";
+	let email = "";
+	let resume = "";
+	let behance = "";
+	if (colorTheme.value === "light-theme") {
+		sun_moon = "/icons/sun.svg";
+		github = "/icons/github.svg";
+		linkedin = "/icons/linkedin.svg";
+		email = "/icons/email.svg";
+		resume = "/icons/resume.svg";
+		behance = "/icons/behance.svg";
+	} else if (colorTheme.value === "dark-theme") {
+		sun_moon = "/icons/moon_w.svg";
+		github = "/icons/github_w.svg";
+		linkedin = "/icons/linkedin_w.svg";
+		email = "/icons/email_w.svg";
+		resume = "/icons/resume_w.svg";
+		behance = "/icons/behance_w.svg";
+	}
 
 	return (
 		<div className={styles.container}>
@@ -29,13 +61,31 @@ export default function Home() {
 					<Image height="100px" width="100px" objectFit="cover" src={"/profile.jpg"} style={{ borderRadius: "50%" }} />
 				</div>
 
-				<h1>Josh Renema</h1>
+				<h1 onClick={() => { console.log("test") }}>Josh Renema</h1>
 				<div className={styles.socials}>
-					<IconButton href={""} img_src={"/icons/github.svg"} />
-					<IconButton href={""} img_src={"/icons/linkedin.svg"} />
-					<IconButton href={""} img_src={"/icons/mail.svg"} />
-					<Button href="https://drive.google.com/file/d/1zH8T0XU913RQCSfOq5ps4SPHl8En4zF7/view?usp=sharing" text="Resume" />
+					<a target="_blank" rel="noopener noreferrer" href="https://github.com/jos-ren">
+						<IconButton img_src={github} />
+					</a>
+					<a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/josh-renema/">
+						<IconButton img_src={linkedin} />
+					</a>
+					<a target="_blank" rel="noopener noreferrer" href={"mailto:josh.renema@protonmail.com"}>
+						<IconButton img_src={email} />
+					</a>
+					<a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1zH8T0XU913RQCSfOq5ps4SPHl8En4zF7/view?usp=sharing">
+						<IconButton img_src={resume} />
+					</a>
+					<a target="_blank" rel="noopener noreferrer" href="https://www.behance.net/joshrenema">
+						<IconButton img_src={behance} />
+					</a>
+					<IconButton onClick={() => { colorTheme.toggle() }} img_src={sun_moon} />
+					{/* <Button href="https://drive.google.com/file/d/1zH8T0XU913RQCSfOq5ps4SPHl8En4zF7/view?usp=sharing" text="Resume" /> */}
+					{/* <IconButton href={"https://instagram.com/jos-ren"} img_src={"/icons/instagram.svg"} /> */}
+					{/* <IconButton href={"mailto:josh.renema@protonmail.com"} img_src={"/icons/grid-four.svg"} /> */}
+					{/* <IconButton href={"mailto:josh.renema@protonmail.com"} img_src={"/icons/hard-drives.svg"} /> */}
+					{/* <IconButton href={"mailto:josh.renema@protonmail.com"} img_src={"/icons/discord.svg"} /> */}
 				</div>
+
 
 				{/* about me */}
 				{/* <p>I'm a Full Stack Developer and Designer, currently living in Surrey, Canada. I enjoy creating projects that live on the internet, whether that be websites, applications, or anything in between. I always strive for my projects to provide real world value.</p>
@@ -51,125 +101,34 @@ export default function Home() {
 				<div>
 
 					{/* NOTES */}
-					{/* need to turn accordians into components */}
+
 					{/* add a dropdown arrow into accordian, which flips when pressed */}
 					{/* add a carousel into tile content for viewing images */}
 					{/* add space for short summary of prject  */}
 					{/* add chips for small descriptors of project, like python, react, ui, etc. */}
 					{/* add a view more button on each expanded, to redirect to website to see more (BCIT, harvard, behance, etc)*/}
 
+					{/* eventually try and fix all warning in vercel */}
+					{/* perhaps move bio to main, above projects? */}
+					{/* resize pngs and get rid of padding inside image */}
+
+					{/* get copy email button working */}
+
+					{/* 3.3 import custom fonts */}
+					{/* 4. header */}
+
+
 					<h1>Projects</h1>
-					<Accordion>
-						{projects_data.map((o) => {
-							return (
-								<AccordionItem 
-								key={o.id}
-								title={
-									<div style={{
-										cursor: "pointer",
-										width: "100%",
-										height: "100px",
-										border: "1px solid green",
-										display: "flex",
-									}}>
-										<div style={{
-											marginRight: "25px",
-											marginTop: "25px",
-											marginLeft: "25px"
-										}}>
-											<Image height="50px" width="50px" objectFit="contain" src={o.icon} />
-										</div>
-
-										<div style={{ display: "flex", flexDirection: "column" }}>
-											<h3>{o.title}</h3>
-											<div>{o.desc}</div>
-										</div>
-									</div>
-								}>
-									<TileContent />
-								</AccordionItem>
-							);
-						})}
-					</Accordion>
-
-					<br />
-					<br />
+					<AccSection data={projects_data} />
 
 					<h1>Design</h1>
-					<Accordion>
-						{design_data.map((o) => {
-							return (
-								<AccordionItem
-									key={o.id}
-									title={
-										<div style={{
-											cursor: "pointer",
-											width: "100%",
-											height: "100px",
-											border: "1px solid green",
-											display: "flex",
-										}}>
-											<div style={{
-												marginRight: "25px",
-												marginTop: "25px",
-												marginLeft: "25px"
-											}}>
-												<Image height="50px" width="50px" objectFit="contain" src={o.icon} />
-											</div>
-
-											<div style={{ display: "flex", flexDirection: "column" }}>
-												<h3>{o.title}</h3>
-												<div>{o.desc}</div>
-											</div>
-										</div>
-									}>
-									<TileContent />
-								</AccordionItem>
-							);
-						})}
-					</Accordion>
-
-					<br />
-					<br />
+					<AccSection data={design_data} />
 
 					<h1>Education</h1>
-					<Accordion>
-						{school_data.map((o) => {
-							return (
-								<AccordionItem
-									key={o.id}
-									title={
-										<div style={{
-											cursor: "pointer",
-											width: "100%",
-											height: "100px",
-											border: "1px solid green",
-											display: "flex",
-										}}>
-											<div style={{
-												marginRight: "25px",
-												marginTop: "25px",
-												marginLeft: "25px"
-											}}>
-												<Image height="50px" width="50px" objectFit="contain" src={o.icon} />
-											</div>
+					<AccSection data={school_data} />
 
-											<div style={{ display: "flex", flexDirection: "column" }}>
-												<h3>{o.title}</h3>
-												<div>{o.desc}</div>
-											</div>
-										</div>
-									}>
-									<TileContent />
-								</AccordionItem>
-							);
-						})}
-					</Accordion>
 
-					<br />
-					<br />
-
-					<footer>hello</footer>
+					<Footer />
 
 				</div>
 			</div>
