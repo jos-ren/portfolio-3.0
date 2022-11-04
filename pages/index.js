@@ -30,18 +30,21 @@ export default function Home() {
 	let linkedin = "";
 	let email = "";
 	let resume = "";
+	let behance = "";
 	if (colorTheme.value === "light-theme") {
 		sun_moon = "/icons/sun.svg";
 		github = "/icons/github.svg";
 		linkedin = "/icons/linkedin.svg";
 		email = "/icons/email.svg";
 		resume = "/icons/resume.svg";
+		behance = "/icons/behance.svg";
 	} else if (colorTheme.value === "dark-theme") {
 		sun_moon = "/icons/moon_w.svg";
 		github = "/icons/github_w.svg";
 		linkedin = "/icons/linkedin_w.svg";
 		email = "/icons/email_w.svg";
 		resume = "/icons/resume_w.svg";
+		behance = "/icons/behance_w.svg";
 	}
 
 	return (
@@ -55,7 +58,7 @@ export default function Home() {
 			<div className={styles.side}>
 
 				<div>
-					{/* <Image height="100px" width="100px" objectFit="cover" src={"/profile.jpg"} style={{ borderRadius: "50%" }} /> */}
+					<Image height="100px" width="100px" objectFit="cover" src={"/profile.jpg"} style={{ borderRadius: "50%" }} />
 				</div>
 
 				<h1 onClick={() => { console.log("test") }}>Josh Renema</h1>
@@ -72,13 +75,15 @@ export default function Home() {
 					<a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1zH8T0XU913RQCSfOq5ps4SPHl8En4zF7/view?usp=sharing">
 						<IconButton img_src={resume} />
 					</a>
+					<a target="_blank" rel="noopener noreferrer" href="https://www.behance.net/joshrenema">
+						<IconButton img_src={behance} />
+					</a>
+					<IconButton onClick={() => { colorTheme.toggle() }} img_src={sun_moon} />
 					{/* <Button href="https://drive.google.com/file/d/1zH8T0XU913RQCSfOq5ps4SPHl8En4zF7/view?usp=sharing" text="Resume" /> */}
 					{/* <IconButton href={"https://instagram.com/jos-ren"} img_src={"/icons/instagram.svg"} /> */}
 					{/* <IconButton href={"mailto:josh.renema@protonmail.com"} img_src={"/icons/grid-four.svg"} /> */}
 					{/* <IconButton href={"mailto:josh.renema@protonmail.com"} img_src={"/icons/hard-drives.svg"} /> */}
 					{/* <IconButton href={"mailto:josh.renema@protonmail.com"} img_src={"/icons/discord.svg"} /> */}
-					<IconButton onClick={() => { colorTheme.set('light-theme') }} img_src={sun_moon} />
-					<IconButton onClick={() => { colorTheme.set('dark-theme') }} img_src={sun_moon} />
 				</div>
 
 
@@ -97,13 +102,11 @@ export default function Home() {
 
 					{/* NOTES */}
 
-					{/* need to turn accordians into components */}
 					{/* add a dropdown arrow into accordian, which flips when pressed */}
 					{/* add a carousel into tile content for viewing images */}
 					{/* add space for short summary of prject  */}
 					{/* add chips for small descriptors of project, like python, react, ui, etc. */}
 					{/* add a view more button on each expanded, to redirect to website to see more (BCIT, harvard, behance, etc)*/}
-					{/* rounded corners on accordians 6px  */}
 
 					{/* eventually try and fix all warning in vercel */}
 					{/* perhaps move bio to main, above projects? */}
@@ -111,18 +114,9 @@ export default function Home() {
 
 					{/* get copy email button working */}
 
-					{/* 1. add animations when switching shapes
-					2. animations when modal expands
-					2.5 hover on tiles slightly makes it bigger?
-					3. get theme for bg and text working / universal
-						3.1 color palletes
-							3.1.1 light theme
-							3.1.2 dark theme
-							3.1.3 fun theme
-						3.2 theme switcher
-						3.3 import custom fonts
-					4. footer and header
-					 */}
+					{/* 3.3 import custom fonts */}
+					{/* 4. header */}
+
 
 					<h1>Projects</h1>
 					<AccSection data={projects_data} />

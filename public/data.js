@@ -35,7 +35,7 @@ export const projects_data = [
 		id: 4,
 		title: "Poman",
 		desc: "A foodie social network app",
-		icon: "/icons/poman.png",
+		icon: "/icons/poman.svg",
 		github_link: "/",
 		link: null,
 	},
@@ -56,7 +56,7 @@ export const design_data = [
 		title: "Digital Art",
 		desc: "Some of my design work throught the years",
 		link: "https://www.behance.net/joshrenema",
-		icon: "/icons/joker.png",
+		icon: "/icons/behance.png",
 	},
 	{
 		id: 1,
