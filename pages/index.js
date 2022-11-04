@@ -17,11 +17,10 @@ import useColorTheme from "use-color-theme";
 
 export default function Home() {
 
-	const [copied, setCopied] = useState(true);
 	// const [copied, setCopied] = useState(true);
-	const [show, setShow] = useState(false);
-
-	const colorTheme = useColorTheme("dark-theme", {
+	// const [copied, setCopied] = useState(true);
+	// const [show, setShow] = useState(false);
+	const colorTheme = useColorTheme("light-theme", {
 		classNames: ["light-theme", "dark-theme"],
 	});
 
@@ -58,7 +57,7 @@ export default function Home() {
 			<div className={styles.side}>
 
 				<div>
-					<Image height="100px" width="100px" objectFit="cover" src={"/profile.jpg"} style={{ borderRadius: "50%" }} />
+					{/* <Image height="100px" width="100px" objectFit="cover" src={"/profile.jpg"} style={{ borderRadius: "50%" }} /> */}
 				</div>
 
 				<h1 onClick={() => { console.log("test") }}>Josh Renema</h1>

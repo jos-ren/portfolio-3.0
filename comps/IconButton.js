@@ -11,47 +11,34 @@ const Container = styled.button`
   justify-content: center;
   align-items: center;
   background-color: var(--secondary);
-  // background-color: #f0f2f4;
-  transition: background-color 0.2s ease-in;
   cursor: pointer;
-  // :focus {
-  //   border: 2px solid var(--text);
-  // }
-  :hover,
-  :active {
-    // background-color: var(--tertiary);
-    // outline: none;
-    // border:2px solid var(--gradiant);
-  }
-  img {
-    width: 18px;
-    height: 18px;
-  }
-  svg {
-    background-color:white;
-  }
+  margin-right:20px;
   `;
-  
-  const Wrapper = styled.div`
-  margin-right:10px;
+
+const GradiantBorder = styled.div`
   border-radius: 6px;
   background: var(--gradiant);
+  z-index:-1;
+  display:none;
   height: 49px;
   width: 49px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  :hover{
-    // display:none;
-  }
+  position:absolute;
+  top:-2px;
+  left:-2px;
+  `;
+
+const Wrapper = styled.div`
+  position:relative;
+  // border:1px solid red;
 `;
 
 const IconButton = ({ img_src, onClick }) => {
   return (
-    <Wrapper onMouseOver={console.log("enter")}>
+    <Wrapper className="wrapper">
       <Container onClick={onClick}>
         <Image width={20} height={20} src={img_src} />
       </Container>
+      <GradiantBorder className="gradiant_border" />
     </Wrapper>
   );
 };

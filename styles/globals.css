@@ -83,10 +83,14 @@ a {
   padding: 0 4rem;
 }
 
-.socials {
+/* .socials {
   display: flex;
 }
 
 .socials * {
   margin-right: 10px;
+} */
+
+.wrapper:hover .gradiant_border {
+  display: flex;
 }
