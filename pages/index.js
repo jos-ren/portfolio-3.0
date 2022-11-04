@@ -25,6 +25,25 @@ export default function Home() {
 		classNames: ["light-theme", "dark-theme"],
 	});
 
+	let sun_moon = "";
+	let github = "";
+	let linkedin = "";
+	let email = "";
+	let resume = "";
+	if (colorTheme.value === "light-theme") {
+		sun_moon = "/icons/sun.svg";
+		github = "/icons/github.svg";
+		linkedin = "/icons/linkedin.svg";
+		email = "/icons/email.svg";
+		resume = "/icons/resume.svg";
+	} else if (colorTheme.value === "dark-theme") {
+		sun_moon = "/icons/moon_w.svg";
+		github = "/icons/github_w.svg";
+		linkedin = "/icons/linkedin_w.svg";
+		email = "/icons/email_w.svg";
+		resume = "/icons/resume_w.svg";
+	}
+
 	return (
 		<div className={styles.container}>
 			<Head>
@@ -42,24 +61,24 @@ export default function Home() {
 				<h1 onClick={() => { console.log("test") }}>Josh Renema</h1>
 				<div className={styles.socials}>
 					<a target="_blank" rel="noopener noreferrer" href="https://github.com/jos-ren">
-						<IconButton img_src={"/icons/github-3.svg"} />
+						<IconButton img_src={github} />
 					</a>
 					<a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/josh-renema/">
-						<IconButton img_src={"/icons/linkedin.svg"} />
+						<IconButton img_src={linkedin} />
 					</a>
 					<a target="_blank" rel="noopener noreferrer" href={"mailto:josh.renema@protonmail.com"}>
-						<IconButton img_src={"/icons/mail-2.svg"} />
+						<IconButton img_src={email} />
 					</a>
 					<a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1zH8T0XU913RQCSfOq5ps4SPHl8En4zF7/view?usp=sharing">
-						<IconButton img_src={"/icons/file-text.svg"} />
+						<IconButton img_src={resume} />
 					</a>
 					{/* <Button href="https://drive.google.com/file/d/1zH8T0XU913RQCSfOq5ps4SPHl8En4zF7/view?usp=sharing" text="Resume" /> */}
 					{/* <IconButton href={"https://instagram.com/jos-ren"} img_src={"/icons/instagram.svg"} /> */}
 					{/* <IconButton href={"mailto:josh.renema@protonmail.com"} img_src={"/icons/grid-four.svg"} /> */}
 					{/* <IconButton href={"mailto:josh.renema@protonmail.com"} img_src={"/icons/hard-drives.svg"} /> */}
 					{/* <IconButton href={"mailto:josh.renema@protonmail.com"} img_src={"/icons/discord.svg"} /> */}
-					<IconButton onClick={() => { colorTheme.set('light-theme') }} img_src={"/icons/sun-2.svg"} />
-					<IconButton onClick={() => { colorTheme.set('dark-theme') }} img_src={"/icons/moon-2.svg"} />
+					<IconButton onClick={() => { colorTheme.set('light-theme') }} img_src={sun_moon} />
+					<IconButton onClick={() => { colorTheme.set('dark-theme') }} img_src={sun_moon} />
 				</div>
 
 

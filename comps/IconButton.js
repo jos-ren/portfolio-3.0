@@ -10,26 +10,25 @@ const Container = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-  // background-color: var(--secondary-bg);
-  // background-color: #e2e8f0;
-  background-color: #f0f2f4;
+  background-color: var(--secondary);
+  // background-color: #f0f2f4;
   transition: background-color 0.2s ease-in;
   cursor: pointer;
-  // color: var(--headings);
-  color: #000;
+  margin-right:10px;
   :focus {
-    // border: 2px solid var(--headings);
-    border: 2px solid #000;
+    border: 2px solid var(--text);
   }
   :hover,
   :active {
-    // background-color: var(--secondary-bg-hover);
-    background-color: #cdd7e5;
+    background-color: var(--tertiary);
     outline: none;
   }
   img {
     width: 18px;
     height: 18px;
+  }
+  svg {
+    background-color:white;
   }
 `;
 
