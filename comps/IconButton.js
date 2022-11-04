@@ -33,13 +33,11 @@ const Container = styled.button`
   }
 `;
 
-const IconButton = ({ img_src, href }) => {
+const IconButton = ({ img_src, onClick }) => {
   return (
-    <a target="_blank" rel="noopener noreferrer" href={href} >
-      <Container>
-        <Image width={20} height={20} src={img_src} />
-      </Container>
-    </a>
+    <Container onClick={onClick}>
+      <Image width={20} height={20} src={img_src} />
+    </Container>
   );
 };
 

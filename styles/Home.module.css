@@ -4,13 +4,13 @@
   min-height: 100vh;
   /* padding: 0 4rem; */
   /* background: #7da2a9; */
-  background: #fafafa;
-  color: #000000;
+  /* background: #fafafa; */
+  color: var(--text);
 
 }
 
 .side {
-  border-right: 1px solid grey;
+  border-right: 1px solid var(--text);
   max-height: 100vh;
   min-height: 100vh;
   display: flex;
@@ -28,14 +28,14 @@
   /* border: 1px solid green; */
   position: relative;
   left: 35vw;
-  width: calc( 100% - 35vw);
+  width: calc(100% - 35vw);
   padding: 0 4rem;
 }
 
-.socials{
-  display:flex;
+.socials {
+  display: flex;
 }
 
-.socials *{
-  margin-right:10px;
+.socials * {
+  margin-right: 10px;
 }

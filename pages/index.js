@@ -13,11 +13,17 @@ import IconButton from '../comps/IconButton';
 import Button from '../comps/Button';
 import Footer from '../comps/Footer';
 
+import useColorTheme from "use-color-theme";
+
 export default function Home() {
 
 	const [copied, setCopied] = useState(true);
 	// const [copied, setCopied] = useState(true);
 	const [show, setShow] = useState(false);
+
+	const colorTheme = useColorTheme("dark-theme", {
+		classNames: ["light-theme", "dark-theme"],
+	});
 
 	return (
 		<div className={styles.container}>
@@ -35,17 +41,25 @@ export default function Home() {
 
 				<h1 onClick={() => { console.log("test") }}>Josh Renema</h1>
 				<div className={styles.socials}>
-					<IconButton href={"https://github.com/jos-ren"} img_src={"/icons/github-3.svg"} />
-					<IconButton href={"https://www.linkedin.com/in/josh-renema/"} img_src={"/icons/linkedin.svg"} />
-					<IconButton href={"mailto:josh.renema@protonmail.com"} img_src={"/icons/mail-2.svg"} />
-					<IconButton href="https://drive.google.com/file/d/1zH8T0XU913RQCSfOq5ps4SPHl8En4zF7/view?usp=sharing" img_src={"/icons/file-text.svg"} />
+					<a target="_blank" rel="noopener noreferrer" href="https://github.com/jos-ren">
+						<IconButton img_src={"/icons/github-3.svg"} />
+					</a>
+					<a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/josh-renema/">
+						<IconButton img_src={"/icons/linkedin.svg"} />
+					</a>
+					<a target="_blank" rel="noopener noreferrer" href={"mailto:josh.renema@protonmail.com"}>
+						<IconButton img_src={"/icons/mail-2.svg"} />
+					</a>
+					<a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1zH8T0XU913RQCSfOq5ps4SPHl8En4zF7/view?usp=sharing">
+						<IconButton img_src={"/icons/file-text.svg"} />
+					</a>
 					{/* <Button href="https://drive.google.com/file/d/1zH8T0XU913RQCSfOq5ps4SPHl8En4zF7/view?usp=sharing" text="Resume" /> */}
 					{/* <IconButton href={"https://instagram.com/jos-ren"} img_src={"/icons/instagram.svg"} /> */}
 					{/* <IconButton href={"mailto:josh.renema@protonmail.com"} img_src={"/icons/grid-four.svg"} /> */}
 					{/* <IconButton href={"mailto:josh.renema@protonmail.com"} img_src={"/icons/hard-drives.svg"} /> */}
-					<IconButton href={"mailto:josh.renema@protonmail.com"} img_src={"/icons/sun-2.svg"} />
-					<IconButton href={"mailto:josh.renema@protonmail.com"} img_src={"/icons/moon-2.svg"} />
 					{/* <IconButton href={"mailto:josh.renema@protonmail.com"} img_src={"/icons/discord.svg"} /> */}
+					<IconButton onClick={() => { colorTheme.set('light-theme') }} img_src={"/icons/sun-2.svg"} />
+					<IconButton onClick={() => { colorTheme.set('dark-theme') }} img_src={"/icons/moon-2.svg"} />
 				</div>
 
 

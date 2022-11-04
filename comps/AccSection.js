@@ -10,7 +10,7 @@ const Container = styled.div`
     margin-bottom:50px;
     border-radius:8px;
     // border: 1px solid green;
-    background:#f0f2f4;
+    background:var(--secondary);
 `;
 
 const ItemTitle = styled.div`
@@ -20,7 +20,7 @@ const ItemTitle = styled.div`
     // background:black;
     display: flex;
     justify-content: space-between;
-    border-bottom:1px solid green;
+    // border-bottom:1px solid green;
 `;
 
 const AccSection = ({ data }) => {
