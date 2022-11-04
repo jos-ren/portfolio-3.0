@@ -49,3 +49,6 @@ a {
   box-sizing: border-box;
 }
 
+.wrapper:hover .gradiant_border {
+  display: flex;
+}
