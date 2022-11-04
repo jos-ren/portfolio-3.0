@@ -3,15 +3,14 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import React, { useState } from "react";
 
-import { Theme } from "../styles/theme";
 import { projects_data } from '../public/data.js';
 import { school_data } from '../public/data.js';
 import { design_data } from '../public/data.js';
 
 import AccSection from "../comps/AccSection.js"
 import IconButton from '../comps/IconButton';
-import Button from '../comps/Button';
 import Footer from '../comps/Footer';
+import Header from '../comps/Header';
 
 import useColorTheme from "use-color-theme";
 
@@ -77,12 +76,6 @@ export default function Home() {
 					<a target="_blank" rel="noopener noreferrer" href="https://www.behance.net/joshrenema">
 						<IconButton img_src={behance} />
 					</a>
-					<IconButton onClick={() => { colorTheme.toggle() }} img_src={sun_moon} />
-					{/* <Button href="https://drive.google.com/file/d/1zH8T0XU913RQCSfOq5ps4SPHl8En4zF7/view?usp=sharing" text="Resume" /> */}
-					{/* <IconButton href={"https://instagram.com/jos-ren"} img_src={"/icons/instagram.svg"} /> */}
-					{/* <IconButton href={"mailto:josh.renema@protonmail.com"} img_src={"/icons/grid-four.svg"} /> */}
-					{/* <IconButton href={"mailto:josh.renema@protonmail.com"} img_src={"/icons/hard-drives.svg"} /> */}
-					{/* <IconButton href={"mailto:josh.renema@protonmail.com"} img_src={"/icons/discord.svg"} /> */}
 				</div>
 
 
@@ -97,39 +90,33 @@ export default function Home() {
 
 			<div className={styles.main}>
 
-				<div>
+				{/* NOTES */}
 
-					{/* NOTES */}
+				{/* add a dropdown arrow into accordian, which flips when pressed */}
+				{/* add a carousel into tile content for viewing images */}
+				{/* add space for short summary of prject  */}
+				{/* add chips for small descriptors of project, like python, react, ui, etc. */}
+				{/* add a view more button on each expanded, to redirect to website to see more (BCIT, harvard, behance, etc)*/}
 
-					{/* add a dropdown arrow into accordian, which flips when pressed */}
-					{/* add a carousel into tile content for viewing images */}
-					{/* add space for short summary of prject  */}
-					{/* add chips for small descriptors of project, like python, react, ui, etc. */}
-					{/* add a view more button on each expanded, to redirect to website to see more (BCIT, harvard, behance, etc)*/}
+				{/* eventually try and fix all warning in vercel */}
+				{/* perhaps move bio to main, above projects? */}
+				{/* resize pngs and get rid of padding inside image */}
 
-					{/* eventually try and fix all warning in vercel */}
-					{/* perhaps move bio to main, above projects? */}
-					{/* resize pngs and get rid of padding inside image */}
+				{/* 3.3 import custom fonts */}
+				{/* 4. header */}
 
-					{/* get copy email button working */}
+				<Header onClick={() => { colorTheme.toggle() }} img_src={sun_moon} />
 
-					{/* 3.3 import custom fonts */}
-					{/* 4. header */}
+				<h1>Projects</h1>
+				<AccSection data={projects_data} />
 
+				<h1>Design</h1>
+				<AccSection data={design_data} />
 
-					<h1>Projects</h1>
-					<AccSection data={projects_data} />
+				<h1>Education</h1>
+				<AccSection data={school_data} />
 
-					<h1>Design</h1>
-					<AccSection data={design_data} />
-
-					<h1>Education</h1>
-					<AccSection data={school_data} />
-
-
-					<Footer />
-
-				</div>
+				<Footer />
 			</div>
 		</div >
 	)

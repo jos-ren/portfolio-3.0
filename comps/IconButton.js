@@ -12,7 +12,7 @@ const Container = styled.button`
   align-items: center;
   background-color: var(--secondary);
   cursor: pointer;
-  margin-right:20px;
+  margin-right: ${({ margin }) => margin};
   `;
 
 const GradiantBorder = styled.div`
@@ -32,10 +32,10 @@ const Wrapper = styled.div`
   // border:1px solid red;
 `;
 
-const IconButton = ({ img_src, onClick }) => {
+const IconButton = ({ img_src, onClick, margin }) => {
   return (
     <Wrapper className="wrapper">
-      <Container onClick={onClick}>
+      <Container onClick={onClick} margin={margin}>
         <Image width={20} height={20} src={img_src} />
       </Container>
       <GradiantBorder className="gradiant_border" />
@@ -44,3 +44,7 @@ const IconButton = ({ img_src, onClick }) => {
 };
 
 export default IconButton;
+
+IconButton.defaultProps = {
+  margin: "20px",
+};
