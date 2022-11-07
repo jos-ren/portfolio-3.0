@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import React, { useState } from "react";
+import styled from "styled-components";
 
 import { projects_data } from '../public/data.js';
 import { school_data } from '../public/data.js';
@@ -16,9 +17,6 @@ import useColorTheme from "use-color-theme";
 
 export default function Home() {
 
-	// const [copied, setCopied] = useState(true);
-	// const [copied, setCopied] = useState(true);
-	// const [show, setShow] = useState(false);
 	const colorTheme = useColorTheme("light-theme", {
 		classNames: ["light-theme", "dark-theme"],
 	});
@@ -45,6 +43,17 @@ export default function Home() {
 		behance = "/icons/behance_w.svg";
 	}
 
+	const Title = styled.h1`
+	font-family: ThunderBold;
+	font-size: 120pt;
+	background: var(--gradiant);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	margin:0px;
+	padding:0px;
+	letter-spacing:5px
+`;
+
 	return (
 		<div className={styles.container}>
 			<Head>
@@ -55,11 +64,21 @@ export default function Home() {
 
 			<div className={styles.side}>
 
-				<div>
-					{/* <Image height="100px" width="100px" objectFit="cover" src={"/profile.jpg"} style={{ borderRadius: "50%" }} /> */}
+				{/* <div>
+					<Image height="100px" width="100px" objectFit="cover" src={"/profile.jpg"} style={{ borderRadius: "50%" }} />
+				</div> */}
+				<div style={{ position: "relative", bottom: "-50px" }}>
+					<Title>JOSH</Title>
+					<Title style={{
+						fontSize: "50pt",
+						marginBottom: "20px",
+						fontFamily: "ThunderLight",
+						letterSpacing: "20px",
+						top: "-50px",
+						left: "10px",
+						position: "relative"
+					}}>RENEMA</Title>
 				</div>
-
-				<h1 onClick={() => { console.log("test") }}>Josh Renema</h1>
 				<div className={styles.socials}>
 					<a target="_blank" rel="noopener noreferrer" href="https://github.com/jos-ren">
 						<IconButton img_src={github} />
@@ -103,6 +122,7 @@ export default function Home() {
 				{/* resize pngs and get rid of padding inside image */}
 
 				{/* 3.3 import custom fonts */}
+				{/* add a bold font for josh, and a slimmer smaller one for renema. */}
 				{/* 4. header */}
 
 				<Header onClick={() => { colorTheme.toggle() }} img_src={sun_moon} />

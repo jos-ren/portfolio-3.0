@@ -1,24 +1,27 @@
-/* .light-theme {
-  --headings: #000;
-  --text: #38393e;
-  --bg: #fff;
-  --transparent-bg: rgba(255, 255, 255, 0.5);
-  --secondary-bg: #e2e8f0;
-  --secondary-bg-hover: #cdd7e5;
-  --tertiary: #7e8bb6;
-  --gradient: linear-gradient(90deg,
-      rgba(66, 84, 147, 1) 0%,
-      rgba(68, 171, 144, 1) 73%,
-      rgba(26, 117, 135, 1) 100%);
-} */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+
+@font-face {
+  font-family: 'WildWorld';
+  src: url('/fonts/WildWorld.otf');
+ }
+
+@font-face {
+  font-family: 'ThunderBold';
+  src: url('/fonts/ThunderBold.otf');
+ }
+
+@font-face {
+  font-family: 'ThunderLight';
+  src: url('/fonts/ThunderLight.otf');
+ }
 
 .light-theme {
   --primary: #fafafa;
   --secondary: #f0f2f4;
   --tertiary: #e2e8f0;
   --text: #000000;
+  --gradiant: linear-gradient(90deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
   /* --headings: #727175; */
-  --gradiant: linear-gradient(90deg, hsla(152, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
 }
 
 .dark-theme {
@@ -26,8 +29,8 @@
   --secondary: #2b2b37;
   --tertiary: #4f4f64;
   --text: #FFFFFF;
+  --gradiant: linear-gradient(90deg, hsla(152, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
   /* --headings: #727175; */
-  --gradiant: linear-gradient(90deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
 }
 
 html,
