@@ -55,3 +55,59 @@ a {
 .wrapper:hover .gradiant_border {
   display: flex;
 }
+
+/* carousel styles */
+.rec.rec-arrow {
+  border-radius: 0;
+  border: none;
+  outline: none;
+  background: var(--bg);
+  color: var(--text);
+  box-shadow: none;
+  height: 300px;
+}
+
+.rec.rec-arrow.rec-arrow-right {
+  position: relative;
+  right: 20px;
+}
+
+.rec.rec-arrow:hover:enabled {
+  color: var(--text);
+  background: var(--primnary);
+  background-color: var(--primnary);
+  box-shadow: none;
+}
+
+.rec.rec-arrow:focus:enabled {
+  color: var(--text);
+  background: var(--primnary);
+  background-color: var(--primnary);
+  box-shadow: none;
+}
+
+.rec.rec-arrow:disabled {
+  /* color: var(--secondary); */
+  visibility: hidden;
+}
+
+.rec.rec-dot {
+  color: var(--text);
+  background: var(--secondary);
+  border: none;
+  box-shadow: none;
+}
+
+.rec.rec-dot:hover {
+  box-shadow: 0 0 1px 2px var(--text);
+}
+
+.rec.rec-dot_active {
+  box-shadow: none;
+  background: var(--text);
+}
+
+.rec.rec-dot_active:focus {
+  box-shadow: none;
+  background: var(--text);
+}

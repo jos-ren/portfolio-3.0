@@ -22,6 +22,9 @@ export const projects_data = [
 		icon: "/icons/petsave.png",
 		github_link: "https://github.com/jos-ren/petsave-frontend",
 		link: null,
+		screenshots: [
+			{ src: "/screenshots/pantro/1.png"},
+		],
 	},
 	{
 		id: 3,
@@ -30,6 +33,14 @@ export const projects_data = [
 		icon: "/icons/pantro.png",
 		github_link: "https://github.com/jos-ren/bcitd3_pantro",
 		link: null,
+		screenshots: [
+			{ src: "/screenshots/pantro/1.png"},
+			{ src: "/screenshots/pantro/2.png"},
+			{ src: "/screenshots/pantro/3.png"},
+			{ src: "/screenshots/pantro/4.png"},
+			{ src: "/screenshots/pantro/5.png"},
+			{ src: "/screenshots/pantro/6.png"},
+		],
 	},
 	{
 		id: 4,

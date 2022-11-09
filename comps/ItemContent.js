@@ -1,24 +1,30 @@
 import React from "react";
 import styled from "styled-components";
 import Carousel from 'react-elastic-carousel';
+import Image from 'next/image'
 
 const Container = styled.div`
-    height:300px;
+    height:490px;
+    padding-top:30px;
     // border:1px solid red;
     background:var(--tertiary);
 `;
 import { projects_data } from '../public/data.js';
+console.log(projects_data[3].screenshots)
 
 const ItemContent = ({ }) => {
     return (
         <Container>
-            {/* <Carousel itemsToShow={5}>
-                {projects_data.map((o, i) => {
+            {/* mobile screenshots */}
+            <Carousel itemsToShow={3}>
+                {projects_data[3].screenshots.map((o, i) => {
+                    console.log(o.src)
                     return (
-                        <div key={i}>{o.id}</div>
+                        <div key={i}><Image height={400} width={200} src={o.src} /></div>
                     );
                 })}
-            </Carousel> */}
+            </Carousel>
+            {/* desktop screenshots */}
         </Container>
     );
 };

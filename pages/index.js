@@ -79,6 +79,7 @@ export default function Home() {
 						position: "relative"
 					}}>RENEMA</Title>
 				</div>
+				{/* <div>full stack developer & designer</div> */}
 				<div className={styles.socials}>
 					<a target="_blank" rel="noopener noreferrer" href="https://github.com/jos-ren">
 						<IconButton img_src={github} />
@@ -110,6 +111,8 @@ export default function Home() {
 			<div className={styles.main}>
 
 				{/* NOTES */}
+
+				{/* PERHAPS SEPERATE BCITY AND SCM INTO CLIENTS AND OTHERS INTO PERSONAL PROJECTS */}
 
 				{/* add a dropdown arrow into accordian, which flips when pressed */}
 				{/* add a carousel into tile content for viewing images */}

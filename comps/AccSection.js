@@ -50,6 +50,7 @@ const AccSection = ({ data }) => {
                 {data.map((o, idx) => {
                     return (
                         <AccordionItem
+                        style={{borderBottom:"1px solid var(--primary)"}}
                             onExpand={() => HandleOpenExpand(true, idx)}
                             onClose={() => HandleOpenExpand(false, -1)}
                             key={o.id}
