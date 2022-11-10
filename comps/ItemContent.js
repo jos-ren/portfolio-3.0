@@ -12,15 +12,16 @@ const Container = styled.div`
 import { projects_data } from '../public/data.js';
 console.log(projects_data[3].screenshots)
 
-const ItemContent = ({ }) => {
+const ItemContent = ({ id }) => {
     return (
         <Container>
             {/* mobile screenshots */}
+            {/* change carousel arrow to match accordians */}
             <Carousel itemsToShow={3}>
-                {projects_data[3].screenshots.map((o, i) => {
-                    console.log(o.src)
+                {projects_data[id].screenshots.map((o, i) => {
+                    // console.log(o.src)
                     return (
-                        <div key={i}><Image height={400} width={200} src={o.src} /></div>
+                        <div key={i}><Image height={400} width={200} src={o.src} style={{borderRadius:"6px"}}/></div>
                     );
                 })}
             </Carousel>

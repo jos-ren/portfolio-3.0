@@ -6,6 +6,9 @@ export const projects_data = [
 		icon: "/icons/scm.png",
 		github_link: "",
 		link: "https://smartcitymedia.com/stock/browse/",
+		screenshots: [
+			{ src: "/screenshots/pantro/1.png"},
+		],
 	},
 	{
 		id: 1,
@@ -14,6 +17,9 @@ export const projects_data = [
 		icon: "/icons/bcit.png",
 		github_link: "",
 		link: "https://crm.techiesoftomorrow.com/",
+		screenshots: [
+			{ src: "/screenshots/pantro/1.png"},
+		],
 	},
 	{
 		id: 2,
@@ -23,7 +29,14 @@ export const projects_data = [
 		github_link: "https://github.com/jos-ren/petsave-frontend",
 		link: null,
 		screenshots: [
-			{ src: "/screenshots/pantro/1.png"},
+			{ src: "/screenshots/petsave/6.png"},
+			{ src: "/screenshots/petsave/7.png"},
+			{ src: "/screenshots/petsave/4.png"},
+			{ src: "/screenshots/petsave/5.png"},
+			// { src: "/screenshots/petsave/8.png"},
+			// { src: "/screenshots/petsave/1.png"},
+			{ src: "/screenshots/petsave/2.png"},
+			// { src: "/screenshots/petsave/3.png"},
 		],
 	},
 	{
@@ -48,7 +61,10 @@ export const projects_data = [
 		desc: "A foodie social network app",
 		icon: "/icons/poman.svg",
 		github_link: "/",
-		link: null,
+		link: "https://www.youtube.com/watch?v=Rze68rEMxhk",
+		screenshots: [
+			{ src: "/screenshots/pantro/1.png"},
+		],
 	},
 	{
 		id: 5,
@@ -57,7 +73,15 @@ export const projects_data = [
 		icon: "/icons/getem.png",
 		href: "/projects/getem",
 		github_link: "/",
-		link: null,
+		link: "https://www.youtube.com/watch?v=HvQbuNzpwho",
+		screenshots: [
+			{ src: "/screenshots/getem/1.jpg"},
+			{ src: "/screenshots/getem/2.jpg"},
+			{ src: "/screenshots/getem/3.jpg"},
+			{ src: "/screenshots/getem/4.jpg"},
+			{ src: "/screenshots/getem/5.jpg"},
+			{ src: "/screenshots/getem/6.jpg"},
+		],
 	},
 ]
 
