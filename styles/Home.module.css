@@ -6,7 +6,7 @@
 }
 
 .side {
-  border-right: 1px solid var(--text);
+  border-right: 1px solid var(--secondary);
   max-height: 100vh;
   min-height: 100vh;
   display: flex;

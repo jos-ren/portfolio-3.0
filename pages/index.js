@@ -1,14 +1,22 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import styled from "styled-components";
+
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+import { Pagination } from "swiper";
 
 import { projects_data } from '../public/data.js';
 import { school_data } from '../public/data.js';
 import { design_data } from '../public/data.js';
 
 import AccSection from "../comps/AccSection.js"
+import Card from '../comps/Card';
 import IconButton from '../comps/IconButton';
 import Footer from '../comps/Footer';
 import Header from '../comps/Header';
@@ -43,17 +51,6 @@ export default function Home() {
 		behance = "/icons/behance_w.svg";
 	}
 
-	const Title = styled.h1`
-	font-family: ThunderBold;
-	font-size: 120pt;
-	background: var(--gradiant);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	margin:0px;
-	padding:0px;
-	letter-spacing:5px
-`;
-
 	return (
 		<div className={styles.container}>
 			<Head>
@@ -64,22 +61,9 @@ export default function Home() {
 
 			<div className={styles.side}>
 
-				{/* <div>
-					<Image height="100px" width="100px" objectFit="cover" src={"/profile.jpg"} style={{ borderRadius: "50%" }} />
-				</div> */}
-				<div style={{ position: "relative", bottom: "-50px" }}>
-					<Title>JOSH</Title>
-					<Title style={{
-						fontSize: "50pt",
-						marginBottom: "20px",
-						fontFamily: "ThunderLight",
-						letterSpacing: "20px",
-						top: "-50px",
-						left: "10px",
-						position: "relative"
-					}}>RENEMA</Title>
-				</div>
-				{/* <div>full stack developer & designer</div> */}
+				<Image style={{ borderRadius: "50%" }} height="350px" width="350px" objectFit="cover" src="/profile_mountain.jpg" />
+				<h1 style={{ fontWeight: "500", fontSize: "40pt" }}>Josh Renema</h1>
+
 				<div className={styles.socials}>
 					<a target="_blank" rel="noopener noreferrer" href="https://github.com/jos-ren">
 						<IconButton img_src={github} />
@@ -98,13 +82,7 @@ export default function Home() {
 					</a>
 				</div>
 
-
-				{/* about me */}
-				{/* <p>I'm a Full Stack Developer and Designer, currently living in Surrey, Canada. I enjoy creating projects that live on the internet, whether that be websites, applications, or anything in between. I always strive for my projects to provide real world value.</p>
-				<p>I’ve just wrapped up my diploma at the Digital Design and Development program at BCIT, where I’ve learned how to develop and design responsive, cross-platform applications.</p>
-				<p>I’m currently working as a Full Stack Developer at Techies of Tommorow, a tech talent incubator that empowers recent BC tech graduates to work on real industry projects that require high-quality and cost-effective solutions.</p>
-				<p>When I’m not spending my days coding and designing, you’ll probably find me riding my jeep out in the mountains, trying out new food with friends, or testing out my Nikon film camera. Feel free to checkout my projects below or browse to your heart's content!</p> */}
-
+				{/* ADD A TEXT FOR WHAT U ARE HOVERING (BEHNACE, ETC.) */}
 
 			</div>
 
@@ -128,16 +106,69 @@ export default function Home() {
 				{/* add a bold font for josh, and a slimmer smaller one for renema. */}
 				{/* 4. header */}
 
+				{/*  */}
 				<Header onClick={() => { colorTheme.toggle() }} img_src={sun_moon} />
 
-				<h1>Projects</h1>
-				<AccSection data={projects_data} />
 
-				<h1>Design</h1>
-				<AccSection data={design_data} />
+				{/* about me */}
+				{/* <p>I'm a Full Stack Developer and Designer, currently living in Surrey, Canada. I enjoy creating projects that live on the internet, whether that be websites, applications, or anything in between. I always strive for my projects to provide real world value.</p>
+				<p>I’ve just wrapped up my diploma at the Digital Design and Development program at BCIT, where I’ve learned how to develop and design responsive, cross-platform applications.</p>
+				<p>I’m currently working as a Full Stack Developer at Techies of Tommorow, a tech talent incubator that empowers recent BC tech graduates to work on real industry projects that require high-quality and cost-effective solutions.</p>
+				<p>When I’m not spending my days coding and designing, you’ll probably find me riding my jeep out in the mountains, trying out new food with friends, or testing out my Nikon film camera. Feel free to checkout my projects below or browse to your heart's content!</p> */}
+
+					{/* add arrows? swiper demo for ijnfo */}
+				<h1>Projects</h1>
+				<Swiper
+					slidesPerView={3.5}
+					spaceBetween={0}
+					pagination={{
+						clickable: true,
+					}}
+					modules={[Pagination]}
+					className="mySwiper"
+				>
+					{projects_data.map((o, i) => {
+						console.log(o, i)
+						return <SwiperSlide><Card key={i} icon={o.icon} title={o.title} desc={o.desc} /></SwiperSlide>
+					})}
+				</Swiper>
+				{/* once you have enough projects, make this section 2 rows (2x5 or whatever) */}
+
+
+
 
 				<h1>Education</h1>
-				<AccSection data={school_data} />
+				<Swiper
+					slidesPerView={3.5}
+					spaceBetween={30}
+					pagination={{
+						clickable: true,
+					}}
+					modules={[Pagination]}
+					className="mySwiper"
+				>
+					{school_data.map((o, i) => {
+						console.log(o, i)
+						return <SwiperSlide><Card key={i} icon={o.icon} title={o.title} desc={o.desc} /></SwiperSlide>
+					})}
+				</Swiper>
+
+				<h1>Interests</h1>
+				{/* maybe have this as small squares  */}
+				<Swiper
+					slidesPerView={3.5}
+					spaceBetween={30}
+					pagination={{
+						clickable: true,
+					}}
+					modules={[Pagination]}
+					className="mySwiper"
+				>
+					{school_data.map((o, i) => {
+						console.log(o, i)
+						return <SwiperSlide><Card key={i} icon={o.icon} title={o.title} desc={o.desc} /></SwiperSlide>
+					})}
+				</Swiper>
 
 				<Footer />
 			</div>

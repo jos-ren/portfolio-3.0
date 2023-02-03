@@ -17,7 +17,7 @@ const ItemContent = ({ id }) => {
         <Container>
             {/* mobile screenshots */}
             {/* change carousel arrow to match accordians */}
-            <Carousel itemsToShow={3}>
+            <Carousel itemsToShow={4}>
                 {projects_data[id].screenshots.map((o, i) => {
                     // console.log(o.src)
                     return (
