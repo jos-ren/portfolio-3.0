@@ -119,7 +119,7 @@ export default function Home() {
 				{/* add arrows? swiper demo for ijnfo */}
 				<h1>Projects</h1>
 				<Swiper
-					slidesPerView={3.5}
+					slidesPerView={4.5}
 					spaceBetween={0}
 					pagination={{
 						clickable: true,

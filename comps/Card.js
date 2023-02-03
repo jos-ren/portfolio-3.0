@@ -16,8 +16,8 @@ const Card = ({ title, desc, icon }) => {
             <div>
                 <Image height="50px" width="50px" objectFit="contain" src={icon} />
             </div>
-            <h3 style={{margin:"0px"}}>{title}</h3>
-            <div>{desc}</div>
+            <h3 style={{margin:"10px 0px 0px 0px"}}>{title}</h3>
+            <div style={{fontSize:"12pt"}}>{desc}</div>
             {/* <div style={{ display: "flex", flexDirection: "column" }}> */}
             {/* </div> */}
         </Container>
