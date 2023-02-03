@@ -9,13 +9,13 @@ import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
-import { Pagination } from "swiper";
+import "swiper/css/navigation";
+import 'swiper/css/scrollbar';
+import { Pagination, Navigation, Scrollbar } from "swiper";
 
 import { projects_data } from '../public/data.js';
 import { school_data } from '../public/data.js';
-import { design_data } from '../public/data.js';
 
-import AccSection from "../comps/AccSection.js"
 import Card from '../comps/Card';
 import IconButton from '../comps/IconButton';
 import Footer from '../comps/Footer';
@@ -119,16 +119,15 @@ export default function Home() {
 				{/* add arrows? swiper demo for ijnfo */}
 				<h1>Projects</h1>
 				<Swiper
-					slidesPerView={4.5}
+					modules={[Pagination, Navigation, Scrollbar]}
+					slidesPerView={3}
 					spaceBetween={0}
-					pagination={{
-						clickable: true,
-					}}
-					modules={[Pagination]}
+					// navigation={true}
+					scrollbar={{ draggable: true }}
+					// pagination={{ clickable: true, }}
 					className="mySwiper"
 				>
 					{projects_data.map((o, i) => {
-						console.log(o, i)
 						return <SwiperSlide key={i}><Card icon={o.icon} title={o.title} desc={o.desc} /></SwiperSlide>
 					})}
 				</Swiper>
@@ -139,7 +138,7 @@ export default function Home() {
 
 				<h1>Education</h1>
 				<Swiper
-					slidesPerView={3.5}
+					slidesPerView={3}
 					spaceBetween={30}
 					pagination={{
 						clickable: true,
@@ -148,7 +147,6 @@ export default function Home() {
 					className="mySwiper"
 				>
 					{school_data.map((o, i) => {
-						console.log(o, i)
 						return <SwiperSlide key={i}><Card icon={o.icon} title={o.title} desc={o.desc} /></SwiperSlide>
 					})}
 				</Swiper>
@@ -156,7 +154,7 @@ export default function Home() {
 				<h1>Interests</h1>
 				{/* maybe have this as small squares  */}
 				<Swiper
-					slidesPerView={3.5}
+					slidesPerView={3}
 					spaceBetween={30}
 					pagination={{
 						clickable: true,
@@ -165,10 +163,11 @@ export default function Home() {
 					className="mySwiper"
 				>
 					{school_data.map((o, i) => {
-						console.log(o, i)
 						return <SwiperSlide key={i}><Card icon={o.icon} title={o.title} desc={o.desc} /></SwiperSlide>
 					})}
 				</Swiper>
+
+				<h1>Languages</h1>
 
 				<Footer />
 			</div>

@@ -18,6 +18,8 @@ const Card = ({ title, desc, icon }) => {
             </div>
             <h3 style={{margin:"10px 0px 2px 0px"}}>{title}</h3>
             <div style={{fontSize:"12pt"}}>{desc}</div>
+            {/* <a>Link</a> */}
+            {/* add icon which shows piopup on hover in corner */}
             {/* <div style={{ display: "flex", flexDirection: "column" }}> */}
             {/* </div> */}
         </Container>
