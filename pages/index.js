@@ -116,7 +116,7 @@ export default function Home() {
 				<p>I’m currently working as a Full Stack Developer at Techies of Tommorow, a tech talent incubator that empowers recent BC tech graduates to work on real industry projects that require high-quality and cost-effective solutions.</p>
 				<p>When I’m not spending my days coding and designing, you’ll probably find me riding my jeep out in the mountains, trying out new food with friends, or testing out my Nikon film camera. Feel free to checkout my projects below or browse to your heart's content!</p> */}
 
-					{/* add arrows? swiper demo for ijnfo */}
+				{/* add arrows? swiper demo for ijnfo */}
 				<h1>Projects</h1>
 				<Swiper
 					slidesPerView={3.5}
@@ -129,7 +129,7 @@ export default function Home() {
 				>
 					{projects_data.map((o, i) => {
 						console.log(o, i)
-						return <SwiperSlide><Card key={i} icon={o.icon} title={o.title} desc={o.desc} /></SwiperSlide>
+						return <SwiperSlide key={i}><Card icon={o.icon} title={o.title} desc={o.desc} /></SwiperSlide>
 					})}
 				</Swiper>
 				{/* once you have enough projects, make this section 2 rows (2x5 or whatever) */}
@@ -149,7 +149,7 @@ export default function Home() {
 				>
 					{school_data.map((o, i) => {
 						console.log(o, i)
-						return <SwiperSlide><Card key={i} icon={o.icon} title={o.title} desc={o.desc} /></SwiperSlide>
+						return <SwiperSlide key={i}><Card icon={o.icon} title={o.title} desc={o.desc} /></SwiperSlide>
 					})}
 				</Swiper>
 
@@ -166,7 +166,7 @@ export default function Home() {
 				>
 					{school_data.map((o, i) => {
 						console.log(o, i)
-						return <SwiperSlide><Card key={i} icon={o.icon} title={o.title} desc={o.desc} /></SwiperSlide>
+						return <SwiperSlide key={i}><Card icon={o.icon} title={o.title} desc={o.desc} /></SwiperSlide>
 					})}
 				</Swiper>
 
