@@ -14,4 +14,4 @@ To develop my site, I used React and Styled Components to make a clean yet strai
 
 <h2>Screenshot</h2>
 
-![image](https://user-images.githubusercontent.com/60946895/199882413-d6b594a4-5c40-401e-a982-ff80e36098e2.png)
+![image](https://user-images.githubusercontent.com/60946895/216483355-ae6ae2af-d257-4ecb-a8f2-a07dabaf0713.png)
