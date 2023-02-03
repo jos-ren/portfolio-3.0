@@ -9,7 +9,7 @@ const Container = styled.div`
     display:flex;
     align-items:center;
     justify-content:center;
-    // background-color: var(--secondary);
+    background-color: var(--secondary);
     position: relative;
     right: 4rem;
     width: calc(100% + 8rem)
@@ -17,7 +17,7 @@ const Container = styled.div`
 const Footer = ({ }) => {
     return (
         <Container>
-            <div>Developed & Designed by <b>Josh Renema</b> 2022</div>
+            <div>Developed & Designed by <b>Josh Renema</b> 2023</div>
         </Container>
     );
 };
