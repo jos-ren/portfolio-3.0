@@ -11,15 +11,18 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import 'swiper/css/scrollbar';
-import { Pagination, Navigation, Scrollbar } from "swiper";
+import "swiper/css/grid";
+import { Pagination, Navigation, Scrollbar, Grid } from "swiper";
 
 import { projects_data } from '../public/data.js';
 import { school_data } from '../public/data.js';
+import { icons_data } from '../public/data.js';
 
 import Card from '../comps/Card';
 import IconButton from '../comps/IconButton';
 import Footer from '../comps/Footer';
 import Header from '../comps/Header';
+import Tile from '../comps/Tile';
 
 import useColorTheme from "use-color-theme";
 
@@ -51,6 +54,16 @@ export default function Home() {
 		behance = "/icons/behance_w.svg";
 	}
 
+	const Grid = styled.div`
+		display: grid;
+		grid-template-columns: repeat(6, 1fr);
+		grid-template-rows: repeat(2, 1fr);
+		grid-column-gap: 0px;
+		grid-row-gap: 0px; 
+		// border:1px solid red;
+		width: calc(100% + 4rem);
+`;
+
 	return (
 		<div className={styles.container}>
 			<Head>
@@ -61,8 +74,10 @@ export default function Home() {
 
 			<div className={styles.side}>
 
+
 				<Image style={{ borderRadius: "50%" }} height="350px" width="350px" objectFit="cover" src="/profile_mountain.jpg" />
-				<h1 style={{ fontWeight: "500", fontSize: "40pt" }}>Josh Renema</h1>
+				<h1 style={{ fontWeight: "500", fontSize: "40pt", margin:'0px' }}>Josh Renema</h1>
+				<div style={{marginBottom:"20px"}}>Fullstack Developer</div>
 
 				<div className={styles.socials}>
 					<a target="_blank" rel="noopener noreferrer" href="https://github.com/jos-ren">
@@ -88,28 +103,9 @@ export default function Home() {
 
 			<div className={styles.main}>
 
-				{/* NOTES */}
-
-				{/* PERHAPS SEPERATE BCITY AND SCM INTO CLIENTS AND OTHERS INTO PERSONAL PROJECTS */}
-
-				{/* add a dropdown arrow into accordian, which flips when pressed */}
-				{/* add a carousel into tile content for viewing images */}
-				{/* add space for short summary of prject  */}
-				{/* add chips for small descriptors of project, like python, react, ui, etc. */}
-				{/* add a view more button on each expanded, to redirect to website to see more (BCIT, harvard, behance, etc)*/}
-
-				{/* eventually try and fix all warning in vercel */}
-				{/* perhaps move bio to main, above projects? */}
-				{/* resize pngs and get rid of padding inside image */}
-
-				{/* 3.3 import custom fonts */}
-				{/* add a bold font for josh, and a slimmer smaller one for renema. */}
-				{/* 4. header */}
-
-				{/*  */}
 				<Header onClick={() => { colorTheme.toggle() }} img_src={sun_moon} />
 
-
+				{/* perhaps move bio to main, above projects? */}
 				{/* about me */}
 				{/* <p>I'm a Full Stack Developer and Designer, currently living in Surrey, Canada. I enjoy creating projects that live on the internet, whether that be websites, applications, or anything in between. I always strive for my projects to provide real world value.</p>
 				<p>I’ve just wrapped up my diploma at the Digital Design and Development program at BCIT, where I’ve learned how to develop and design responsive, cross-platform applications.</p>
@@ -117,14 +113,12 @@ export default function Home() {
 				<p>When I’m not spending my days coding and designing, you’ll probably find me riding my jeep out in the mountains, trying out new food with friends, or testing out my Nikon film camera. Feel free to checkout my projects below or browse to your heart's content!</p> */}
 
 				{/* add arrows? swiper demo for ijnfo */}
-				<h1>Projects</h1>
+				<h1>Experience</h1>
 				<Swiper
 					modules={[Pagination, Navigation, Scrollbar]}
-					slidesPerView={3}
+					slidesPerView={3.5}
 					spaceBetween={0}
-					// navigation={true}
 					scrollbar={{ draggable: true }}
-					// pagination={{ clickable: true, }}
 					className="mySwiper"
 				>
 					{projects_data.map((o, i) => {
@@ -138,28 +132,10 @@ export default function Home() {
 
 				<h1>Education</h1>
 				<Swiper
-					slidesPerView={3}
-					spaceBetween={30}
-					pagination={{
-						clickable: true,
-					}}
-					modules={[Pagination]}
-					className="mySwiper"
-				>
-					{school_data.map((o, i) => {
-						return <SwiperSlide key={i}><Card icon={o.icon} title={o.title} desc={o.desc} /></SwiperSlide>
-					})}
-				</Swiper>
-
-				<h1>Interests</h1>
-				{/* maybe have this as small squares  */}
-				<Swiper
-					slidesPerView={3}
-					spaceBetween={30}
-					pagination={{
-						clickable: true,
-					}}
-					modules={[Pagination]}
+					modules={[Pagination, Navigation, Scrollbar]}
+					slidesPerView={2}
+					spaceBetween={0}
+					// scrollbar={{ draggable: true }}
 					className="mySwiper"
 				>
 					{school_data.map((o, i) => {
@@ -168,6 +144,28 @@ export default function Home() {
 				</Swiper>
 
 				<h1>Languages</h1>
+				{/* need to add more... */}
+				<Grid>
+					{icons_data.map((o, i) => {
+						console.log(o, i)
+						return <Tile key={i} icon={o.icon} />
+					})}
+				</Grid>
+
+				<h1>Interests</h1>
+				{/* maybe have this as small squares  */}
+				<Swiper
+					modules={[Pagination, Navigation, Scrollbar]}
+					slidesPerView={3.5}
+					spaceBetween={0}
+					// scrollbar={{ draggable: true }}
+					className="mySwiper"
+				>
+					{school_data.map((o, i) => {
+						return <SwiperSlide key={i}><Card icon={o.icon} title={o.title} desc={o.desc} /></SwiperSlide>
+					})}
+				</Swiper>
+
 
 				<Footer />
 			</div>

@@ -7,6 +7,7 @@
   --primary: #fafafa;
   --secondary: #f0f2f4;
   --tertiary: #e2e8f0;
+  --quaternary: #aaaaaa;
   --text: #000000;
   --gradiant: linear-gradient(90deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
   /* --headings: #727175; */
@@ -16,6 +17,7 @@
   --primary: #1b1a22;
   --secondary: #2b2b37;
   --tertiary: #4f4f64;
+  --quaternary: #83839e;
   --text: #FFFFFF;
   --gradiant: linear-gradient(90deg, hsla(152, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
   /* --headings: #727175; */
@@ -51,6 +53,7 @@ a {
   width: calc(100% + 4rem);
   /* border:1px solid green; */
   height: calc(200px + 2rem);
+  /* height: calc((100% - 30px) / 2) !important; */
   margin-bottom:50px;
 }
 
@@ -65,80 +68,15 @@ a {
 }
 
 .swiper-scrollbar.swiper-scrollbar-horizontal{
-  /* height: 100px; */
+  height: 6px !important;
   /* border:1px solid red; */
-  /* left: 0px; */
+  left: 0px !important;
   /* top:0px; */
   /* position:absolute; */
+  background:var(--tertiary) !important;
 }
 
-.swiper-scrollbar-drag{
+.swiper-scrollbar-drag {
   /* height: 5px; */
-  /* background:var(--text); */
+  background:var(--quaternary) !important;
 }
-
-/* .swiper-slide {
-
-} */
-
-/* .swiper-slide img {
-  display: block;
-  width: 300px;
-  height: 300px;
-  object-fit: cover;
-} */
-
-/* carousel styles */
-/* .rec.rec-arrow {
-  border-radius: 0;
-  border: none;
-  outline: none;
-  background: var(--bg);
-  color: var(--text);
-  box-shadow: none;
-  height: 300px;
-}
-
-.rec.rec-arrow.rec-arrow-right {
-  position: relative;
-  right: 20px;
-}
-
-.rec.rec-arrow:hover:enabled {
-  color: var(--text);
-  background: var(--primnary);
-  background-color: var(--primnary);
-  box-shadow: none;
-}
-
-.rec.rec-arrow:focus:enabled {
-  color: var(--text);
-  background: var(--primnary);
-  background-color: var(--primnary);
-  box-shadow: none;
-}
-
-.rec.rec-arrow:disabled {
-  visibility: hidden;
-}
-
-.rec.rec-dot {
-  color: var(--text);
-  background: var(--secondary);
-  border: none;
-  box-shadow: none;
-}
-
-.rec.rec-dot:hover {
-  box-shadow: 0 0 1px 2px var(--text);
-}
-
-.rec.rec-dot_active {
-  box-shadow: none;
-  background: var(--text);
-}
-
-.rec.rec-dot_active:focus {
-  box-shadow: none;
-  background: var(--text);
-} */

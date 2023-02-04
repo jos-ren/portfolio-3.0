@@ -6,20 +6,20 @@ const Container = styled.div`
     background-color: var(--secondary);
     border-radius:8px;
     padding:20px;
-    height:200px;
-    margin-right:30px
+    height:80px;
+    width:80px;
+    margin-right:30px;
+    margin-bottom:30px;
 `;
 
-const Card = ({ title, desc, icon }) => {
+const Tile = ({ icon }) => {
     return (
         <Container>
             <div>
-                <Image height="50px" width="50px" objectFit="contain" src={icon} />
+                <Image height="40px" width="40px" objectFit="contain" src={icon} />
             </div>
-            <h3 style={{margin:"10px 0px 2px 0px"}}>{title}</h3>
-            <div style={{fontSize:"12pt"}}>{desc}</div>
         </Container>
     );
-};
+}; 
 
-export default Card;
+export default Tile;
