@@ -23,6 +23,7 @@ import IconButton from '../comps/IconButton';
 import Footer from '../comps/Footer';
 import Header from '../comps/Header';
 import Tile from '../comps/Tile';
+import Button from '../comps/Button';
 
 import useColorTheme from "use-color-theme";
 
@@ -89,11 +90,11 @@ export default function Home() {
 					<a target="_blank" rel="noopener noreferrer" href={"mailto:josh.renema@protonmail.com"}>
 						<IconButton img_src={email} />
 					</a>
-					<a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1zH8T0XU913RQCSfOq5ps4SPHl8En4zF7/view?usp=sharing">
-						<IconButton img_src={resume} />
-					</a>
 					<a target="_blank" rel="noopener noreferrer" href="https://www.behance.net/joshrenema">
 						<IconButton img_src={behance} />
+					</a>
+					<a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1zH8T0XU913RQCSfOq5ps4SPHl8En4zF7/view?usp=sharing">
+						<Button text={"Resume"} />
 					</a>
 				</div>
 
@@ -147,7 +148,7 @@ export default function Home() {
 				{/* need to add more... */}
 				<Grid>
 					{icons_data.map((o, i) => {
-						console.log(o, i)
+						// console.log(o, i)
 						return <Tile key={i} icon={o.icon} />
 					})}
 				</Grid>
