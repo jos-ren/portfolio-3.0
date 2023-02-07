@@ -2,6 +2,10 @@ import React from "react";
 import styled from "styled-components";
 import Image from "next/image";
 
+const Wrapper = styled.div`
+  position:relative;
+`;
+
 const Container = styled.button`
   border: 0;
   border-radius: 6px;
@@ -13,6 +17,7 @@ const Container = styled.button`
   background-color: var(--secondary);
   cursor: pointer;
   margin-right: ${({ margin }) => margin};
+  color:var(--text);
   `;
 
 const GradiantBorder = styled.div`
@@ -27,16 +32,12 @@ const GradiantBorder = styled.div`
   left:-2px;
   `;
 
-const Wrapper = styled.div`
-  position:relative;
-  // border:1px solid red;
-`;
 
 const IconButton = ({ text, onClick, margin }) => {
   return (
     <Wrapper className="wrapper">
       <Container onClick={onClick} margin={margin}>
-        <div style={{fontSize:"12pt"}}>{text}</div>
+        <div style={{ fontSize: "12pt" }}>{text}</div>
       </Container>
       <GradiantBorder className="gradiant_border" />
     </Wrapper>
