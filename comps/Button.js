@@ -1,48 +1,50 @@
 import React from "react";
 import styled from "styled-components";
+import Image from "next/image";
 
 const Container = styled.button`
+  border: 0;
+  border-radius: 6px;
+  height: 45px;
+  width: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 40px;
-  min-width: 80px;
-  height:45px;
-  width:100px;
-  -webkit-transition: background-color .2s ease-in;
-  transition: background-color 0.2s ease-in;
+  background-color: var(--secondary);
   cursor: pointer;
-  border: 0;
-  // margin-right: 20px;
+  margin-right: ${({ margin }) => margin};
+  `;
+
+const GradiantBorder = styled.div`
   border-radius: 6px;
-  font-weight: 500;
-  // background-color: var(--secondary-bg);
-  // background-color: #e2e8f0;
-  background-color: #f0f2f4;
-  // color: var(--headings);
-  color: #000;
-  font-weight: 500;
-  font-size: 12pt;
-  :focus {
-    // border: 2px solid var(--headings);
-    border: 2px solid #000;
-  }
-  :hover,
-  :active {
-    // background-color: var(--secondary-bg-hover);
-    background-color: #cdd7e5;
-    outline: none;
-  }
+  background: var(--gradiant);
+  z-index:-1;
+  display:none;
+  height: 49px;
+  width: 84px;
+  position:absolute;
+  top:-2px;
+  left:-2px;
+  `;
+
+const Wrapper = styled.div`
+  position:relative;
+  // border:1px solid red;
 `;
 
-const Button = ({ href, text }) => {
-    return (
-        <a target="_blank" rel="noopener noreferrer" href={href} >
-            <Container>
-                {text}
-            </Container>
-        </a>
-    );
+const IconButton = ({ text, onClick, margin }) => {
+  return (
+    <Wrapper className="wrapper">
+      <Container onClick={onClick} margin={margin}>
+        <div style={{fontSize:"12pt"}}>{text}</div>
+      </Container>
+      <GradiantBorder className="gradiant_border" />
+    </Wrapper>
+  );
 };
 
-export default Button;
+export default IconButton;
+
+IconButton.defaultProps = {
+  margin: "20px",
+};

@@ -7,7 +7,7 @@ export const projects_data = [
 		github_link: "",
 		link: "https://smartcitymedia.com/stock/browse/",
 		screenshots: [
-			{ src: "/screenshots/pantro/1.png"},
+			{ src: "/screenshots/pantro/1.png" },
 		],
 	},
 	{
@@ -18,7 +18,7 @@ export const projects_data = [
 		github_link: "",
 		link: "https://crm.techiesoftomorrow.com/",
 		screenshots: [
-			{ src: "/screenshots/pantro/1.png"},
+			{ src: "/screenshots/pantro/1.png" },
 		],
 	},
 	{
@@ -29,13 +29,13 @@ export const projects_data = [
 		github_link: "https://github.com/jos-ren/petsave-frontend",
 		link: null,
 		screenshots: [
-			{ src: "/screenshots/petsave/6.png"},
-			{ src: "/screenshots/petsave/7.png"},
-			{ src: "/screenshots/petsave/4.png"},
-			{ src: "/screenshots/petsave/5.png"},
+			{ src: "/screenshots/petsave/6.png" },
+			{ src: "/screenshots/petsave/7.png" },
+			{ src: "/screenshots/petsave/4.png" },
+			{ src: "/screenshots/petsave/5.png" },
 			// { src: "/screenshots/petsave/8.png"},
 			// { src: "/screenshots/petsave/1.png"},
-			{ src: "/screenshots/petsave/2.png"},
+			{ src: "/screenshots/petsave/2.png" },
 			// { src: "/screenshots/petsave/3.png"},
 		],
 	},
@@ -47,12 +47,12 @@ export const projects_data = [
 		github_link: "https://github.com/jos-ren/bcitd3_pantro",
 		link: null,
 		screenshots: [
-			{ src: "/screenshots/pantro/1.png"},
-			{ src: "/screenshots/pantro/2.png"},
-			{ src: "/screenshots/pantro/3.png"},
-			{ src: "/screenshots/pantro/4.png"},
-			{ src: "/screenshots/pantro/5.png"},
-			{ src: "/screenshots/pantro/6.png"},
+			{ src: "/screenshots/pantro/1.png" },
+			{ src: "/screenshots/pantro/2.png" },
+			{ src: "/screenshots/pantro/3.png" },
+			{ src: "/screenshots/pantro/4.png" },
+			{ src: "/screenshots/pantro/5.png" },
+			{ src: "/screenshots/pantro/6.png" },
 		],
 	},
 	{
@@ -63,7 +63,7 @@ export const projects_data = [
 		github_link: "/",
 		link: "https://www.youtube.com/watch?v=Rze68rEMxhk",
 		screenshots: [
-			{ src: "/screenshots/pantro/1.png"},
+			{ src: "/screenshots/pantro/1.png" },
 		],
 	},
 	{
@@ -75,12 +75,12 @@ export const projects_data = [
 		github_link: "/",
 		link: "https://www.youtube.com/watch?v=HvQbuNzpwho",
 		screenshots: [
-			{ src: "/screenshots/getem/1.jpg"},
-			{ src: "/screenshots/getem/2.jpg"},
-			{ src: "/screenshots/getem/3.jpg"},
-			{ src: "/screenshots/getem/4.jpg"},
-			{ src: "/screenshots/getem/5.jpg"},
-			{ src: "/screenshots/getem/6.jpg"},
+			{ src: "/screenshots/getem/1.jpg" },
+			{ src: "/screenshots/getem/2.jpg" },
+			{ src: "/screenshots/getem/3.jpg" },
+			{ src: "/screenshots/getem/4.jpg" },
+			{ src: "/screenshots/getem/5.jpg" },
+			{ src: "/screenshots/getem/6.jpg" },
 		],
 	},
 ]
@@ -118,3 +118,132 @@ export const school_data = [
 		icon: "/icons/harvard.png"
 	},
 ]
+
+export const icons_data = [
+	{
+		id: 2,
+		icon: "/icons/lang/react.png",
+		tooltip: "React",
+	},
+	{
+		id: 17,
+		icon: "/icons/lang/python.png",
+		tooltip: "Python",
+	},
+	{
+		id: 7,
+		icon: "/icons/lang/nextjs.png",
+		tooltip: "NextJS",
+	},
+	{
+		id: 8,
+		icon: "/icons/lang/nodejs.png",
+		tooltip: "NodeJS",
+	},
+	{
+		id: 4,
+		icon: "/icons/lang/php.png",
+		tooltip: "PHP",
+	},
+	{
+		id: 5,
+		icon: "/icons/lang/mysql.png",
+		tooltip: "MySql",
+	},
+	{
+		id: 6,
+		icon: "/icons/lang/postgresql.png",
+		tooltip: "PostgreSQL",
+	},
+	{
+		id: 3,
+		icon: "/icons/lang/javascript.png",
+		tooltip: "Javascript",
+	},
+	{
+		id: 9,
+		icon: "/icons/lang/html.png",
+		tooltip: "HTML",
+	},
+	{
+		id: 10,
+		icon: "/icons/lang/css.png",
+		tooltip: "CSS",
+	},
+	{
+		id: 19,
+		icon: "/icons/lang/wordpress.png",
+		tooltip: "Wordpress",
+	},
+	// {
+	// 	id: 1,
+	// 	icon: "/icons/lang/aws.svg",
+	// 	tooltip: "AWS (DynamoDB, SES, SMS, S3)",
+	// },
+	// {
+	// 	id: 11,
+	// 	icon: "/icons/lang/adobe.svg",
+	// 	tooltip: "Adobe Creative Suite",
+	// },
+	// {
+	// 	id: 13,
+	// 	icon: "/icons/lang/figma.svg",
+	// 	tooltip: "Figma",
+	// },
+	// {
+	// 	id: 14,
+	// 	icon: "/icons/lang/firebase.svg",
+	// 	tooltip: "Firebase",
+	// },
+	// {
+	// 	id: 15,
+	// 	icon: "/icons/lang/material.svg",
+	// 	tooltip: "Material Design",
+	// },
+	// {
+	// 	id: 16,
+	// 	icon: "/icons/lang/postman.svg",
+	// 	tooltip: "Postman",
+	// },
+	// {
+	// 	id: 18,
+	// 	icon: "/icons/lang/sass.svg",
+	// 	tooltip: "Sass: Syntactically Awesome Style Sheets",
+	// },
+];
+
+
+
+
+export const interests_data = [
+	{
+		id: 0,
+		image: "/images/4.jpg",
+		desc: "maya lovely oneeee",
+	},
+	{
+		id: 0,
+		image: "/images/5.jpg",
+		desc: "maya lovely oneeee",
+	},
+	{
+		id: 0,
+		image: "/images/3.jpg",
+		desc: "maya lovely oneeee",
+	},
+	{
+		id: 0,
+		image: "/images/6.jpg",
+		desc: "maya lovely oneeee",
+	},
+	{
+		id: 0,
+		image: "/images/1.jpg",
+		desc: "maya lovely oneeee",
+	},
+	{
+		id: 0,
+		image: "/images/2.jpg",
+		desc: "maya lovely oneeee",
+	},
+];
