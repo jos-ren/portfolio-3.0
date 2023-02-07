@@ -8,8 +8,12 @@ const Container = styled.div`
     padding:20px;
     height:80px;
     width:80px;
-    margin-right:30px;
-    margin-bottom:30px;
+    margin-right:20px;
+    margin-bottom:20px;
+
+    // flex: 0 0 calc(16.66% - 20px);
+    // padding: 20px;
+    // margin: 10px;
 `;
 
 const Tile = ({ icon }) => {

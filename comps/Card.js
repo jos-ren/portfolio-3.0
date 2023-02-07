@@ -7,19 +7,27 @@ const Container = styled.div`
     border-radius:8px;
     padding:20px;
     height:200px;
-    margin-right:30px
+    margin-right:30px;
+    margin-bottom:30px;
 `;
 
-const Card = ({ title, desc, icon }) => {
+const Card = ({ title, desc, icon, hasIcon }) => {
     return (
         <Container>
-            <div>
-                <Image height="50px" width="50px" objectFit="contain" src={icon} />
-            </div>
-            <h3 style={{margin:"10px 0px 2px 0px"}}>{title}</h3>
-            <div style={{fontSize:"12pt"}}>{desc}</div>
+            {hasIcon ?
+                <div>
+                    <Image height="50px" width="50px" objectFit="contain" src={icon} />
+                    <h3 style={{ margin: "10px 0px 2px 0px" }}>{title}</h3>
+                </div> :
+                <></>
+            }
+            <div style={{ fontSize: "12pt", textOverflow:"ellipsis"}}>{desc}</div>
         </Container>
     );
 };
 
 export default Card;
+
+Card.defaultProps = {
+    hasIcon: true
+  };

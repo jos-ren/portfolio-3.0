@@ -48,32 +48,21 @@ a {
 
 .swiper {
   width: calc(100% + 4rem);
+  /* display:block !important; */
+  /* height:calc( auto + 2rem ); */
   /* border:1px solid green; */
-  height: calc(200px + 2rem);
+  /* height: calc(500px + 2rem); */
   /* height: calc((100% - 30px) / 2) !important; */
-  margin-bottom:50px;
-}
-
-.swiper-button-next{
-  border:1px solid salmon;
-}
-
-.swiper-button-prev{
-  border:1px solid salmon;
-  position: relative;
-  left:100px;
+  /* margin-bottom:50px; */
 }
 
 .swiper-scrollbar.swiper-scrollbar-horizontal{
   height: 6px !important;
-  /* border:1px solid red; */
   left: 0px !important;
-  /* top:0px; */
-  /* position:absolute; */
+  /* bottom: -2px !important; */
   background:var(--tertiary) !important;
 }
 
 .swiper-scrollbar-drag {
-  /* height: 5px; */
   background:var(--quaternary) !important;
 }

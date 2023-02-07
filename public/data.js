@@ -211,3 +211,39 @@ export const icons_data = [
 	// 	tooltip: "Sass: Syntactically Awesome Style Sheets",
 	// },
 ];
+
+
+
+
+export const interests_data = [
+	{
+		id: 0,
+		image: "/images/4.jpg",
+		desc: "maya lovely oneeee",
+	},
+	{
+		id: 0,
+		image: "/images/5.jpg",
+		desc: "maya lovely oneeee",
+	},
+	{
+		id: 0,
+		image: "/images/3.jpg",
+		desc: "maya lovely oneeee",
+	},
+	{
+		id: 0,
+		image: "/images/6.jpg",
+		desc: "maya lovely oneeee",
+	},
+	{
+		id: 0,
+		image: "/images/1.jpg",
+		desc: "maya lovely oneeee",
+	},
+	{
+		id: 0,
+		image: "/images/2.jpg",
+		desc: "maya lovely oneeee",
+	},
+];
