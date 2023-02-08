@@ -25,6 +25,7 @@ import Header from '../comps/Header';
 import Tile from '../comps/Tile';
 import Button from '../comps/Button';
 import PhotoCard from '../comps/PhotoCard';
+import TextCard from '../comps/TextCard';
 
 import useColorTheme from "use-color-theme";
 
@@ -33,6 +34,9 @@ export default function Home() {
 	const colorTheme = useColorTheme("light-theme", {
 		classNames: ["light-theme", "dark-theme"],
 	});
+
+	const [isShown, setIsShown] = useState(true);
+	console.log(isShown)
 
 	let sun_moon = "";
 	let github = "";
@@ -97,7 +101,7 @@ export default function Home() {
 					<a target="_blank" rel="noopener noreferrer" href="https://www.behance.net/joshrenema">
 						<IconButton img_src={behance} />
 					</a>
-					<a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1zH8T0XU913RQCSfOq5ps4SPHl8En4zF7/view?usp=sharing">
+					<a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1MzXEtLKZ2h67UMKlzdBGnKA1JhoJGz-1/view?usp=sharing">
 						<Button text={"Resume"} />
 					</a>
 				</div>
@@ -112,15 +116,16 @@ export default function Home() {
 
 				<Header onClick={() => { colorTheme.toggle() }} img_src={sun_moon} />
 
-				{/* perhaps move bio to main, above projects? */}
 				{/* about me */}
 				<h1>About Me</h1>
-				<Card hasIcon={false} desc={`
+				{/* im a canadian full stack developer currently residing in the PNW! */}
+				<TextCard text={`
 				I'm a Full Stack Developer, currently living in Surrey, BC. I enjoy creating projects that live on the internet, whether that be websites, applications, or anything in between. I always strive for my projects to provide real world value.
 				I’ve earned my diploma from the Digital Design and Development program at BCIT, where I’ve learned how to develop and design responsive, cross-platform applications.
 				I’m currently working as a Full Stack Developer at Techies of Tommorow, a tech talent incubator that empowers recent BC tech graduates to work on real industry projects that require high-quality and cost-effective solutions.
 				When I’m not spending my days coding and designing, you’ll probably find me riding my jeep out in the mountains, trying out new food with friends, or testing out my Nikon film camera. Feel free to checkout my projects below or browse to your heart's content!
 				`} />
+
 
 				{/* add arrows? swiper demo for ijnfo */}
 				<h1 style={{ marginTop: "40px" }} >Experience</h1>
@@ -138,12 +143,11 @@ export default function Home() {
 				{/* once you have enough projects, make this section 2 rows (2x5 or whatever) */}
 
 
-
-
+				{/* perhaps add start dates and whether its completed or not */}
 				<h1 style={{ marginTop: "50px" }}>Education</h1>
 				<Swiper
 					modules={[Pagination, Navigation, Scrollbar]}
-					slidesPerView={2}
+					slidesPerView={2.05}
 					spaceBetween={0}
 					// scrollbar={{ draggable: true }}
 					className="mySwiper"
@@ -157,8 +161,7 @@ export default function Home() {
 				{/* need to add more... */}
 				<Grid rows={2} columns={8}>
 					{icons_data.map((o, i) => {
-						// console.log(o, i)
-						return <Tile key={i} icon={o.icon} />
+						return <Tile key={i} icon={o.icon} name={o.name} isShown={isShown} onMouseEnter={() => console.log("YES")} onMouseLeave={() => setIsShown("NO")}/>
 					})}
 				</Grid>
 
