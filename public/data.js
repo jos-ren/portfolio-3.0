@@ -5,7 +5,7 @@ export const projects_data = [
 		desc: "Real Estate Web App serving 20,000+ geo-tagged photos",
 		icon: "/icons/scm.png",
 		github_link: "",
-		link: "https://smartcitymedia.com/stock/browse/",
+		link: "https://smartcitymedia.com/",
 		screenshots: [
 			{ src: "/screenshots/pantro/1.png" },
 		],
@@ -85,22 +85,22 @@ export const projects_data = [
 	},
 ]
 
-export const design_data = [
-	{
-		id: 0,
-		title: "Digital Art",
-		desc: "Some of my design work throught the years",
-		link: "https://www.behance.net/joshrenema",
-		icon: "/icons/behance.png",
-	},
-	{
-		id: 1,
-		title: "Icons",
-		desc: "vr icons, poman, recycle toss, budding writers?, petsave, ",
-		link: "(post these on dribble)",
-		icon: "/icons/rt.png",
-	}
-]
+// export const design_data = [
+// 	{
+// 		id: 0,
+// 		title: "Digital Art",
+// 		desc: "Some of my design work throught the years",
+// 		link: "https://www.behance.net/joshrenema",
+// 		icon: "/icons/behance.png",
+// 	},
+// 	{
+// 		id: 1,
+// 		title: "Icons",
+// 		desc: "vr icons, poman, recycle toss, budding writers?, petsave, ",
+// 		link: "(post these on dribble)",
+// 		icon: "/icons/rt.png",
+// 	}
+// ]
 
 export const school_data = [
 	{
@@ -114,7 +114,7 @@ export const school_data = [
 		id: 1,
 		title: "Harvard",
 		desc: "CS50P ",
-		link: "https://cs50.harvard.edu/python/2022/",
+		link: "https://www.edx.org/course/cs50s-introduction-to-programming-with-python",
 		icon: "/icons/harvard.png"
 	},
 ]

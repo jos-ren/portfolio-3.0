@@ -35,39 +35,32 @@ export default function Home() {
 		classNames: ["light-theme", "dark-theme"],
 	});
 
-	const [isShown, setIsShown] = useState(true);
-	console.log(isShown)
+	const [isHovered, setIsHovered] = useState(true);
+	console.log(isHovered)
 
 	let sun_moon = "";
 	let github = "";
 	let linkedin = "";
 	let email = "";
-	let resume = "";
 	let behance = "";
+	let link = "";
 	if (colorTheme.value === "light-theme") {
 		sun_moon = "/icons/sun.svg";
 		github = "/icons/github.svg";
 		linkedin = "/icons/linkedin.svg";
 		email = "/icons/email.svg";
-		resume = "/icons/resume.svg";
 		behance = "/icons/behance.svg";
+		link = "/icons/link.svg";
 	} else if (colorTheme.value === "dark-theme") {
 		sun_moon = "/icons/moon_w.svg";
 		github = "/icons/github_w.svg";
 		linkedin = "/icons/linkedin_w.svg";
 		email = "/icons/email_w.svg";
-		resume = "/icons/resume_w.svg";
 		behance = "/icons/behance_w.svg";
+		link = "/icons/link_w.svg";
 	}
 
 	const Grid = styled.div`
-		// display: grid;
-		// grid-template-columns: repeat(${props => props.columns}, 1fr);
-		// grid-template-rows: repeat(${props => props.rows}, 1fr);
-		// grid-column-gap: 0px;
-		// grid-row-gap: 0px; 
-		// // border:1px solid red;
-		// width: calc(100% + 4rem);
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
@@ -128,7 +121,7 @@ export default function Home() {
 
 
 				{/* add arrows? swiper demo for ijnfo */}
-				<h1 style={{ marginTop: "40px" }} >Experience</h1>
+				<h1 style={{ marginTop: "40px" }} >Projects</h1>
 				<Swiper
 					modules={[Pagination, Navigation, Scrollbar]}
 					slidesPerView={3.5}
@@ -137,7 +130,11 @@ export default function Home() {
 					className="mySwiper"
 				>
 					{projects_data.map((o, i) => {
-						return <SwiperSlide key={i}><Card icon={o.icon} title={o.title} desc={o.desc} /></SwiperSlide>
+						return <SwiperSlide key={i}>
+							<a target="_blank" rel="noopener noreferrer" href={o.link}>
+								<Card icon={o.icon} title={o.title} desc={o.desc} link={link} isShown={isHovered} />
+							</a>
+						</SwiperSlide>
 					})}
 				</Swiper>
 				{/* once you have enough projects, make this section 2 rows (2x5 or whatever) */}
@@ -153,7 +150,11 @@ export default function Home() {
 					className="mySwiper"
 				>
 					{school_data.map((o, i) => {
-						return <SwiperSlide key={i}><Card icon={o.icon} title={o.title} desc={o.desc} /></SwiperSlide>
+						return <SwiperSlide key={i}>
+							<a target="_blank" rel="noopener noreferrer" href={o.link}>
+								<Card icon={o.icon} title={o.title} desc={o.desc} link={link} isShown={isHovered} />
+							</a>
+						</SwiperSlide>
 					})}
 				</Swiper>
 
@@ -161,7 +162,7 @@ export default function Home() {
 				{/* need to add more... */}
 				<Grid rows={2} columns={8}>
 					{icons_data.map((o, i) => {
-						return <Tile key={i} icon={o.icon} name={o.name} isShown={isShown} onMouseEnter={() => console.log("YES")} onMouseLeave={() => setIsShown("NO")}/>
+						return <Tile key={i} icon={o.icon} name={o.name} isShown={isHovered} onMouseEnter={() => console.log("YES")} onMouseLeave={() => console.log("NO")} />
 					})}
 				</Grid>
 
