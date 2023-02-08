@@ -152,7 +152,7 @@ export default function Home() {
 					{school_data.map((o, i) => {
 						return <SwiperSlide key={i}>
 							<a target="_blank" rel="noopener noreferrer" href={o.link}>
-								<Card icon={o.icon} title={o.title} desc={o.desc} link={link} isShown={isHovered} />
+								<Card icon={o.icon} title={o.title} desc={o.desc} link={link} isShown={isHovered} type={o.type} />
 							</a>
 						</SwiperSlide>
 					})}

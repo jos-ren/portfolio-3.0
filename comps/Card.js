@@ -12,7 +12,7 @@ const Container = styled.div`
     cursor:pointer;
 `;
 
-const Card = ({ title, desc, icon, link, isShown }) => {
+const Card = ({ title, desc, icon, link, isShown, type }) => {
     return (
         <Container>
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "start" }}>
@@ -21,6 +21,7 @@ const Card = ({ title, desc, icon, link, isShown }) => {
             </div>
             <h3 style={{ margin: "10px 0px 2px 0px" }}>{title}</h3>
             <div style={{ fontSize: "12pt", textOverflow: "ellipsis" }}>{desc}</div>
+            <div style={{fontStyle:"italic"}}>{type}</div>
         </Container>
     );
 };

@@ -108,14 +108,16 @@ export const school_data = [
 		title: "BCIT",
 		desc: "Digital Design & Development",
 		link: "https://www.bcit.ca/programs/digital-design-and-development-diploma-full-time-6515dipma/",
-		icon: "/icons/bcit.png"
+		icon: "/icons/bcit.png",
+		type:"Diploma",
 	},
 	{
 		id: 1,
 		title: "Harvard",
 		desc: "CS50P ",
 		link: "https://www.edx.org/course/cs50s-introduction-to-programming-with-python",
-		icon: "/icons/harvard.png"
+		icon: "/icons/harvard.png",
+		type:"Certificate",
 	},
 ]
 
