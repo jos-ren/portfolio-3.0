@@ -12,12 +12,12 @@ const Container = styled.div`
     cursor:pointer;
 `;
 
-const Card = ({ title, desc, icon, link, isShown, type }) => {
+const Card = ({ title, desc, icon, link, isShown, type, index }) => {
     return (
         <Container>
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "start" }}>
                 <Image height="50px" width="50px" objectFit="contain" src={icon} />
-                {isShown ? <Image height="20px" width="20px" objectFit="contain" src={link} /> : <></>}
+                {isShown == index ? <Image height="20px" width="20px" objectFit="contain" src={link} /> : <></>}
             </div>
             <h3 style={{ margin: "10px 0px 2px 0px" }}>{title}</h3>
             <div style={{ fontSize: "12pt", textOverflow: "ellipsis" }}>{desc}</div>

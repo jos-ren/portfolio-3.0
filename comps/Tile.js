@@ -18,14 +18,16 @@ const Container = styled.div`
     // flex: 0 0 calc(16.66% - 20px);
     // padding: 20px;
     // margin: 10px;
+    cursor:default;
+    transition: display 2s;
 `;
 
-const Tile = ({ icon, isShown, name }) => {
+const Tile = ({ icon, isShown, name, index }) => {
     return (
         <Container>
-            {isShown ?
-                <Image height="40px" width="40px" objectFit="contain" src={icon} /> :
-                <div>{name}</div>
+            {isShown == index ?
+                <div className="hover-display">{name}</div> :
+                <Image height="40px" width="40px" objectFit="contain" src={icon} /> 
             }
         </Container>
     );

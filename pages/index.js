@@ -35,8 +35,9 @@ export default function Home() {
 		classNames: ["light-theme", "dark-theme"],
 	});
 
-	const [isHovered, setIsHovered] = useState(true);
-	console.log(isHovered)
+	const [isPro, setIsPro] = useState(-1);
+	const [isEdu, setIsEdu] = useState(-1);
+	const [isTech, setIsTech] = useState(-1);
 
 	let sun_moon = "";
 	let github = "";
@@ -88,11 +89,11 @@ export default function Home() {
 					<a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/josh-renema/">
 						<IconButton img_src={linkedin} />
 					</a>
-					<a target="_blank" rel="noopener noreferrer" href={"mailto:josh.renema@protonmail.com"}>
-						<IconButton img_src={email} />
-					</a>
 					<a target="_blank" rel="noopener noreferrer" href="https://www.behance.net/joshrenema">
 						<IconButton img_src={behance} />
+					</a>
+					<a target="_blank" rel="noopener noreferrer" href={"mailto:josh.renema@protonmail.com"}>
+						<IconButton img_src={email} />
 					</a>
 					<a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1MzXEtLKZ2h67UMKlzdBGnKA1JhoJGz-1/view?usp=sharing">
 						<Button text={"Resume"} />
@@ -112,12 +113,13 @@ export default function Home() {
 				{/* about me */}
 				<h1>About Me</h1>
 				{/* im a canadian full stack developer currently residing in the PNW! */}
-				<TextCard text={`
+				{/* <TextCard text={''} /> */}
+				{`
 				I'm a Full Stack Developer, currently living in Surrey, BC. I enjoy creating projects that live on the internet, whether that be websites, applications, or anything in between. I always strive for my projects to provide real world value.
 				I’ve earned my diploma from the Digital Design and Development program at BCIT, where I’ve learned how to develop and design responsive, cross-platform applications.
 				I’m currently working as a Full Stack Developer at Techies of Tommorow, a tech talent incubator that empowers recent BC tech graduates to work on real industry projects that require high-quality and cost-effective solutions.
 				When I’m not spending my days coding and designing, you’ll probably find me riding my jeep out in the mountains, trying out new food with friends, or testing out my Nikon film camera. Feel free to checkout my projects below or browse to your heart's content!
-				`} />
+				`}
 
 
 				{/* add arrows? swiper demo for ijnfo */}
@@ -129,10 +131,10 @@ export default function Home() {
 					scrollbar={{ draggable: true }}
 					className="mySwiper"
 				>
-					{projects_data.map((o, i) => {
-						return <SwiperSlide key={i}>
-							<a target="_blank" rel="noopener noreferrer" href={o.link}>
-								<Card icon={o.icon} title={o.title} desc={o.desc} link={link} isShown={isHovered} />
+					{projects_data.map((o, index) => {
+						return <SwiperSlide key={index} >
+							<a target="_blank" rel="noopener noreferrer" href={o.link} onMouseEnter={() => setIsPro(index)} onMouseLeave={() => setIsPro(-1)}>
+								<Card icon={o.icon} title={o.title} desc={o.desc} link={link} isShown={isPro} index={index} />
 							</a>
 						</SwiperSlide>
 					})}
@@ -149,10 +151,10 @@ export default function Home() {
 					// scrollbar={{ draggable: true }}
 					className="mySwiper"
 				>
-					{school_data.map((o, i) => {
-						return <SwiperSlide key={i}>
-							<a target="_blank" rel="noopener noreferrer" href={o.link}>
-								<Card icon={o.icon} title={o.title} desc={o.desc} link={link} isShown={isHovered} type={o.type} />
+					{school_data.map((o, index) => {
+						return <SwiperSlide key={index}>
+							<a target="_blank" rel="noopener noreferrer" href={o.link} onMouseEnter={() => setIsEdu(index)} onMouseLeave={() => setIsEdu(-1)}>
+								<Card icon={o.icon} title={o.title} desc={o.desc} link={link} type={o.type} isShown={isEdu} index={index} />
 							</a>
 						</SwiperSlide>
 					})}
@@ -161,8 +163,10 @@ export default function Home() {
 				<h1 >Technologies</h1>
 				{/* need to add more... */}
 				<Grid rows={2} columns={8}>
-					{icons_data.map((o, i) => {
-						return <Tile key={i} icon={o.icon} name={o.name} isShown={isHovered} onMouseEnter={() => console.log("YES")} onMouseLeave={() => console.log("NO")} />
+					{icons_data.map((o, index) => {
+						return <div key={index} onMouseEnter={() => setIsTech(index)} onMouseLeave={() => setIsTech(-1)}>
+							<Tile icon={o.icon} name={o.name} index={index} isShown={isTech} />
+						</div>
 					})}
 				</Grid>
 
@@ -180,6 +184,19 @@ export default function Home() {
 						return <SwiperSlide key={i}><PhotoCard image={o.image} desc={o.desc} /></SwiperSlide>
 					})}
 				</Swiper>
+				{/* 
+				
+				kayaking
+				hiking
+				photography
+				fitness
+				reading
+				travel
+				cars
+				
+				*/}
+
+				{/* contact form */}
 
 
 				<Footer />

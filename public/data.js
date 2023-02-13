@@ -220,32 +220,32 @@ export const icons_data = [
 export const interests_data = [
 	{
 		id: 0,
-		image: "/images/4.jpg",
-		desc: "maya lovely oneeee",
+		image: "/images/photography.jpg",
+		desc: "Photography",
 	},
 	{
 		id: 0,
-		image: "/images/5.jpg",
-		desc: "maya lovely oneeee",
+		image: "/images/hiking.jpg",
+		desc: "Hiking",
 	},
 	{
 		id: 0,
-		image: "/images/3.jpg",
-		desc: "maya lovely oneeee",
+		image: "/images/travel.jpg",
+		desc: "Traveling",
 	},
 	{
 		id: 0,
-		image: "/images/6.jpg",
-		desc: "maya lovely oneeee",
+		image: "/images/cars.jpg",
+		desc: "Cars",
 	},
 	{
 		id: 0,
-		image: "/images/1.jpg",
-		desc: "maya lovely oneeee",
+		image: "/images/book.jpg",
+		desc: "Reading",
 	},
-	{
-		id: 0,
-		image: "/images/2.jpg",
-		desc: "maya lovely oneeee",
-	},
+	// {
+	// 	id: 0,
+	// 	image: "/images/2.jpg",
+	// 	desc: "maya lovely oneeee",
+	// },
 ];
