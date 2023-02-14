@@ -23,8 +23,10 @@ import IconButton from '../comps/IconButton';
 import Footer from '../comps/Footer';
 import Header from '../comps/Header';
 import Tile from '../comps/Tile';
-import Button from '../comps/Button';
+import LinkButton from '../comps/LinkButton';
 import PhotoCard from '../comps/PhotoCard';
+import TextCard from '../comps/TextCard';
+import ContactForm from "../comps/ContactForm";
 
 import useColorTheme from "use-color-theme";
 
@@ -34,36 +36,33 @@ export default function Home() {
 		classNames: ["light-theme", "dark-theme"],
 	});
 
+	const [isPro, setIsPro] = useState(-1);
+	const [isEdu, setIsEdu] = useState(-1);
+	const [isTech, setIsTech] = useState(-1);
+
 	let sun_moon = "";
 	let github = "";
 	let linkedin = "";
 	let email = "";
-	let resume = "";
 	let behance = "";
+	let link = "";
 	if (colorTheme.value === "light-theme") {
 		sun_moon = "/icons/sun.svg";
 		github = "/icons/github.svg";
 		linkedin = "/icons/linkedin.svg";
 		email = "/icons/email.svg";
-		resume = "/icons/resume.svg";
 		behance = "/icons/behance.svg";
+		link = "/icons/link.svg";
 	} else if (colorTheme.value === "dark-theme") {
 		sun_moon = "/icons/moon_w.svg";
 		github = "/icons/github_w.svg";
 		linkedin = "/icons/linkedin_w.svg";
 		email = "/icons/email_w.svg";
-		resume = "/icons/resume_w.svg";
 		behance = "/icons/behance_w.svg";
+		link = "/icons/link_w.svg";
 	}
 
 	const Grid = styled.div`
-		// display: grid;
-		// grid-template-columns: repeat(${props => props.columns}, 1fr);
-		// grid-template-rows: repeat(${props => props.rows}, 1fr);
-		// grid-column-gap: 0px;
-		// grid-row-gap: 0px; 
-		// // border:1px solid red;
-		// width: calc(100% + 4rem);
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
@@ -91,14 +90,14 @@ export default function Home() {
 					<a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/josh-renema/">
 						<IconButton img_src={linkedin} />
 					</a>
-					<a target="_blank" rel="noopener noreferrer" href={"mailto:josh.renema@protonmail.com"}>
-						<IconButton img_src={email} />
-					</a>
 					<a target="_blank" rel="noopener noreferrer" href="https://www.behance.net/joshrenema">
 						<IconButton img_src={behance} />
 					</a>
-					<a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1zH8T0XU913RQCSfOq5ps4SPHl8En4zF7/view?usp=sharing">
-						<Button text={"Resume"} />
+					<a target="_blank" rel="noopener noreferrer" href={"mailto:josh.renema@protonmail.com"}>
+						<IconButton img_src={email} />
+					</a>
+					<a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1MzXEtLKZ2h67UMKlzdBGnKA1JhoJGz-1/view?usp=sharing">
+						<LinkButton text={"Resume"} />
 					</a>
 				</div>
 
@@ -112,18 +111,20 @@ export default function Home() {
 
 				<Header onClick={() => { colorTheme.toggle() }} img_src={sun_moon} />
 
-				{/* perhaps move bio to main, above projects? */}
 				{/* about me */}
 				<h1>About Me</h1>
-				<Card hasIcon={false} desc={`
+				{/* im a canadian full stack developer currently residing in the PNW! */}
+				{/* <TextCard text={''} /> */}
+				{`
 				I'm a Full Stack Developer, currently living in Surrey, BC. I enjoy creating projects that live on the internet, whether that be websites, applications, or anything in between. I always strive for my projects to provide real world value.
 				I’ve earned my diploma from the Digital Design and Development program at BCIT, where I’ve learned how to develop and design responsive, cross-platform applications.
 				I’m currently working as a Full Stack Developer at Techies of Tommorow, a tech talent incubator that empowers recent BC tech graduates to work on real industry projects that require high-quality and cost-effective solutions.
 				When I’m not spending my days coding and designing, you’ll probably find me riding my jeep out in the mountains, trying out new food with friends, or testing out my Nikon film camera. Feel free to checkout my projects below or browse to your heart's content!
-				`} />
+				`}
+
 
 				{/* add arrows? swiper demo for ijnfo */}
-				<h1 style={{ marginTop: "40px" }} >Experience</h1>
+				<h1 style={{ marginTop: "40px" }} >Projects</h1>
 				<Swiper
 					modules={[Pagination, Navigation, Scrollbar]}
 					slidesPerView={3.5}
@@ -131,34 +132,42 @@ export default function Home() {
 					scrollbar={{ draggable: true }}
 					className="mySwiper"
 				>
-					{projects_data.map((o, i) => {
-						return <SwiperSlide key={i}><Card icon={o.icon} title={o.title} desc={o.desc} /></SwiperSlide>
+					{projects_data.map((o, index) => {
+						return <SwiperSlide key={index} >
+							<a target="_blank" rel="noopener noreferrer" href={o.link} onMouseEnter={() => setIsPro(index)} onMouseLeave={() => setIsPro(-1)}>
+								<Card icon={o.icon} title={o.title} desc={o.desc} link={link} isShown={isPro} index={index} />
+							</a>
+						</SwiperSlide>
 					})}
 				</Swiper>
 				{/* once you have enough projects, make this section 2 rows (2x5 or whatever) */}
 
 
-
-
+				{/* perhaps add start dates and whether its completed or not */}
 				<h1 style={{ marginTop: "50px" }}>Education</h1>
 				<Swiper
 					modules={[Pagination, Navigation, Scrollbar]}
-					slidesPerView={2}
+					slidesPerView={2.05}
 					spaceBetween={0}
 					// scrollbar={{ draggable: true }}
 					className="mySwiper"
 				>
-					{school_data.map((o, i) => {
-						return <SwiperSlide key={i}><Card icon={o.icon} title={o.title} desc={o.desc} /></SwiperSlide>
+					{school_data.map((o, index) => {
+						return <SwiperSlide key={index}>
+							<a target="_blank" rel="noopener noreferrer" href={o.link} onMouseEnter={() => setIsEdu(index)} onMouseLeave={() => setIsEdu(-1)}>
+								<Card icon={o.icon} title={o.title} desc={o.desc} link={link} type={o.type} isShown={isEdu} index={index} />
+							</a>
+						</SwiperSlide>
 					})}
 				</Swiper>
 
 				<h1 >Technologies</h1>
 				{/* need to add more... */}
 				<Grid rows={2} columns={8}>
-					{icons_data.map((o, i) => {
-						// console.log(o, i)
-						return <Tile key={i} icon={o.icon} />
+					{icons_data.map((o, index) => {
+						return <div key={index} onMouseEnter={() => setIsTech(index)} onMouseLeave={() => setIsTech(-1)}>
+							<Tile icon={o.icon} name={o.name} index={index} isShown={isTech} />
+						</div>
 					})}
 				</Grid>
 
@@ -176,6 +185,29 @@ export default function Home() {
 						return <SwiperSlide key={i}><PhotoCard image={o.image} desc={o.desc} /></SwiperSlide>
 					})}
 				</Swiper>
+
+				{/* 
+				
+				kayaking
+				hiking
+				photography
+				fitness
+				reading
+				travel
+				cars
+				
+				*/}
+
+
+				{/* contact form */}
+				<h1 style={{ marginTop: "60px" }}>Contact Me</h1>
+				<ContactForm />
+
+				{/* 
+				about section
+				projects section
+				contact section
+				 */}
 
 
 				<Footer />

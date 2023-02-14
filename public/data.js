@@ -5,7 +5,7 @@ export const projects_data = [
 		desc: "Real Estate Web App serving 20,000+ geo-tagged photos",
 		icon: "/icons/scm.png",
 		github_link: "",
-		link: "https://smartcitymedia.com/stock/browse/",
+		link: "https://smartcitymedia.com/",
 		screenshots: [
 			{ src: "/screenshots/pantro/1.png" },
 		],
@@ -85,22 +85,22 @@ export const projects_data = [
 	},
 ]
 
-export const design_data = [
-	{
-		id: 0,
-		title: "Digital Art",
-		desc: "Some of my design work throught the years",
-		link: "https://www.behance.net/joshrenema",
-		icon: "/icons/behance.png",
-	},
-	{
-		id: 1,
-		title: "Icons",
-		desc: "vr icons, poman, recycle toss, budding writers?, petsave, ",
-		link: "(post these on dribble)",
-		icon: "/icons/rt.png",
-	}
-]
+// export const design_data = [
+// 	{
+// 		id: 0,
+// 		title: "Digital Art",
+// 		desc: "Some of my design work throught the years",
+// 		link: "https://www.behance.net/joshrenema",
+// 		icon: "/icons/behance.png",
+// 	},
+// 	{
+// 		id: 1,
+// 		title: "Icons",
+// 		desc: "vr icons, poman, recycle toss, budding writers?, petsave, ",
+// 		link: "(post these on dribble)",
+// 		icon: "/icons/rt.png",
+// 	}
+// ]
 
 export const school_data = [
 	{
@@ -108,107 +108,109 @@ export const school_data = [
 		title: "BCIT",
 		desc: "Digital Design & Development",
 		link: "https://www.bcit.ca/programs/digital-design-and-development-diploma-full-time-6515dipma/",
-		icon: "/icons/bcit.png"
+		icon: "/icons/bcit.png",
+		type:"Diploma",
 	},
 	{
 		id: 1,
 		title: "Harvard",
 		desc: "CS50P ",
-		link: "https://cs50.harvard.edu/python/2022/",
-		icon: "/icons/harvard.png"
+		link: "https://www.edx.org/course/cs50s-introduction-to-programming-with-python",
+		icon: "/icons/harvard.png",
+		type:"Certificate",
 	},
 ]
 
 export const icons_data = [
 	{
 		id: 2,
-		icon: "/icons/lang/react.png",
-		tooltip: "React",
+		icon: "/icons/tech/react.png",
+		name: "React",
 	},
 	{
 		id: 17,
-		icon: "/icons/lang/python.png",
-		tooltip: "Python",
+		icon: "/icons/tech/python.png",
+		name: "Python",
 	},
 	{
 		id: 7,
-		icon: "/icons/lang/nextjs.png",
-		tooltip: "NextJS",
+		icon: "/icons/tech/nextjs.png",
+		name: "NextJS",
 	},
 	{
 		id: 8,
-		icon: "/icons/lang/nodejs.png",
-		tooltip: "NodeJS",
+		icon: "/icons/tech/nodejs.png",
+		name: "NodeJS",
 	},
 	{
 		id: 4,
-		icon: "/icons/lang/php.png",
-		tooltip: "PHP",
+		icon: "/icons/tech/php.png",
+		name: "PHP",
 	},
 	{
 		id: 5,
-		icon: "/icons/lang/mysql.png",
-		tooltip: "MySql",
+		icon: "/icons/tech/mysql.png",
+		name: "MySql",
 	},
 	{
 		id: 6,
-		icon: "/icons/lang/postgresql.png",
-		tooltip: "PostgreSQL",
+		icon: "/icons/tech/postgresql.png",
+		name: "PostgreSQL",
 	},
 	{
 		id: 3,
-		icon: "/icons/lang/javascript.png",
-		tooltip: "Javascript",
+		icon: "/icons/tech/javascript.png",
+		name: "Javascript",
 	},
 	{
 		id: 9,
-		icon: "/icons/lang/html.png",
-		tooltip: "HTML",
+		icon: "/icons/tech/html.png",
+		name: "HTML",
 	},
 	{
 		id: 10,
-		icon: "/icons/lang/css.png",
-		tooltip: "CSS",
+		icon: "/icons/tech/css.png",
+		name: "CSS",
 	},
 	{
 		id: 19,
-		icon: "/icons/lang/wordpress.png",
-		tooltip: "Wordpress",
+		icon: "/icons/tech/wordpress.png",
+		name: "Wordpress",
+	},
+	{
+		id: 1,
+		icon: "/icons/tech/aws.png",
+		name: "AWS",
+	},
+	{
+		id: 11,
+		icon: "/icons/tech/adobe.png",
+		name: "Adobe Creative Suite",
+	},
+	{
+		id: 13,
+		icon: "/icons/tech/figma.png",
+		name: "Figma",
 	},
 	// {
-	// 	id: 1,
-	// 	icon: "/icons/lang/aws.svg",
-	// 	tooltip: "AWS (DynamoDB, SES, SMS, S3)",
-	// },
-	// {
-	// 	id: 11,
-	// 	icon: "/icons/lang/adobe.svg",
-	// 	tooltip: "Adobe Creative Suite",
-	// },
-	// {
-	// 	id: 13,
-	// 	icon: "/icons/lang/figma.svg",
-	// 	tooltip: "Figma",
-	// },
-	// {
 	// 	id: 14,
-	// 	icon: "/icons/lang/firebase.svg",
-	// 	tooltip: "Firebase",
+	// 	icon: "/icons/tech/firebase.svg",
+	// 	name: "Firebase",
 	// },
 	// {
 	// 	id: 15,
-	// 	icon: "/icons/lang/material.svg",
-	// 	tooltip: "Material Design",
+	// 	icon: "/icons/tech/material.svg",
+	// 	name: "Material Design",
 	// },
 	// {
 	// 	id: 16,
-	// 	icon: "/icons/lang/postman.svg",
-	// 	tooltip: "Postman",
+	// 	icon: "/icons/tech/postman.svg",
+	// 	name: "Postman",
 	// },
 	// {
 	// 	id: 18,
-	// 	icon: "/icons/lang/sass.svg",
-	// 	tooltip: "Sass: Syntactically Awesome Style Sheets",
+	// 	icon: "/icons/tech/sass.svg",
+	// 	name: "Sass: Syntactically Awesome Style Sheets",
 	// },
 ];
 
@@ -218,32 +220,32 @@ export const icons_data = [
 export const interests_data = [
 	{
 		id: 0,
-		image: "/images/4.jpg",
-		desc: "maya lovely oneeee",
+		image: "/images/photography.jpg",
+		desc: "Photography",
 	},
 	{
 		id: 0,
-		image: "/images/5.jpg",
-		desc: "maya lovely oneeee",
+		image: "/images/hiking.jpg",
+		desc: "Hiking",
 	},
 	{
 		id: 0,
-		image: "/images/3.jpg",
-		desc: "maya lovely oneeee",
+		image: "/images/travel.jpg",
+		desc: "Traveling",
 	},
 	{
 		id: 0,
-		image: "/images/6.jpg",
-		desc: "maya lovely oneeee",
+		image: "/images/cars.jpg",
+		desc: "Cars",
 	},
 	{
 		id: 0,
-		image: "/images/1.jpg",
-		desc: "maya lovely oneeee",
+		image: "/images/book.jpg",
+		desc: "Reading",
 	},
-	{
-		id: 0,
-		image: "/images/2.jpg",
-		desc: "maya lovely oneeee",
-	},
+	// {
+	// 	id: 0,
+	// 	image: "/images/2.jpg",
+	// 	desc: "maya lovely oneeee",
+	// },
 ];

@@ -1,50 +1,30 @@
 import React from "react";
 import styled from "styled-components";
-import Image from "next/image";
 
 const Container = styled.button`
   border: 0;
   border-radius: 6px;
   height: 45px;
-  width: 80px;
+  padding:0px 16px;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: var(--secondary);
   cursor: pointer;
   margin-right: ${({ margin }) => margin};
+  color:var(--text);
+  &:focus, :hover {
+    background: var(--tertiary);
+    outline: 2px solid var(--text);
+  }
   `;
 
-const GradiantBorder = styled.div`
-  border-radius: 6px;
-  background: var(--gradiant);
-  z-index:-1;
-  display:none;
-  height: 49px;
-  width: 84px;
-  position:absolute;
-  top:-2px;
-  left:-2px;
-  `;
-
-const Wrapper = styled.div`
-  position:relative;
-  // border:1px solid red;
-`;
-
-const IconButton = ({ text, onClick, margin }) => {
+const IconButton = ({ text, onClick, margin, type }) => {
   return (
-    <Wrapper className="wrapper">
-      <Container onClick={onClick} margin={margin}>
-        <div style={{fontSize:"12pt"}}>{text}</div>
-      </Container>
-      <GradiantBorder className="gradiant_border" />
-    </Wrapper>
+    <Container onClick={onClick} margin={margin} type={type}>
+      <div style={{ fontSize: "12pt" }}>{text}</div>
+    </Container>
   );
 };
 
 export default IconButton;
-
-IconButton.defaultProps = {
-  margin: "20px",
-};
