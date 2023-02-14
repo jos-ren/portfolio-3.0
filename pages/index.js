@@ -79,8 +79,8 @@ export default function Home() {
 			<div className={styles.side}>
 
 
-				<Image style={{ borderRadius: "50%" }} height="350px" width="350px" objectFit="cover" src="/profile_mountain.jpg" />
-				<h1 style={{ fontWeight: "500", fontSize: "40pt", margin: '0px' }}>Josh Renema</h1>
+				<Image style={{ borderRadius: "50%"}} height="300px" width="300px" objectFit="cover" src="/profile_mountain.jpg" />
+				<h1 style={{ fontWeight: "500", fontSize: "40pt", margin: '0px', marginTop:"20px" }}>Josh Renema</h1>
 				<div style={{ marginBottom: "20px" }}>Fullstack Developer</div>
 
 				<div className={styles.socials}>
@@ -155,7 +155,7 @@ export default function Home() {
 					{school_data.map((o, index) => {
 						return <SwiperSlide key={index}>
 							<a target="_blank" rel="noopener noreferrer" href={o.link} onMouseEnter={() => setIsEdu(index)} onMouseLeave={() => setIsEdu(-1)}>
-								<Card icon={o.icon} title={o.title} desc={o.desc} link={link} type={o.type} isShown={isEdu} index={index} />
+								<Card icon={o.icon} title={o.title} desc={o.desc} link={link} info={o.info} isShown={isEdu} index={index} />
 							</a>
 						</SwiperSlide>
 					})}

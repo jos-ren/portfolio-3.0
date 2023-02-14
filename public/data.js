@@ -106,18 +106,18 @@ export const school_data = [
 	{
 		id: 0,
 		title: "BCIT",
-		desc: "Digital Design & Development",
+		desc: <>Digital Design & Development | <i>Diploma</i></>,
 		link: "https://www.bcit.ca/programs/digital-design-and-development-diploma-full-time-6515dipma/",
 		icon: "/icons/bcit.png",
-		type:"Diploma",
+		info: "2 year program focused on Web development in React as well as Design & UI / UX",
 	},
 	{
 		id: 1,
 		title: "Harvard",
-		desc: "CS50P ",
+		desc: <>CS50P | <i> Certificate </i></>,
 		link: "https://www.edx.org/course/cs50s-introduction-to-programming-with-python",
 		icon: "/icons/harvard.png",
-		type:"Certificate",
+		info: "10 week program that teaches the fundamentals of Python & Object oriented programming",
 	},
 ]
 
@@ -191,6 +191,11 @@ export const icons_data = [
 		id: 13,
 		icon: "/icons/tech/figma.png",
 		name: "Figma",
+	},
+	{
+		id: 13,
+		icon: "/icons/tech/styled.png",
+		name: "Styled Components",
 	},
 	// {
 	// 	id: 14,
