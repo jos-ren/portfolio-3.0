@@ -23,9 +23,10 @@ import IconButton from '../comps/IconButton';
 import Footer from '../comps/Footer';
 import Header from '../comps/Header';
 import Tile from '../comps/Tile';
-import Button from '../comps/Button';
+import LinkButton from '../comps/LinkButton';
 import PhotoCard from '../comps/PhotoCard';
 import TextCard from '../comps/TextCard';
+import ContactForm from "../comps/ContactForm";
 
 import useColorTheme from "use-color-theme";
 
@@ -96,7 +97,7 @@ export default function Home() {
 						<IconButton img_src={email} />
 					</a>
 					<a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1MzXEtLKZ2h67UMKlzdBGnKA1JhoJGz-1/view?usp=sharing">
-						<Button text={"Resume"} />
+						<LinkButton text={"Resume"} />
 					</a>
 				</div>
 
@@ -184,6 +185,7 @@ export default function Home() {
 						return <SwiperSlide key={i}><PhotoCard image={o.image} desc={o.desc} /></SwiperSlide>
 					})}
 				</Swiper>
+
 				{/* 
 				
 				kayaking
@@ -196,7 +198,16 @@ export default function Home() {
 				
 				*/}
 
+
 				{/* contact form */}
+				<h1 style={{ marginTop: "60px" }}>Contact Me</h1>
+				<ContactForm />
+
+				{/* 
+				about section
+				projects section
+				contact section
+				 */}
 
 
 				<Footer />
