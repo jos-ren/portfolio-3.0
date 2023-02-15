@@ -7,14 +7,12 @@ import { useRouter } from 'next/router'
 const Projects = ({ }) => {
     return (
         <div>
-            {projects_data.map((post) => (
-                <ul>
-                    <li key={post.id}>
-                        <Link href={`/projects/${encodeURIComponent(post.id)}`}>
-                            {post.slug}
-                        </Link>
-                    </li>
-                </ul>
+            {projects_data.map((post, index) => (
+                <li key={index}>
+                    <Link href={`/projects/${encodeURIComponent(post.id)}`}>
+                        {post.slug}
+                    </Link>
+                </li>
             ))}
         </div>
     );

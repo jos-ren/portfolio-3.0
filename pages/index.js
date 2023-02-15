@@ -135,8 +135,8 @@ const router = useRouter()
 
 
 				<ul>
-					{projects_data.map((post) => (
-						<li key={post.id}>
+					{projects_data.map((post, index) => (
+						<li key={index}>
 							<Link href={`/projects/${encodeURIComponent(post.slug)}`}>
 								{post.title}
 							</Link>
