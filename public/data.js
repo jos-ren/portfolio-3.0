@@ -2,7 +2,6 @@ export const projects_data = [
 	{
 		id: 0,
 		title: "Smart City Media",
-		slug:"scm",
 		desc: "Real Estate Web App serving 20,000+ geo-tagged photos",
 		icon: "/icons/scm.png",
 		github_link: "",
@@ -14,7 +13,6 @@ export const projects_data = [
 	{
 		id: 1,
 		title: "BCIT CRM",
-		slug:"bcit-crm",
 		desc: "CRM with the options to text, email, and send updates to contacts",
 		icon: "/icons/bcit.png",
 		github_link: "",
@@ -26,7 +24,6 @@ export const projects_data = [
 	{
 		id: 2,
 		title: "Petsave",
-		slug:"petsave",
 		desc: "Social media app for animal rehabilitation centers",
 		icon: "/icons/petsave.png",
 		github_link: "https://github.com/jos-ren/petsave-frontend",
@@ -45,7 +42,6 @@ export const projects_data = [
 	{
 		id: 3,
 		title: "Pantro",
-		slug:"pantro",
 		desc: "Pantry app which tracks food expiration dates",
 		icon: "/icons/pantro.png",
 		github_link: "https://github.com/jos-ren/bcitd3_pantro",
@@ -62,9 +58,8 @@ export const projects_data = [
 	{
 		id: 4,
 		title: "Twitter Translate Bot",
-		slug:"twitter-translate-bot",
 		desc: "Python bot which can translate any tweet into french",
-		icon: "/icons/",
+		icon: "/icons/translate.png",
 		github_link: "",
 		link: null,
 	},

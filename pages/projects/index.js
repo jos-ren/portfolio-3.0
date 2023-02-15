@@ -8,11 +8,11 @@ const Projects = ({ }) => {
     return (
         <div>
             {projects_data.map((post, index) => (
-                <li key={index}>
+                <div key={index} style={{textDecoration: "underline", margin:"10px", color:"blue"}}>
                     <Link href={`/projects/${encodeURIComponent(post.id)}`}>
-                        {post.slug}
+                        {post.title}
                     </Link>
-                </li>
+                </div>
             ))}
         </div>
     );

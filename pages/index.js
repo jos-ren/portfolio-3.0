@@ -79,12 +79,12 @@ export default function Home() {
 	}
 
 	const Grid = styled.div`
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(2, 1fr);
 `;
 
-const router = useRouter()
+	const router = useRouter()
 
 	return (
 		<div className={styles.container}>
@@ -129,24 +129,6 @@ const router = useRouter()
 
 				<Header onClick={() => { colorTheme.toggle() }} img_src={sun_moon} logo_src={logo} />
 
-				<Link href="/projects">test</Link>
-
-				<p>path: {router.pathname}</p>
-
-
-				<ul>
-					{projects_data.map((post, index) => (
-						<li key={index}>
-							<Link href={`/projects/${encodeURIComponent(post.slug)}`}>
-								{post.title}
-							</Link>
-
-						</li>
-					))}
-				</ul>
-
-
-
 				{/* about me */}
 				<h1>About Me</h1>
 				{/* im a canadian full stack developer currently residing in the PNW! */}
@@ -161,25 +143,19 @@ const router = useRouter()
 
 				{/* add arrows? swiper demo for ijnfo */}
 				<h1 style={{ marginTop: "40px" }} >Projects</h1>
-				<Swiper
-					modules={[Pagination, Navigation, Scrollbar]}
-					slidesPerView={3.5}
-					spaceBetween={0}
-					scrollbar={{ draggable: true }}
-					className="mySwiper"
-				>
-					{projects_data.map((o, index) => {
-						return <SwiperSlide key={index} >
-							{/* onMouseEnter={() => setIsPro(index)} onMouseLeave={() => setIsPro(-1)} */}
-							<Link href={{
-								pathname: '/projects/[slug]',
-								query: { slug: o.slug },
-							}} >
-								<Card icon={o.icon} title={o.title} desc={o.desc} link={link} isShown={isPro} index={index} />
-							</Link>
-						</SwiperSlide>
+				<Grid>
+					{projects_data && projects_data.map((o, index) => {
+						return (
+							<div key={index}>
+								<Link href={`/projects/${encodeURIComponent(o.id)}`} >
+									{o.title}
+									{/* wtf is wrong here. find out lol */}
+									{/* <Card icon={o.icon} title={o.title} desc={o.desc} link={link} isShown={isPro} index={index} /> */}
+								</Link>
+							</div>
+						)
 					})}
-				</Swiper>
+				</Grid>
 
 				{/* <Grid rows={2} columns={3}>
 					{projects_data.map((o, index) => {
@@ -210,13 +186,15 @@ const router = useRouter()
 
 				<h1 style={{ marginTop: "40px" }} >Technologies</h1>
 				{/* need to add more... */}
-				<Grid >
+				<div style={{
+					display: "flex", flexWrap: 'wrap', justifyContent: 'center'
+				}} >
 					{icons_data.map((o, index) => {
 						return <div key={index} onMouseEnter={() => setIsTech(index)} onMouseLeave={() => setIsTech(-1)}>
 							<Tile icon={o.icon} name={o.name} index={index} isShown={isTech} />
 						</div>
 					})}
-				</Grid>
+				</div>
 
 
 
