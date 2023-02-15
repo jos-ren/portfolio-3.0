@@ -2,6 +2,7 @@ export const projects_data = [
 	{
 		id: 0,
 		title: "Smart City Media",
+		slug:"scm",
 		desc: "Real Estate Web App serving 20,000+ geo-tagged photos",
 		icon: "/icons/scm.png",
 		github_link: "",
@@ -13,6 +14,7 @@ export const projects_data = [
 	{
 		id: 1,
 		title: "BCIT CRM",
+		slug:"bcit-crm",
 		desc: "CRM with the options to text, email, and send updates to contacts",
 		icon: "/icons/bcit.png",
 		github_link: "",
@@ -24,6 +26,7 @@ export const projects_data = [
 	{
 		id: 2,
 		title: "Petsave",
+		slug:"petsave",
 		desc: "Social media app for animal rehabilitation centers",
 		icon: "/icons/petsave.png",
 		github_link: "https://github.com/jos-ren/petsave-frontend",
@@ -42,6 +45,7 @@ export const projects_data = [
 	{
 		id: 3,
 		title: "Pantro",
+		slug:"pantro",
 		desc: "Pantry app which tracks food expiration dates",
 		icon: "/icons/pantro.png",
 		github_link: "https://github.com/jos-ren/bcitd3_pantro",
@@ -57,32 +61,41 @@ export const projects_data = [
 	},
 	{
 		id: 4,
-		title: "Poman",
-		desc: "Foodie social network app",
-		icon: "/icons/poman.svg",
-		github_link: "/",
-		link: "https://www.youtube.com/watch?v=Rze68rEMxhk",
-		screenshots: [
-			{ src: "/screenshots/pantro/1.png" },
-		],
+		title: "Twitter Translate Bot",
+		slug:"twitter-translate-bot",
+		desc: "Python bot which can translate any tweet into french",
+		icon: "/icons/",
+		github_link: "",
+		link: null,
 	},
-	{
-		id: 5,
-		title: "Get'em",
-		desc: "Delivery app for everyday items",
-		icon: "/icons/getem.png",
-		href: "/projects/getem",
-		github_link: "/",
-		link: "https://www.youtube.com/watch?v=HvQbuNzpwho",
-		screenshots: [
-			{ src: "/screenshots/getem/1.jpg" },
-			{ src: "/screenshots/getem/2.jpg" },
-			{ src: "/screenshots/getem/3.jpg" },
-			{ src: "/screenshots/getem/4.jpg" },
-			{ src: "/screenshots/getem/5.jpg" },
-			{ src: "/screenshots/getem/6.jpg" },
-		],
-	},
+	// {
+	// 	id: 4,
+	// 	title: "Poman",
+	// 	desc: "Foodie social network app",
+	// 	icon: "/icons/poman.svg",
+	// 	github_link: "/",
+	// 	link: "https://www.youtube.com/watch?v=Rze68rEMxhk",
+	// 	screenshots: [
+	// 		{ src: "/screenshots/pantro/1.png" },
+	// 	],
+	// },
+	// {
+	// 	id: 5,
+	// 	title: "Get'em",
+	// 	desc: "Delivery app for everyday items",
+	// 	icon: "/icons/getem.png",
+	// 	href: "/projects/getem",
+	// 	github_link: "/",
+	// 	link: "https://www.youtube.com/watch?v=HvQbuNzpwho",
+	// 	screenshots: [
+	// 		{ src: "/screenshots/getem/1.jpg" },
+	// 		{ src: "/screenshots/getem/2.jpg" },
+	// 		{ src: "/screenshots/getem/3.jpg" },
+	// 		{ src: "/screenshots/getem/4.jpg" },
+	// 		{ src: "/screenshots/getem/5.jpg" },
+	// 		{ src: "/screenshots/getem/6.jpg" },
+	// 	],
+	// },
 ]
 
 // export const design_data = [
@@ -117,7 +130,7 @@ export const school_data = [
 		desc: <>CS50P | <i> Certificate </i></>,
 		link: "https://www.edx.org/course/cs50s-introduction-to-programming-with-python",
 		icon: "/icons/harvard.png",
-		info: "10 week program that teaches the fundamentals of Python & Object oriented programming",
+		info: "10 week program that teaches the fundamentals of Python & Object Oriented Programming",
 	},
 ]
 
@@ -141,11 +154,6 @@ export const icons_data = [
 		id: 8,
 		icon: "/icons/tech/nodejs.png",
 		name: "NodeJS",
-	},
-	{
-		id: 4,
-		icon: "/icons/tech/php.png",
-		name: "PHP",
 	},
 	{
 		id: 5,
@@ -173,6 +181,11 @@ export const icons_data = [
 		name: "CSS",
 	},
 	{
+		id: 4,
+		icon: "/icons/tech/php.png",
+		name: "PHP",
+	},
+	{
 		id: 19,
 		icon: "/icons/tech/wordpress.png",
 		name: "Wordpress",
@@ -196,6 +209,11 @@ export const icons_data = [
 		id: 13,
 		icon: "/icons/tech/styled.png",
 		name: "Styled Components",
+	},
+	{
+		id: 13,
+		icon: "/icons/tech/github.png",
+		name: "Github",
 	},
 	// {
 	// 	id: 14,

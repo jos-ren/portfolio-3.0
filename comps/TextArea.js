@@ -3,8 +3,8 @@ import styled from "styled-components";
 
 
 const Container = styled.textarea`
-    min-width:500px;
-    width:60%;
+    // min-width:500px;
+    width:100%;
     height:160px;
     border-radius:6px;
     background:var(--secondary);
