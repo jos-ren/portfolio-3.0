@@ -9,14 +9,15 @@ const Container = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--secondary);
+  background-color: var(--tertiary);
   cursor: pointer;
   margin-right: ${({ margin }) => margin};
   color:var(--text);
-  &:focus, :hover {
-    background: var(--tertiary);
-    outline: 2px solid var(--text);
-  }
+  border: 1px solid var(--border);
+  // &:focus, :hover {
+  //   background: var(--hover);
+  //   outline: 2px solid var(--text);
+  // }
   `;
 
 const IconButton = ({ text, onClick, margin, type }) => {

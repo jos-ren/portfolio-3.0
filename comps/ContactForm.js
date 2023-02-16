@@ -3,7 +3,7 @@ import Input from "./Input.js"
 import Button from "./Button.js"
 import TextArea from "./TextArea.js"
 
-const FORM_ENDPOINT = "https://public.herotofu.com/v1/2ce23ed0-ac96-11ed-a31e-753411848f80"; // TODO - fill on the later step
+const FORM_ENDPOINT = process.env.NEXT_PUBLIC_HERO_TOFU_KEY;
 
 
 const ContactForm = () => {

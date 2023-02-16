@@ -62,6 +62,9 @@ export const projects_data = [
 		icon: "/icons/translate.png",
 		github_link: "",
 		link: null,
+		screenshots: [
+			{ src: "/screenshots/pantro/1.png" },
+		],
 	},
 	// {
 	// 	id: 4,
@@ -92,23 +95,6 @@ export const projects_data = [
 	// 	],
 	// },
 ]
-
-// export const design_data = [
-// 	{
-// 		id: 0,
-// 		title: "Digital Art",
-// 		desc: "Some of my design work throught the years",
-// 		link: "https://www.behance.net/joshrenema",
-// 		icon: "/icons/behance.png",
-// 	},
-// 	{
-// 		id: 1,
-// 		title: "Icons",
-// 		desc: "vr icons, poman, recycle toss, budding writers?, petsave, ",
-// 		link: "(post these on dribble)",
-// 		icon: "/icons/rt.png",
-// 	}
-// ]
 
 export const school_data = [
 	{
@@ -232,38 +218,47 @@ export const icons_data = [
 	// },
 ];
 
+// export const interests_data = [
+// 	{
+// 		id: 0,
+// 		image: "/images/photography.jpg",
+// 		desc: "Photography",
+// 	},
+// 	{
+// 		id: 0,
+// 		image: "/images/hiking.jpg",
+// 		desc: "Hiking",
+// 	},
+// 	{
+// 		id: 0,
+// 		image: "/images/travel.jpg",
+// 		desc: "Traveling",
+// 	},
+// 	{
+// 		id: 0,
+// 		image: "/images/cars.jpg",
+// 		desc: "Cars",
+// 	},
+// 	{
+// 		id: 0,
+// 		image: "/images/book.jpg",
+// 		desc: "Reading",
+// 	},
+// ];
 
-
-
-export const interests_data = [
-	{
-		id: 0,
-		image: "/images/photography.jpg",
-		desc: "Photography",
-	},
-	{
-		id: 0,
-		image: "/images/hiking.jpg",
-		desc: "Hiking",
-	},
-	{
-		id: 0,
-		image: "/images/travel.jpg",
-		desc: "Traveling",
-	},
-	{
-		id: 0,
-		image: "/images/cars.jpg",
-		desc: "Cars",
-	},
-	{
-		id: 0,
-		image: "/images/book.jpg",
-		desc: "Reading",
-	},
-	// {
-	// 	id: 0,
-	// 	image: "/images/2.jpg",
-	// 	desc: "maya lovely oneeee",
-	// },
-];
+// export const design_data = [
+// 	{
+// 		id: 0,
+// 		title: "Digital Art",
+// 		desc: "Some of my design work throught the years",
+// 		link: "https://www.behance.net/joshrenema",
+// 		icon: "/icons/behance.png",
+// 	},
+// 	{
+// 		id: 1,
+// 		title: "Icons",
+// 		desc: "vr icons, poman, recycle toss, budding writers?, petsave, ",
+// 		link: "(post these on dribble)",
+// 		icon: "/icons/rt.png",
+// 	}
+// ]

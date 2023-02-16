@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Image from 'next/image'
 
 const Container = styled.div`
-    background-color: var(--secondary);
+    background-color: var(--tertiary);
     border-radius:8px;
     padding:20px;
     margin-right:30px;

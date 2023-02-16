@@ -7,15 +7,16 @@ const Container = styled.input`
     width:50%;
     height:45px;
     border-radius:6px;
-    background:var(--secondary);
+    background:var(--tertiary);
     font-family: Inter;
     font-size:12pt;
     margin-bottom:20px;
     border:none;
     color:var(--text);
     padding:0 0 0 16px;
+    border: 1px solid var(--border);
     &:focus {
-        background: var(--tertiary);
+        background: var(--hover);
         outline: 2px solid var(--text);
       }
 `;

@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import styles from '../../styles/Home.module.css'
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { useRouter } from 'next/router'
@@ -57,9 +56,8 @@ export default function Projects() {
             <div>{data.github_link}</div>
             <div>{data.link}</div>
             {/* {data.screenshots.map((o, index) => {
-                console.log(o, index)
                 return (
-                    <Image key={index} height="50px" width="50px" objectFit="contain" src={o.src} />
+                    <Image key={index} height="500px" width="200px" objectFit="contain" src={o.src} />
                 )
             })} */}
             <br />

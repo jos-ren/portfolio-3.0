@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Image from 'next/image'
 
 const Container = styled.div`
-    background-color: var(--secondary);
+    background-color: var(--tertiary);
     border-radius:8px;
     padding:20px;
     height:80px;
@@ -19,7 +19,7 @@ const Container = styled.div`
     // padding: 20px;
     // margin: 10px;
     cursor:default;
-    transition: display 2s;
+    border: 1px solid var(--border);
 `;
 
 const Tile = ({ icon, isShown, name, index }) => {
