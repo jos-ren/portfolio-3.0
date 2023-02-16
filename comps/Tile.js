@@ -4,6 +4,7 @@ import Image from 'next/image'
 
 const Container = styled.div`
     background-color: var(--tertiary);
+    border: 1px solid var(--border);
     border-radius:8px;
     padding:20px;
     height:80px;
@@ -19,7 +20,6 @@ const Container = styled.div`
     // padding: 20px;
     // margin: 10px;
     cursor:default;
-    border: 1px solid var(--border);
 `;
 
 const Tile = ({ icon, isShown, name, index }) => {
