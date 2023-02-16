@@ -17,13 +17,14 @@ import { Pagination, Navigation, Scrollbar } from "swiper";
 import { projects_data } from '../public/data.js';
 import { school_data } from '../public/data.js';
 import { icons_data } from '../public/data.js';
-// import { interests_data } from '../public/data.js';
+import { interests_data } from '../public/data.js';
 
 // import components
 import Card from '../comps/Card';
 import Tile from '../comps/Tile';
 import ContactForm from "../comps/ContactForm";
 import SideBar from "../comps/SideBar";
+import PhotoCard from "../comps/PhotoCard";
 import Grid from "../comps/Grid";
 
 import useColorTheme from "use-color-theme";
@@ -90,7 +91,7 @@ export default function Home() {
 				<SideBar logo_src={logo} sm_src={sun_moon} onClick={() => { colorTheme.toggle() }} data={projects_data} />
 				{/* CONTENT */}
 				<div style={{
-					padding: "10rem",
+					padding: "5rem 16rem",
 					display: "flex",
 					flexDirection: "column",
 					width: "calc(100vw - 333px)",
@@ -98,6 +99,8 @@ export default function Home() {
 					left: '333px',
 					background: 'var(--secondary)'
 				}}>
+
+					<Image height="400" width="1000" objectFit="cover" quality="100" src={"/test.jpg"} style={{borderRadius:"14px"}}/>
 
 					{/* about me */}
 					<h1>About Me</h1>
@@ -124,9 +127,9 @@ export default function Home() {
 
 					{/* perhaps add start dates and whether its completed or not */}
 					<h1 style={{ marginTop: "50px" }}>Education</h1>
-					<div style={{ display: "grid", gridTemplateColumns: 'repeat(2, 1fr)', gridTemplateRows: '1fr', border: "1px solid red" }} >
+					<div style={{ display: "grid", gridTemplateColumns: 'repeat(2, 1fr)', gridTemplateRows: '1fr' }} >
 						{school_data.map((o, index) => {
-							return <a style={{ border: "1px solid green" }} key={index} target="_blank" rel="noopener noreferrer" href={o.link} onMouseEnter={() => setIsEdu(index)} onMouseLeave={() => setIsEdu(-1)}>
+							return <a style={{ }} key={index} target="_blank" rel="noopener noreferrer" href={o.link} onMouseEnter={() => setIsEdu(index)} onMouseLeave={() => setIsEdu(-1)}>
 								<Card icon={o.icon} title={o.title} desc={o.desc} link={link} info={o.info} isShown={isEdu} index={index} />
 							</a>
 						})}
@@ -134,7 +137,7 @@ export default function Home() {
 
 					<h1 style={{ marginTop: "40px" }} >Technologies</h1>
 					{/* need to add more... */}
-					<div style={{ display: "flex", flexWrap: 'wrap', justifyContent: 'center', border: "1px solid red" }} >
+					<div style={{ display: "flex", flexWrap: 'wrap', justifyContent: 'center' }} >
 						{icons_data.map((o, index) => {
 							return <div key={index} onMouseEnter={() => setIsTech(index)} onMouseLeave={() => setIsTech(-1)}>
 								<Tile icon={o.icon} name={o.name} index={index} isShown={isTech} />
@@ -147,18 +150,12 @@ export default function Home() {
 
 
 					{/* <h1 style={{ marginTop: "30px" }}>Interests</h1>
+					<div style={{ display: "flex", flexWrap: 'wrap', justifyContent:"space-between"}} >
+						{interests_data.map((o, i) => {
+							return <PhotoCard image={o.image} desc={o.desc} />
+						})}
+					</div> */}
 
-					<Swiper
-					modules={[Pagination, Navigation, Scrollbar]}
-					slidesPerView={3}
-					spaceBetween={0}
-					scrollbar={{ draggable: true }}
-					className="mySwiper"
-					>
-					{interests_data.map((o, i) => {
-						return <SwiperSlide key={i}><PhotoCard image={o.image} desc={o.desc} /></SwiperSlide>
-					})}
-					</Swiper> */}
 
 
 					{/* contact form */}

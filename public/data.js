@@ -218,33 +218,33 @@ export const icons_data = [
 	// },
 ];
 
-// export const interests_data = [
-// 	{
-// 		id: 0,
-// 		image: "/images/photography.jpg",
-// 		desc: "Photography",
-// 	},
-// 	{
-// 		id: 0,
-// 		image: "/images/hiking.jpg",
-// 		desc: "Hiking",
-// 	},
-// 	{
-// 		id: 0,
-// 		image: "/images/travel.jpg",
-// 		desc: "Traveling",
-// 	},
-// 	{
-// 		id: 0,
-// 		image: "/images/cars.jpg",
-// 		desc: "Cars",
-// 	},
-// 	{
-// 		id: 0,
-// 		image: "/images/book.jpg",
-// 		desc: "Reading",
-// 	},
-// ];
+export const interests_data = [
+	{
+		id: 0,
+		image: "/images/photography.jpg",
+		desc: "Photography",
+	},
+	{
+		id: 0,
+		image: "/images/hiking.jpg",
+		desc: "Hiking",
+	},
+	{
+		id: 0,
+		image: "/images/travel.jpg",
+		desc: "Traveling",
+	},
+	{
+		id: 0,
+		image: "/images/cars.jpg",
+		desc: "Cars",
+	},
+	{
+		id: 0,
+		image: "/images/book.jpg",
+		desc: "Reading",
+	},
+];
 
 // export const design_data = [
 // 	{
