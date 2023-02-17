@@ -26,7 +26,7 @@ import PhotoCard from "../comps/PhotoCard";
 
 
 export default function Home() {
-	
+
 	const colorTheme = useColorTheme("light-theme", {
 		classNames: ["light-theme", "dark-theme"],
 	});
@@ -76,14 +76,14 @@ export default function Home() {
 			<h1 style={{ marginTop: "40px" }} >Projects</h1>
 			<div style={{ display: "grid", gridTemplateColumns: 'repeat(3, 1fr)', gridTemplateRows: '1fr' }} >
 				{projects_data.map((o, index) => {
-					return <Card icon={o.icon} title={o.title} desc={o.desc} link={link} index={index} />
+					return <Card key={index} icon={o.icon} title={o.title} desc={o.desc} link={link} index={index} />
 				})}
 			</div>
 
 			<h1 style={{ marginTop: "50px" }}>Education</h1>
 			<div style={{ display: "grid", gridTemplateColumns: 'repeat(2, 1fr)', gridTemplateRows: '1fr' }} >
 				{school_data.map((o, index) => {
-					return <a style={{}} key={index} target="_blank" rel="noopener noreferrer" href={o.link} onMouseEnter={() => setIsEdu(index)} onMouseLeave={() => setIsEdu(-1)}>
+					return <a key={index} target="_blank" rel="noopener noreferrer" href={o.link} onMouseEnter={() => setIsEdu(index)} onMouseLeave={() => setIsEdu(-1)}>
 						<Card icon={o.icon} title={o.title} desc={o.desc} link={link} info={o.info} isShown={isEdu} index={index} />
 					</a>
 				})}
