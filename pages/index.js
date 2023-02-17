@@ -73,14 +73,14 @@ export default function Home() {
 				When I’m not spending my days coding and designing, you’ll probably find me riding my jeep out in the mountains, trying out new food with friends, or testing out my Nikon film camera. Feel free to checkout my projects below or browse to your heart's content!
 			`}
 
-			<h1 style={{ marginTop: "40px" }} >Projects</h1>
+			<h1 style={{ marginTop: "50px" }} >Projects</h1>
 			<div style={{ display: "grid", gridTemplateColumns: 'repeat(3, 1fr)', gridTemplateRows: '1fr' }} >
 				{projects_data.map((o, index) => {
 					return <Card key={index} icon={o.icon} title={o.title} desc={o.desc} link={link} index={index} />
 				})}
 			</div>
 
-			<h1 style={{ marginTop: "50px" }}>Education</h1>
+			<h1 style={{ marginTop: "40px" }}>Education</h1>
 			<div style={{ display: "grid", gridTemplateColumns: 'repeat(2, 1fr)', gridTemplateRows: '1fr' }} >
 				{school_data.map((o, index) => {
 					return <a key={index} target="_blank" rel="noopener noreferrer" href={o.link} onMouseEnter={() => setIsEdu(index)} onMouseLeave={() => setIsEdu(-1)}>
@@ -105,7 +105,7 @@ export default function Home() {
 					})}
 				</div> */}
 
-			<h1 style={{ marginTop: "60px" }}>Contact Me</h1>
+			<h1 style={{ marginTop: "40px" }}>Contact Me</h1>
 			<ContactForm />
 
 		</>
