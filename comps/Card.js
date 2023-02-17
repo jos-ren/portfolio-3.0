@@ -8,12 +8,12 @@ const Container = styled.div`
     border-radius:8px;
     padding:20px;
     min-height:200px;
-    min-width:200px;
+    min-width:180px;
     // width:100%;
     // max-width:600px;
     // width:500px;
-    margin-right:30px;
-    margin-bottom:30px;
+    // margin-right:30px;
+    // margin-bottom:30px;
     cursor:pointer;
     // position:relative;
 `;

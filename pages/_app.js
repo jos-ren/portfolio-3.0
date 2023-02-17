@@ -2,7 +2,9 @@ import React, { } from "react";
 import Head from 'next/head'
 import '../styles/globals.css'
 import useColorTheme from "use-color-theme";
+import { useMediaQuery } from 'react-responsive'
 import SideBar from "../comps/SideBar";
+import TopBar from "../comps/TopBar";
 import { projects_data } from '../public/data.js';
 
 if (typeof window !== 'undefined' && localStorage.colorTheme !== '"dark-theme"') {
@@ -39,6 +41,7 @@ function MyApp({ Component, pageProps }) {
     logo = "/icons/logo_w.svg";
   }
 
+  const isTablet = useMediaQuery({ query: '(max-width: 880px)' })
 
   return (
     <div>
@@ -49,25 +52,36 @@ function MyApp({ Component, pageProps }) {
       </Head>
       {/* BODY */}
       <div style={{ display: "flex", flexDirection: "row" }}>
-        {/* SIDE */}
-        <SideBar logo_src={logo} sm_src={sun_moon} onClick={() => { colorTheme.toggle() }} data={projects_data} />
+        {/* SIDE BAR / TOP BAR */}
+        {isTablet ? <TopBar /> : <SideBar logo_src={logo} sm_src={sun_moon} onClick={() => { colorTheme.toggle() }} data={projects_data} />}
         {/* MAIN */}
-        <div style={{
-          position: "relative",
-          width: "calc(100vw - 333px)",
-          left: '333px',
-          minHeight: "100vh",
-          background: 'var(--secondary)',
-
-          display: 'grid',
-          gridTemplateColumns: '1fr 3fr 1fr',
-          gridTemplateRows: '1fr',
-          gap: '0px 0px',
-          gridTemplateAreas: "fill content fill",
-        }}>
+        <div style={
+          isTablet ? {
+            position: "relative",
+            width: "100vw",
+            left: "0px",
+            minHeight: "100vh",
+            background: 'var(--secondary)',
+            display: "flex",
+            flexDirection: "column",
+            alignItems:"center",
+            padding: "0em 1.5em"
+          } : {
+            position: "relative",
+            width: "calc(100vw - 333px)",
+            left: "333px",
+            minHeight: "100vh",
+            background: 'var(--secondary)',
+            display: "flex",
+            flexDirection: "column",
+            alignItems:"center",
+            padding: "0em 2em"
+          }
+        }>
           <div className="fill"></div>
           {/* CONTENT */}
-          <div className="content" style={{margin:"6em 0"}}>
+          <div className="content" style={ { padding: "6em 0", maxWidth:"800px"} 
+            }>
             <Component {...pageProps} />
           </div>
           <div className="fill"></div>

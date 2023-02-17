@@ -111,7 +111,7 @@ export const school_data = [
 		desc: <>CS50P | <i> Certificate </i></>,
 		link: "https://www.edx.org/course/cs50s-introduction-to-programming-with-python",
 		icon: "/icons/harvard.png",
-		info: "10 week program that teaches the fundamentals of Python & Object Oriented Programming",
+		info: "10 week program that teaches the fundamentals of Python",
 	},
 ]
 

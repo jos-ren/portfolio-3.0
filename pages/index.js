@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import React, { useState, useEffect, useLayoutEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import Link from 'next/link'
 
@@ -11,6 +11,7 @@ import 'swiper/css/scrollbar';
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation, Scrollbar } from "swiper";
 import useColorTheme from "use-color-theme";
+import { useMediaQuery } from 'react-responsive'
 
 // import data
 import { projects_data } from '../public/data.js';
@@ -51,9 +52,19 @@ export default function Home() {
 	// 	`)
 	// });
 
+	// margins should change for all 5 breakpoints
+	// 3 cards
+	const isDesktop = useMediaQuery({ query: '(max-width: 1600px)' })
+	// 2 card
+	const isSmallDesktop = useMediaQuery({ query: '(max-width: 1160px)' })
+	// sidebar changes to top
+	// still 2 cards
+	const isTablet = useMediaQuery({ query: '(max-width: 880px)' })
+	// 1 cards
+	const isMobile = useMediaQuery({ query: '(max-width: 425px)' })
+
 	return (
 		<>
-
 			{/* 
 				3 main sections of home page:
 				about section
@@ -61,7 +72,12 @@ export default function Home() {
 				contact section
 			*/}
 
-			{/* <Image height="400" width="1000" objectFit="cover" quality="100" src={"/test.jpg"} style={{ borderRadius: "14px" }} /> */}
+			{isDesktop && <p>Desktop</p>}
+			{isSmallDesktop && <p>SmallDesktop</p>}
+			{isTablet && <p>Tablet</p>}
+			{isMobile && <p>Mobile</p>}
+
+			<Image height="400" width="1000" objectFit="cover" quality="100" src={"/test.jpg"} style={{ borderRadius: "14px" }} />
 
 			{/* about me */}
 			<h1>About Me</h1>
@@ -73,15 +89,27 @@ export default function Home() {
 				When I’m not spending my days coding and designing, you’ll probably find me riding my jeep out in the mountains, trying out new food with friends, or testing out my Nikon film camera. Feel free to checkout my projects below or browse to your heart's content!
 			`}
 
+			{/* have a 2 / 3 format when 3 wide & a 2 / 2 / 1 when 2 wide */}
 			<h1 style={{ marginTop: "50px" }} >Projects</h1>
-			<div style={{ display: "grid", gridTemplateColumns: 'repeat(3, 1fr)', gridTemplateRows: '1fr' }} >
+			<div style={
+				isMobile ? { display: "grid", gridTemplateColumns: 'repeat(1, 1fr)', gridTemplateRows: '1fr', rowGap: '20px', columnGap: '20px' } :
+					isSmallDesktop || isTablet ? { display: "grid", gridTemplateColumns: 'repeat(2, 1fr)', gridTemplateRows: '1fr', rowGap: '20px', columnGap: '20px' } :
+						{ display: "grid", gridTemplateColumns: 'repeat(3, 1fr)', gridTemplateRows: '1fr', rowGap: '20px', columnGap: '20px' }
+			} >
 				{projects_data.map((o, index) => {
-					return <Card key={index} icon={o.icon} title={o.title} desc={o.desc} link={link} index={index} />
+					return <div key={index}>
+						<Link href={"/projects/" + index}>
+							<Card icon={o.icon} title={o.title} desc={o.desc} index={index} />
+						</Link>
+					</div>
 				})}
 			</div>
 
 			<h1 style={{ marginTop: "40px" }}>Education</h1>
-			<div style={{ display: "grid", gridTemplateColumns: 'repeat(2, 1fr)', gridTemplateRows: '1fr' }} >
+			<div style={
+				isMobile ? { display: "grid", gridTemplateColumns: 'repeat(1, 1fr)', gridTemplateRows: '1fr', rowGap: '20px', columnGap: '20px' } :
+					{ display: "grid", gridTemplateColumns: 'repeat(2, 1fr)', gridTemplateRows: '1fr', rowGap: '20px', columnGap: '20px' }
+			} >
 				{school_data.map((o, index) => {
 					return <a key={index} target="_blank" rel="noopener noreferrer" href={o.link} onMouseEnter={() => setIsEdu(index)} onMouseLeave={() => setIsEdu(-1)}>
 						<Card icon={o.icon} title={o.title} desc={o.desc} link={link} info={o.info} isShown={isEdu} index={index} />
@@ -90,7 +118,7 @@ export default function Home() {
 			</div>
 
 			<h1 style={{ marginTop: "40px" }} >Technologies</h1>
-			<div style={{ display: "flex", flexWrap: 'wrap', justifyContent: 'center' }} >
+			<div style={{ display: "flex", flexWrap: 'wrap', justifyContent: 'center', gap: '20px' }} >
 				{icons_data.map((o, index) => {
 					return <div key={index} onMouseEnter={() => setIsTech(index)} onMouseLeave={() => setIsTech(-1)}>
 						<Tile icon={o.icon} name={o.name} index={index} isShown={isTech} />

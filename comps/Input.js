@@ -3,8 +3,8 @@ import styled from "styled-components";
 
 
 const Container = styled.input`
-    min-width:500px;
-    width:50%;
+    // min-width:500px;
+    width:100%;
     height:45px;
     border-radius:6px;
     background:var(--tertiary);
