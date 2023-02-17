@@ -24,11 +24,15 @@ const SideBar = ({ logo_src, sm_src, onClick, data }) => {
     return (
         <Container>
             <div style={{ display: "flex", width: '100%' }}>
-                <SideButton img_src={logo_src} text={'Josh Renema'} />
+                <Link href="/">
+                    <div style={{width:"100%"}}>
+                        <SideButton img_src={logo_src} text={'Josh Renema'} />
+                    </div>
+                </Link>
                 <IconButton onClick={onClick} img_src={sm_src} />
             </div>
 
-            <div style={{margin:"15px 0px"}}></div>
+            <div style={{ margin: "15px 0px" }}></div>
 
             <p>PROJECTS</p>
             {/* maybe have a "view more button after 4-5" */}
@@ -38,7 +42,7 @@ const SideBar = ({ logo_src, sm_src, onClick, data }) => {
                 </Link>
             })}
 
-            <div style={{margin:"15px 0px"}}></div>
+            <div style={{ margin: "15px 0px" }}></div>
 
             <p>SOCIALS</p>
             <div>Github</div>
