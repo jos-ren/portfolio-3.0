@@ -57,67 +57,61 @@ export const projects_data = [
 	},
 	{
 		id: 4,
-		title: "Poman",
-		desc: "Foodie social network app",
-		icon: "/icons/poman.svg",
-		github_link: "/",
-		link: "https://www.youtube.com/watch?v=Rze68rEMxhk",
+		title: "Twitter Translate Bot",
+		desc: "Python bot which can translate any tweet into french",
+		icon: "/icons/translate.png",
+		github_link: "",
+		link: null,
 		screenshots: [
 			{ src: "/screenshots/pantro/1.png" },
 		],
 	},
-	{
-		id: 5,
-		title: "Get'em",
-		desc: "Delivery app for everyday items",
-		icon: "/icons/getem.png",
-		href: "/projects/getem",
-		github_link: "/",
-		link: "https://www.youtube.com/watch?v=HvQbuNzpwho",
-		screenshots: [
-			{ src: "/screenshots/getem/1.jpg" },
-			{ src: "/screenshots/getem/2.jpg" },
-			{ src: "/screenshots/getem/3.jpg" },
-			{ src: "/screenshots/getem/4.jpg" },
-			{ src: "/screenshots/getem/5.jpg" },
-			{ src: "/screenshots/getem/6.jpg" },
-		],
-	},
+	// {
+	// 	id: 4,
+	// 	title: "Poman",
+	// 	desc: "Foodie social network app",
+	// 	icon: "/icons/poman.svg",
+	// 	github_link: "/",
+	// 	link: "https://www.youtube.com/watch?v=Rze68rEMxhk",
+	// 	screenshots: [
+	// 		{ src: "/screenshots/pantro/1.png" },
+	// 	],
+	// },
+	// {
+	// 	id: 5,
+	// 	title: "Get'em",
+	// 	desc: "Delivery app for everyday items",
+	// 	icon: "/icons/getem.png",
+	// 	href: "/projects/getem",
+	// 	github_link: "/",
+	// 	link: "https://www.youtube.com/watch?v=HvQbuNzpwho",
+	// 	screenshots: [
+	// 		{ src: "/screenshots/getem/1.jpg" },
+	// 		{ src: "/screenshots/getem/2.jpg" },
+	// 		{ src: "/screenshots/getem/3.jpg" },
+	// 		{ src: "/screenshots/getem/4.jpg" },
+	// 		{ src: "/screenshots/getem/5.jpg" },
+	// 		{ src: "/screenshots/getem/6.jpg" },
+	// 	],
+	// },
 ]
-
-// export const design_data = [
-// 	{
-// 		id: 0,
-// 		title: "Digital Art",
-// 		desc: "Some of my design work throught the years",
-// 		link: "https://www.behance.net/joshrenema",
-// 		icon: "/icons/behance.png",
-// 	},
-// 	{
-// 		id: 1,
-// 		title: "Icons",
-// 		desc: "vr icons, poman, recycle toss, budding writers?, petsave, ",
-// 		link: "(post these on dribble)",
-// 		icon: "/icons/rt.png",
-// 	}
-// ]
 
 export const school_data = [
 	{
 		id: 0,
 		title: "BCIT",
-		desc: "Digital Design & Development",
+		desc: <>Digital Design & Development | <i>Diploma</i></>,
 		link: "https://www.bcit.ca/programs/digital-design-and-development-diploma-full-time-6515dipma/",
 		icon: "/icons/bcit.png",
-		type:"Diploma",
+		info: "2 year program focused on Web development in React as well as Design & UI / UX",
 	},
 	{
 		id: 1,
 		title: "Harvard",
-		desc: "CS50P ",
+		desc: <>CS50P | <i> Certificate </i></>,
 		link: "https://www.edx.org/course/cs50s-introduction-to-programming-with-python",
 		icon: "/icons/harvard.png",
-		type:"Certificate",
+		info: "10 week program that teaches the fundamentals of Python",
 	},
 ]
 
@@ -141,11 +135,6 @@ export const icons_data = [
 		id: 8,
 		icon: "/icons/tech/nodejs.png",
 		name: "NodeJS",
-	},
-	{
-		id: 4,
-		icon: "/icons/tech/php.png",
-		name: "PHP",
 	},
 	{
 		id: 5,
@@ -173,6 +162,11 @@ export const icons_data = [
 		name: "CSS",
 	},
 	{
+		id: 4,
+		icon: "/icons/tech/php.png",
+		name: "PHP",
+	},
+	{
 		id: 19,
 		icon: "/icons/tech/wordpress.png",
 		name: "Wordpress",
@@ -191,6 +185,16 @@ export const icons_data = [
 		id: 13,
 		icon: "/icons/tech/figma.png",
 		name: "Figma",
+	},
+	{
+		id: 13,
+		icon: "/icons/tech/styled.png",
+		name: "Styled Components",
+	},
+	{
+		id: 13,
+		icon: "/icons/tech/github.png",
+		name: "Github",
 	},
 	// {
 	// 	id: 14,
@@ -213,9 +217,6 @@ export const icons_data = [
 	// 	name: "Sass: Syntactically Awesome Style Sheets",
 	// },
 ];
-
-
-
 
 export const interests_data = [
 	{
@@ -243,9 +244,21 @@ export const interests_data = [
 		image: "/images/book.jpg",
 		desc: "Reading",
 	},
-	// {
-	// 	id: 0,
-	// 	image: "/images/2.jpg",
-	// 	desc: "maya lovely oneeee",
-	// },
 ];
+
+// export const design_data = [
+// 	{
+// 		id: 0,
+// 		title: "Digital Art",
+// 		desc: "Some of my design work throught the years",
+// 		link: "https://www.behance.net/joshrenema",
+// 		icon: "/icons/behance.png",
+// 	},
+// 	{
+// 		id: 1,
+// 		title: "Icons",
+// 		desc: "vr icons, poman, recycle toss, budding writers?, petsave, ",
+// 		link: "(post these on dribble)",
+// 		icon: "/icons/rt.png",
+// 	}
+// ]

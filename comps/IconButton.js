@@ -10,41 +10,42 @@ const Container = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--secondary);
+  background-color: var(--tertiary);
   cursor: pointer;
-  margin-right: ${({ margin }) => margin};
+  // margin-left: ${({ margin }) => margin};
+  margin-left: 20px;
+  border: 1px solid var(--border);
   `;
 
-const GradiantBorder = styled.div`
-  border-radius: 6px;
-  background: var(--gradiant);
-  z-index:-1;
-  display:none;
-  height: 49px;
-  width: 49px;
-  position:absolute;
-  top:-2px;
-  left:-2px;
-  `;
+// const GradiantBorder = styled.div`
+//   border-radius: 6px;
+//   background: var(--gradiant);
+//   z-index:-1;
+//   display:none;
+//   height: 49px;
+//   width: 49px;
+//   position:absolute;
+//   top:-2px;
+//   left:-2px;
+//   `;
 
-const Wrapper = styled.div`
-  position:relative;
-  // border:1px solid red;
-`;
+// const Wrapper = styled.div`
+//   position:relative;
+//   // border:1px solid red;
+// `;
 
 const IconButton = ({ img_src, onClick, margin }) => {
   return (
-    <Wrapper className="wrapper">
-      <Container onClick={onClick} margin={margin}>
-        <Image width={20} height={20} src={img_src} />
-      </Container>
-      <GradiantBorder className="gradiant_border" />
-    </Wrapper>
+    // <Wrapper className="wrapper">
+    //   <Container onClick={onClick} margin={margin}>
+    //     <Image width={20} height={20} src={img_src} />
+    //   </Container>
+    //   <GradiantBorder className="gradiant_border" />
+    // </Wrapper>
+    <Container onClick={onClick} margin={margin}>
+      <Image width={20} height={20} src={img_src} />
+    </Container>
   );
 };
 
 export default IconButton;
-
-IconButton.defaultProps = {
-  margin: "20px",
-};
