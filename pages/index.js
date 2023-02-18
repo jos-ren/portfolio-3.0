@@ -135,7 +135,6 @@ export default function Home() {
 
 			<h1 style={{ marginTop: "40px" }}>Contact Me</h1>
 			<ContactForm />
-
 		</>
 	)
 }

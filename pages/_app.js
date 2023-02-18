@@ -53,7 +53,15 @@ function MyApp({ Component, pageProps }) {
       {/* BODY */}
       <div style={{ display: "flex", flexDirection: "row" }}>
         {/* SIDE BAR / TOP BAR */}
-        {isTablet ? <TopBar /> : <SideBar logo_src={logo} sm_src={sun_moon} onClick={() => { colorTheme.toggle() }} data={projects_data} />}
+        {isTablet ? <TopBar /> : <SideBar
+          logo_src={logo}
+          sm_src={sun_moon}
+          github={github}
+          linkedin={linkedin}
+          behance={behance}
+          email={email}
+          onClick={() => { colorTheme.toggle() }} data={projects_data}
+        />}
         {/* MAIN */}
         <div style={
           isTablet ? {
@@ -64,7 +72,7 @@ function MyApp({ Component, pageProps }) {
             background: 'var(--secondary)',
             display: "flex",
             flexDirection: "column",
-            alignItems:"center",
+            alignItems: "center",
             padding: "0em 1.5em"
           } : {
             position: "relative",
@@ -74,14 +82,14 @@ function MyApp({ Component, pageProps }) {
             background: 'var(--secondary)',
             display: "flex",
             flexDirection: "column",
-            alignItems:"center",
+            alignItems: "center",
             padding: "0em 2em"
           }
         }>
           <div className="fill"></div>
           {/* CONTENT */}
-          <div className="content" style={ { padding: "6em 0", maxWidth:"800px"} 
-            }>
+          <div className="content" style={{ padding: "6em 0", maxWidth: "800px" }
+          }>
             <Component {...pageProps} />
           </div>
           <div className="fill"></div>

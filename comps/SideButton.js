@@ -13,15 +13,15 @@ const Container = styled.button`
     cursor:pointer;
 `;
 
-const CompName = ({ img_src, text }) => {
+const SideButton = ({ img_src, text }) => {
     return (
         <Container>
             <Image width={20} height={20} src={img_src} />
-            <div style={{fontSize:"12pt", marginLeft:"20px", color:"var(--text)"}}>
+            <div style={{fontSize:"12pt", margin:"2px 0px 0px 16px", color:"var(--text)", fontFamily:"Inter"}}>
                 {text}
             </div>
         </Container>
     );
 }
 
-export default CompName;
+export default SideButton;
