@@ -17,13 +17,15 @@ const Container = styled.div`
     top: 0px;
     box-shadow: 1px 0 0 0 var(--border);
     background: var(--primary);
-
+    z-index:99;
     padding:100px 20px;
+    // width: ${(props) => props.isOpen ? "auto" : "333px"};
+    // width: ${(props) => props.isOpen ? "auto" : "333px"};
 `;
 
-const SideBar = ({ logo_src, sm_src, onClick, data, github, linkedin, behance, email }) => {
+const SideBar = ({ logo_src, sm_src, onClick, data, github, linkedin, behance, email, isOpen }) => {
     return (
-        <Container>
+        <Container isOpen={isOpen}>
             <div style={{ display: "flex", width: '100%' }}>
                 <Link href="/">
                     <div style={{ width: "100%" }}>

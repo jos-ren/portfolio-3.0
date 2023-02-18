@@ -1,4 +1,4 @@
-import React, { } from "react";
+import React, { useState } from "react";
 import Head from 'next/head'
 import '../styles/globals.css'
 import useColorTheme from "use-color-theme";
@@ -18,6 +18,7 @@ function MyApp({ Component, pageProps }) {
   const colorTheme = useColorTheme("light-theme", {
     classNames: ["light-theme", "dark-theme"],
   });
+  const [isOpen, setIsOpen] = useState(true)
 
   let sun_moon = "";
   let github = "";
@@ -53,15 +54,28 @@ function MyApp({ Component, pageProps }) {
       {/* BODY */}
       <div style={{ display: "flex", flexDirection: "row" }}>
         {/* SIDE BAR / TOP BAR */}
-        {isTablet ? <TopBar /> : <SideBar
-          logo_src={logo}
-          sm_src={sun_moon}
-          github={github}
-          linkedin={linkedin}
-          behance={behance}
-          email={email}
-          onClick={() => { colorTheme.toggle() }} data={projects_data}
-        />}
+        {isTablet ? <TopBar isOpen={isOpen} onClick={() => { setIsOpen(!isOpen) }} /> :
+          <SideBar
+            logo_src={logo}
+            sm_src={sun_moon}
+            github={github}
+            linkedin={linkedin}
+            behance={behance}
+            email={email}
+            onClick={() => { colorTheme.toggle() }} data={projects_data}
+          />}
+        {isOpen && isTablet &&
+          <SideBar
+            logo_src={logo}
+            sm_src={sun_moon}
+            github={github}
+            linkedin={linkedin}
+            behance={behance}
+            email={email}
+            onClick={() => { colorTheme.toggle() }} data={projects_data}
+            isOpen={isOpen}
+          />
+        }
         {/* MAIN */}
         <div style={
           isTablet ? {
