@@ -18,7 +18,7 @@ function MyApp({ Component, pageProps }) {
   const colorTheme = useColorTheme("light-theme", {
     classNames: ["light-theme", "dark-theme"],
   });
-  const [isOpen, setIsOpen] = useState(true)
+  const [isOpen, setIsOpen] = useState(false)
 
   let sun_moon = "";
   let github = "";
