@@ -4,12 +4,6 @@ import styled from "styled-components";
 import Link from 'next/link'
 
 // Import 3rd party libraries
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-import 'swiper/css/scrollbar';
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Navigation, Scrollbar } from "swiper";
 import useColorTheme from "use-color-theme";
 import { useMediaQuery } from 'react-responsive'
 

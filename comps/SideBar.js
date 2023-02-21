@@ -6,15 +6,15 @@ import IconButton from "./IconButton"
 import Link from 'next/link'
 
 const Container = styled.div`
-    max-height: 100vh;
-    min-height: 100vh;
+    height: 100vh;
     width:333px;
     display: flex;
     flex-direction: column;
-    // justify-content: center;
-    // align-items: center;
     position: fixed;
     top: 0px;
+    left: ${(props) => props.isOpen ? "0px" : "-333px"};
+    transition: left .33s;
+    transition-timing-function: ease-out;
     box-shadow: 1px 0 0 0 var(--border);
     background: var(--primary);
     z-index:99;
@@ -23,7 +23,7 @@ const Container = styled.div`
     // width: ${(props) => props.isOpen ? "auto" : "333px"};
 `;
 
-const SideBar = ({ icon, logo_src, sm_src, onClick, data, github, linkedin, behance, email, isOpen }) => {
+const SideBar = ({ icon, logo_src, onClick, data, isOpen }) => {
     return (
         <Container isOpen={isOpen}>
             <div style={{ display: "flex", width: '100%' }}>

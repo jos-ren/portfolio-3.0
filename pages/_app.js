@@ -24,10 +24,13 @@ function MyApp({ Component, pageProps }) {
   const isTablet = useMediaQuery({ query: '(max-width: 880px)' })
 
   let logo = "";
+  let strokeColor = "black";
   if (colorTheme.value === "light-theme") {
     logo = "/icons/logo.svg";
+    strokeColor = "black";
   } else if (colorTheme.value === "dark-theme") {
     logo = "/icons/logo_w.svg";
+    strokeColor = "white";
   }
 
   const toggleDarkMode = () => {
@@ -37,6 +40,10 @@ function MyApp({ Component, pageProps }) {
       setDarkMode(false);
     }
   };
+
+  // if istablet, set open to false
+  // if !istablet set open true
+  // use react-responsive
 
   return (
     <div>
@@ -48,32 +55,19 @@ function MyApp({ Component, pageProps }) {
       {/* BODY */}
       <div style={{ display: "flex", flexDirection: "row" }}>
         {/* SIDE BAR / TOP BAR */}
-        {isTablet ? <TopBar strokeColor={"gray"} onClick={() => { setIsOpen(!isOpen) }} /> :
-          <SideBar
-            logo_src={logo}
-            onClick={() => { colorTheme.toggle(), toggleDarkMode() }} data={projects_data}
-            icon={
-              <DarkModeSwitch
-                checked={isDarkMode}
-                onChange={toggleDarkMode}
-                size={20}
-              />
-            }
-          />}
-        {isOpen && isTablet &&
-          <SideBar
-            logo_src={logo}
-            onClick={() => { colorTheme.toggle(), toggleDarkMode() }} data={projects_data}
-            icon={
-              <DarkModeSwitch
-                checked={isDarkMode}
-                onChange={toggleDarkMode}
-                size={20}
-              />
-            }
-            isOpen={isOpen}
-          />
-        }
+        {isTablet && <TopBar strokeColor={strokeColor} onClick={() => { setIsOpen(!isOpen) }} />}
+        <SideBar
+          isOpen={isOpen}
+          logo_src={logo}
+          onClick={() => { colorTheme.toggle(), toggleDarkMode() }} data={projects_data}
+          icon={
+            <DarkModeSwitch
+              checked={isDarkMode}
+              onChange={toggleDarkMode}
+              size={20}
+            />
+          }
+        />
         {/* MAIN */}
         <div style={
           isTablet ? {
