@@ -19,29 +19,14 @@ function MyApp({ Component, pageProps }) {
   const colorTheme = useColorTheme("light-theme", {
     classNames: ["light-theme", "dark-theme"],
   });
-  const [isDarkMode, setDarkMode] = React.useState(true);
+  const [isDarkMode, setDarkMode] = React.useState(false);
   const [isOpen, setIsOpen] = useState(false)
   const isTablet = useMediaQuery({ query: '(max-width: 880px)' })
 
-  let sun_moon = "";
-  let github = "";
-  let linkedin = "";
-  let email = "";
-  let behance = "";
   let logo = "";
   if (colorTheme.value === "light-theme") {
-    sun_moon = "/icons/sun.svg";
-    github = "/icons/github.svg";
-    linkedin = "/icons/linkedin.svg";
-    email = "/icons/email.svg";
-    behance = "/icons/behance.svg";
     logo = "/icons/logo.svg";
   } else if (colorTheme.value === "dark-theme") {
-    sun_moon = "/icons/moon_w.svg";
-    github = "/icons/github_w.svg";
-    linkedin = "/icons/linkedin_w.svg";
-    email = "/icons/email_w.svg";
-    behance = "/icons/behance_w.svg";
     logo = "/icons/logo_w.svg";
   }
 
@@ -63,14 +48,9 @@ function MyApp({ Component, pageProps }) {
       {/* BODY */}
       <div style={{ display: "flex", flexDirection: "row" }}>
         {/* SIDE BAR / TOP BAR */}
-        {isTablet ? <TopBar isOpen={isOpen} onClick={() => { setIsOpen(!isOpen) }} /> :
+        {isTablet ? <TopBar strokeColor={"gray"} onClick={() => { setIsOpen(!isOpen) }} /> :
           <SideBar
             logo_src={logo}
-            sm_src={sun_moon}
-            github={github}
-            linkedin={linkedin}
-            behance={behance}
-            email={email}
             onClick={() => { colorTheme.toggle(), toggleDarkMode() }} data={projects_data}
             icon={
               <DarkModeSwitch
@@ -83,11 +63,6 @@ function MyApp({ Component, pageProps }) {
         {isOpen && isTablet &&
           <SideBar
             logo_src={logo}
-            sm_src={sun_moon}
-            github={github}
-            linkedin={linkedin}
-            behance={behance}
-            email={email}
             onClick={() => { colorTheme.toggle(), toggleDarkMode() }} data={projects_data}
             icon={
               <DarkModeSwitch

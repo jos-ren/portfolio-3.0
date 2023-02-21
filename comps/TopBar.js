@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
-import { GoThreeBars, GoX } from "react-icons/go";
+import UseAnimations from 'react-useanimations';
+import menu4 from 'react-useanimations/lib/menu4'
 
 const Container = styled.div`
     height:60px;
@@ -16,12 +17,18 @@ const Container = styled.div`
     padding:0 1.5em;
 `;
 
-const TopBar = ({ isOpen, onClick }) => {
+const TopBar = ({ onClick, strokeColor }) => {
   return (
     <Container>
-      {isOpen ? <GoX size={30} onClick={onClick} /> : <GoThreeBars size={30} onClick={onClick}/>}
+      <div style={{ cursor: 'pointer' }}>
+        <UseAnimations animation={menu4} size={36} onClick={onClick} speed={1.5} strokeColor={strokeColor} />
+      </div>
     </Container>
   );
+}
+
+TopBar.defaultProps = {
+  strokeColor: "black"
 }
 
 export default TopBar;

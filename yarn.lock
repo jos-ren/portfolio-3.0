@@ -1844,6 +1844,11 @@
   dependencies:
     "js-tokens" "^3.0.0 || ^4.0.0"
 
+"lottie-web@^5.5.7":
+  "integrity" "sha512-d0PFIGiwuMsJYaF4uPo+qG8dEorlI+xFI2zrrFtE1bGO4WoLIz+NjremxEq1swpR7juR10aeOtmNh3d6G3ub0A=="
+  "resolved" "https://registry.npmjs.org/lottie-web/-/lottie-web-5.10.2.tgz"
+  "version" "5.10.2"
+
 "lru-cache@^6.0.0":
   "integrity" "sha512-Jo6dJ04CmSjuznwJSS3pUeWmd/H0ffTlkXXgwZi+eq1UCmqQwCh+eLsYOYCwY991i2Fah4h1BEMCx4qThGbsiA=="
   "resolved" "https://registry.npmjs.org/lru-cache/-/lru-cache-6.0.0.tgz"
@@ -2164,7 +2169,7 @@
   dependencies:
     "safe-buffer" "^5.1.0"
 
-"react-dom@^15.0 || ^16.0", "react-dom@^15.0.0 || ^16.0.0", "react-dom@^16.8.0 || ^17.0.0 || ^18.0.0", "react-dom@^17.0.2 || ^18.0.0-0", "react-dom@^18.0.0", "react-dom@>= 16.8.0", "react-dom@15 - 17", "react-dom@18.2.0":
+"react-dom@^15.0 || ^16.0", "react-dom@^15.0.0 || ^16.0.0", "react-dom@^16.8.0 || ^17.0.0 || ^18.0.0", "react-dom@^17.0.2 || ^18.0.0-0", "react-dom@^18.0.0", "react-dom@>= 16.8.0", "react-dom@>=16", "react-dom@15 - 17", "react-dom@18.2.0":
   "integrity" "sha512-6IMTriUmvsjHUjNtEDudZfuDQUoWXVxKHhlEGSk81n4YFS+r/Kl99wXiwlVXtPBtJenozv2P+hxDsw9eA7Xo6g=="
   "resolved" "https://registry.npmjs.org/react-dom/-/react-dom-18.2.0.tgz"
   "version" "18.2.0"
@@ -2241,6 +2246,13 @@
   "version" "1.1.1"
   dependencies:
     "react-spring" "^9.0.0-rc.3"
+
+"react-useanimations@^2.10.0":
+  "integrity" "sha512-MzGNv8vkvb6qEvMBCj+O6nUloUHSJRubMAH3uE7J4M+pjt5ud5xDaXBrQgv5GbvBg29XzviKWHTfvvkofDEu+Q=="
+  "resolved" "https://registry.npmjs.org/react-useanimations/-/react-useanimations-2.10.0.tgz"
+  "version" "2.10.0"
+  dependencies:
+    "lottie-web" "^5.5.7"
 
 "react-youtube@^10.0.0":
   "integrity" "sha512-erhAYKEVsvnUisgEqt4ZyuVYJ56vqdIUg1vvg4ZOE8NfL1xf9eMXFSed1drG62uEqvIknhpfW5EzOVVvBLcshQ=="
