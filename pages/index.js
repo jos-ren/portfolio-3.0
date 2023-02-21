@@ -52,7 +52,6 @@ export default function Home() {
 	// 	`)
 	// });
 
-	// margins should change for all 5 breakpoints
 	// 3 cards
 	const isDesktop = useMediaQuery({ query: '(max-width: 1600px)' })
 	// 2 card

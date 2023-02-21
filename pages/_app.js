@@ -6,6 +6,7 @@ import { useMediaQuery } from 'react-responsive'
 import SideBar from "../comps/SideBar";
 import TopBar from "../comps/TopBar";
 import { projects_data } from '../public/data.js';
+import { DarkModeSwitch } from 'react-toggle-dark-mode';
 
 if (typeof window !== 'undefined' && localStorage.colorTheme !== '"dark-theme"') {
   localStorage.setItem("colorTheme", '"light-theme"');
@@ -18,7 +19,9 @@ function MyApp({ Component, pageProps }) {
   const colorTheme = useColorTheme("light-theme", {
     classNames: ["light-theme", "dark-theme"],
   });
+  const [isDarkMode, setDarkMode] = React.useState(true);
   const [isOpen, setIsOpen] = useState(false)
+  const isTablet = useMediaQuery({ query: '(max-width: 880px)' })
 
   let sun_moon = "";
   let github = "";
@@ -42,7 +45,13 @@ function MyApp({ Component, pageProps }) {
     logo = "/icons/logo_w.svg";
   }
 
-  const isTablet = useMediaQuery({ query: '(max-width: 880px)' })
+  const toggleDarkMode = () => {
+    if (colorTheme.value === "light-theme") {
+      setDarkMode(true);
+    } else if (colorTheme.value === "dark-theme") {
+      setDarkMode(false);
+    }
+  };
 
   return (
     <div>
@@ -62,7 +71,14 @@ function MyApp({ Component, pageProps }) {
             linkedin={linkedin}
             behance={behance}
             email={email}
-            onClick={() => { colorTheme.toggle() }} data={projects_data}
+            onClick={() => { colorTheme.toggle(), toggleDarkMode() }} data={projects_data}
+            icon={
+              <DarkModeSwitch
+                checked={isDarkMode}
+                onChange={toggleDarkMode}
+                size={20}
+              />
+            }
           />}
         {isOpen && isTablet &&
           <SideBar
@@ -72,7 +88,14 @@ function MyApp({ Component, pageProps }) {
             linkedin={linkedin}
             behance={behance}
             email={email}
-            onClick={() => { colorTheme.toggle() }} data={projects_data}
+            onClick={() => { colorTheme.toggle(), toggleDarkMode() }} data={projects_data}
+            icon={
+              <DarkModeSwitch
+                checked={isDarkMode}
+                onChange={toggleDarkMode}
+                size={20}
+              />
+            }
             isOpen={isOpen}
           />
         }

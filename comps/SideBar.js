@@ -23,7 +23,7 @@ const Container = styled.div`
     // width: ${(props) => props.isOpen ? "auto" : "333px"};
 `;
 
-const SideBar = ({ logo_src, sm_src, onClick, data, github, linkedin, behance, email, isOpen }) => {
+const SideBar = ({ icon, logo_src, sm_src, onClick, data, github, linkedin, behance, email, isOpen }) => {
     return (
         <Container isOpen={isOpen}>
             <div style={{ display: "flex", width: '100%' }}>
@@ -32,7 +32,7 @@ const SideBar = ({ logo_src, sm_src, onClick, data, github, linkedin, behance, e
                         <SideButton img_src={logo_src} text={'Josh Renema'} />
                     </div>
                 </Link>
-                <IconButton onClick={onClick} img_src={sm_src} />
+                <IconButton onClick={onClick} icon={icon} />
             </div>
 
             <div style={{ margin: "15px 0px" }}></div>

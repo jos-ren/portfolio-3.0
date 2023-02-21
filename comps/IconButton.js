@@ -29,12 +29,8 @@ const Container = styled.button`
 //   left:-2px;
 //   `;
 
-// const Wrapper = styled.div`
-//   position:relative;
-//   // border:1px solid red;
-// `;
 
-const IconButton = ({ img_src, onClick, margin }) => {
+const IconButton = ({ icon, onClick, margin }) => {
   return (
     // <Wrapper className="wrapper">
     //   <Container onClick={onClick} margin={margin}>
@@ -43,7 +39,8 @@ const IconButton = ({ img_src, onClick, margin }) => {
     //   <GradiantBorder className="gradiant_border" />
     // </Wrapper>
     <Container onClick={onClick} margin={margin}>
-      <Image width={20} height={20} src={img_src} />
+      {/* <Image width={20} height={20} src={img_src} /> */}
+      {icon}
     </Container>
   );
 };
