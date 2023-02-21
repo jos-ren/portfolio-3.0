@@ -13,7 +13,7 @@ const Container = styled.div`
     position: fixed;
     top: 0px;
     left: ${(props) => props.isOpen ? "0px" : "-333px"};
-    transition: left .33s;
+    transition: left .2s;
     transition-timing-function: ease-out;
     box-shadow: 1px 0 0 0 var(--border);
     background: var(--primary);
@@ -23,12 +23,12 @@ const Container = styled.div`
     // width: ${(props) => props.isOpen ? "auto" : "333px"};
 `;
 
-const SideBar = ({ icon, logo_src, onClick, data, isOpen }) => {
+const SideBar = ({ icon, logo_src, onClick, data, isOpen, onLinkClick}) => {
     return (
         <Container isOpen={isOpen}>
             <div style={{ display: "flex", width: '100%' }}>
                 <Link href="/">
-                    <div style={{ width: "100%" }}>
+                    <div style={{ width: "100%" }} onClick={onLinkClick}>
                         <SideButton img_src={logo_src} text={'Josh Renema'} />
                     </div>
                 </Link>
@@ -41,7 +41,7 @@ const SideBar = ({ icon, logo_src, onClick, data, isOpen }) => {
             {/* maybe have a "view more button after 4-5" */}
             {data.map((o, index) => {
                 return <Link key={index} href={`/projects/${encodeURIComponent(o.id)}`} >
-                    <div>
+                    <div onClick={onLinkClick}>
                         <SideHover text={o.title} img_src={o.icon} />
                     </div>
                 </Link>

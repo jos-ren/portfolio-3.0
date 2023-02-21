@@ -59,7 +59,9 @@ function MyApp({ Component, pageProps }) {
         <SideBar
           isOpen={isOpen}
           logo_src={logo}
-          onClick={() => { colorTheme.toggle(), toggleDarkMode() }} data={projects_data}
+          onClick={() => { colorTheme.toggle(), toggleDarkMode() }}
+          onLinkClick={() => setIsOpen(false)}
+          data={projects_data}
           icon={
             <DarkModeSwitch
               checked={isDarkMode}
