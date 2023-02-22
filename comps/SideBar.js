@@ -6,15 +6,15 @@ import IconButton from "./IconButton"
 import Link from 'next/link'
 
 const Container = styled.div`
-    max-height: 100vh;
-    min-height: 100vh;
+    height: 100vh;
     width:333px;
     display: flex;
     flex-direction: column;
-    // justify-content: center;
-    // align-items: center;
     position: fixed;
     top: 0px;
+    left: ${(props) => props.isOpen ? "0px" : "-333px"};
+    transition: left .2s;
+    transition-timing-function: ease-out;
     box-shadow: 1px 0 0 0 var(--border);
     background: var(--primary);
     z-index:99;
@@ -23,16 +23,16 @@ const Container = styled.div`
     // width: ${(props) => props.isOpen ? "auto" : "333px"};
 `;
 
-const SideBar = ({ logo_src, sm_src, onClick, data, github, linkedin, behance, email, isOpen }) => {
+const SideBar = ({ icon, logo_src, onClick, data, isOpen, onLinkClick}) => {
     return (
         <Container isOpen={isOpen}>
             <div style={{ display: "flex", width: '100%' }}>
                 <Link href="/">
-                    <div style={{ width: "100%" }}>
+                    <div style={{ width: "100%" }} onClick={onLinkClick}>
                         <SideButton img_src={logo_src} text={'Josh Renema'} />
                     </div>
                 </Link>
-                <IconButton onClick={onClick} img_src={sm_src} />
+                <IconButton onClick={onClick} icon={icon} />
             </div>
 
             <div style={{ margin: "15px 0px" }}></div>
@@ -41,7 +41,7 @@ const SideBar = ({ logo_src, sm_src, onClick, data, github, linkedin, behance, e
             {/* maybe have a "view more button after 4-5" */}
             {data.map((o, index) => {
                 return <Link key={index} href={`/projects/${encodeURIComponent(o.id)}`} >
-                    <div>
+                    <div onClick={onLinkClick}>
                         <SideHover text={o.title} img_src={o.icon} />
                     </div>
                 </Link>

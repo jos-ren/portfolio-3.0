@@ -6,6 +6,7 @@ import { useMediaQuery } from 'react-responsive'
 import SideBar from "../comps/SideBar";
 import TopBar from "../comps/TopBar";
 import { projects_data } from '../public/data.js';
+import { DarkModeSwitch } from 'react-toggle-dark-mode';
 
 if (typeof window !== 'undefined' && localStorage.colorTheme !== '"dark-theme"') {
   localStorage.setItem("colorTheme", '"light-theme"');
@@ -18,31 +19,31 @@ function MyApp({ Component, pageProps }) {
   const colorTheme = useColorTheme("light-theme", {
     classNames: ["light-theme", "dark-theme"],
   });
+  const [isDarkMode, setDarkMode] = React.useState(false);
   const [isOpen, setIsOpen] = useState(false)
+  const isTablet = useMediaQuery({ query: '(max-width: 880px)' })
 
-  let sun_moon = "";
-  let github = "";
-  let linkedin = "";
-  let email = "";
-  let behance = "";
   let logo = "";
+  let strokeColor = "black";
   if (colorTheme.value === "light-theme") {
-    sun_moon = "/icons/sun.svg";
-    github = "/icons/github.svg";
-    linkedin = "/icons/linkedin.svg";
-    email = "/icons/email.svg";
-    behance = "/icons/behance.svg";
     logo = "/icons/logo.svg";
+    strokeColor = "black";
   } else if (colorTheme.value === "dark-theme") {
-    sun_moon = "/icons/moon_w.svg";
-    github = "/icons/github_w.svg";
-    linkedin = "/icons/linkedin_w.svg";
-    email = "/icons/email_w.svg";
-    behance = "/icons/behance_w.svg";
     logo = "/icons/logo_w.svg";
+    strokeColor = "white";
   }
 
-  const isTablet = useMediaQuery({ query: '(max-width: 880px)' })
+  const toggleDarkMode = () => {
+    if (colorTheme.value === "light-theme") {
+      setDarkMode(true);
+    } else if (colorTheme.value === "dark-theme") {
+      setDarkMode(false);
+    }
+  };
+
+  // if istablet, set open to false
+  // if !istablet set open true
+  // use react-responsive
 
   return (
     <div>
@@ -54,28 +55,36 @@ function MyApp({ Component, pageProps }) {
       {/* BODY */}
       <div style={{ display: "flex", flexDirection: "row" }}>
         {/* SIDE BAR / TOP BAR */}
-        {isTablet ? <TopBar isOpen={isOpen} onClick={() => { setIsOpen(!isOpen) }} /> :
-          <SideBar
-            logo_src={logo}
-            sm_src={sun_moon}
-            github={github}
-            linkedin={linkedin}
-            behance={behance}
-            email={email}
-            onClick={() => { colorTheme.toggle() }} data={projects_data}
-          />}
-        {isOpen && isTablet &&
-          <SideBar
-            logo_src={logo}
-            sm_src={sun_moon}
-            github={github}
-            linkedin={linkedin}
-            behance={behance}
-            email={email}
-            onClick={() => { colorTheme.toggle() }} data={projects_data}
-            isOpen={isOpen}
-          />
-        }
+        {isTablet && <TopBar strokeColor={strokeColor} onClick={() => { setIsOpen(!isOpen) }} />}
+        {/* // use two seperate sidebars depending on if tablet or not */}
+        <SideBar
+          isOpen={isOpen}
+          logo_src={logo}
+          onClick={() => { colorTheme.toggle(), toggleDarkMode() }}
+          onLinkClick={() => setIsOpen(false)}
+          data={projects_data}
+          icon={
+            <DarkModeSwitch
+              checked={isDarkMode}
+              onChange={toggleDarkMode}
+              size={20}
+            />
+          }
+        />
+        {/* for desktop */}
+        {!isTablet && <SideBar
+          isOpen={true}
+          logo_src={logo}
+          onClick={() => { colorTheme.toggle(), toggleDarkMode() }}
+          data={projects_data}
+          icon={
+            <DarkModeSwitch
+              checked={isDarkMode}
+              onChange={toggleDarkMode}
+              size={20}
+            />
+          }
+        />}
         {/* MAIN */}
         <div style={
           isTablet ? {

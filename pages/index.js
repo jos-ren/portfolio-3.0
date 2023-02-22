@@ -4,12 +4,6 @@ import styled from "styled-components";
 import Link from 'next/link'
 
 // Import 3rd party libraries
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-import 'swiper/css/scrollbar';
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Navigation, Scrollbar } from "swiper";
 import useColorTheme from "use-color-theme";
 import { useMediaQuery } from 'react-responsive'
 
@@ -52,7 +46,6 @@ export default function Home() {
 	// 	`)
 	// });
 
-	// margins should change for all 5 breakpoints
 	// 3 cards
 	const isDesktop = useMediaQuery({ query: '(max-width: 1600px)' })
 	// 2 card
@@ -72,10 +65,10 @@ export default function Home() {
 				contact section
 			*/}
 
-			{isDesktop && <p>Desktop</p>}
+			{/* {isDesktop && <p>Desktop</p>}
 			{isSmallDesktop && <p>SmallDesktop</p>}
 			{isTablet && <p>Tablet</p>}
-			{isMobile && <p>Mobile</p>}
+			{isMobile && <p>Mobile</p>} */}
 
 			<Image height="400" width="1000" objectFit="cover" quality="100" src={"/test.jpg"} style={{ borderRadius: "14px" }} />
 
