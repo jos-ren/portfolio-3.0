@@ -20,8 +20,4 @@ Grid.defaultProps = {
 
 }
 
-Grid.propTypes = {
-
-}
-
 export default Grid;

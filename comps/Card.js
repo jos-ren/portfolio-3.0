@@ -16,11 +16,16 @@ const Container = styled.div`
     // margin-bottom:30px;
     cursor:pointer;
     // position:relative;
+    :hover{
+        // background:var(--hover)
+        // change this to border
+        // border:${(props) => props.isHover && "1px solid hsla(217, 100%, 50%, 1)"};
+    }
 `;
 
-const Card = ({ title, desc, icon, link, isShown, info, index }) => {
+const Card = ({ title, desc, icon, link, isShown, info, index, isHover }) => {
     return (
-        <Container className="wrapper">
+        <Container className="wrapper" isHover={isHover}>
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "start" }}>
                 <Image height="50px" width="50px" objectFit="contain" src={icon} />
                 {isShown == index ? <Image height="20px" width="20px" objectFit="contain" src={link} /> : <></>}
@@ -31,5 +36,9 @@ const Card = ({ title, desc, icon, link, isShown, info, index }) => {
         </Container>
     );
 };
+
+Card.defaultProps = {
+    isHover: false
+}
 
 export default Card;

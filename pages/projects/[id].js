@@ -11,7 +11,7 @@ export default function Projects() {
     const [data, setData] = useState([])
 
     const router = useRouter()
-    console.log(data.screenshots, "data")
+    // console.log(data.screenshots, "data")
 
     useEffect(() => {
         if (router.query.id) {
