@@ -65,10 +65,10 @@ export default function Home() {
 				contact section
 			*/}
 
-			{isDesktop && <p>Desktop</p>}
+			{/* {isDesktop && <p>Desktop</p>}
 			{isSmallDesktop && <p>SmallDesktop</p>}
 			{isTablet && <p>Tablet</p>}
-			{isMobile && <p>Mobile</p>}
+			{isMobile && <p>Mobile</p>} */}
 
 			<Image height="400" width="1000" objectFit="cover" quality="100" src={"/test.jpg"} style={{ borderRadius: "14px" }} />
 

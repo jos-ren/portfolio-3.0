@@ -56,6 +56,7 @@ function MyApp({ Component, pageProps }) {
       <div style={{ display: "flex", flexDirection: "row" }}>
         {/* SIDE BAR / TOP BAR */}
         {isTablet && <TopBar strokeColor={strokeColor} onClick={() => { setIsOpen(!isOpen) }} />}
+        {/* // use two seperate sidebars depending on if tablet or not */}
         <SideBar
           isOpen={isOpen}
           logo_src={logo}
@@ -70,6 +71,20 @@ function MyApp({ Component, pageProps }) {
             />
           }
         />
+        {/* for desktop */}
+        {!isTablet && <SideBar
+          isOpen={true}
+          logo_src={logo}
+          onClick={() => { colorTheme.toggle(), toggleDarkMode() }}
+          data={projects_data}
+          icon={
+            <DarkModeSwitch
+              checked={isDarkMode}
+              onChange={toggleDarkMode}
+              size={20}
+            />
+          }
+        />}
         {/* MAIN */}
         <div style={
           isTablet ? {
