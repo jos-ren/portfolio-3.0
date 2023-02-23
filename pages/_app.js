@@ -41,12 +41,6 @@ function MyApp({ Component, pageProps }) {
     }
   };
 
-  // if istablet, set open to false
-  // if !istablet set open true
-  // use react-responsive
-
-  console.log(isOpen)
-
   return (
     <div>
       <Head>
