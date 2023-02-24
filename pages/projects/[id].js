@@ -35,24 +35,36 @@ export default function Projects() {
 
             <div style={{ marginBottom: "50px" }}></div>
 
-            <SectionBlock
-                title={"Introduction"}
-            // points={
-            //     <>
-            //         {data.points.map((o, index) => {
-            //             return <div key={index}>{o.point}</div>
-            //         })}
-            //     </>
-            // } 
-            />
+            <div style={{ border: "1px solid red" }}>
+                <h1>Introduction</h1>
+                <p>Summary</p>
+                <p>Core Functionalities</p>
+                <p>Role</p>
+                <p>Technologies</p>
+                <p>Links</p>
+            </div>
 
-            <SectionBlock title={"Purpose"} />
+            <div style={{ border: "1px solid red" }}>
+                <h1>Purpose</h1>
+                <p>Why?</p>
+                <p>What was the expected outcome?</p>
+                <p>Initial Designs</p>
+            </div>
+            <div style={{ border: "1px solid red" }}>
+                <h1>Spotlight</h1>
+                <p>Summary</p>
+                <p>Summary</p>
+                <p>Summary</p>
+            </div>
+            <div style={{ border: "1px solid red" }}>
+                <h1>Current Status</h1>
+                <p>Summary</p>
+            </div>
+            <div style={{ border: "1px solid red" }}>
+                <h1>Lessons Learned</h1>
+                <p>Summary</p>
+            </div>
 
-            <SectionBlock title={"Spotlight"} />
-
-            <SectionBlock title={"Current Status"} />
-
-            <SectionBlock title={"Lessons Learned"} />
         </>
     )
 }
