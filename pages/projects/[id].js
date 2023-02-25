@@ -35,7 +35,7 @@ export default function Projects() {
             <div style={{ border: "1px solid red" }}>
                 <h1>Introduction</h1>
                 <p>Summary</p>
-                <div>{DATA.title}</div>
+                {/* <div>{DATA.title}</div> */}
 
                 <p>Core Functionalities</p>
                 <p>Role</p>
