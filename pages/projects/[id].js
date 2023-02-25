@@ -26,6 +26,9 @@ export default function Projects() {
             {/* <div style={{ borderRadius: "16px", overflow: "hidden" }}>
                 <ReactPlayer url='https://www.youtube.com/watch?v=ysz5S6PUM-U' controls={true} width={"800px"} height={"460px"} pip={false} />
             </div> */}
+            <div style={{ borderRadius: "16px", overflow: "hidden" }}>
+            <Image height="550" width="800" objectFit="cover" quality="100" src={"/pantro_thumb.png"} style={{ borderRadius: "14px" }} />
+            </div>
 
             <div style={{ marginBottom: "50px", width:"800px" }}></div>
 
