@@ -10,9 +10,10 @@ To develop my site, I used React and Styled Components to make a clean yet strai
 
 <h2>Live Site</h2>
 
-<a href="https://jos-ren.vercel.app/" target="_blank">Link Here</a>
+<a href="https://josren.ca" target="_blank">Link Here</a>
 
 <h2>Screenshot</h2>
 
-![image](https://user-images.githubusercontent.com/60946895/217628506-07a6feda-4f4a-4fcc-a94b-09ede9b357ea.png)
+![image](https://user-images.githubusercontent.com/60946895/221374887-78843fd1-caca-4f74-a1ea-383eeb3f824c.png)
+
 
