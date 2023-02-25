@@ -20,8 +20,8 @@ const Container = styled.div`
 const TopBar = ({ onClick, strokeColor }) => {
   return (
     <Container>
-      <div style={{ cursor: 'pointer' }}>
-        <UseAnimations animation={menu4} size={36} onClick={onClick} speed={2.5} strokeColor={strokeColor} />
+      <div style={{ cursor: 'pointer' }} onClick={onClick}>
+        <UseAnimations animation={menu4} size={36}  speed={2.5} strokeColor={strokeColor}/>
       </div>
     </Container>
   );

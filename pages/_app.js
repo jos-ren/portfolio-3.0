@@ -41,10 +41,6 @@ function MyApp({ Component, pageProps }) {
     }
   };
 
-  // if istablet, set open to false
-  // if !istablet set open true
-  // use react-responsive
-
   return (
     <div>
       <Head>
@@ -55,7 +51,7 @@ function MyApp({ Component, pageProps }) {
       {/* BODY */}
       <div style={{ display: "flex", flexDirection: "row" }}>
         {/* SIDE BAR / TOP BAR */}
-        {isTablet && <TopBar strokeColor={strokeColor} onClick={() => { setIsOpen(!isOpen) }} />}
+        {isTablet && <TopBar strokeColor={strokeColor} onClick={() => { setIsOpen(!isOpen)}}/>}
         {/* // use two seperate sidebars depending on if tablet or not */}
         <SideBar
           isOpen={isOpen}

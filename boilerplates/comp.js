@@ -12,3 +12,5 @@ const CompName = ({}) => {
 }
 
 export default CompName;
+
+    // width: ${(props) => props.isOpen ? "auto" : "333px"};

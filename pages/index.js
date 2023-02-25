@@ -90,11 +90,11 @@ export default function Home() {
 						{ display: "grid", gridTemplateColumns: 'repeat(3, 1fr)', gridTemplateRows: '1fr', rowGap: '20px', columnGap: '20px' }
 			} >
 				{projects_data.map((o, index) => {
-					return <div key={index}>
-						<Link href={"/projects/" + index}>
-							<Card icon={o.icon} title={o.title} desc={o.desc} index={index} />
-						</Link>
-					</div>
+					return <Link key={index} href={"/projects/" + index}>
+						<div>
+							<Card icon={o.icon} title={o.title} desc={o.desc} index={index} isHover={true} />
+						</div>
+					</Link>
 				})}
 			</div>
 
