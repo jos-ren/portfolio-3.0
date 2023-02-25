@@ -90,6 +90,13 @@ export const projects_data = [
 		screenshots: [
 			{ src: "/screenshots/pantro/1.png" },
 		],
+		introduction: [
+			{ summary: "" },
+			{ functions: "" },
+			{ role: "" },
+			{ technologies: "" },
+			{ links: "" },
+		],
 	},
 	{
 		id: 2,

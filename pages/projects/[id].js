@@ -15,29 +15,25 @@ const Wrapper = styled.div`
 
 export default function Projects() {
 
-    const [data, setData] = useState([])
-
     const router = useRouter()
-    // console.log(data, "data")
 
-    useEffect(() => {
-        if (router.query.id) {
-            setData(projects_data[router.query.id])
-        }
-    });
+    let DATA = projects_data[router.query.id]
 
     return (
+
         <>
             {/* optional video here */}
-            <div style={{ borderRadius: "16px", overflow: "hidden" }}>
+            {/* <div style={{ borderRadius: "16px", overflow: "hidden" }}>
                 <ReactPlayer url='https://www.youtube.com/watch?v=ysz5S6PUM-U' controls={true} width={"800px"} height={"460px"} pip={false} />
-            </div>
+            </div> */}
 
-            <div style={{ marginBottom: "50px" }}></div>
+            <div style={{ marginBottom: "50px", width:"800px" }}></div>
 
             <div style={{ border: "1px solid red" }}>
                 <h1>Introduction</h1>
                 <p>Summary</p>
+                <div>{DATA.title}</div>
+
                 <p>Core Functionalities</p>
                 <p>Role</p>
                 <p>Technologies</p>
@@ -64,7 +60,6 @@ export default function Projects() {
                 <h1>Lessons Learned</h1>
                 <p>Summary</p>
             </div>
-
         </>
     )
 }
