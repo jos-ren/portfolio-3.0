@@ -7,6 +7,8 @@ import SideBar from "../comps/SideBar";
 import TopBar from "../comps/TopBar";
 import { projects_data } from '../public/data.js';
 import { DarkModeSwitch } from 'react-toggle-dark-mode';
+import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
+import { useLoading, ThreeDots } from '@agney/react-loading';
 
 if (typeof window !== 'undefined' && localStorage.colorTheme !== '"dark-theme"') {
   localStorage.setItem("colorTheme", '"light-theme"');
@@ -47,6 +49,11 @@ function MyApp({ Component, pageProps }) {
     setTimeout(() => setIsLoading(false), 500);
   }, []);
 
+  const { containerProps, indicatorEl } = useLoading({
+    loading: true,
+    indicator: <ThreeDots width="50" />,
+  });
+
   return (
     <div>
       <Head>
@@ -55,7 +62,14 @@ function MyApp({ Component, pageProps }) {
         <link rel="icon" href="./icons/logo.png" />
       </Head>
 
-      {isLoading && <>loadin</>}
+      {isLoading && <div style={{ display: "flex", width: "100vw", height: "100vh", alignItems: "center", justifyContent: "center" }}>
+        <div {...containerProps}>
+          {indicatorEl} {/* renders only while loading */}
+        </div>
+      </div>}
+
+
+      {/* -------------------------------------------- */}
 
       {!isLoading && <div style={{ display: "flex", flexDirection: "row" }}>
         {/* SIDE BAR / TOP BAR */}
