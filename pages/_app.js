@@ -8,7 +8,7 @@ import TopBar from "../comps/TopBar";
 import { projects_data } from '../public/data.js';
 import { DarkModeSwitch } from 'react-toggle-dark-mode';
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
-import { useLoading, ThreeDots } from '@agney/react-loading';
+import { useLoading, BallTriangle } from '@agney/react-loading';
 
 if (typeof window !== 'undefined' && localStorage.colorTheme !== '"dark-theme"') {
   localStorage.setItem("colorTheme", '"light-theme"');
@@ -46,12 +46,12 @@ function MyApp({ Component, pageProps }) {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    setTimeout(() => setIsLoading(false), 500);
+    setTimeout(() => setIsLoading(false), 750);
   }, []);
 
   const { containerProps, indicatorEl } = useLoading({
     loading: true,
-    indicator: <ThreeDots width="50" />,
+    indicator: <BallTriangle width="50" />,
   });
 
   return (
@@ -62,7 +62,7 @@ function MyApp({ Component, pageProps }) {
         <link rel="icon" href="./icons/logo.png" />
       </Head>
 
-      {isLoading && <div style={{ display: "flex", width: "100vw", height: "100vh", alignItems: "center", justifyContent: "center" }}>
+      {isLoading && <div style={{ display: "flex", width: "100vw", height: "100vh", alignItems: "center", justifyContent: "center", background:"var(--secondary"}}>
         <div {...containerProps}>
           {indicatorEl} {/* renders only while loading */}
         </div>
