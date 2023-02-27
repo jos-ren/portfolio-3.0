@@ -4,8 +4,6 @@ import SideButton from "./SideButton"
 import SideHover from "./SideHover"
 import IconButton from "./IconButton"
 import Link from 'next/link'
-import Skeleton from 'react-loading-skeleton'
-import 'react-loading-skeleton/dist/skeleton.css'
 
 const Container = styled.div`
     height: 100vh;
@@ -25,48 +23,55 @@ const Container = styled.div`
     // width: ${(props) => props.isOpen ? "auto" : "333px"};
 `;
 
-const SideBar = ({ icon, logo_src, onClick, data, isOpen, onLinkClick }) => {
+const SideBar = ({ icon, logo_src, onClick, data, isOpen, onLinkClick}) => {
     return (
         <Container isOpen={isOpen}>
             <div style={{ display: "flex", width: '100%' }}>
                 <Link href="/">
                     <div style={{ width: "100%" }} onClick={onLinkClick}>
-                        {<SideButton img_src={logo_src} text={'Josh Renema'} /> || <Skeleton count={1} />}
+                        <SideButton img_src={logo_src} text={'Josh Renema'} />
                     </div>
                 </Link>
-                {<IconButton onClick={onClick} icon={icon} /> || <Skeleton count={1} />}
+                <IconButton onClick={onClick} icon={icon} />
             </div>
 
             <div style={{ margin: "15px 0px" }}></div>
 
-            {<p>PROJECTS</p> || <Skeleton count={1} />}
+            <p>PROJECTS</p>
             {/* maybe have a "view more button after 4-5" */}
             {data.map((o, index) => {
                 return <Link key={index} href={`/projects/${encodeURIComponent(o.id)}`} >
                     <div onClick={onLinkClick}>
-                        {<SideHover text={o.title} img_src={o.icon} /> || <Skeleton count={1} />}
+                        <SideHover text={o.title} img_src={o.icon} />
                     </div>
                 </Link>
             })}
 
             <div style={{ margin: "15px 0px" }}></div>
 
-            {<p>SOCIALS</p> || <Skeleton count={1} />}
-
+            <p>SOCIALS</p>
             <a target="_blank" rel="noopener noreferrer" href="https://github.com/jos-ren">
-                {<SideHover text={'Github'} /> || <Skeleton count={1} />}
+                <SideHover text={'Github'}
+                // img_src={github}
+                />
             </a>
             <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/josh-renema/">
-                {<SideHover text={'Linkedin'} /> || <Skeleton count={1} />}
+                <SideHover text={'Linkedin'}
+                // img_src={linkedin}
+                />
             </a>
             <a target="_blank" rel="noopener noreferrer" href="https://www.behance.net/joshrenema">
-                {<SideHover text={'Behance'} /> || <Skeleton count={1} />}
+                <SideHover text={'Behance'}
+                // img_src={behance}
+                />
             </a>
             <a target="_blank" rel="noopener noreferrer" href={"mailto:josh.renema@protonmail.com"}>
-                {<SideHover text={'Email'} /> || <Skeleton count={1} />}
+                <SideHover text={'Email'}
+                //  img_src={email}
+                />
             </a>
             <a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1MzXEtLKZ2h67UMKlzdBGnKA1JhoJGz-1/view?usp=sharing">
-                {<SideHover text={'Resume'} /> || <Skeleton count={1} />}
+                <SideHover text={'Resume'} />
             </a>
 
         </Container>
