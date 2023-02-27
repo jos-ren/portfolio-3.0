@@ -6,6 +6,8 @@ import Link from 'next/link'
 // Import 3rd party libraries
 import useColorTheme from "use-color-theme";
 import { useMediaQuery } from 'react-responsive'
+import Skeleton from 'react-loading-skeleton'
+import 'react-loading-skeleton/dist/skeleton.css'
 
 // import data
 import { projects_data } from '../public/data.js';
@@ -70,7 +72,7 @@ export default function Home() {
 			{isTablet && <p>Tablet</p>}
 			{isMobile && <p>Mobile</p>} */}
 
-			<Image height="400" width="1000" objectFit="cover" quality="100" src={"/test.jpg"} style={{ borderRadius: "14px" }} />
+			{<Image height="400" width="1000" objectFit="cover" quality="100" src={"/test.jpg"} style={{ borderRadius: "14px" }} /> || <Skeleton count={1} />}
 
 			{/* about me */}
 			<h1>About Me</h1>
@@ -83,7 +85,7 @@ export default function Home() {
 			`}
 
 			{/* have a 2 / 3 format when 3 wide & a 2 / 2 / 1 when 2 wide */}
-			<h1 style={{ marginTop: "50px" }} >Projects</h1>
+			{<h1 style={{ marginTop: "50px" }} >Projects</h1> || <Skeleton count={1} />}
 			<div style={
 				isMobile ? { display: "grid", gridTemplateColumns: 'repeat(1, 1fr)', gridTemplateRows: '1fr', rowGap: '20px', columnGap: '20px' } :
 					isSmallDesktop || isTablet ? { display: "grid", gridTemplateColumns: 'repeat(2, 1fr)', gridTemplateRows: '1fr', rowGap: '20px', columnGap: '20px' } :
