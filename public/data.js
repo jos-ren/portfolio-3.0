@@ -48,7 +48,7 @@ export const projects_data = [
 		spotlight: [
 			{ killer_feature: "" },
 			{ technical_hurdles: "" },
-			{ how_solve: "" },
+			{ solutions: "" },
 		],
 		// Current status
 		// • This section is optional. If the project is actively being used by real people, talk a little

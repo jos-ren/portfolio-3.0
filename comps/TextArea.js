@@ -7,7 +7,7 @@ const Container = styled.textarea`
     width:100%;
     height:160px;
     border-radius:6px;
-    background:var(--tertiary);
+    background:var(--secondary);
     font-family: Inter;
     font-size:12pt;
     margin-bottom:20px;
@@ -15,10 +15,11 @@ const Container = styled.textarea`
     color:var(--text);
     padding: 16px;
     border: 1px solid var(--border);
-    &:focus {
-        background: var(--hover);
-        outline: 2px solid var(--text);
-      }
+    resize: none;
+    // &:focus {
+    //     background: var(--hover);
+    //     outline: 2px solid var(--text);
+    //   }
 `;
 
 const TextArea = ({  placeholder, name, required }) => {

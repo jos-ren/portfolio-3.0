@@ -9,15 +9,22 @@ const Container = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--tertiary);
+  background-color: var(--secondary);
   cursor: pointer;
   margin-right: ${({ margin }) => margin};
   color:var(--text);
   border: 1px solid var(--border);
-  // &:focus, :hover {
-  //   background: var(--hover);
-  //   outline: 2px solid var(--text);
-  // }
+  cursor:pointer;
+  transition: bottom .2s;
+  transition-timing-function: ease-out;
+  position:relative;
+  bottom:0px;
+  width:100%;
+  :hover{
+      position:relative;
+      bottom:2px;
+      box-shadow: 0 1px 3px -2px rgba(0,0,0,.1);
+  }
   `;
 
 const IconButton = ({ text, onClick, margin, type }) => {

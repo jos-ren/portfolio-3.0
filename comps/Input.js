@@ -7,7 +7,7 @@ const Container = styled.input`
     width:100%;
     height:45px;
     border-radius:6px;
-    background:var(--tertiary);
+    background:var(--secondary);
     font-family: Inter;
     font-size:12pt;
     margin-bottom:20px;
@@ -15,10 +15,10 @@ const Container = styled.input`
     color:var(--text);
     padding:0 0 0 16px;
     border: 1px solid var(--border);
-    &:focus {
-        background: var(--hover);
-        outline: 2px solid var(--text);
-      }
+    // &:focus {
+    //     background: var(--hover);
+    //     outline: 2px solid var(--text);
+    //   }
 `;
 
 const Input = ({ type, placeholder, name, required }) => {

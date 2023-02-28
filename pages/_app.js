@@ -7,7 +7,6 @@ import SideBar from "../comps/SideBar";
 import TopBar from "../comps/TopBar";
 import { projects_data } from '../public/data.js';
 import { DarkModeSwitch } from 'react-toggle-dark-mode';
-import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 import { useLoading, BallTriangle } from '@agney/react-loading';
 
 if (typeof window !== 'undefined' && localStorage.colorTheme !== '"dark-theme"') {
@@ -51,7 +50,7 @@ function MyApp({ Component, pageProps }) {
 
   const { containerProps, indicatorEl } = useLoading({
     loading: true,
-    indicator: <BallTriangle width="50" />,
+    indicator: <BallTriangle width="70" />,
   });
 
   return (
@@ -62,14 +61,14 @@ function MyApp({ Component, pageProps }) {
         <link rel="icon" href="./icons/logo.png" />
       </Head>
 
-      {isLoading && <div style={{ display: "flex", width: "100vw", height: "100vh", alignItems: "center", justifyContent: "center", background:"var(--secondary"}}>
+      {/* renders only while loading */}
+      {isLoading && <div style={{ display: "flex", width: "100vw", height: "100vh", alignItems: "center", justifyContent: "center", background: "var(--secondary" }}>
         <div {...containerProps}>
-          {indicatorEl} {/* renders only while loading */}
+          {indicatorEl}
         </div>
       </div>}
 
 
-      {/* -------------------------------------------- */}
 
       {!isLoading && <div style={{ display: "flex", flexDirection: "row" }}>
         {/* SIDE BAR / TOP BAR */}

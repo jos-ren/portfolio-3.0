@@ -9,23 +9,21 @@ const Container = styled.div`
     padding:20px;
     min-height:200px;
     min-width:180px;
-    // width:100%;
-    // max-width:600px;
-    // width:500px;
-    // margin-right:30px;
-    // margin-bottom:30px;
     cursor:pointer;
-    // position:relative;
+    transition: bottom .2s;
+    transition-timing-function: ease-out;
+    position:relative;
+    bottom:0px;
     :hover{
-        // background:var(--hover)
-        // change this to border
-        // border:${(props) => props.isHover && "1px solid hsla(217, 100%, 50%, 1)"};
+        position:relative;
+        bottom:2px;
+        box-shadow: 0 1px 3px -2px rgba(0,0,0,.1);
     }
 `;
 
-const Card = ({ title, desc, icon, link, isShown, info, index, isHover }) => {
+const Card = ({ title, desc, icon, link, isShown, info, index, }) => {
     return (
-        <Container className="wrapper" isHover={isHover}>
+        <Container className="wrapper">
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "start" }}>
                 <Image height="50px" width="50px" objectFit="contain" src={icon} />
                 {isShown == index ? <Image height="20px" width="20px" objectFit="contain" src={link} /> : <></>}
@@ -36,9 +34,5 @@ const Card = ({ title, desc, icon, link, isShown, info, index, isHover }) => {
         </Container>
     );
 };
-
-Card.defaultProps = {
-    isHover: false
-}
 
 export default Card;

@@ -5,6 +5,7 @@ import ReactPlayer from 'react-player'
 
 import { projects_data } from '../../public/data.js';
 import SectionBlock from "../../comps/SectionBlock"
+import { useLoading, BallTriangle } from '@agney/react-loading';
 
 import styled from "styled-components";
 
@@ -19,6 +20,17 @@ export default function Projects() {
 
     let DATA = projects_data[router.query.id]
 
+    const [isLoading, setIsLoading] = useState(true);
+
+    useEffect(() => {
+        setTimeout(() => setIsLoading(false), 750);
+    }, []);
+
+    const { containerProps, indicatorEl } = useLoading({
+        loading: true,
+        indicator: <BallTriangle width="70" />,
+    })
+
     return (
 
         <>
@@ -27,16 +39,15 @@ export default function Projects() {
                 <ReactPlayer url='https://www.youtube.com/watch?v=ysz5S6PUM-U' controls={true} width={"800px"} height={"460px"} pip={false} />
             </div> */}
             <div style={{ borderRadius: "16px", overflow: "hidden" }}>
-            <Image height="550" width="800" objectFit="cover" quality="100" src={"/pantro_thumb.png"} style={{ borderRadius: "14px" }} />
+                <Image height="550" width="800" objectFit="cover" quality="100" src={"/pantro_thumb.png"} style={{ borderRadius: "14px" }} />
             </div>
 
-            <div style={{ marginBottom: "50px", width:"800px" }}></div>
+            <div style={{ marginBottom: "50px", width: "800px" }}></div>
 
             <div style={{ border: "1px solid red" }}>
                 <h1>Introduction</h1>
                 <p>Summary</p>
                 {/* <div>{DATA.title}</div> */}
-
                 <p>Core Functionalities</p>
                 <p>Role</p>
                 <p>Technologies</p>
@@ -45,23 +56,27 @@ export default function Projects() {
 
             <div style={{ border: "1px solid red" }}>
                 <h1>Purpose</h1>
-                <p>Why?</p>
-                <p>What was the expected outcome?</p>
+                <p>Why Build This Project?</p>
+                <p>What Was The Expected Outcome?</p>
                 <p>Initial Designs</p>
+                <p>Preliminary Planning</p>
             </div>
             <div style={{ border: "1px solid red" }}>
                 <h1>Spotlight</h1>
-                <p>Summary</p>
-                <p>Summary</p>
-                <p>Summary</p>
+                <p>Killer Feature</p>
+                <p>Technical Hurdles</p>
+                <p>Solutions</p>
             </div>
             <div style={{ border: "1px solid red" }}>
                 <h1>Current Status</h1>
-                <p>Summary</p>
+                <p>...</p>
             </div>
             <div style={{ border: "1px solid red" }}>
                 <h1>Lessons Learned</h1>
-                <p>Summary</p>
+                <p>What did I Learn?</p>
+                <p>Was Framework good Choice?</p>
+                <p>Accessibility</p>
+                <p>How did this Project Build Knowledge</p>
             </div>
         </>
     )
