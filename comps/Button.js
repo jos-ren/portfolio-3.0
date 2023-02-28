@@ -9,10 +9,9 @@ const Container = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--secondary);
   cursor: pointer;
   margin-right: ${({ margin }) => margin};
-  color:var(--text);
+  font-weight:100;
   border: 1px solid var(--border);
   cursor:pointer;
   transition: bottom .2s;
@@ -20,17 +19,29 @@ const Container = styled.button`
   position:relative;
   bottom:0px;
   width:100%;
+  background: var(--secondary);
+  color: var(--text);
+  font-family: Inter;
+  font-size: 12pt;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-decoration: none;
+  // text-transform: uppercase;
   :hover{
-      position:relative;
-      bottom:2px;
-      box-shadow: 0 1px 3px -2px rgba(0,0,0,.1);
+    // border: 1px solid blue;
+    position:relative;
+    bottom:2px;
+    box-shadow: 0 1px 3px -2px rgba(0,0,0,.1);
+  }
+  &:focus {
+    outline: 1px solid blue;
   }
   `;
 
 const IconButton = ({ text, onClick, margin, type }) => {
   return (
     <Container onClick={onClick} margin={margin} type={type}>
-      <div style={{ fontSize: "12pt" }}>{text}</div>
+      <div>{text}</div>
     </Container>
   );
 };

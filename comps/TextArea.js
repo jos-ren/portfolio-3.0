@@ -16,10 +16,9 @@ const Container = styled.textarea`
     padding: 16px;
     border: 1px solid var(--border);
     resize: none;
-    // &:focus {
-    //     background: var(--hover);
-    //     outline: 2px solid var(--text);
-    //   }
+    &:focus {
+        outline: 1px solid var(--highlight);
+      }
 `;
 
 const TextArea = ({  placeholder, name, required }) => {

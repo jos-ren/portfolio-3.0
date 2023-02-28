@@ -13,9 +13,15 @@ const Container = styled.div`
     justify-content:space-between;
     padding: 0px 10px;
     cursor:pointer;
-    // margin-bottom:10px;
+    transition: bottom .2s;
+    transition-timing-function: ease-out;
+    position:relative;
+    bottom:0px;
     :hover{
-        background:var(--hover)
+        position:relative;
+        bottom:1px;
+        // box-shadow: 0 1px 3px -2px rgba(0,0,0,.1);
+        background: var(--hover);
     }
 `;
 

@@ -15,10 +15,9 @@ const Container = styled.input`
     color:var(--text);
     padding:0 0 0 16px;
     border: 1px solid var(--border);
-    // &:focus {
-    //     background: var(--hover);
-    //     outline: 2px solid var(--text);
-    //   }
+    &:focus {
+        outline: 1px solid var(--highlight);
+      }
 `;
 
 const Input = ({ type, placeholder, name, required }) => {

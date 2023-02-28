@@ -57,7 +57,7 @@ const ContactCard = ({ isMobile }) => {
                     </div>
                 }
                 <TextArea placeholder="Your message" name="message" required />
-                <Button type="submit" text="Send a Message" />
+                <Button type="submit" text="Send Message" />
             </form>
         </Container >
     );
