@@ -12,6 +12,7 @@
   --hover: #e2e8f0;
   --border: rgba(0, 0, 0, .1);
   --highlight: #0071fc;
+  --button-focus: #003a82;
 }
 
 .dark-theme {
@@ -22,7 +23,8 @@
   --text: #FFFFFF;
   --hover: #4f4f64;
   --border: rgba(255, 255, 255, 0.1);
-  --highlight: #0071fc;
+  --highlight: #1efc7f;
+  --button-focus: #6bffac;
 }
 
 html,

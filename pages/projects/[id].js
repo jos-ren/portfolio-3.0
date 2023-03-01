@@ -18,18 +18,20 @@ export default function Projects() {
 
     const router = useRouter()
 
-    let DATA = projects_data[router.query.id]
 
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
-        setTimeout(() => setIsLoading(false), 750);
+        setTimeout(() => setIsLoading(false), 500);
     }, []);
 
     const { containerProps, indicatorEl } = useLoading({
         loading: true,
         indicator: <BallTriangle width="70" />,
     })
+
+    let DATA = projects_data[router.query.id]
+    console.log(DATA.introduction[0].summary)
 
     return (
 
@@ -38,20 +40,24 @@ export default function Projects() {
             {/* <div style={{ borderRadius: "16px", overflow: "hidden" }}>
                 <ReactPlayer url='https://www.youtube.com/watch?v=ysz5S6PUM-U' controls={true} width={"800px"} height={"460px"} pip={false} />
             </div> */}
-            <div style={{ borderRadius: "16px", overflow: "hidden" }}>
+            {/* <div style={{ borderRadius: "16px", overflow: "hidden" }}>
                 <Image height="550" width="800" objectFit="cover" quality="100" src={"/pantro_thumb.png"} style={{ borderRadius: "14px" }} />
-            </div>
+            </div> */}
 
             <div style={{ marginBottom: "50px", width: "800px" }}></div>
 
             <div style={{ border: "1px solid red" }}>
                 <h1>Introduction</h1>
                 <p>Summary</p>
-                {/* <div>{DATA.title}</div> */}
+                <div>{DATA.introduction[0].summary}</div>
                 <p>Core Functionalities</p>
+                <div>{DATA.introduction[0].functions}</div>
                 <p>Role</p>
+                <div>{DATA.introduction[0].role}</div>
                 <p>Technologies</p>
+                <div>{DATA.introduction[0].technologies}</div>
                 <p>Links</p>
+                <div>{DATA.introduction[0].links}</div>
             </div>
 
             <div style={{ border: "1px solid red" }}>

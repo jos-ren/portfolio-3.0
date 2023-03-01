@@ -17,11 +17,13 @@ export const projects_data = [
 		// • Technologies used
 		// • Links to live demo + source code (if applicable)
 		introduction: [
-			{ summary: "" },
-			{ functions: "" },
-			{ role: "" },
-			{ technologies: "" },
-			{ links: "" },
+			{
+				summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+				functions: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+				role: "Full Stack Developer",
+				technologies: "React, Next.js, ",
+				links: "smartcitymedia.com",
+			},
 		],
 		// Purpose and Goal
 		// • Why did you build this project? Why is it important to you?
@@ -91,11 +93,13 @@ export const projects_data = [
 			{ src: "/screenshots/pantro/1.png" },
 		],
 		introduction: [
-			{ summary: "" },
-			{ functions: "" },
-			{ role: "" },
-			{ technologies: "" },
-			{ links: "" },
+			{
+				summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+				functions: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+				role: "Full Stack Developer",
+				technologies: "React, Next.js, ",
+				links: "smartcitymedia.com",
+			},
 		],
 	},
 	{
@@ -115,6 +119,15 @@ export const projects_data = [
 			{ src: "/screenshots/petsave/2.png" },
 			// { src: "/screenshots/petsave/3.png"},
 		],
+		introduction: [
+			{
+				summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+				functions: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+				role: "Full Stack Developer",
+				technologies: "React, Next.js, ",
+				links: "smartcitymedia.com",
+			},
+		],
 	},
 	{
 		id: 3,
@@ -131,6 +144,15 @@ export const projects_data = [
 			{ src: "/screenshots/pantro/5.png" },
 			{ src: "/screenshots/pantro/6.png" },
 		],
+		introduction: [
+			{
+				summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+				functions: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+				role: "Full Stack Developer",
+				technologies: "React, Next.js, ",
+				links: "smartcitymedia.com",
+			},
+		],
 	},
 	{
 		id: 4,
@@ -141,6 +163,15 @@ export const projects_data = [
 		link: null,
 		screenshots: [
 			{ src: "/screenshots/pantro/1.png" },
+		],
+		introduction: [
+			{
+				summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+				functions: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+				role: "Full Stack Developer",
+				technologies: "React, Next.js, ",
+				links: "smartcitymedia.com",
+			},
 		],
 	},
 	// {
