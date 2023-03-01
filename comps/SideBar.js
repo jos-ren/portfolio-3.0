@@ -23,7 +23,7 @@ const Container = styled.div`
     // width: ${(props) => props.isOpen ? "auto" : "333px"};
 `;
 
-const SideBar = ({ icon, logo_src, onClick, data, isOpen, onLinkClick}) => {
+const SideBar = ({ icon, logo_src, onClick, data, isOpen, onLinkClick }) => {
     return (
         <Container isOpen={isOpen}>
             <div style={{ display: "flex", width: '100%' }}>
@@ -37,7 +37,7 @@ const SideBar = ({ icon, logo_src, onClick, data, isOpen, onLinkClick}) => {
 
             <div style={{ margin: "15px 0px" }}></div>
 
-            <p>PROJECTS</p>
+            <p style={{ marginLeft: "10px" }}>PROJECTS</p>
             {/* maybe have a "view more button after 4-5" */}
             {data.map((o, index) => {
                 return <Link key={index} href={`/projects/${encodeURIComponent(o.id)}`} >
@@ -49,7 +49,7 @@ const SideBar = ({ icon, logo_src, onClick, data, isOpen, onLinkClick}) => {
 
             <div style={{ margin: "15px 0px" }}></div>
 
-            <p>SOCIALS</p>
+            <p style={{ marginLeft: "10px" }}>SOCIALS</p>
             <a target="_blank" rel="noopener noreferrer" href="https://github.com/jos-ren">
                 <SideHover text={'Github'}
                 // img_src={github}

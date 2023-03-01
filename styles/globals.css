@@ -43,7 +43,7 @@ p {
   font-weight: 600;
   letter-spacing: 2px;
   text-decoration: none;
-  margin-left: 10px;
+  /* margin-left: 10px; */
 }
 
 a {

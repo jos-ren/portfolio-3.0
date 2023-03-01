@@ -17,6 +17,7 @@ import { interests_data } from '../public/data.js';
 import Card from '../comps/Card';
 import Tile from '../comps/Tile';
 import ContactCard from "../comps/ContactCard";
+import HeaderLine from "../comps/HeaderLine"
 // import PhotoCard from "../comps/PhotoCard";
 
 
@@ -73,6 +74,7 @@ export default function Home() {
 			<Image height="400" width="1000" objectFit="cover" quality="100" src={"/test.jpg"} style={{ borderRadius: "14px" }} />
 
 			{/* about me */}
+			{/* <HeaderLine header="About Me"/> */}
 			<h1>About Me</h1>
 			{/* im a canadian full stack developer currently residing in the PNW! */}
 			{`
