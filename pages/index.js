@@ -16,8 +16,9 @@ import { interests_data } from '../public/data.js';
 // import components
 import Card from '../comps/Card';
 import Tile from '../comps/Tile';
-import ContactForm from "../comps/ContactForm";
-import PhotoCard from "../comps/PhotoCard";
+import ContactCard from "../comps/ContactCard";
+import HeaderLine from "../comps/HeaderLine"
+// import PhotoCard from "../comps/PhotoCard";
 
 
 export default function Home() {
@@ -73,6 +74,7 @@ export default function Home() {
 			<Image height="400" width="1000" objectFit="cover" quality="100" src={"/test.jpg"} style={{ borderRadius: "14px" }} />
 
 			{/* about me */}
+			{/* <HeaderLine header="About Me"/> */}
 			<h1>About Me</h1>
 			{/* im a canadian full stack developer currently residing in the PNW! */}
 			{`
@@ -92,7 +94,7 @@ export default function Home() {
 				{projects_data.map((o, index) => {
 					return <Link key={index} href={"/projects/" + index}>
 						<div>
-							<Card icon={o.icon} title={o.title} desc={o.desc} index={index} isHover={true} />
+							<Card icon={o.icon} title={o.title} desc={o.desc} index={index} />
 						</div>
 					</Link>
 				})}
@@ -127,7 +129,7 @@ export default function Home() {
 				</div> */}
 
 			<h1 style={{ marginTop: "40px" }}>Contact Me</h1>
-			<ContactForm />
+			<ContactCard isMobile={isTablet}/>
 		</>
 	)
 }

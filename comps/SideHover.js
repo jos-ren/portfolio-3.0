@@ -13,9 +13,14 @@ const Container = styled.div`
     justify-content:space-between;
     padding: 0px 10px;
     cursor:pointer;
-    // margin-bottom:10px;
+    // transition: bottom .2s;
+    // transition-timing-function: ease-out;
+    // position:relative;
+    // bottom:0px;
     :hover{
-        background:var(--hover)
+    //     position:relative;
+    //     bottom:1px;
+        background: var(--hover);
     }
 `;
 

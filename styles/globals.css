@@ -5,24 +5,26 @@
 
 .light-theme {
   --primary: #ffffff;
-  --secondary: rgba(0, 0, 0, .02);
+  /* --secondary: rgba(0, 0, 0, .02); */
+  --secondary: #fafafa;
   --tertiary: #f0f2f4;
-
   --text: #000000;
   --hover: #e2e8f0;
   --border: rgba(0, 0, 0, .1);
-  --gradiant: linear-gradient(90deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+  --highlight: #0071fc;
+  --button-focus: #003a82;
 }
 
 .dark-theme {
   --primary: #1b1a22;
-  --secondary: rgba(0, 0, 0, .2);
+  /* --secondary: rgba(0, 0, 0, .2); */
+  --secondary: #16151b;
   --tertiary: #2b2b37;
-
   --text: #FFFFFF;
   --hover: #4f4f64;
   --border: rgba(255, 255, 255, 0.1);
-  --gradiant: linear-gradient(90deg, hsla(152, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+  --highlight: #1efc7f;
+  --button-focus: #6bffac;
 }
 
 html,
@@ -41,7 +43,7 @@ p {
   font-weight: 600;
   letter-spacing: 2px;
   text-decoration: none;
-  margin-left: 10px;
+  /* margin-left: 10px; */
 }
 
 a {
@@ -51,10 +53,6 @@ a {
 
 * {
   box-sizing: border-box;
-}
-
-.wrapper:hover .gradiant_border {
-  display: flex;
 }
 
 .swiper {

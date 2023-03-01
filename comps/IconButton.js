@@ -15,6 +15,15 @@ const Container = styled.button`
   // margin-left: ${({ margin }) => margin};
   margin-left: 20px;
   border: 1px solid var(--border);
+  // transition: bottom .2s;
+  // transition-timing-function: ease-out;
+  // position:relative;
+  // bottom:0px;
+  :hover{
+      // position:relative;
+      // bottom:1px;
+      box-shadow: 0 1px 3px -2px rgba(0,0,0,.1);
+  }
   `;
 
 // const GradiantBorder = styled.div`
