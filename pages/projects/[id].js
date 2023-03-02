@@ -2,17 +2,15 @@ import React, { useState, useEffect } from "react";
 import Image from 'next/image'
 import { useRouter } from 'next/router'
 import ReactPlayer from 'react-player'
-
 import { projects_data } from '../../public/data.js';
 import SectionBlock from "../../comps/SectionBlock"
 import HeaderLine from "../../comps/HeaderLine"
 import { useLoading, BallTriangle } from '@agney/react-loading';
-
 import styled from "styled-components";
 
-const Wrapper = styled.div`
-    border:1px solid red;
-    width:100%;
+
+const Text = styled.div`
+    margin:10px 0px;
 `;
 
 export default function Projects() {
@@ -34,30 +32,35 @@ export default function Projects() {
     let DATA = projects_data[router.query.id]
     let INTRODUCTION = projects_data[router.query.id].introduction[0]
     // let PURPOSE = projects_data[router.query.id].purpose[0]
-    console.log(DATA.introduction[0].summary)
+    console.log(DATA.header_media.split("", 1)[0])
 
     return (
 
         <>
-            {/* optional video here */}
-            <div style={{ borderRadius: "16px", overflow: "hidden" }}>
-                <ReactPlayer url='https://www.youtube.com/watch?v=ysz5S6PUM-U' controls={true} width={"auto"} height={"460px"} pip={false} />
-            </div>
-            {/* <div style={{ borderRadius: "16px", overflow: "hidden" }}>
-                <Image height="550" width="800" objectFit="cover" quality="100" src={"/pantro_thumb.png"} style={{ borderRadius: "14px" }} />
-            </div> */}
+            <h1>{DATA.title}</h1>
+            {/* if no video, use image as a header*/}
+            {"/" == DATA.header_media.split("", 1)[0] ?
+                <div style={{ borderRadius: "16px", overflow: "hidden" }}>
+                    <Image height="1080" width="1920" objectFit="cover" quality="100" src={DATA.header_media} style={{ borderRadius: "14px" }} />
+                </div> :
+                <div style={{ borderRadius: "16px", overflow: "hidden" }}>
+                    <ReactPlayer url={DATA.header_media} controls={true} width={"auto"} height={"460px"} pip={false} />
+                </div> 
+            }
+
 
             <HeaderLine header={"Introduction"} />
             <p>Summary</p>
-            <div>{INTRODUCTION.summary}</div>
+            <Text>{INTRODUCTION.summary}</Text>
             <p>Core Functionalities</p>
-            <div>{INTRODUCTION.functions}</div>
+            {/* bullet points */}
+            <Text>{INTRODUCTION.functions}</Text>
             <p>Role</p>
-            <div>{INTRODUCTION.role}</div>
+            <Text>{INTRODUCTION.role}</Text>
             <p>Technologies</p>
-            <div>{INTRODUCTION.technologies}</div>
+            <Text>{INTRODUCTION.technologies}</Text>
             <p>Links</p>
-            <div>{DATA.introduction[0].links}</div>
+            <Text>{INTRODUCTION.link}</Text>
 
 
 
