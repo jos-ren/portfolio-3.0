@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { useRouter } from 'next/router'
 import ReactPlayer from 'react-player'
 import { projects_data } from '../../public/data.js';
-import SectionBlock from "../../comps/SectionBlock"
+import Pill from "../../comps/Pill"
 import HeaderLine from "../../comps/HeaderLine"
 import { useLoading, BallTriangle } from '@agney/react-loading';
 import styled from "styled-components";
@@ -32,7 +32,7 @@ export default function Projects() {
     let DATA = projects_data[router.query.id]
     let INTRODUCTION = projects_data[router.query.id].introduction[0]
     // let PURPOSE = projects_data[router.query.id].purpose[0]
-    console.log(DATA.header_media.split("", 1)[0])
+    console.log(INTRODUCTION.technologies)
 
     return (
 
@@ -45,8 +45,19 @@ export default function Projects() {
                 </div> :
                 <div style={{ borderRadius: "16px", overflow: "hidden" }}>
                     <ReactPlayer url={DATA.header_media} controls={true} width={"auto"} height={"460px"} pip={false} />
-                </div> 
+                </div>
             }
+
+
+            <p>Technologies</p>
+            {/* pills for tags */}
+            {DATA.technologies.map((o, index) => {
+                return <Pill key={index} text={o} />
+            })}
+            {/* buttons to website links, github links */}
+            <p>Links</p>
+            <Text>{DATA.link}</Text>
+            {/* role */}
 
 
             <HeaderLine header={"Introduction"} />
@@ -57,10 +68,6 @@ export default function Projects() {
             <Text>{INTRODUCTION.functions}</Text>
             <p>Role</p>
             <Text>{INTRODUCTION.role}</Text>
-            <p>Technologies</p>
-            <Text>{INTRODUCTION.technologies}</Text>
-            <p>Links</p>
-            <Text>{INTRODUCTION.link}</Text>
 
 
 

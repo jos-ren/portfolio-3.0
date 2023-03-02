@@ -5,6 +5,14 @@ export const projects_data = [
 		desc: "Real Estate Web App serving 20,000+ geo-tagged photos",
 		icon: "/icons/scm.png",
 		header_media: "https://www.youtube.com/watch?v=ysz5S6PUM-U",
+		link: "https://smartcitymedia.com/",
+		github_link: "",
+		technologies: [
+			"React",
+			"Next.js",
+			"Node.js",
+			"AWS",
+		],
 		// Introduction
 		// • High-level summary of what the project is
 		// • List of core functionalities / interesting features
@@ -17,9 +25,6 @@ export const projects_data = [
 				summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
 				functions: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
 				role: "Full Stack Developer",
-				technologies: "React, Next.js, ",
-				link: "https://smartcitymedia.com/",
-				github_link: "",
 			},
 		],
 		// Purpose and Goal
@@ -85,14 +90,19 @@ export const projects_data = [
 		desc: "CRM with the options to text, email, and send updates to contacts",
 		icon: "/icons/bcit.png",
 		header_media: "https://www.youtube.com/watch?v=ysz5S6PUM-U",
+		link: "https://crm.techiesoftomorrow.com/",
+		github_link: "",
+		technologies: [
+			"React",
+			"Next.js",
+			"Node.js",
+			"AWS",
+		],
 		introduction: [
 			{
 				summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
 				functions: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
 				role: "Full Stack Developer",
-				technologies: "React, Next.js, ",
-				link: "https://crm.techiesoftomorrow.com/",
-				github_link: "",
 			},
 		],
 	},
@@ -102,14 +112,18 @@ export const projects_data = [
 		desc: "Social media app for animal rehabilitation centers",
 		icon: "/icons/petsave.png",
 		header_media: "/screenshots/petsave_cover.jpg",
+		github_link: "https://github.com/jos-ren/petsave-frontend",
+		technologies: [
+			"React",
+			"Next.js",
+			"Node.js",
+			"AWS",
+		],
 		introduction: [
 			{
 				summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
 				functions: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
 				role: "Full Stack Developer",
-				technologies: "React, Next.js, ",
-				link: null,
-				github_link: "https://github.com/jos-ren/petsave-frontend",
 			},
 		],
 	},
@@ -119,14 +133,19 @@ export const projects_data = [
 		desc: "Pantry app which tracks food expiration dates",
 		icon: "/icons/pantro.png",
 		header_media: "/screenshots/pantro_cover.jpg",
+		link: "",
+		github_link: "https://github.com/jos-ren/bcitd3_pantro",
+		technologies: [
+			"React",
+			"Next.js",
+			"Node.js",
+			"AWS",
+		],
 		introduction: [
 			{
 				summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
 				functions: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-				role: "Full Stack Developer",
-				technologies: "React, Next.js, ",
-				link: null,
-				github_link: "https://github.com/jos-ren/bcitd3_pantro",
+				role: "Full Stack Developer",			
 			},
 		],
 	},
@@ -136,14 +155,19 @@ export const projects_data = [
 		desc: "Python bot which can translate any tweet into french",
 		icon: "/icons/translate.png",
 		header_media: "https://www.youtube.com/watch?v=SxiX59jA-1w",
+		link: "",
+		github_link: "",
+		technologies: [
+			"React",
+			"Next.js",
+			"Node.js",
+			"AWS",
+		],
 		introduction: [
 			{
 				summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
 				functions: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
 				role: "Full Stack Developer",
-				technologies: "Python, Google Translate API, Twitter API",
-				link: null,
-				github_link: "",
 			},
 		],
 	},
