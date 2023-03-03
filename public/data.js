@@ -12,6 +12,8 @@ export const projects_data = [
 			"Next.js",
 			"Node.js",
 			"AWS",
+			"S3",
+			"RDS",
 		],
 		// Introduction
 		// • High-level summary of what the project is

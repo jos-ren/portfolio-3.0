@@ -1,13 +1,18 @@
 import React, { useState, useEffect } from "react";
 import Image from 'next/image'
-import { useRouter } from 'next/router'
-import ReactPlayer from 'react-player'
-import { projects_data } from '../../public/data.js';
-import Pill from "../../comps/Pill"
-import HeaderLine from "../../comps/HeaderLine"
-import { useLoading, BallTriangle } from '@agney/react-loading';
 import styled from "styled-components";
+import { useRouter } from 'next/router'
+import useColorTheme from "use-color-theme";
 
+import { projects_data } from '../../public/data.js';
+
+import ReactPlayer from 'react-player'
+import { useLoading, BallTriangle } from '@agney/react-loading';
+
+import Pill from "../../comps/Pill"
+import SideButton from "../../comps/SideButton"
+import IconButton from "../../comps/IconButton"
+import HeaderLine from "../../comps/HeaderLine"
 
 const Text = styled.div`
     margin:10px 0px;
@@ -34,10 +39,39 @@ export default function Projects() {
     // let PURPOSE = projects_data[router.query.id].purpose[0]
     console.log(INTRODUCTION.technologies)
 
+    const colorTheme = useColorTheme("light-theme", {
+        classNames: ["light-theme", "dark-theme"],
+    });
+
+    let github = "";
+    let link = "";
+    if (colorTheme.value === "light-theme") {
+        github = "/icons/github.svg";
+        link = "/icons/link.svg";
+    } else if (colorTheme.value === "dark-theme") {
+        github = "/icons/github_w.svg";
+        link = "/icons/link_w.svg";
+    }
+
     return (
 
         <>
-            <h1>{DATA.title}</h1>
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom:"20px" }}>
+                <div>
+                    <h1 style={{marginBottom:"0px"}}>{DATA.title}</h1>
+                    <Text>{INTRODUCTION.role}</Text>
+                </div>
+                {/* buttons to website links, github links */}
+                <div style={{ display: "flex" }}>
+                    <a target="_blank" rel="noopener noreferrer" href={DATA.link} >
+                        <IconButton icon={<Image src={link} height={20} width={20} />} />
+                    </a>
+                    <a target="_blank" rel="noopener noreferrer" href={DATA.github_link} >
+                        <IconButton icon={<Image src={github} height={20} width={20} />} />
+                    </a>
+                </div>
+            </div>
+
             {/* if no video, use image as a header*/}
             {"/" == DATA.header_media.split("", 1)[0] ?
                 <div style={{ borderRadius: "16px", overflow: "hidden" }}>
@@ -48,17 +82,15 @@ export default function Projects() {
                 </div>
             }
 
-
-            <p>Technologies</p>
-            {/* pills for tags */}
-            {DATA.technologies.map((o, index) => {
-                return <Pill key={index} text={o} />
-            })}
-            {/* buttons to website links, github links */}
-            <p>Links</p>
-            <Text>{DATA.link}</Text>
-            {/* role */}
-
+            <div style={{ display: "flex", alignItems: "center", marginTop: "16px" }}>
+                <p>Tags:</p>
+                {/* pills for tags */}
+                <div style={{ marginLeft: "10px", display: "flex", flexWrap: 'wrap', gap: '8px' }}>
+                    {DATA.technologies.map((o, index) => {
+                        return <Pill key={index} text={o} />
+                    })}
+                </div>
+            </div>
 
             <HeaderLine header={"Introduction"} />
             <p>Summary</p>
@@ -66,8 +98,6 @@ export default function Projects() {
             <p>Core Functionalities</p>
             {/* bullet points */}
             <Text>{INTRODUCTION.functions}</Text>
-            <p>Role</p>
-            <Text>{INTRODUCTION.role}</Text>
 
 
 
