@@ -8,9 +8,11 @@ import { projects_data } from '../../public/data.js';
 
 import ReactPlayer from 'react-player'
 import { useLoading, BallTriangle } from '@agney/react-loading';
+import { useMediaQuery } from 'react-responsive'
 
 import Pill from "../../comps/Pill"
 import SideButton from "../../comps/SideButton"
+import Button from "../../comps/Button"
 import IconButton from "../../comps/IconButton"
 import HeaderLine from "../../comps/HeaderLine"
 
@@ -37,7 +39,7 @@ export default function Projects() {
     let DATA = projects_data[router.query.id]
     let INTRODUCTION = projects_data[router.query.id].introduction[0]
     // let PURPOSE = projects_data[router.query.id].purpose[0]
-    console.log(INTRODUCTION.technologies)
+    // console.log(INTRODUCTION.technologies)
 
     const colorTheme = useColorTheme("light-theme", {
         classNames: ["light-theme", "dark-theme"],
@@ -53,18 +55,24 @@ export default function Projects() {
         link = "/icons/link_w.svg";
     }
 
+    const isTablet = useMediaQuery({ query: '(max-width: 880px)' })
+    // 1 cards
+    const isMobile = useMediaQuery({ query: '(max-width: 425px)' })
+
     return (
 
         <>
-            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom:"20px" }}>
+            <div style={isMobile ?
+                { marginBottom: "20px",  alignItems: "center", display:"flex", flexDirection:"column" } :
+                { display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "20px" }
+            }>
                 <div>
-                    <h1 style={{marginBottom:"0px"}}>{DATA.title}</h1>
-                    <Text>{INTRODUCTION.role}</Text>
+                    <h1 style={{ marginBottom: "0px" }}>{DATA.title}</h1>
                 </div>
                 {/* buttons to website links, github links */}
-                <div style={{ display: "flex" }}>
+                <div style={isMobile ? { display: "flex", marginTop:"20px"} : { display: "flex" }}>
                     <a target="_blank" rel="noopener noreferrer" href={DATA.link} >
-                        <IconButton icon={<Image src={link} height={20} width={20} />} />
+                        <Button text="View Site" background="var(--tertiary)" color="var(--text)" />
                     </a>
                     <a target="_blank" rel="noopener noreferrer" href={DATA.github_link} >
                         <IconButton icon={<Image src={github} height={20} width={20} />} />
@@ -82,6 +90,7 @@ export default function Projects() {
                 </div>
             }
 
+            {/* <Text>{INTRODUCTION.role}</Text> */}
             <div style={{ display: "flex", alignItems: "center", marginTop: "16px" }}>
                 <p>Tags:</p>
                 {/* pills for tags */}

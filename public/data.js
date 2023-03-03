@@ -160,10 +160,9 @@ export const projects_data = [
 		link: "",
 		github_link: "",
 		technologies: [
-			"React",
-			"Next.js",
-			"Node.js",
-			"AWS",
+			"Python",
+			"Google Translate API",
+			"Twitter API",
 		],
 		introduction: [
 			{
