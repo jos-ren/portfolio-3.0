@@ -5,7 +5,7 @@ const Container = styled.div`
     // text-transform: uppercase;
     display:flex;
     align-items:center;
-    margin:50px 0px 30px 0px;
+    margin: ${({ margin }) => margin};margin
 `;
 
 const Line = styled.div`
@@ -13,15 +13,19 @@ const Line = styled.div`
     width:100%;
 `;
 
-const HeaderLine = ({ header }) => {
+const HeaderLine = ({ header, margin }) => {
     return (
-        <Container>
+        <Container margin={margin}>
             <Line />
             <p style={{ fontSize: '14px', margin: "0px 15px", whiteSpace: 'nowrap' }}>{header}</p>
             <Line />
         </Container>
     );
 }
+
+HeaderLine.defaultProps = {
+    margin: "50px 0px 30px 0px"
+  }
 
 export default HeaderLine;
 

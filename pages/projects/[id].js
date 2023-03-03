@@ -90,10 +90,11 @@ export default function Projects() {
                 </div>
             }
 
+            {/* school or work project*/}
             {/* <Text>{INTRODUCTION.role}</Text> */}
+
             <div style={{ display: "flex", alignItems: "center", marginTop: "16px" }}>
                 <p>Tags:</p>
-                {/* pills for tags */}
                 <div style={{ marginLeft: "10px", display: "flex", flexWrap: 'wrap', gap: '8px' }}>
                     {DATA.technologies.map((o, index) => {
                         return <Pill key={index} text={o} />
@@ -101,7 +102,7 @@ export default function Projects() {
                 </div>
             </div>
 
-            <HeaderLine header={"Introduction"} />
+            <HeaderLine header={"Introduction"} margin={"40px 0px 30px 0px"}/>
             <p>Summary</p>
             <Text>{INTRODUCTION.summary}</Text>
             <p>Core Functionalities</p>
