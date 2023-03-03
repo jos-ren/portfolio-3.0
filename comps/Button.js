@@ -34,7 +34,7 @@ const Container = styled.button`
   }
   `;
 
-const IconButton = ({ text, onClick, margin, type }) => {
+const Button = ({ text, onClick, margin, type }) => {
   return (
     <Container onClick={onClick} margin={margin} type={type}>
       <div >{text}</div>
@@ -42,4 +42,4 @@ const IconButton = ({ text, onClick, margin, type }) => {
   );
 };
 
-export default IconButton;
+export default Button;
