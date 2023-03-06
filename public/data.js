@@ -4,10 +4,20 @@ export const projects_data = [
 		title: "Smart City Media",
 		desc: "Real Estate Web App serving 20,000+ geo-tagged photos",
 		icon: "/icons/scm.png",
-		github_link: "",
+		header_media: "https://www.youtube.com/watch?v=ysz5S6PUM-U",
 		link: "https://smartcitymedia.com/",
-		screenshots: [
-			{ src: "/screenshots/pantro/1.png" },
+		github_link: "",
+		type:[{
+			source:"Work",
+			background:"var(--orange)",
+		}],
+		technologies: [
+			"React",
+			"Next.js",
+			"Node.js",
+			"AWS",
+			"S3",
+			"RDS",
 		],
 		// Introduction
 		// • High-level summary of what the project is
@@ -21,8 +31,6 @@ export const projects_data = [
 				summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
 				functions: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
 				role: "Full Stack Developer",
-				technologies: "React, Next.js, ",
-				links: "smartcitymedia.com",
 			},
 		],
 		// Purpose and Goal
@@ -87,18 +95,24 @@ export const projects_data = [
 		title: "BCIT CRM",
 		desc: "CRM with the options to text, email, and send updates to contacts",
 		icon: "/icons/bcit.png",
-		github_link: "",
+		header_media: "https://www.youtube.com/watch?v=ysz5S6PUM-U",
 		link: "https://crm.techiesoftomorrow.com/",
-		screenshots: [
-			{ src: "/screenshots/pantro/1.png" },
+		github_link: "",
+		type:[{
+			source:"Work",
+			background:"var(--orange)",
+		}],
+		technologies: [
+			"React",
+			"Next.js",
+			"Node.js",
+			"AWS",
 		],
 		introduction: [
 			{
 				summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
 				functions: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
 				role: "Full Stack Developer",
-				technologies: "React, Next.js, ",
-				links: "smartcitymedia.com",
 			},
 		],
 	},
@@ -107,25 +121,24 @@ export const projects_data = [
 		title: "Petsave",
 		desc: "Social media app for animal rehabilitation centers",
 		icon: "/icons/petsave.png",
+		header_media: "/screenshots/petsave_cover.jpg",
+		link: "",
 		github_link: "https://github.com/jos-ren/petsave-frontend",
-		link: null,
-		screenshots: [
-			{ src: "/screenshots/petsave/6.png" },
-			{ src: "/screenshots/petsave/7.png" },
-			{ src: "/screenshots/petsave/4.png" },
-			{ src: "/screenshots/petsave/5.png" },
-			// { src: "/screenshots/petsave/8.png"},
-			// { src: "/screenshots/petsave/1.png"},
-			{ src: "/screenshots/petsave/2.png" },
-			// { src: "/screenshots/petsave/3.png"},
+		type:[{
+			source:"Student",
+			background:"var(--blue)",
+		}],
+		technologies: [
+			"React",
+			"Next.js",
+			"Node.js",
+			"AWS",
 		],
 		introduction: [
 			{
 				summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
 				functions: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
 				role: "Full Stack Developer",
-				technologies: "React, Next.js, ",
-				links: "smartcitymedia.com",
 			},
 		],
 	},
@@ -134,23 +147,24 @@ export const projects_data = [
 		title: "Pantro",
 		desc: "Pantry app which tracks food expiration dates",
 		icon: "/icons/pantro.png",
+		header_media: "/screenshots/pantro_cover.jpg",
+		link: "",
 		github_link: "https://github.com/jos-ren/bcitd3_pantro",
-		link: null,
-		screenshots: [
-			{ src: "/screenshots/pantro/1.png" },
-			{ src: "/screenshots/pantro/2.png" },
-			{ src: "/screenshots/pantro/3.png" },
-			{ src: "/screenshots/pantro/4.png" },
-			{ src: "/screenshots/pantro/5.png" },
-			{ src: "/screenshots/pantro/6.png" },
+		type:[{
+			source:"Student",
+			background:"var(--blue)",
+		}],
+		technologies: [
+			"React",
+			"Next.js",
+			"Node.js",
+			"AWS",
 		],
 		introduction: [
 			{
 				summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
 				functions: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-				role: "Full Stack Developer",
-				technologies: "React, Next.js, ",
-				links: "smartcitymedia.com",
+				role: "Full Stack Developer",			
 			},
 		],
 	},
@@ -159,18 +173,23 @@ export const projects_data = [
 		title: "Twitter Translate Bot",
 		desc: "Python bot which can translate any tweet into french",
 		icon: "/icons/translate.png",
-		github_link: "",
-		link: null,
-		screenshots: [
-			{ src: "/screenshots/pantro/1.png" },
+		header_media: "https://www.youtube.com/watch?v=SxiX59jA-1w",
+		link: "",
+		github_link: "https://github.com/jos-ren/twitter_translate",
+		type:[{
+			source:"Personal",
+			background:"var(--green)",
+		}],
+		technologies: [
+			"Python",
+			"Google Translate API",
+			"Twitter API",
 		],
 		introduction: [
 			{
 				summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
 				functions: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
 				role: "Full Stack Developer",
-				technologies: "React, Next.js, ",
-				links: "smartcitymedia.com",
 			},
 		],
 	},
@@ -179,11 +198,8 @@ export const projects_data = [
 	// 	title: "Poman",
 	// 	desc: "Foodie social network app",
 	// 	icon: "/icons/poman.svg",
-	// 	github_link: "/",
 	// 	link: "https://www.youtube.com/watch?v=Rze68rEMxhk",
-	// 	screenshots: [
-	// 		{ src: "/screenshots/pantro/1.png" },
-	// 	],
+	// 	github_link: "/",
 	// },
 	// {
 	// 	id: 5,
@@ -191,16 +207,8 @@ export const projects_data = [
 	// 	desc: "Delivery app for everyday items",
 	// 	icon: "/icons/getem.png",
 	// 	href: "/projects/getem",
-	// 	github_link: "/",
 	// 	link: "https://www.youtube.com/watch?v=HvQbuNzpwho",
-	// 	screenshots: [
-	// 		{ src: "/screenshots/getem/1.jpg" },
-	// 		{ src: "/screenshots/getem/2.jpg" },
-	// 		{ src: "/screenshots/getem/3.jpg" },
-	// 		{ src: "/screenshots/getem/4.jpg" },
-	// 		{ src: "/screenshots/getem/5.jpg" },
-	// 		{ src: "/screenshots/getem/6.jpg" },
-	// 	],
+	// 	github_link: "/",
 	// },
 ]
 
@@ -304,69 +312,4 @@ export const icons_data = [
 		icon: "/icons/tech/github.png",
 		name: "Github",
 	},
-	// {
-	// 	id: 14,
-	// 	icon: "/icons/tech/firebase.svg",
-	// 	name: "Firebase",
-	// },
-	// {
-	// 	id: 15,
-	// 	icon: "/icons/tech/material.svg",
-	// 	name: "Material Design",
-	// },
-	// {
-	// 	id: 16,
-	// 	icon: "/icons/tech/postman.svg",
-	// 	name: "Postman",
-	// },
-	// {
-	// 	id: 18,
-	// 	icon: "/icons/tech/sass.svg",
-	// 	name: "Sass: Syntactically Awesome Style Sheets",
-	// },
 ];
-
-export const interests_data = [
-	{
-		id: 0,
-		image: "/images/photography.jpg",
-		desc: "Photography",
-	},
-	{
-		id: 0,
-		image: "/images/hiking.jpg",
-		desc: "Hiking",
-	},
-	{
-		id: 0,
-		image: "/images/travel.jpg",
-		desc: "Traveling",
-	},
-	{
-		id: 0,
-		image: "/images/cars.jpg",
-		desc: "Cars",
-	},
-	{
-		id: 0,
-		image: "/images/book.jpg",
-		desc: "Reading",
-	},
-];
-
-// export const design_data = [
-// 	{
-// 		id: 0,
-// 		title: "Digital Art",
-// 		desc: "Some of my design work throught the years",
-// 		link: "https://www.behance.net/joshrenema",
-// 		icon: "/icons/behance.png",
-// 	},
-// 	{
-// 		id: 1,
-// 		title: "Icons",
-// 		desc: "vr icons, poman, recycle toss, budding writers?, petsave, ",
-// 		link: "(post these on dribble)",
-// 		icon: "/icons/rt.png",
-// 	}
-// ]

@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Image from 'next/image'
+import Pill from "./Pill"
 
 const Container = styled.div`
     background-color: var(--tertiary);
@@ -21,12 +22,15 @@ const Container = styled.div`
     }
 `;
 
-const Card = ({ title, desc, icon, link, isShown, info, index, }) => {
+const Card = ({ title, desc, icon, link, isShown, info, index, hasPill, type, background }) => {
     return (
-        <Container className="wrapper">
+        <Container>
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "start" }}>
                 <Image height="50px" width="50px" objectFit="contain" src={icon} />
                 {isShown == index ? <Image height="20px" width="20px" objectFit="contain" src={link} /> : <></>}
+                {/* {hasPill && <Pill text={type} color="white" background={background} border={"none"} />} */}
+                {/* {hasPill && <Pill text={type} color={background} border={"1px solid " + background} />} */}
+                {hasPill && <Pill text={type} color={background} />}
             </div>
             <h3 style={{ margin: "10px 0px 2px 0px" }}>{title}</h3>
             <div style={{ fontSize: "12pt", textOverflow: "ellipsis", marginBottom: "5px" }}>{desc}</div>
@@ -34,5 +38,9 @@ const Card = ({ title, desc, icon, link, isShown, info, index, }) => {
         </Container>
     );
 };
+
+Card.defaultProps = {
+    hasPill: false,
+}
 
 export default Card;

@@ -22,6 +22,7 @@ function MyApp({ Component, pageProps }) {
   });
   const [isDarkMode, setDarkMode] = React.useState(false);
   const [isOpen, setIsOpen] = useState(false)
+  
   const isTablet = useMediaQuery({ query: '(max-width: 880px)' })
 
   let logo = "";

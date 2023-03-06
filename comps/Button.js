@@ -16,30 +16,35 @@ const Container = styled.button`
   position:relative;
   bottom:0px;
   width:100%;
-  background: var(--highlight);
-  color: var(--secondary);
+  background: ${({ background }) => background};
+  color: ${({ color }) => color};
   font-family: Inter;
-  font-size: 12pt;
+  font-size: 10.5pt;
   font-weight: 600;
   letter-spacing: 2px;
   text-decoration: none;
-  :hover{
-    // border: 1px solid blue;
-    position:relative;
-    bottom:2px;
-    box-shadow: 0 1px 3px -2px rgba(0,0,0,.1);
-  }
+  // :hover{
+  //   // border: 1px solid blue;
+  //   position:relative;
+  //   bottom:1px;
+  //   box-shadow: 0 1px 3px -2px rgba(0,0,0,.1);
+  // }
   &:focus {
     outline: 1px solid var(--button-focus);
   }
   `;
 
-const IconButton = ({ text, onClick, margin, type }) => {
+const Button = ({ text, onClick, margin, type, background, color }) => {
   return (
-    <Container onClick={onClick} margin={margin} type={type}>
-      <div >{text}</div>
+    <Container onClick={onClick} margin={margin} type={type} background={background} color={color}>
+      <div>{text}</div>
     </Container>
   );
 };
 
-export default IconButton;
+Button.defaultProps = {
+  background: "var(--highlight)",
+  color: "var(--secondary)"
+}
+
+export default Button;

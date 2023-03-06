@@ -71,7 +71,7 @@ export default function Home() {
 			{isTablet && <p>Tablet</p>}
 			{isMobile && <p>Mobile</p>} */}
 
-			<Image height="400" width="1000" objectFit="cover" quality="100" src={"/test.jpg"} style={{ borderRadius: "14px" }} />
+			<Image height="400" width="1000" objectFit="cover" quality="100" src={"/profile.jpg"} style={{ borderRadius: "14px" }} />
 
 			{/* about me */}
 			{/* <HeaderLine header="About Me"/> */}
@@ -94,7 +94,7 @@ export default function Home() {
 				{projects_data.map((o, index) => {
 					return <Link key={index} href={"/projects/" + index}>
 						<div>
-							<Card icon={o.icon} title={o.title} desc={o.desc} index={index} />
+							<Card icon={o.icon} title={o.title} desc={o.desc} index={index} hasPill={true} type={o.type[0].source} background={o.type[0].background}/>
 						</div>
 					</Link>
 				})}

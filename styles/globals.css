@@ -11,8 +11,13 @@
   --text: #000000;
   --hover: #e2e8f0;
   --border: rgba(0, 0, 0, .1);
+  --p: #636363;
   --highlight: #0071fc;
   --button-focus: #003a82;
+
+  --orange: #ed9f12;
+  --green: #08b296;
+  --blue: #0071fc;
 }
 
 .dark-theme {
@@ -23,8 +28,13 @@
   --text: #FFFFFF;
   --hover: #4f4f64;
   --border: rgba(255, 255, 255, 0.1);
+  --p: #a39d9d;
   --highlight: #1efc7f;
   --button-focus: #6bffac;
+
+  --orange: #ed9f12;
+  --green: #08b296;
+  --blue: #0071fc;
 }
 
 html,
@@ -38,7 +48,7 @@ body {
 }
 
 p {
-  color: #636363;
+  color: var(--p);
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 2px;

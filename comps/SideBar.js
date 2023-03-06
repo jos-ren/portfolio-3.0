@@ -74,25 +74,11 @@ const SideBar = ({ icon, logo_src, onClick, data, isOpen, onLinkClick }) => {
                 <SideHover text={'Resume'} />
             </a>
 
+            {/* perhaps add a "more" section. it can include interests, photography, etc */}
+
         </Container>
     );
 }
-//          <Image style={{ borderRadius: "50%" }} height="300px" width="300px" objectFit="cover" src="/profile_mountain.jpg" />
-// 			<a target="_blank" rel="noopener noreferrer" href="https://github.com/jos-ren">
-// 			<IconButton img_src={github} />
-// 			</a>
-// 			<a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/josh-renema/">
-// 			<IconButton img_src={linkedin} />
-// 			</a>
-// 			<a target="_blank" rel="noopener noreferrer" href="https://www.behance.net/joshrenema">
-// 			<IconButton img_src={behance} />
-// 			</a>
-// 			<a target="_blank" rel="noopener noreferrer" href={"mailto:josh.renema@protonmail.com"}>
-// 			<IconButton img_src={email} />
-// 			</a>
-// 			<a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1MzXEtLKZ2h67UMKlzdBGnKA1JhoJGz-1/view?usp=sharing">
-// 			<LinkButton text={"Resume"} />
-// 			</a>
 
 
 export default SideBar;

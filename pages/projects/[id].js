@@ -1,18 +1,23 @@
 import React, { useState, useEffect } from "react";
 import Image from 'next/image'
+import styled from "styled-components";
 import { useRouter } from 'next/router'
-import ReactPlayer from 'react-player'
+import useColorTheme from "use-color-theme";
 
 import { projects_data } from '../../public/data.js';
-import SectionBlock from "../../comps/SectionBlock"
-import HeaderLine from "../../comps/HeaderLine"
+
+import ReactPlayer from 'react-player'
 import { useLoading, BallTriangle } from '@agney/react-loading';
+import { useMediaQuery } from 'react-responsive'
 
-import styled from "styled-components";
+import Pill from "../../comps/Pill"
+import SideButton from "../../comps/SideButton"
+import Button from "../../comps/Button"
+import IconButton from "../../comps/IconButton"
+import HeaderLine from "../../comps/HeaderLine"
 
-const Wrapper = styled.div`
-    border:1px solid red;
-    width:100%;
+const Text = styled.div`
+    margin:10px 0px;
 `;
 
 export default function Projects() {
@@ -34,30 +39,72 @@ export default function Projects() {
     let DATA = projects_data[router.query.id]
     let INTRODUCTION = projects_data[router.query.id].introduction[0]
     // let PURPOSE = projects_data[router.query.id].purpose[0]
-    console.log(DATA.introduction[0].summary)
+    // console.log(INTRODUCTION.technologies)
+
+    const colorTheme = useColorTheme("light-theme", {
+        classNames: ["light-theme", "dark-theme"],
+    });
+
+    let github = "";
+    let link = "";
+    if (colorTheme.value === "light-theme") {
+        github = "/icons/github.svg";
+        link = "/icons/link.svg";
+    } else if (colorTheme.value === "dark-theme") {
+        github = "/icons/github_w.svg";
+        link = "/icons/link_w.svg";
+    }
+
+    const isTablet = useMediaQuery({ query: '(max-width: 880px)' })
+    // 1 cards
+    const isMobile = useMediaQuery({ query: '(max-width: 425px)' })
 
     return (
 
         <>
-            {/* optional video here */}
-            <div style={{ borderRadius: "16px", overflow: "hidden" }}>
-                <ReactPlayer url='https://www.youtube.com/watch?v=ysz5S6PUM-U' controls={true} width={"auto"} height={"460px"} pip={false} />
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "20px" }}>
+                <div>
+                    <h1 style={{ margin: "0px", }}>{DATA.title}</h1>
+                </div>
+                {/* buttons to website links, github links */}
+                <div style={{ display: "flex" }}>
+                    {DATA.link !== "" && <a target="_blank" rel="noopener noreferrer" href={DATA.link} >
+                        <Button text="View Site" background="var(--tertiary)" color="var(--text)" />
+                    </a>}
+                    {DATA.github_link !== "" && <a target="_blank" rel="noopener noreferrer" href={DATA.github_link} >
+                        <IconButton icon={<Image src={github} height={20} width={20} />} />
+                    </a>}
+                </div>
             </div>
-            {/* <div style={{ borderRadius: "16px", overflow: "hidden" }}>
-                <Image height="550" width="800" objectFit="cover" quality="100" src={"/pantro_thumb.png"} style={{ borderRadius: "14px" }} />
-            </div> */}
 
-            <HeaderLine header={"Introduction"} />
+            {/* if no video, use image as a header*/}
+            {"/" == DATA.header_media.split("", 1)[0] ?
+                <div style={{ borderRadius: "16px", overflow: "hidden" }}>
+                    <Image height="1080" width="1920" objectFit="cover" quality="100" src={DATA.header_media} style={{ borderRadius: "14px" }} />
+                </div> :
+                <div style={{ borderRadius: "16px", overflow: "hidden" }}>
+                    <ReactPlayer url={DATA.header_media} controls={true} width={"auto"} height={"460px"} pip={false} />
+                </div>
+            }
+
+            {/* school or work project*/}
+            {/* <Text>{INTRODUCTION.role}</Text> */}
+
+            <div style={{ display: "flex", alignItems: "center", marginTop: "16px" }}>
+                <p>Tags:</p>
+                <div style={{ marginLeft: "10px", display: "flex", flexWrap: 'wrap', gap: '8px' }}>
+                    {DATA.technologies.map((o, index) => {
+                        return <Pill key={index} text={o} />
+                    })}
+                </div>
+            </div>
+
+            <HeaderLine header={"Introduction"} margin={"40px 0px 30px 0px"} />
             <p>Summary</p>
-            <div>{INTRODUCTION.summary}</div>
+            <Text>{INTRODUCTION.summary}</Text>
             <p>Core Functionalities</p>
-            <div>{INTRODUCTION.functions}</div>
-            <p>Role</p>
-            <div>{INTRODUCTION.role}</div>
-            <p>Technologies</p>
-            <div>{INTRODUCTION.technologies}</div>
-            <p>Links</p>
-            <div>{DATA.introduction[0].links}</div>
+            {/* bullet points */}
+            <Text>{INTRODUCTION.functions}</Text>
 
 
 
