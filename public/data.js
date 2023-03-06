@@ -19,6 +19,7 @@ export const projects_data = [
 			"S3",
 			"RDS",
 		],
+		role: "Full Stack Developer",
 		// Introduction
 		// • High-level summary of what the project is
 		// • List of core functionalities / interesting features
@@ -30,7 +31,6 @@ export const projects_data = [
 			{
 				summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
 				functions: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-				role: "Full Stack Developer",
 			},
 		],
 		// Purpose and Goal
@@ -108,11 +108,11 @@ export const projects_data = [
 			"Node.js",
 			"AWS",
 		],
+		role: "Full Stack Developer",
 		introduction: [
 			{
 				summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
 				functions: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-				role: "Full Stack Developer",
 			},
 		],
 	},
@@ -134,11 +134,11 @@ export const projects_data = [
 			"Node.js",
 			"AWS",
 		],
+		role: "Full Stack Developer",
 		introduction: [
 			{
 				summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
 				functions: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-				role: "Full Stack Developer",
 			},
 		],
 	},
@@ -160,11 +160,11 @@ export const projects_data = [
 			"Node.js",
 			"AWS",
 		],
+		role: "Full Stack Developer",			
 		introduction: [
 			{
 				summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
 				functions: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-				role: "Full Stack Developer",			
 			},
 		],
 	},
@@ -185,11 +185,11 @@ export const projects_data = [
 			"Google Translate API",
 			"Twitter API",
 		],
+		role: "Full Stack Developer",
 		introduction: [
 			{
 				summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
 				functions: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-				role: "Full Stack Developer",
 			},
 		],
 	},

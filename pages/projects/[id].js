@@ -90,12 +90,20 @@ export default function Projects() {
             {/* school or work project*/}
             {/* <Text>{INTRODUCTION.role}</Text> */}
 
-            <div style={{ display: "flex", alignItems: "center", marginTop: "16px" }}>
-                <p>Tags:</p>
-                <div style={{ marginLeft: "10px", display: "flex", flexWrap: 'wrap', gap: '8px' }}>
-                    {DATA.technologies.map((o, index) => {
-                        return <Pill key={index} text={o} />
-                    })}
+            <div style={{ display: "flex",  marginTop: "16px", justifyContent:"space-between" }}>
+                <div style={{ display: "flex", alignItems: "center", }}>
+                    <p>Tags:</p>
+                    <div style={{ marginLeft: "10px", display: "flex", flexWrap: 'wrap', gap: '8px' }}>
+                        {DATA.technologies.map((o, index) => {
+                            return <Pill key={index} text={o} />
+                        })}
+                    </div>
+                </div>
+                <div style={{ display: "flex", alignItems: "center", }}>
+                    <p>Role:</p>
+                    <div style={{ marginLeft: "10px", display: "flex", fontSize:"14px" }}>
+                        <div>{DATA.role}</div>
+                    </div>
                 </div>
             </div>
 
