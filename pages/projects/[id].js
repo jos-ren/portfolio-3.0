@@ -62,15 +62,12 @@ export default function Projects() {
     return (
 
         <>
-            <div style={isMobile ?
-                { marginBottom: "20px", alignItems: "center", display: "flex", flexDirection: "column" } :
-                { display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "20px" }
-            }>
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "20px" }}>
                 <div>
-                    <h1 style={{ marginBottom: "0px" }}>{DATA.title}</h1>
+                    <h1 style={{ margin: "0px", }}>{DATA.title}</h1>
                 </div>
                 {/* buttons to website links, github links */}
-                <div style={isMobile ? { display: "flex", marginTop: "20px" } : { display: "flex" }}>
+                <div style={{ display: "flex" }}>
                     {DATA.link !== "" && <a target="_blank" rel="noopener noreferrer" href={DATA.link} >
                         <Button text="View Site" background="var(--tertiary)" color="var(--text)" />
                     </a>}
