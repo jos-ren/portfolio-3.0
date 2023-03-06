@@ -63,20 +63,20 @@ export default function Projects() {
 
         <>
             <div style={isMobile ?
-                { marginBottom: "20px",  alignItems: "center", display:"flex", flexDirection:"column" } :
+                { marginBottom: "20px", alignItems: "center", display: "flex", flexDirection: "column" } :
                 { display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "20px" }
             }>
                 <div>
                     <h1 style={{ marginBottom: "0px" }}>{DATA.title}</h1>
                 </div>
                 {/* buttons to website links, github links */}
-                <div style={isMobile ? { display: "flex", marginTop:"20px"} : { display: "flex" }}>
-                    <a target="_blank" rel="noopener noreferrer" href={DATA.link} >
+                <div style={isMobile ? { display: "flex", marginTop: "20px" } : { display: "flex" }}>
+                    {DATA.link !== "" && <a target="_blank" rel="noopener noreferrer" href={DATA.link} >
                         <Button text="View Site" background="var(--tertiary)" color="var(--text)" />
-                    </a>
-                    <a target="_blank" rel="noopener noreferrer" href={DATA.github_link} >
+                    </a>}
+                    {DATA.github_link !== "" && <a target="_blank" rel="noopener noreferrer" href={DATA.github_link} >
                         <IconButton icon={<Image src={github} height={20} width={20} />} />
-                    </a>
+                    </a>}
                 </div>
             </div>
 
@@ -102,7 +102,7 @@ export default function Projects() {
                 </div>
             </div>
 
-            <HeaderLine header={"Introduction"} margin={"40px 0px 30px 0px"}/>
+            <HeaderLine header={"Introduction"} margin={"40px 0px 30px 0px"} />
             <p>Summary</p>
             <Text>{INTRODUCTION.summary}</Text>
             <p>Core Functionalities</p>

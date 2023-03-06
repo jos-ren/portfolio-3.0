@@ -94,7 +94,7 @@ export default function Home() {
 				{projects_data.map((o, index) => {
 					return <Link key={index} href={"/projects/" + index}>
 						<div>
-							<Card icon={o.icon} title={o.title} desc={o.desc} index={index} />
+							<Card icon={o.icon} title={o.title} desc={o.desc} index={index} hasPill={true} type={o.type[0].source} background={o.type[0].background}/>
 						</div>
 					</Link>
 				})}
