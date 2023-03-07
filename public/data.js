@@ -66,7 +66,7 @@ export const projects_data = [
 		// it, stuff like that.
 		// • If the project was contrived specifically for the portfolio, omit this section. 
 		status: [
-			// can be combined into one, maybe be casual and write a sentance
+			// can be combined into one, maybe be casual and write a sentence
 			{ who: "" },
 			{ why: "" },
 			{ what: "" },
