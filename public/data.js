@@ -7,9 +7,9 @@ export const projects_data = [
 		header_media: "https://www.youtube.com/watch?v=ysz5S6PUM-U",
 		link: "https://smartcitymedia.com/",
 		github_link: "",
-		type:[{
-			source:"Work",
-			background:"var(--orange)",
+		type: [{
+			source: "Work",
+			background: "var(--orange)",
 		}],
 		technologies: [
 			"React",
@@ -19,18 +19,22 @@ export const projects_data = [
 			"S3",
 			"RDS",
 		],
-		role: "Full Stack Developer",
-		// Introduction
-		// • High-level summary of what the project is
-		// • List of core functionalities / interesting features
 		// • Your role in the project. were you exclusively doing development, or did you do
 		// design? If you worked in groups, what parts did you tackle?
-		// • Technologies used
-		// • Links to live demo + source code (if applicable)
+		role: "Full Stack Developer",
+		// Introduction
 		introduction: [
 			{
-				summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-				functions: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+				// • High-level summary of what the project is
+				summary: "Smart City Media (SCM) is a Real Estate Web App which includes thousands of geotagged aerial photos. Essentially SCM is a stock photo marketplace for property drone shots.",
+				// • List of core functionalities / interesting features
+				functions: [
+					<li>Mapbox browse page with 15,000+ geotagged photos</li>,
+					<li>Add photos to cart and purchase through 'Shop' API</li>,
+					<li>Upload Photos to database using AWS S3</li>,
+					<li>Database which uses AWS RDS</li>,
+					<li>Serverless CRUD in backend</li>
+				],
 			},
 		],
 		// Purpose and Goal
@@ -38,12 +42,7 @@ export const projects_data = [
 		// • What was the expected outcome of the project?
 		// • What were the initial designs?
 		// • Any other preliminary planning that you did which helps build a narrative 
-		purpose: [
-			{ why: "" },
-			{ what: "" },
-			{ designs: "" },
-			{ planning: "" },
-		],
+		purpose: [""],
 		//  Spotlight
 		// • What is the “killer feature” of your project? What feature does it have that took the
 		// most work, or was the most technically impressive? Some possible examples:
@@ -56,21 +55,18 @@ export const projects_data = [
 		// • How did you solve those problems? What was the solution? Go deep here, and write
 		// with a developer in mind. 
 		spotlight: [
-			{ killer_feature: "" },
-			{ technical_hurdles: "" },
-			{ solutions: "" },
+			{
+				killer_feature: "The photo gallery feature where you would upload photos to our database and it would create a lovely gallery to display photos to clients.",
+				technical_hurdles: "Some technical hurdles for this project would be learning how to use the AWS APIs. This was the first time using it and the documentation at times was hard to get through with all the different quaries which were available.",
+				solutions: "Once I had got aquanted with how it worked however, I found it alot easier to use and was proud of what I had learned."
+			},
 		],
 		// Current status
 		// • This section is optional. If the project is actively being used by real people, talk a little
 		// bit about the current status, who uses it, why they use it, what they say to you about
 		// it, stuff like that.
 		// • If the project was contrived specifically for the portfolio, omit this section. 
-		status: [
-			// can be combined into one, maybe be casual and write a sentence
-			{ who: "" },
-			{ why: "" },
-			{ what: "" },
-		],
+		status: "Smart City is currently being used by thousands of Users from Vancouver to LA, Toronto, and even Calgary. They have expanded their photo library to over 15,000 real estate photos.",
 		// Lessons Learned
 		// • What did you learn doing this project? Feel free to list multiple things. Also feel free to
 		// cover non-technical lessons. It’s great to talk about how you learned to use an
@@ -84,10 +80,11 @@ export const projects_data = [
 		// • How has this affected the work you’ve done since then? Real examples of how this
 		// project built your knowledge for future projects is fantastic. 
 		lessons: [
-			{ what: "" },
-			{ good_choice: "" },
-			{ accessibility: "" },
-			{ how: "" },
+			{
+				what: "Throughout the course of this project I really expanded my backend skillset, creating queries, getting to know some of AWS' libraries, and reading through documentation. I also learned alot about collaboration and how to approach tasks with this in mind, dividing up work effectively in a team setting",
+				good_choice: "",
+				how: "Since I've left this project, I've used my new knowledge of building front end applications in React to build this portfolio! Having real world experience such as this has really expanded my knowledge as well as my collaboration skills greatly."
+			},
 		],
 	},
 	{
@@ -98,9 +95,9 @@ export const projects_data = [
 		header_media: "https://www.youtube.com/watch?v=ysz5S6PUM-U",
 		link: "https://crm.techiesoftomorrow.com/",
 		github_link: "",
-		type:[{
-			source:"Work",
-			background:"var(--orange)",
+		type: [{
+			source: "Work",
+			background: "var(--orange)",
 		}],
 		technologies: [
 			"React",
@@ -113,6 +110,30 @@ export const projects_data = [
 			{
 				summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
 				functions: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+			},
+		],
+		purpose: [
+			{
+				why: "",
+				what: "",
+				designs: "",
+				planning: ""
+			},
+		],
+		spotlight: [
+			{
+				killer_feature: "",
+				technical_hurdles: "",
+				solutions: ""
+			},
+		],
+		status: "",
+		lessons: [
+			{
+				what: "",
+				good_choice: "",
+				accessibility: "",
+				how: ""
 			},
 		],
 	},
@@ -124,9 +145,9 @@ export const projects_data = [
 		header_media: "/screenshots/petsave_cover.jpg",
 		link: "",
 		github_link: "https://github.com/jos-ren/petsave-frontend",
-		type:[{
-			source:"Student",
-			background:"var(--blue)",
+		type: [{
+			source: "Student",
+			background: "var(--blue)",
 		}],
 		technologies: [
 			"React",
@@ -139,6 +160,30 @@ export const projects_data = [
 			{
 				summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
 				functions: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+			},
+		],
+		purpose: [
+			{
+				why: "",
+				what: "",
+				designs: "",
+				planning: ""
+			},
+		],
+		spotlight: [
+			{
+				killer_feature: "",
+				technical_hurdles: "",
+				solutions: ""
+			},
+		],
+		status: "",
+		lessons: [
+			{
+				what: "",
+				good_choice: "",
+				accessibility: "",
+				how: ""
 			},
 		],
 	},
@@ -150,9 +195,9 @@ export const projects_data = [
 		header_media: "/screenshots/pantro_cover.jpg",
 		link: "",
 		github_link: "https://github.com/jos-ren/bcitd3_pantro",
-		type:[{
-			source:"Student",
-			background:"var(--blue)",
+		type: [{
+			source: "Student",
+			background: "var(--blue)",
 		}],
 		technologies: [
 			"React",
@@ -160,11 +205,35 @@ export const projects_data = [
 			"Node.js",
 			"AWS",
 		],
-		role: "Full Stack Developer",			
+		role: "Full Stack Developer",
 		introduction: [
 			{
 				summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
 				functions: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+			},
+		],
+		purpose: [
+			{
+				why: "",
+				what: "",
+				designs: "",
+				planning: ""
+			},
+		],
+		spotlight: [
+			{
+				killer_feature: "",
+				technical_hurdles: "",
+				solutions: ""
+			},
+		],
+		status: "",
+		lessons: [
+			{
+				what: "",
+				good_choice: "",
+				accessibility: "",
+				how: ""
 			},
 		],
 	},
@@ -176,9 +245,9 @@ export const projects_data = [
 		header_media: "https://www.youtube.com/watch?v=SxiX59jA-1w",
 		link: "",
 		github_link: "https://github.com/jos-ren/twitter_translate",
-		type:[{
-			source:"Personal",
-			background:"var(--green)",
+		type: [{
+			source: "Personal",
+			background: "var(--green)",
 		}],
 		technologies: [
 			"Python",
@@ -190,6 +259,30 @@ export const projects_data = [
 			{
 				summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
 				functions: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+			},
+		],
+		purpose: [
+			{
+				why: "",
+				what: "",
+				designs: "",
+				planning: ""
+			},
+		],
+		spotlight: [
+			{
+				killer_feature: "",
+				technical_hurdles: "",
+				solutions: ""
+			},
+		],
+		status: "",
+		lessons: [
+			{
+				what: "",
+				good_choice: "",
+				accessibility: "",
+				how: ""
 			},
 		],
 	},

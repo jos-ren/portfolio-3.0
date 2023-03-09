@@ -75,6 +75,7 @@ const SideBar = ({ icon, logo_src, onClick, data, isOpen, onLinkClick }) => {
             </a>
 
             {/* perhaps add a "more" section. it can include interests, photography, etc */}
+            {/* GALLERY (polaroids) */}
 
         </Container>
     );

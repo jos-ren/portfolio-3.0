@@ -7,7 +7,6 @@ import useColorTheme from "use-color-theme";
 import { projects_data } from '../../public/data.js';
 
 import ReactPlayer from 'react-player'
-import { useLoading, BallTriangle } from '@agney/react-loading';
 import { useMediaQuery } from 'react-responsive'
 
 import Pill from "../../comps/Pill"
@@ -17,28 +16,23 @@ import IconButton from "../../comps/IconButton"
 import HeaderLine from "../../comps/HeaderLine"
 
 const Text = styled.div`
-    margin:10px 0px;
+    margin:10px 0px 20px 0px;
+`;
+
+const Bullet = styled.div`
+    margin:10px 0px 20px 18px;
 `;
 
 export default function Projects() {
 
     const router = useRouter()
 
-
-    const [isLoading, setIsLoading] = useState(true);
-
-    useEffect(() => {
-        setTimeout(() => setIsLoading(false), 500);
-    }, []);
-
-    const { containerProps, indicatorEl } = useLoading({
-        loading: true,
-        indicator: <BallTriangle width="70" />,
-    })
-
     let DATA = projects_data[router.query.id]
     let INTRODUCTION = projects_data[router.query.id].introduction[0]
-    // let PURPOSE = projects_data[router.query.id].purpose[0]
+    let PURPOSE = projects_data[router.query.id].purpose[0]
+    let SPOTLIGHT = projects_data[router.query.id].spotlight[0]
+    let STATUS = projects_data[router.query.id].status
+    let LESSONS = projects_data[router.query.id].lessons[0]
     // console.log(INTRODUCTION.technologies)
 
     const colorTheme = useColorTheme("light-theme", {
@@ -65,6 +59,10 @@ export default function Projects() {
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "20px" }}>
                 <div>
                     <h1 style={{ margin: "0px", }}>{DATA.title}</h1>
+                    {/* school or work project*/}
+                    {/* ADDD */}
+
+                    <div>sss</div>
                 </div>
                 {/* buttons to website links, github links */}
                 <div style={{ display: "flex" }}>
@@ -87,10 +85,7 @@ export default function Projects() {
                 </div>
             }
 
-            {/* school or work project*/}
-            {/* <Text>{INTRODUCTION.role}</Text> */}
-
-            <div style={{ display: "flex",  marginTop: "16px", justifyContent:"space-between" }}>
+            <div style={{ display: "flex", marginTop: "16px", justifyContent: "space-between" }}>
                 <div style={{ display: "flex", alignItems: "center", }}>
                     <p>Tags:</p>
                     <div style={{ marginLeft: "10px", display: "flex", flexWrap: 'wrap', gap: '8px' }}>
@@ -101,7 +96,7 @@ export default function Projects() {
                 </div>
                 <div style={{ display: "flex", alignItems: "center", }}>
                     <p>Role:</p>
-                    <div style={{ marginLeft: "10px", display: "flex", fontSize:"14px" }}>
+                    <div style={{ marginLeft: "10px", display: "flex", fontSize: "14px" }}>
                         <div>{DATA.role}</div>
                     </div>
                 </div>
@@ -112,29 +107,42 @@ export default function Projects() {
             <Text>{INTRODUCTION.summary}</Text>
             <p>Core Functionalities</p>
             {/* bullet points */}
-            <Text>{INTRODUCTION.functions}</Text>
+            <Bullet>{INTRODUCTION.functions}</Bullet>
 
-
-
-            <HeaderLine header={"Purpose"} />
-            <p>Why Build This Project?</p>
-            <p>What Was The Expected Outcome?</p>
-            <p>Initial Designs</p>
-            <p>Preliminary Planning</p>
+            {/* if project was started / created by you, use this */}
+            {PURPOSE !== "" && <div>
+                <HeaderLine header={"Purpose"} />
+                <p>Why Build This Project?</p>
+                <Text>{PURPOSE.why}</Text>
+                <p>What Was The Expected Outcome?</p>
+                <Text>{PURPOSE.what}</Text>
+                <p>Initial Designs</p>
+                <Text>{PURPOSE.design}</Text>
+                <p>Preliminary Planning</p>
+                <Text>{PURPOSE.planning}</Text>
+            </div>}
 
             <HeaderLine header={"Spotlight"} />
             <p>Killer Feature</p>
+            <Text>{SPOTLIGHT.killer_feature}</Text>
             <p>Technical Hurdles</p>
+            <Text>{SPOTLIGHT.technical_hurdles}</Text>
             <p>Solutions</p>
+            <Text>{SPOTLIGHT.solutions}</Text>
 
-            <HeaderLine header={"Current Status"} />
-            <p>...</p>
+            {/* If the project is ongoing, use this section */}
+            {STATUS !== "" && <HeaderLine header={"Current Status"} />}
+            <div>{STATUS}</div>
 
             <HeaderLine header={"Lessons Learned"} />
             <p>What did I Learn?</p>
-            <p>Was Framework good Choice?</p>
-            <p>Accessibility</p>
-            <p>How did this Project Build Knowledge</p>
+            <Text>{LESSONS.what}</Text>
+            {LESSONS.good_choice !== "" && <div>
+                <p>Was Framework good Choice?</p>
+                <Text>{LESSONS.good_choice}</Text>
+            </div>}
+            <p>How has this affected the work I have done since?</p>
+            <Text>{LESSONS.how}</Text>
 
         </>
     )
