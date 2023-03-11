@@ -21,7 +21,9 @@ export const projects_data = [
 		],
 		// • Your role in the project. were you exclusively doing development, or did you do
 		// design? If you worked in groups, what parts did you tackle?
-		role: "Full Stack Developer",
+		role: [
+			"Full Stack Developer"
+		],
 		// Introduction
 		introduction: [
 			{
@@ -105,7 +107,9 @@ export const projects_data = [
 			"Node.js",
 			"AWS",
 		],
-		role: "Full Stack Developer",
+		role: [
+			"Full Stack Developer"
+		],
 		introduction: [
 			{
 				summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
@@ -155,7 +159,10 @@ export const projects_data = [
 			"Node.js",
 			"AWS",
 		],
-		role: "Full Stack Developer",
+		role: [
+			"Full Stack Developer",
+			"UI Designer",
+		],
 		introduction: [
 			{
 				summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
@@ -205,7 +212,10 @@ export const projects_data = [
 			"Node.js",
 			"AWS",
 		],
-		role: "Full Stack Developer",
+		role: [
+			"Full Stack Developer",
+			"UI Designer",
+		],
 		introduction: [
 			{
 				summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
@@ -254,7 +264,9 @@ export const projects_data = [
 			"Google Translate API",
 			"Twitter API",
 		],
-		role: "Full Stack Developer",
+		role: [
+			"Python Dev",
+		],
 		introduction: [
 			{
 				summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",

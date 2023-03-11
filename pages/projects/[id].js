@@ -59,10 +59,6 @@ export default function Projects() {
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "20px" }}>
                 <div>
                     <h1 style={{ margin: "0px", }}>{DATA.title}</h1>
-                    {/* school or work project*/}
-                    {/* ADDD */}
-
-                    <div>sss</div>
                 </div>
                 {/* buttons to website links, github links */}
                 <div style={{ display: "flex" }}>
@@ -85,24 +81,26 @@ export default function Projects() {
                 </div>
             }
 
-            <div style={{ display: "flex", marginTop: "16px", justifyContent: "space-between" }}>
-                <div style={{ display: "flex", alignItems: "center", }}>
-                    <p>Tags:</p>
-                    <div style={{ marginLeft: "10px", display: "flex", flexWrap: 'wrap', gap: '8px' }}>
-                        {DATA.technologies.map((o, index) => {
-                            return <Pill key={index} text={o} />
-                        })}
-                    </div>
-                </div>
-                <div style={{ display: "flex", alignItems: "center", }}>
-                    <p>Role:</p>
-                    <div style={{ marginLeft: "10px", display: "flex", fontSize: "14px" }}>
-                        <div>{DATA.role}</div>
-                    </div>
+            <div style={{ display: "flex", alignItems: "center", marginTop:"16px" }}>
+                <p>Role:</p>
+                <div style={{ marginLeft: "10px", display: "flex", fontSize: "14px", flexWrap: 'wrap', gap: '8px' }}>
+                    <Pill text={DATA.type[0].source} color={DATA.type[0].background} />
+                    {DATA.role.map((o, index) => {
+                        return <Pill key={index} text={o} />
+                    })}
                 </div>
             </div>
 
-            <HeaderLine header={"Introduction"} margin={"40px 0px 30px 0px"} />
+            <div style={{ display: "flex", alignItems: "center", marginTop:"6px" }}>
+                <p>Technologies:</p>
+                <div style={{ marginLeft: "10px", display: "flex", flexWrap: 'wrap', gap: '8px' }}>
+                    {DATA.technologies.map((o, index) => {
+                        return <Pill key={index} text={o} />
+                    })}
+                </div>
+            </div>
+
+            <HeaderLine header={"Introduction"} margin={"20px 0px 30px 0px"} />
             <p>Summary</p>
             <Text>{INTRODUCTION.summary}</Text>
             <p>Core Functionalities</p>
