@@ -19,17 +19,15 @@ export const projects_data = [
 			"S3",
 			"RDS",
 		],
-		// • Your role in the project. were you exclusively doing development, or did you do
-		// design? If you worked in groups, what parts did you tackle?
 		role: [
 			"Full Stack Developer"
 		],
 		// Introduction
+		// • High-level summary of what the project is
+		// • List of core functionalities / interesting features
 		introduction: [
 			{
-				// • High-level summary of what the project is
 				summary: "Smart City Media (SCM) is a Real Estate Web App which includes thousands of geotagged aerial photos. Essentially SCM is a stock photo marketplace for property drone shots.",
-				// • List of core functionalities / interesting features
 				functions: [
 					<li>Mapbox browse page with 15,000+ geotagged photos</li>,
 					<li>Add photos to cart and purchase through 'Shop' API</li>,
@@ -37,6 +35,10 @@ export const projects_data = [
 					<li>Database which uses AWS RDS</li>,
 					<li>Serverless CRUD in backend</li>
 				],
+				members: [
+					<li>Rina Han</li>,
+					<li>Andrius Cvetkovas</li>,
+				]
 			},
 		],
 		// Purpose and Goal
@@ -112,8 +114,13 @@ export const projects_data = [
 		],
 		introduction: [
 			{
-				summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-				functions: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+				summary: "",
+				functions: "",
+				members: [
+					<li>Joe Le</li>,
+					<li>Cindy Park</li>,
+					<li>Ian Bayly</li>,
+				]
 			},
 		],
 		purpose: [
@@ -165,8 +172,13 @@ export const projects_data = [
 		],
 		introduction: [
 			{
-				summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-				functions: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+				summary: "",
+				functions: "",
+				members: [
+					<li>Cindy Park</li>,
+					<li>Brittany Mcdonald</li>,
+					<li>Yunyun Peng</li>,
+				]
 			},
 		],
 		purpose: [
@@ -218,8 +230,13 @@ export const projects_data = [
 		],
 		introduction: [
 			{
-				summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-				functions: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+				summary: "",
+				functions: "",
+				members: [
+					<li>Jordan Naranja</li>,
+					<li>Brittany Mcdonald</li>,
+					<li>Hanbin Park</li>,
+				]
 			},
 		],
 		purpose: [
@@ -269,8 +286,9 @@ export const projects_data = [
 		],
 		introduction: [
 			{
-				summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-				functions: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+				summary: "",
+				functions: "",
+				members: ""
 			},
 		],
 		purpose: [
@@ -299,21 +317,14 @@ export const projects_data = [
 		],
 	},
 	// {
-	// 	id: 4,
 	// 	title: "Poman",
 	// 	desc: "Foodie social network app",
-	// 	icon: "/icons/poman.svg",
 	// 	link: "https://www.youtube.com/watch?v=Rze68rEMxhk",
-	// 	github_link: "/",
 	// },
 	// {
-	// 	id: 5,
 	// 	title: "Get'em",
 	// 	desc: "Delivery app for everyday items",
-	// 	icon: "/icons/getem.png",
-	// 	href: "/projects/getem",
 	// 	link: "https://www.youtube.com/watch?v=HvQbuNzpwho",
-	// 	github_link: "/",
 	// },
 ]
 

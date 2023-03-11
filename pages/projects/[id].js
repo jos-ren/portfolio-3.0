@@ -81,7 +81,7 @@ export default function Projects() {
                 </div>
             }
 
-            <div style={{ display: "flex", alignItems: "center", marginTop:"16px" }}>
+            <div style={{ display: "flex", alignItems: "center", marginTop: "16px" }}>
                 <p>Role:</p>
                 <div style={{ marginLeft: "10px", display: "flex", fontSize: "14px", flexWrap: 'wrap', gap: '8px' }}>
                     <Pill text={DATA.type[0].source} color={DATA.type[0].background} />
@@ -91,7 +91,7 @@ export default function Projects() {
                 </div>
             </div>
 
-            <div style={{ display: "flex", alignItems: "center", marginTop:"6px" }}>
+            <div style={{ display: "flex", alignItems: "center", marginTop: "6px" }}>
                 <p>Technologies:</p>
                 <div style={{ marginLeft: "10px", display: "flex", flexWrap: 'wrap', gap: '8px' }}>
                     {DATA.technologies.map((o, index) => {
@@ -100,12 +100,16 @@ export default function Projects() {
                 </div>
             </div>
 
-            <HeaderLine header={"Introduction"} margin={"20px 0px 30px 0px"} />
+            <HeaderLine header={"Introduction"} margin={"30px 0px 30px 0px"} />
             <p>Summary</p>
             <Text>{INTRODUCTION.summary}</Text>
             <p>Core Functionalities</p>
             {/* bullet points */}
             <Bullet>{INTRODUCTION.functions}</Bullet>
+            {/* {INTRODUCTION.members !== "" && <>
+                <p>Teammates</p>
+                <Bullet>{INTRODUCTION.members}</Bullet>
+            </>} */}
 
             {/* if project was started / created by you, use this */}
             {PURPOSE !== "" && <div>
