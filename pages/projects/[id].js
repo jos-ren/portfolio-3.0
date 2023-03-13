@@ -77,7 +77,9 @@ export default function Projects() {
                     <Image height="1080" width="1920" objectFit="cover" quality="100" src={DATA.header_media} style={{ borderRadius: "14px" }} />
                 </div> :
                 <div style={{ borderRadius: "16px", overflow: "hidden" }}>
-                    <ReactPlayer url={DATA.header_media} controls={true} width={"auto"} height={"460px"} pip={false} />
+                    <div className='player-wrapper'>
+                        <ReactPlayer url={DATA.header_media} controls={true} width={"100%"} height={"100%"} pip={false} className='react-player'/>
+                    </div>
                 </div>
             }
 
@@ -124,6 +126,8 @@ export default function Projects() {
                 <Text>{PURPOSE.planning}</Text>
             </div>}
 
+
+            {/* add 2 photos for spotlight */}
             <HeaderLine header={"Spotlight"} />
             <p>Killer Feature</p>
             <Text>{SPOTLIGHT.killer_feature}</Text>

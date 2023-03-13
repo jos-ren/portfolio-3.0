@@ -65,16 +65,13 @@ a {
   box-sizing: border-box;
 }
 
-.swiper {
-  width: calc(100% + 4rem);
+.player-wrapper {
+  position: relative;
+  padding-top: 56.25%; /* Player ratio: 100 / (1280 / 720) */
 }
 
-.swiper-scrollbar.swiper-scrollbar-horizontal {
-  height: 6px !important;
-  left: 0px !important;
-  background: var(--tertiary) !important;
-}
-
-.swiper-scrollbar-drag {
-  background: var(--quaternary) !important;
+.react-player {
+  position: absolute;
+  top: 0;
+  left: 0;
 }

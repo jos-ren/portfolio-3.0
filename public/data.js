@@ -4,7 +4,7 @@ export const projects_data = [
 		title: "Smart City Media",
 		desc: "Real Estate Web App serving 20,000+ geo-tagged photos",
 		icon: "/icons/scm.png",
-		header_media: "https://www.youtube.com/watch?v=ysz5S6PUM-U",
+		header_media: "https://www.youtube.com/watch?v=pUTw9OWsBIw",
 		link: "https://smartcitymedia.com/",
 		github_link: "",
 		type: [{
@@ -60,7 +60,7 @@ export const projects_data = [
 		// with a developer in mind. 
 		spotlight: [
 			{
-				killer_feature: "The photo gallery feature where you would upload photos to our database and it would create a lovely gallery to display photos to clients.",
+				killer_feature: "The photo gallery feature where you would upload photos to our database, creates a lovely gallery to display photos to clients.",
 				technical_hurdles: "Some technical hurdles for this project would be learning how to use the AWS APIs. This was the first time using it and the documentation at times was hard to get through with all the different quaries which were available.",
 				solutions: "Once I had got aquanted with how it worked however, I found it alot easier to use and was proud of what I had learned."
 			},
@@ -114,8 +114,10 @@ export const projects_data = [
 		],
 		introduction: [
 			{
-				summary: "",
-				functions: "",
+				summary: " as,mn sakj sdmakn skand kdnas kasnd knasd knas dknas knd sakn dknsa dkns aknd skan bdkjnsa kdn sakmndbnkajsbnk,dmsan,mnad knas mnsa dmnsd mnsd mn sdamna sdmn dsamn sdmn ",
+				functions: [
+					<li></li>,
+				],
 				members: [
 					<li>Joe Le</li>,
 					<li>Cindy Park</li>,
@@ -162,9 +164,7 @@ export const projects_data = [
 		}],
 		technologies: [
 			"React",
-			"Next.js",
-			"Node.js",
-			"AWS",
+			"Axios"
 		],
 		role: [
 			"Full Stack Developer",
@@ -173,7 +173,9 @@ export const projects_data = [
 		introduction: [
 			{
 				summary: "",
-				functions: "",
+				functions: [
+					<li></li>,
+				],
 				members: [
 					<li>Cindy Park</li>,
 					<li>Brittany Mcdonald</li>,
@@ -231,7 +233,9 @@ export const projects_data = [
 		introduction: [
 			{
 				summary: "",
-				functions: "",
+				functions: [
+					<li></li>,
+				],
 				members: [
 					<li>Jordan Naranja</li>,
 					<li>Brittany Mcdonald</li>,
@@ -282,12 +286,14 @@ export const projects_data = [
 			"Twitter API",
 		],
 		role: [
-			"Python Dev",
+			"Python Developer",
 		],
 		introduction: [
 			{
-				summary: "",
-				functions: "",
+				summary: " sdm sdajmn ja jbwliuh ljkuhladsk dlu dkldsjlfsdjuhfd ysui asfli uhf iuhfsdi u fiuy iufh iuhf hiusa iuayf iushadf iusyhf iufdsh ",
+				functions: [
+					<li></li>,
+				],
 				members: ""
 			},
 		],
