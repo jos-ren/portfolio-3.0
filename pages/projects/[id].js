@@ -78,7 +78,7 @@ export default function Projects() {
                 </div> :
                 <div style={{ borderRadius: "16px", overflow: "hidden" }}>
                     <div className='player-wrapper'>
-                        <ReactPlayer url={DATA.header_media} controls={true} width={"100%"} height={"100%"} pip={false} className='react-player'/>
+                        <ReactPlayer url={DATA.header_media} controls={true} width={"100%"} height={"100%"} pip={false} className='react-player' />
                     </div>
                 </div>
             }
@@ -108,10 +108,10 @@ export default function Projects() {
             <p>Core Functionalities</p>
             {/* bullet points */}
             <Bullet>{INTRODUCTION.functions}</Bullet>
-            {/* {INTRODUCTION.members !== "" && <>
+            {INTRODUCTION.members !== "" && <>
                 <p>Teammates</p>
                 <Bullet>{INTRODUCTION.members}</Bullet>
-            </>} */}
+            </>}
 
             {/* if project was started / created by you, use this */}
             {PURPOSE !== "" && <div>
@@ -121,9 +121,12 @@ export default function Projects() {
                 <p>What Was The Expected Outcome?</p>
                 <Text>{PURPOSE.what}</Text>
                 <p>Initial Designs</p>
-                <Text>{PURPOSE.design}</Text>
-                <p>Preliminary Planning</p>
-                <Text>{PURPOSE.planning}</Text>
+                <Text>Here were our initial UI Designs which we mocked up in Figma before we began development.</Text>
+                <Image height="1080" width="1920" objectFit="cover" quality="100" src={PURPOSE.designs} style={{ borderRadius: "14px" }} />
+                {PURPOSE.planning !== "" && <>
+                    <p>Preliminary Planning</p>
+                    <Text>{PURPOSE.planning}</Text>
+                </>}
             </div>}
 
 
@@ -135,6 +138,7 @@ export default function Projects() {
             <Text>{SPOTLIGHT.technical_hurdles}</Text>
             <p>Solutions</p>
             <Text>{SPOTLIGHT.solutions}</Text>
+            {SPOTLIGHT.solution_img !== "" && <Image height="1080" width="1920" objectFit="cover" quality="100" src={SPOTLIGHT.solution_img} style={{ borderRadius: "14px" }} />}
 
             {/* If the project is ongoing, use this section */}
             {STATUS !== "" && <HeaderLine header={"Current Status"} />}
@@ -147,8 +151,10 @@ export default function Projects() {
                 <p>Was Framework good Choice?</p>
                 <Text>{LESSONS.good_choice}</Text>
             </div>}
-            <p>How has this affected the work I have done since?</p>
-            <Text>{LESSONS.how}</Text>
+            {LESSONS.how !== "" && <>
+                <p>How has this affected the work I have done since?</p>
+                <Text>{LESSONS.how}</Text>
+            </>}
 
         </>
     )
