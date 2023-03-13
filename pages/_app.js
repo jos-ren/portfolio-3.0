@@ -20,28 +20,23 @@ function MyApp({ Component, pageProps }) {
   const colorTheme = useColorTheme("light-theme", {
     classNames: ["light-theme", "dark-theme"],
   });
-  const [isDarkMode, setDarkMode] = React.useState(false);
-  const [isOpen, setIsOpen] = useState(false)
   
+  const [isOpen, setIsOpen] = useState(false)
+
   const isTablet = useMediaQuery({ query: '(max-width: 880px)' })
 
   let logo = "";
   let strokeColor = "black";
+  let mode = "";
   if (colorTheme.value === "light-theme") {
     logo = "/icons/logo.svg";
     strokeColor = "black";
+    mode = false;
   } else if (colorTheme.value === "dark-theme") {
     logo = "/icons/logo_w.svg";
     strokeColor = "white";
+    mode = true;
   }
-
-  const toggleDarkMode = () => {
-    if (colorTheme.value === "light-theme") {
-      setDarkMode(true);
-    } else if (colorTheme.value === "dark-theme") {
-      setDarkMode(false);
-    }
-  };
 
   const [isLoading, setIsLoading] = useState(true);
 
@@ -78,27 +73,28 @@ function MyApp({ Component, pageProps }) {
         <SideBar
           isOpen={isOpen}
           logo_src={logo}
-          onClick={() => { colorTheme.toggle(), toggleDarkMode() }}
+          onClick={() => { colorTheme.toggle() }}
           onLinkClick={() => setIsOpen(false)}
           data={projects_data}
           icon={
             <DarkModeSwitch
-              checked={isDarkMode}
-              onChange={toggleDarkMode}
+              checked={mode}
+              onChange={() => { }}
               size={20}
             />
           }
         />
+
         {/* for desktop */}
         {!isTablet && <SideBar
           isOpen={true}
           logo_src={logo}
-          onClick={() => { colorTheme.toggle(), toggleDarkMode() }}
+          onClick={() => { colorTheme.toggle() }}
           data={projects_data}
           icon={
             <DarkModeSwitch
-              checked={isDarkMode}
-              onChange={toggleDarkMode}
+              checked={mode}
+              onChange={() => { }}
               size={20}
             />
           }

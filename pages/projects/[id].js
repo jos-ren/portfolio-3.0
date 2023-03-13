@@ -59,10 +59,6 @@ export default function Projects() {
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "20px" }}>
                 <div>
                     <h1 style={{ margin: "0px", }}>{DATA.title}</h1>
-                    {/* school or work project*/}
-                    {/* ADDD */}
-
-                    <div>sss</div>
                 </div>
                 {/* buttons to website links, github links */}
                 <div style={{ display: "flex" }}>
@@ -81,33 +77,41 @@ export default function Projects() {
                     <Image height="1080" width="1920" objectFit="cover" quality="100" src={DATA.header_media} style={{ borderRadius: "14px" }} />
                 </div> :
                 <div style={{ borderRadius: "16px", overflow: "hidden" }}>
-                    <ReactPlayer url={DATA.header_media} controls={true} width={"auto"} height={"460px"} pip={false} />
+                    <div className='player-wrapper'>
+                        <ReactPlayer url={DATA.header_media} controls={true} width={"100%"} height={"100%"} pip={false} className='react-player' />
+                    </div>
                 </div>
             }
 
-            <div style={{ display: "flex", marginTop: "16px", justifyContent: "space-between" }}>
-                <div style={{ display: "flex", alignItems: "center", }}>
-                    <p>Tags:</p>
-                    <div style={{ marginLeft: "10px", display: "flex", flexWrap: 'wrap', gap: '8px' }}>
-                        {DATA.technologies.map((o, index) => {
-                            return <Pill key={index} text={o} />
-                        })}
-                    </div>
-                </div>
-                <div style={{ display: "flex", alignItems: "center", }}>
-                    <p>Role:</p>
-                    <div style={{ marginLeft: "10px", display: "flex", fontSize: "14px" }}>
-                        <div>{DATA.role}</div>
-                    </div>
+            <div style={{ display: "flex", alignItems: "center", marginTop: "16px" }}>
+                <p>Role:</p>
+                <div style={{ marginLeft: "10px", display: "flex", fontSize: "14px", flexWrap: 'wrap', gap: '8px' }}>
+                    <Pill text={DATA.type[0].source} color={DATA.type[0].background} />
+                    {DATA.role.map((o, index) => {
+                        return <Pill key={index} text={o} />
+                    })}
                 </div>
             </div>
 
-            <HeaderLine header={"Introduction"} margin={"40px 0px 30px 0px"} />
+            <div style={{ display: "flex", alignItems: "center", marginTop: "6px" }}>
+                <p>Technologies:</p>
+                <div style={{ marginLeft: "10px", display: "flex", flexWrap: 'wrap', gap: '8px' }}>
+                    {DATA.technologies.map((o, index) => {
+                        return <Pill key={index} text={o} />
+                    })}
+                </div>
+            </div>
+
+            <HeaderLine header={"Introduction"} margin={"30px 0px 30px 0px"} />
             <p>Summary</p>
             <Text>{INTRODUCTION.summary}</Text>
             <p>Core Functionalities</p>
             {/* bullet points */}
             <Bullet>{INTRODUCTION.functions}</Bullet>
+            {INTRODUCTION.members !== "" && <>
+                <p>Teammates</p>
+                <Bullet>{INTRODUCTION.members}</Bullet>
+            </>}
 
             {/* if project was started / created by you, use this */}
             {PURPOSE !== "" && <div>
@@ -117,11 +121,16 @@ export default function Projects() {
                 <p>What Was The Expected Outcome?</p>
                 <Text>{PURPOSE.what}</Text>
                 <p>Initial Designs</p>
-                <Text>{PURPOSE.design}</Text>
-                <p>Preliminary Planning</p>
-                <Text>{PURPOSE.planning}</Text>
+                <Text>Here were our initial UI Designs which we mocked up in Figma before we began development.</Text>
+                <Image height="1080" width="1920" objectFit="cover" quality="100" src={PURPOSE.designs} style={{ borderRadius: "14px" }} />
+                {PURPOSE.planning !== "" && <>
+                    <p>Preliminary Planning</p>
+                    <Text>{PURPOSE.planning}</Text>
+                </>}
             </div>}
 
+
+            {/* add 2 photos for spotlight */}
             <HeaderLine header={"Spotlight"} />
             <p>Killer Feature</p>
             <Text>{SPOTLIGHT.killer_feature}</Text>
@@ -129,6 +138,7 @@ export default function Projects() {
             <Text>{SPOTLIGHT.technical_hurdles}</Text>
             <p>Solutions</p>
             <Text>{SPOTLIGHT.solutions}</Text>
+            {SPOTLIGHT.solution_img !== "" && <Image height="1080" width="1920" objectFit="cover" quality="100" src={SPOTLIGHT.solution_img} style={{ borderRadius: "14px" }} />}
 
             {/* If the project is ongoing, use this section */}
             {STATUS !== "" && <HeaderLine header={"Current Status"} />}
@@ -141,8 +151,10 @@ export default function Projects() {
                 <p>Was Framework good Choice?</p>
                 <Text>{LESSONS.good_choice}</Text>
             </div>}
-            <p>How has this affected the work I have done since?</p>
-            <Text>{LESSONS.how}</Text>
+            {LESSONS.how !== "" && <>
+                <p>How has this affected the work I have done since?</p>
+                <Text>{LESSONS.how}</Text>
+            </>}
 
         </>
     )
