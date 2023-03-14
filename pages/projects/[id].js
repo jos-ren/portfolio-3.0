@@ -146,7 +146,7 @@ export default function Projects() {
                     })}
                 </>}
                 {PURPOSE.planning !== "" && <>
-                    <SubHeader>Preliminary Planning</SubHeader>
+                    <SubHeader>Additional Planning</SubHeader>
                     <Text>{PURPOSE.planning}</Text>
                 </>}
             </div>}

@@ -189,7 +189,7 @@ export const projects_data = [
 				killer_feature: "The best feature of the app would be the ability to post an image. It combined our knowledge of using a CRUD system with also using AWS S3 Buckets to store the images in the cloud.",
 				technical_hurdles: "The biggest hurdle we faced was figuring out the backend of our project. This was one of the first times which we had created a database which was capable of CRUD.",
 				solutions: "Solving this was a matter of studying how to create a database with CRUD functions/queries. At the same time that we were working on this project, in our class we were being taught about the backend. We first created a database diagram (shown below). From here we created an SQL query to create our database. Next was learning how to use axios to create backend functions for CRUD. Then we connected the backend functions into our frontend interface.",
-				solution_img: "/screenshots/petsave_solution.png",
+				solution_img: "/screenshots/petsave_db.png",
 				solution_img_caption: "Petsave's Database Diagram",
 			},
 		],
@@ -279,9 +279,9 @@ export const projects_data = [
 		// with a developer in mind. 
 		spotlight: [
 			{
-				killer_feature: "",
-				technical_hurdles: "",
-				solutions: "",
+				killer_feature: "Using the nutritional database API was the best feature of this app. It pulls nutritional facts data from it's database with calorie info, as well as all the other macro nutrients",
+				technical_hurdles: "I was pretty new to using APIs so sorting through the data and trying to display the correct information in the frontend was a bit of a struggle for me at first.",
+				solutions: "Through reading through the Nutrition API's documentation carefully and testing out queries, I was soon able to get the correct data where I wanted it. It was a struggle but with some patience I soon figured it out",
 				solution_img: "",
 				solution_img_caption: "",
 			},
@@ -303,7 +303,7 @@ export const projects_data = [
 		// project built your knowledge for future projects is fantastic. 
 		lessons: [
 			{
-				what: "",
+				what: "Through this project my knowledge of using axios to fetch data from 3rd party APIs was definitely strengthened. I also had a great time with my teamates coming up with the UI design and performing user testing on it.",
 				good_choice: "",
 				how: ""
 			},
