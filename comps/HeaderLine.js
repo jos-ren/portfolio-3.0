@@ -17,7 +17,7 @@ const HeaderLine = ({ header, margin }) => {
     return (
         <Container margin={margin}>
             <Line />
-            <p style={{ fontSize: '14px', margin: "0px 15px", whiteSpace: 'nowrap' }}>{header}</p>
+            <p style={{ fontSize: '15px', margin: "0px 15px", whiteSpace: 'nowrap' }}>{header}</p>
             <Line />
         </Container>
     );

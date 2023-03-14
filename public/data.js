@@ -115,14 +115,7 @@ export const projects_data = [
 				]
 			},
 		],
-		purpose: [
-			{
-				why: "",
-				what: "",
-				designs: "",
-				planning: ""
-			},
-		],
+		purpose: [""],
 		spotlight: [
 			{
 				killer_feature: "",
@@ -132,7 +125,6 @@ export const projects_data = [
 			},
 		],
 		status: "",
-
 		lessons: [
 			{
 				what: "",
@@ -182,7 +174,13 @@ export const projects_data = [
 			{
 				why: "We as a group wanted to make a fun social media app for a charitable cause, all while improving our development and design skills.",
 				what: "A MVP where users could create accounts and post photos",
-				designs: "/screenshots/petsave_designs.png",
+				design_desc:"Through 2 weeks of user testing and redesigning we came up with this final UI using Figma. It includes Login, Home, Create Post pages and much more.",
+				design:[
+					{
+						img: "/screenshots/petsave_designs.png",
+						caption: "Final UI",
+					},
+				],
 				planning: ""
 			},
 		],
@@ -192,6 +190,7 @@ export const projects_data = [
 				technical_hurdles: "The biggest hurdle we faced was figuring out the backend of our project. This was one of the first times which we had created a database which was capable of CRUD.",
 				solutions: "Solving this was a matter of studying how to create a database with CRUD functions/queries. At the same time that we were working on this project, in our class we were being taught about the backend. We first created a database diagram (shown below). From here we created an SQL query to create our database. Next was learning how to use axios to create backend functions for CRUD. Then we connected the backend functions into our frontend interface.",
 				solution_img: "/screenshots/petsave_solution.png",
+				solution_img_caption: "Petsave's Database Diagram",
 			},
 		],
 		status: "",
@@ -219,7 +218,8 @@ export const projects_data = [
 			"React",
 			"Next.js",
 			"Node.js",
-			"AWS",
+			"Heroku",
+			"Nutrition Database API"
 		],
 		role: [
 			"Full Stack Developer",
@@ -230,7 +230,7 @@ export const projects_data = [
 		// • List of core functionalities / interesting features
 		introduction: [
 			{
-				summary: "Pantro is a web app where users can track the expiration dates of the foods in their fridge. This was a student group project I created while studying at BCIT.",
+				summary: "Pantro is a web app where users can track the expiration dates of the foods in their kitchen. This was a student group project I created while studying at BCIT.",
 				functions: [
 					<li>Track food expiration dates</li>,
 					<li>Add / remove food from your "pantry"</li>,
@@ -250,9 +250,19 @@ export const projects_data = [
 		// • Any other preliminary planning that you did which helps build a narrative 
 		purpose: [
 			{
-				why: "",
+				why: "We decided to build this project because we were looking for something useful which we could see ourselves actually using. We all enjoyed cooking so we thought why not make an app which would be useful in this area",
 				what: "",
-				designs: "",
+				design_desc:"We wanted to make a simple app which was also very functional and easy to use for the end user. We first made a very rough draft of the expected pages. After much testing we settled on the final UI below.",
+				design:[
+					{
+						img: "/screenshots/pantro_designs_1.png",
+						caption: "Rough draft of the planned pages",
+					},
+					{
+						img: "/screenshots/pantro_designs_2.png",
+						caption: "Final UI after user testing, made in Figma",
+					},
+				],
 				planning: ""
 			},
 		],
@@ -273,6 +283,7 @@ export const projects_data = [
 				technical_hurdles: "",
 				solutions: "",
 				solution_img: "",
+				solution_img_caption: "",
 			},
 		],
 		// Current status
@@ -331,7 +342,8 @@ export const projects_data = [
 			{
 				why: "",
 				what: "",
-				designs: "",
+				design_desc:"",
+				design: "",
 				planning: ""
 			},
 		],
