@@ -120,9 +120,11 @@ export default function Projects() {
                 <Text>{PURPOSE.why}</Text>
                 <p>What Was The Expected Outcome?</p>
                 <Text>{PURPOSE.what}</Text>
-                <p>Initial Designs</p>
-                <Text>Here were our initial UI Designs which we mocked up in Figma before we began development.</Text>
-                <Image height="1080" width="1920" objectFit="cover" quality="100" src={PURPOSE.designs} style={{ borderRadius: "14px" }} />
+                {PURPOSE.designs !== "" && <>
+                    <p>Initial Designs</p>
+                    <Text>Here were our initial UI Designs which we mocked up in Figma before we began development.</Text>
+                    <Image height="1080" width="1920" objectFit="cover" quality="100" src={PURPOSE.designs} style={{ borderRadius: "14px" }} />
+                </>}
                 {PURPOSE.planning !== "" && <>
                     <p>Preliminary Planning</p>
                     <Text>{PURPOSE.planning}</Text>

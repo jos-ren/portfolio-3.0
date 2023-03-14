@@ -1,3 +1,31 @@
+export const socials_data = [
+	{
+		id: 0,
+		title: "Github",
+		link: "https://github.com/jos-ren",
+	},
+	{
+		id: 0,
+		title: "Linkedin",
+		link: "https://www.linkedin.com/in/josh-renema/",
+	},
+	{
+		id: 0,
+		title: "Behance",
+		link: "https://www.behance.net/joshrenema",
+	},
+	{
+		id: 0,
+		title: "Email",
+		link: "mailto:josh.renema@protonmail.com",
+	},
+	{
+		id: 0,
+		title: "Resume",
+		link: "https://drive.google.com/file/d/1MzXEtLKZ2h67UMKlzdBGnKA1JhoJGz-1/view?usp=sharing",
+	},
+]
+
 export const projects_data = [
 	{
 		id: 0,
@@ -22,9 +50,6 @@ export const projects_data = [
 		role: [
 			"Full Stack Developer"
 		],
-		// Introduction
-		// • High-level summary of what the project is
-		// • List of core functionalities / interesting features
 		introduction: [
 			{
 				summary: "Smart City Media (SCM) is a Real Estate Web App which includes thousands of geotagged aerial photos. Essentially SCM is a stock photo marketplace for property drone shots.",
@@ -38,13 +63,7 @@ export const projects_data = [
 				members: ""
 			},
 		],
-		// Purpose and Goal
-		// • Why did you build this project? Why is it important to you?
-		// • What was the expected outcome of the project?
-		// • What were the initial designs?
-		// • Any other preliminary planning that you did which helps build a narrative 
 		purpose: [""],
-
 		spotlight: [
 			{
 				killer_feature: "The photo gallery feature where you would upload photos to our database, creates a lovely gallery to display photos to clients.",
@@ -53,13 +72,7 @@ export const projects_data = [
 				solution_img: "",
 			},
 		],
-		// Current status
-		// • This section is optional. If the project is actively being used by real people, talk a little
-		// bit about the current status, who uses it, why they use it, what they say to you about
-		// it, stuff like that.
-		// • If the project was contrived specifically for the portfolio, omit this section. 
-		status: "Smart City is currently being used by thousands of Users from Vancouver to LA, Toronto, and even Calgary. They have expanded their photo library to over 15,000 real estate photos.",
-
+		status: "Smart City is currently being used by thousands of users from Vancouver to LA, Toronto, and even Calgary. They have expanded their photo library to over 15,000 real estate photos.",
 		lessons: [
 			{
 				what: "Throughout the course of this project I really expanded my backend skillset, creating queries, getting to know some of AWS' libraries, and reading through documentation. I also learned alot about collaboration and how to approach tasks with this in mind, dividing up work effectively in a team setting",
@@ -173,17 +186,6 @@ export const projects_data = [
 				planning: ""
 			},
 		],
-		//  Spotlight
-		// • What is the “killer feature” of your project? What feature does it have that took the
-		// most work, or was the most technically impressive? Some possible examples:
-		// ◦ User authentication
-		// ◦ A feed of items fetched from a database
-		// ◦ A particularly tricky UI element (eg. autocomplete, calendar, drag-and-drop)
-		// ◦ Anything you’re proud of!
-		// • What were the technical hurdles that got in your way? Any major problems you hit
-		// during development?
-		// • How did you solve those problems? What was the solution? Go deep here, and write
-		// with a developer in mind. 
 		spotlight: [
 			{
 				killer_feature: "The best feature of the app would be the ability to post an image. It combined our knowledge of using a CRUD system with also using AWS S3 Buckets to store the images in the cloud.",
@@ -193,15 +195,6 @@ export const projects_data = [
 			},
 		],
 		status: "",
-		// Lessons Learned
-		// • What did you learn doing this project? Feel free to list multiple things. Also feel free to
-		// cover non-technical lessons. It’s great to talk about how you learned to use an
-		// advanced feature of a framework or library, but it’s just as valuable to talk about
-		// project-management experience, or things you learned about shipping projects.
-		// • If you used a framework or other libraries/tools, was it a good choice? How did it
-		// help? In which ways was it insufficient?
-		// • How has this affected the work you’ve done since then? Real examples of how this
-		// project built your knowledge for future projects is fantastic. 
 		lessons: [
 			{
 				what: "Throughout this project I learned a great deal. From improving my frontend React knowledge, to creating a functional backend with images. One of the more important lessons I found was not actually a technical one though, This was the first time I had collaborated with a group to create a Web App start to finish. My communication and collaboration skills improved greatly.",
@@ -232,11 +225,16 @@ export const projects_data = [
 			"Full Stack Developer",
 			"UI Designer",
 		],
+		// Introduction
+		// • High-level summary of what the project is
+		// • List of core functionalities / interesting features
 		introduction: [
 			{
-				summary: "",
+				summary: "Pantro is a web app where users can track the expiration dates of the foods in their fridge. This was a student group project I created while studying at BCIT.",
 				functions: [
-					<li></li>,
+					<li>Track food expiration dates</li>,
+					<li>Add / remove food from your "pantry"</li>,
+					<li>Check the nutritional facts of your food</li>,
 				],
 				members: [
 					<li>Jordan Naranja</li>,
@@ -245,6 +243,11 @@ export const projects_data = [
 				]
 			},
 		],
+		// Purpose and Goal
+		// • Why did you build this project? Why is it important to you?
+		// • What was the expected outcome of the project?
+		// • What were the initial designs?
+		// • Any other preliminary planning that you did which helps build a narrative 
 		purpose: [
 			{
 				why: "",
@@ -253,6 +256,17 @@ export const projects_data = [
 				planning: ""
 			},
 		],
+		//  Spotlight
+		// • What is the “killer feature” of your project? What feature does it have that took the
+		// most work, or was the most technically impressive? Some possible examples:
+		// ◦ User authentication
+		// ◦ A feed of items fetched from a database
+		// ◦ A particularly tricky UI element (eg. autocomplete, calendar, drag-and-drop)
+		// ◦ Anything you’re proud of!
+		// • What were the technical hurdles that got in your way? Any major problems you hit
+		// during development?
+		// • How did you solve those problems? What was the solution? Go deep here, and write
+		// with a developer in mind. 
 		spotlight: [
 			{
 				killer_feature: "",
@@ -261,7 +275,21 @@ export const projects_data = [
 				solution_img: "",
 			},
 		],
+		// Current status
+		// • This section is optional. If the project is actively being used by real people, talk a little
+		// bit about the current status, who uses it, why they use it, what they say to you about
+		// it, stuff like that.
+		// • If the project was contrived specifically for the portfolio, omit this section. 
 		status: "",
+		// Lessons Learned
+		// • What did you learn doing this project? Feel free to list multiple things. Also feel free to
+		// cover non-technical lessons. It’s great to talk about how you learned to use an
+		// advanced feature of a framework or library, but it’s just as valuable to talk about
+		// project-management experience, or things you learned about shipping projects.
+		// • If you used a framework or other libraries/tools, was it a good choice? How did it
+		// help? In which ways was it insufficient?
+		// • How has this affected the work you’ve done since then? Real examples of how this
+		// project built your knowledge for future projects is fantastic. 
 		lessons: [
 			{
 				what: "",
