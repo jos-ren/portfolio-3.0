@@ -42,7 +42,7 @@ export default function Projects() {
     let INTRODUCTION = projects_data[router.query.id].introduction[0]
     let PURPOSE = projects_data[router.query.id].purpose[0]
     let SPOTLIGHT = projects_data[router.query.id].spotlight[0]
-    let STATUS = projects_data[router.query.id].status
+    let STATUS = projects_data[router.query.id].status[0]
     let LESSONS = projects_data[router.query.id].lessons[0]
     // console.log(INTRODUCTION.technologies)
 
@@ -51,13 +51,13 @@ export default function Projects() {
     });
 
     let github = "";
-    let link = "";
+    let twitter = "";
     if (colorTheme.value === "light-theme") {
         github = "/icons/github.svg";
-        link = "/icons/link.svg";
+        twitter = "/icons/twitter.svg";
     } else if (colorTheme.value === "dark-theme") {
         github = "/icons/github_w.svg";
-        link = "/icons/link_w.svg";
+        twitter = "/icons/twitter_w.svg";
     }
 
     const isTablet = useMediaQuery({ query: '(max-width: 880px)' })
@@ -75,6 +75,9 @@ export default function Projects() {
                 <div style={{ display: "flex" }}>
                     {DATA.link !== "" && <a target="_blank" rel="noopener noreferrer" href={DATA.link} >
                         <Button text="View Site" background="var(--tertiary)" color="var(--text)" />
+                    </a>}
+                    {DATA.twitter_link !== "" && <a target="_blank" rel="noopener noreferrer" href={DATA.twitter_link} >
+                        <IconButton icon={<Image src={twitter} height={20} width={20} />} />
                     </a>}
                     {DATA.github_link !== "" && <a target="_blank" rel="noopener noreferrer" href={DATA.github_link} >
                         <IconButton icon={<Image src={github} height={20} width={20} />} />
@@ -119,6 +122,10 @@ export default function Projects() {
             <SubHeader>Core Functionalities</SubHeader>
             {/* bullet points */}
             <Bullet>{INTRODUCTION.functions}</Bullet>
+            {INTRODUCTION.summary_img && <>
+                <Image height="1080" width="1920" objectFit="cover" quality="100" src={INTRODUCTION.summary_img} style={{ borderRadius: "14px" }} />
+                <Caption>{INTRODUCTION.summary_img_caption}</Caption>
+            </>}
             {INTRODUCTION.members !== "" && <>
                 <SubHeader>Teammates</SubHeader>
                 <Bullet>{INTRODUCTION.members}</Bullet>
@@ -148,6 +155,10 @@ export default function Projects() {
                 {PURPOSE.planning !== "" && <>
                     <SubHeader>Additional Planning</SubHeader>
                     <Text>{PURPOSE.planning}</Text>
+                    {PURPOSE.planning_img && <>
+                        <Image height="1080" width="1920" objectFit="cover" quality="100" src={PURPOSE.planning_img} style={{ borderRadius: "14px" }} />
+                        <Caption>{PURPOSE.planning_img_caption}</Caption>
+                    </>}
                 </>}
             </div>}
 
@@ -166,8 +177,13 @@ export default function Projects() {
             </>}
 
             {/* If the project is ongoing, use this section */}
-            {STATUS !== "" && <HeaderLine header={"Current Status"} />}
-            <div>{STATUS}</div>
+            {STATUS !== "" && <>
+                <HeaderLine header={"Current Status"} />
+                <div>{STATUS.text}</div>
+                <br></br>
+                <Image height="1080" width="1920" objectFit="cover" quality="100" src={STATUS.img} style={{ borderRadius: "14px" }} />
+                <Caption>{STATUS.img_caption}</Caption>
+            </>}
 
             <HeaderLine header={"Lessons Learned"} />
             <SubHeader>What did I Learn?</SubHeader>

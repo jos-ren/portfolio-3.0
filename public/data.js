@@ -34,6 +34,7 @@ export const projects_data = [
 		icon: "/icons/scm.png",
 		header_media: "https://www.youtube.com/watch?v=pUTw9OWsBIw",
 		link: "https://smartcitymedia.com/",
+		twitter_link: "",
 		github_link: "",
 		type: [{
 			source: "Work",
@@ -43,9 +44,10 @@ export const projects_data = [
 			"React",
 			"Next.js",
 			"Node.js",
-			"AWS",
-			"S3",
-			"RDS",
+			"AWS S3",
+			"AWS RDS",
+			"Mapbox",
+			"Shop",
 		],
 		role: [
 			"Full Stack Developer"
@@ -67,12 +69,18 @@ export const projects_data = [
 		spotlight: [
 			{
 				killer_feature: "The photo gallery feature where you would upload photos to our database, creates a lovely gallery to display photos to clients.",
-				technical_hurdles: "Some technical hurdles for this project would be learning how to use the AWS APIs. This was the first time using it and the documentation at times was hard to get through with all the different quaries which were available.",
-				solutions: "Once I had got aquanted with how it worked however, I found it alot easier to use and was proud of what I had learned.",
+				technical_hurdles: "Some technical hurdles for this project would be learning how to use the AWS APIs. This was the first time using it and the documentation at times was hard to get through with all of the different queries which were available.",
+				solutions: "Once I had got acquainted with how it worked however, I found it alot easier to use and was proud of what I had learned.",
 				solution_img: "",
 			},
 		],
-		status: "Smart City is currently being used by thousands of users from Vancouver to LA, Toronto, and even Calgary. They have expanded their photo library to over 15,000 real estate photos.",
+		status: [
+			{
+				text: "Smart City is currently being used by thousands of users from Vancouver to LA, Toronto, and even Calgary. They have expanded their photo library to over 15,000 geotagged photos on their stock site.",
+				img: "/screenshots/scm_map.png",
+				img_caption: "A map of SCM's current geotagged photos"
+			}
+		],
 		lessons: [
 			{
 				what: "Throughout the course of this project I really expanded my backend skillset, creating queries, getting to know some of AWS' libraries, and reading through documentation. I also learned alot about collaboration and how to approach tasks with this in mind, dividing up work effectively in a team setting",
@@ -88,6 +96,7 @@ export const projects_data = [
 		icon: "/icons/bcit.png",
 		header_media: "https://www.youtube.com/watch?v=ysz5S6PUM-U",
 		link: "https://crm.techiesoftomorrow.com/",
+		twitter_link: "",
 		github_link: "",
 		type: [{
 			source: "Work",
@@ -124,7 +133,7 @@ export const projects_data = [
 				solution_img: "",
 			},
 		],
-		status: "",
+		status: [""],
 		lessons: [
 			{
 				what: "",
@@ -141,6 +150,7 @@ export const projects_data = [
 		header_media: "/screenshots/petsave_cover.jpg",
 		link: "",
 		github_link: "https://github.com/jos-ren/petsave-frontend",
+		twitter_link: "",
 		type: [{
 			source: "Student",
 			background: "var(--blue)",
@@ -174,8 +184,8 @@ export const projects_data = [
 			{
 				why: "We as a group wanted to make a fun social media app for a charitable cause, all while improving our development and design skills.",
 				what: "A MVP where users could create accounts and post photos",
-				design_desc:"Through 2 weeks of user testing and redesigning we came up with this final UI using Figma. It includes Login, Home, Create Post pages and much more.",
-				design:[
+				design_desc: "Through 2 weeks of user testing and redesigning we came up with this final UI using Figma. It includes Login, Home, Create Post pages and much more.",
+				design: [
 					{
 						img: "/screenshots/petsave_designs.png",
 						caption: "Final UI",
@@ -193,7 +203,7 @@ export const projects_data = [
 				solution_img_caption: "Petsave's Database Diagram",
 			},
 		],
-		status: "",
+		status: [""],
 		lessons: [
 			{
 				what: "Throughout this project I learned a great deal. From improving my frontend React knowledge, to creating a functional backend with images. One of the more important lessons I found was not actually a technical one though, This was the first time I had collaborated with a group to create a Web App start to finish. My communication and collaboration skills improved greatly.",
@@ -210,6 +220,7 @@ export const projects_data = [
 		header_media: "/screenshots/pantro_cover.jpg",
 		link: "",
 		github_link: "https://github.com/jos-ren/bcitd3_pantro",
+		twitter_link: "",
 		type: [{
 			source: "Student",
 			background: "var(--blue)",
@@ -243,17 +254,12 @@ export const projects_data = [
 				]
 			},
 		],
-		// Purpose and Goal
-		// • Why did you build this project? Why is it important to you?
-		// • What was the expected outcome of the project?
-		// • What were the initial designs?
-		// • Any other preliminary planning that you did which helps build a narrative 
 		purpose: [
 			{
 				why: "We decided to build this project because we were looking for something useful which we could see ourselves actually using. We all enjoyed cooking so we thought why not make an app which would be useful in this area",
 				what: "",
-				design_desc:"We wanted to make a simple app which was also very functional and easy to use for the end user. We first made a very rough draft of the expected pages. After much testing we settled on the final UI below.",
-				design:[
+				design_desc: "We wanted to make a simple app which was also very functional and easy to use for the end user. We first made a very rough draft of the expected pages. After much testing we settled on the final UI below.",
+				design: [
 					{
 						img: "/screenshots/pantro_designs_1.png",
 						caption: "Rough draft of the planned pages",
@@ -291,7 +297,7 @@ export const projects_data = [
 		// bit about the current status, who uses it, why they use it, what they say to you about
 		// it, stuff like that.
 		// • If the project was contrived specifically for the portfolio, omit this section. 
-		status: "",
+		status: [""],
 		// Lessons Learned
 		// • What did you learn doing this project? Feel free to list multiple things. Also feel free to
 		// cover non-technical lessons. It’s great to talk about how you learned to use an
@@ -317,6 +323,7 @@ export const projects_data = [
 		header_media: "https://www.youtube.com/watch?v=SxiX59jA-1w",
 		link: "",
 		github_link: "https://github.com/jos-ren/twitter_translate",
+		twitter_link: "https://twitter.com/CS50P",
 		type: [{
 			source: "Personal",
 			background: "var(--green)",
@@ -331,34 +338,45 @@ export const projects_data = [
 		],
 		introduction: [
 			{
-				summary: " sdm sdajmn ja jbwliuh ljkuhladsk dlu dkldsjlfsdjuhfd ysui asfli uhf iuhfsdi u fiuy iufh iuhf hiusa iuayf iushadf iusyhf iufdsh ",
+				summary: "Twitter Translate Bot is a python script which takes a tweet from Twitter, translates the tweet using Google Translate's API, then makes a new tweet using the translated text. This was my final project of the CS50P course from Harvard.",
+				summary_img:"/screenshots/translate_summary.png",
+				summary_img_caption:"The Python script's process",
 				functions: [
-					<li></li>,
+					<li>READ Selected Twitter Tweet</li>,
+					<li>Translate tweet into desired language (French)</li>,
+					<li>POST translated text onto Twitter</li>
 				],
 				members: ""
 			},
 		],
+		// Purpose and Goal
+		// • Why did you build this project? Why is it important to you?
+		// • What was the expected outcome of the project?
+		// • What were the initial designs?
+		// • Any other preliminary planning that you did which helps build a narrative 
 		purpose: [
 			{
-				why: "",
+				why: "For my final project I wanted to test my knowledge of using APIs and wanted to use 2 different ones at the same time. I noticed that on twitter to translate a tweet you has to first click on the individual tweet and then a 'translate' button would then appear. I wanted to make this easier for users and have them just scroll through an account and see their desired tweet translated.",
 				what: "",
-				design_desc:"",
+				design_desc: "",
 				design: "",
-				planning: ""
+				planning: "I created a new Twitter account with the name 'CanadaFR' (@CS50P is the handle) which would take the tweets from @Canada's Twitter and translate them from English to French.",
+				planning_img:"/screenshots/translate_example.png",
+				planning_img_caption:"An example of reposting the selected tweet into French."
 			},
 		],
 		spotlight: [
 			{
-				killer_feature: "",
-				technical_hurdles: "",
-				solutions: "",
+				killer_feature: "Translating the text through Google Translate's API was my favorite part of this project. It was simple to use, and just required you to input the desired text, and the language you wanted to translate it to.",
+				technical_hurdles: "Since a tweet cannot be longer than 280 chars, sometimes when I translated from English to French, the translated text would be longer than 280. This would cut off some of the text and users would be missing some information.",
+				solutions: "To solve this issue, I decided to take the text that was cut off, and reply to my original tweet using it. This way all of the needed information would be translated and if it was over 280 chars, the remaining text would just be underneath the original tweet in a reply.",
 				solution_img: "",
 			},
 		],
-		status: "",
+		status: [""],
 		lessons: [
 			{
-				what: "",
+				what: "Through this project, I tested out my Python skills, as well as using 2 different APIs at once in a script. It was exciting to see what I could create and challenge myself to make a cool script which had real world usecases.",
 				good_choice: "",
 				how: ""
 			},
