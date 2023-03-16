@@ -122,21 +122,24 @@ export default function Projects() {
             <SubHeader>Core Functionalities</SubHeader>
             {/* bullet points */}
             <Bullet>{INTRODUCTION.functions}</Bullet>
-            {INTRODUCTION.summary_img && <>
-                <Image height="1080" width="1920" objectFit="cover" quality="100" src={INTRODUCTION.summary_img} style={{ borderRadius: "14px" }} />
-                <Caption>{INTRODUCTION.summary_img_caption}</Caption>
+            {INTRODUCTION.images[0] !== "" && <>
+                {INTRODUCTION.images.map((o, index) => {
+                    return <div key={index}>
+                        <Image height="1080" width="1920" objectFit="cover" quality="100" src={o.img} style={{ borderRadius: "14px" }} />
+                        <Caption>{o.caption}</Caption>
+                    </div >
+                })}
             </>}
             {INTRODUCTION.members !== "" && <>
                 <SubHeader>Teammates</SubHeader>
                 <Bullet>{INTRODUCTION.members}</Bullet>
             </>}
 
-            {/* if project was started / created by you, use this */}
             {PURPOSE !== "" && <div>
                 <HeaderLine header={"Purpose"} />
                 <SubHeader>Why Build This Project?</SubHeader>
-                <Text>{PURPOSE.why}</Text>
 
+                <Text>{PURPOSE.why}</Text>
                 {PURPOSE.what !== "" && <>
                     <SubHeader>What Was The Expected Outcome?</SubHeader>
                     <Text>{PURPOSE.what}</Text>
@@ -152,6 +155,7 @@ export default function Projects() {
                         </div >
                     })}
                 </>}
+
                 {PURPOSE.planning !== "" && <>
                     <SubHeader>Additional Planning</SubHeader>
                     <Text>{PURPOSE.planning}</Text>
@@ -167,6 +171,10 @@ export default function Projects() {
             <HeaderLine header={"Spotlight"} />
             <SubHeader>Killer Feature</SubHeader>
             <Text>{SPOTLIGHT.killer_feature}</Text>
+            {SPOTLIGHT.feature_img && <>
+                <Image height="1080" width="1920" objectFit="cover" quality="100" src={SPOTLIGHT.feature_img} style={{ borderRadius: "14px" }} />
+                <Caption>{SPOTLIGHT.feature_img_caption}</Caption>
+            </>}
             <SubHeader>Technical Hurdles</SubHeader>
             <Text>{SPOTLIGHT.technical_hurdles}</Text>
             <SubHeader>Solutions</SubHeader>
@@ -180,9 +188,11 @@ export default function Projects() {
             {STATUS !== "" && <>
                 <HeaderLine header={"Current Status"} />
                 <div>{STATUS.text}</div>
-                <br></br>
-                <Image height="1080" width="1920" objectFit="cover" quality="100" src={STATUS.img} style={{ borderRadius: "14px" }} />
-                <Caption>{STATUS.img_caption}</Caption>
+                {STATUS.img !== "" && <>
+                    <br></br>
+                    <Image height="1080" width="1920" objectFit="cover" quality="100" src={STATUS.img} style={{ borderRadius: "14px" }} />
+                    <Caption>{STATUS.img_caption}</Caption>
+                </>}
             </>}
 
             <HeaderLine header={"Lessons Learned"} />
