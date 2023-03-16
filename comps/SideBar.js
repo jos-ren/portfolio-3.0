@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from "styled-components";
 import SideButton from "./SideButton"
 import SideHover from "./SideHover"
@@ -23,7 +23,9 @@ const Container = styled.div`
     // width: ${(props) => props.isOpen ? "auto" : "333px"};
 `;
 
-const SideBar = ({ icon, logo_src, onClick, data, isOpen, onLinkClick }) => {
+const SideBar = ({ icon, logo_src, onClick, projects_data, isOpen, onLinkClick, link_src, socials_data }) => {
+    const [isHovered, setIsHovered] = useState(-1);
+
     return (
         <Container isOpen={isOpen}>
             <div style={{ display: "flex", width: '100%' }}>
@@ -39,7 +41,7 @@ const SideBar = ({ icon, logo_src, onClick, data, isOpen, onLinkClick }) => {
 
             <p style={{ marginLeft: "10px" }}>PROJECTS</p>
             {/* maybe have a "view more button after 4-5" */}
-            {data.map((o, index) => {
+            {projects_data.map((o, index) => {
                 return <Link key={index} href={`/projects/${encodeURIComponent(o.id)}`} >
                     <div onClick={onLinkClick}>
                         <SideHover text={o.title} img_src={o.icon} />
@@ -50,21 +52,11 @@ const SideBar = ({ icon, logo_src, onClick, data, isOpen, onLinkClick }) => {
             <div style={{ margin: "15px 0px" }}></div>
 
             <p style={{ marginLeft: "10px" }}>SOCIALS</p>
-            <a target="_blank" rel="noopener noreferrer" href="https://github.com/jos-ren">
-                <SideHover text={'Github'} />
-            </a>
-            <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/josh-renema/">
-                <SideHover text={'Linkedin'} />
-            </a>
-            <a target="_blank" rel="noopener noreferrer" href="https://www.behance.net/joshrenema">
-                <SideHover text={'Behance'} />
-            </a>
-            <a target="_blank" rel="noopener noreferrer" href={"mailto:josh.renema@protonmail.com"}>
-                <SideHover text={'Email'} />
-            </a>
-            <a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1MzXEtLKZ2h67UMKlzdBGnKA1JhoJGz-1/view?usp=sharing">
-                <SideHover text={'Resume'} />
-            </a>
+            {socials_data.map((o, index) => {
+                return <a key={index} onMouseEnter={() => setIsHovered(index)} onMouseLeave={() => setIsHovered(-1)} target="_blank" rel="noopener noreferrer" href="o.link" >
+                    <SideHover text={o.title} link_src={link_src} isHovered={isHovered} index={index} />
+                </a>
+            })}
 
             {/* perhaps add a "more" section. it can include interests, photography, etc */}
             {/* GALLERY (polaroids) */}

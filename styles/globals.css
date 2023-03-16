@@ -29,8 +29,10 @@
   --hover: #4f4f64;
   --border: rgba(255, 255, 255, 0.1);
   --p: #a39d9d;
-  --highlight: #1efc7f;
-  --button-focus: #6bffac;
+  /* --highlight: #1efc7f;
+  --button-focus: #6bffac; */
+  --highlight: #0071fc;
+  --button-focus: #003a82;
 
   --orange: #ed9f12;
   --green: #08b296;

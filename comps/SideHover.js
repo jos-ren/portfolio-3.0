@@ -24,7 +24,7 @@ const Container = styled.div`
     }
 `;
 
-const SideHover = ({ img_src, text }) => {
+const SideHover = ({ img_src, text, isHovered, index, link_src }) => {
     return (
         <Container>
             <div style={{
@@ -39,6 +39,7 @@ const SideHover = ({ img_src, text }) => {
                 {text}
             </div>
             {img_src && <Image width={20} height={20} src={img_src} />}
+            {isHovered == index && link_src && <Image width={16} height={16} src={link_src} />}
         </Container >
     );
 }

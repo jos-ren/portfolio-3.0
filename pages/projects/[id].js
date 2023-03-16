@@ -10,13 +10,24 @@ import ReactPlayer from 'react-player'
 import { useMediaQuery } from 'react-responsive'
 
 import Pill from "../../comps/Pill"
-import SideButton from "../../comps/SideButton"
 import Button from "../../comps/Button"
 import IconButton from "../../comps/IconButton"
 import HeaderLine from "../../comps/HeaderLine"
 
 const Text = styled.div`
     margin:10px 0px 20px 0px;
+`;
+
+const Caption = styled.div`
+    width:100%;
+    font-size:12px;
+    margin-bottom:30px;
+    display:flex;
+    justify-content:center;
+`;
+
+const SubHeader = styled.p`
+    font-size:11.5px;
 `;
 
 const Bullet = styled.div`
@@ -31,7 +42,7 @@ export default function Projects() {
     let INTRODUCTION = projects_data[router.query.id].introduction[0]
     let PURPOSE = projects_data[router.query.id].purpose[0]
     let SPOTLIGHT = projects_data[router.query.id].spotlight[0]
-    let STATUS = projects_data[router.query.id].status
+    let STATUS = projects_data[router.query.id].status[0]
     let LESSONS = projects_data[router.query.id].lessons[0]
     // console.log(INTRODUCTION.technologies)
 
@@ -40,13 +51,13 @@ export default function Projects() {
     });
 
     let github = "";
-    let link = "";
+    let twitter = "";
     if (colorTheme.value === "light-theme") {
         github = "/icons/github.svg";
-        link = "/icons/link.svg";
+        twitter = "/icons/twitter.svg";
     } else if (colorTheme.value === "dark-theme") {
         github = "/icons/github_w.svg";
-        link = "/icons/link_w.svg";
+        twitter = "/icons/twitter_w.svg";
     }
 
     const isTablet = useMediaQuery({ query: '(max-width: 880px)' })
@@ -64,6 +75,9 @@ export default function Projects() {
                 <div style={{ display: "flex" }}>
                     {DATA.link !== "" && <a target="_blank" rel="noopener noreferrer" href={DATA.link} >
                         <Button text="View Site" background="var(--tertiary)" color="var(--text)" />
+                    </a>}
+                    {DATA.twitter_link !== "" && <a target="_blank" rel="noopener noreferrer" href={DATA.twitter_link} >
+                        <IconButton icon={<Image src={twitter} height={20} width={20} />} />
                     </a>}
                     {DATA.github_link !== "" && <a target="_blank" rel="noopener noreferrer" href={DATA.github_link} >
                         <IconButton icon={<Image src={github} height={20} width={20} />} />
@@ -84,7 +98,7 @@ export default function Projects() {
             }
 
             <div style={{ display: "flex", alignItems: "center", marginTop: "16px" }}>
-                <p>Role:</p>
+                <SubHeader>Role:</SubHeader>
                 <div style={{ marginLeft: "10px", display: "flex", fontSize: "14px", flexWrap: 'wrap', gap: '8px' }}>
                     <Pill text={DATA.type[0].source} color={DATA.type[0].background} />
                     {DATA.role.map((o, index) => {
@@ -94,7 +108,7 @@ export default function Projects() {
             </div>
 
             <div style={{ display: "flex", alignItems: "center", marginTop: "6px" }}>
-                <p>Technologies:</p>
+                <SubHeader>Technologies:</SubHeader>
                 <div style={{ marginLeft: "10px", display: "flex", flexWrap: 'wrap', gap: '8px' }}>
                     {DATA.technologies.map((o, index) => {
                         return <Pill key={index} text={o} />
@@ -103,56 +117,93 @@ export default function Projects() {
             </div>
 
             <HeaderLine header={"Introduction"} margin={"30px 0px 30px 0px"} />
-            <p>Summary</p>
+            <SubHeader>Summary</SubHeader>
             <Text>{INTRODUCTION.summary}</Text>
-            <p>Core Functionalities</p>
+            <SubHeader>Core Functionalities</SubHeader>
             {/* bullet points */}
             <Bullet>{INTRODUCTION.functions}</Bullet>
+            {INTRODUCTION.images[0] !== "" && <>
+                {INTRODUCTION.images.map((o, index) => {
+                    return <div key={index}>
+                        <Image height="1080" width="1920" objectFit="cover" quality="100" src={o.img} style={{ borderRadius: "14px" }} />
+                        <Caption>{o.caption}</Caption>
+                    </div >
+                })}
+            </>}
             {INTRODUCTION.members !== "" && <>
-                <p>Teammates</p>
+                <SubHeader>Teammates</SubHeader>
                 <Bullet>{INTRODUCTION.members}</Bullet>
             </>}
 
-            {/* if project was started / created by you, use this */}
             {PURPOSE !== "" && <div>
                 <HeaderLine header={"Purpose"} />
-                <p>Why Build This Project?</p>
+                <SubHeader>Why Build This Project?</SubHeader>
+
                 <Text>{PURPOSE.why}</Text>
-                <p>What Was The Expected Outcome?</p>
-                <Text>{PURPOSE.what}</Text>
-                <p>Initial Designs</p>
-                <Text>Here were our initial UI Designs which we mocked up in Figma before we began development.</Text>
-                <Image height="1080" width="1920" objectFit="cover" quality="100" src={PURPOSE.designs} style={{ borderRadius: "14px" }} />
+                {PURPOSE.what !== "" && <>
+                    <SubHeader>What Was The Expected Outcome?</SubHeader>
+                    <Text>{PURPOSE.what}</Text>
+                </>}
+
+                {PURPOSE.design !== "" && <>
+                    <SubHeader>Initial Designs</SubHeader>
+                    <Text>{PURPOSE.design_desc}</Text>
+                    {PURPOSE.design.map((o, index) => {
+                        return <div key={index}>
+                            <Image height="1080" width="1920" objectFit="cover" quality="100" src={o.img} style={{ borderRadius: "14px" }} />
+                            <Caption>{o.caption}</Caption>
+                        </div >
+                    })}
+                </>}
+
                 {PURPOSE.planning !== "" && <>
-                    <p>Preliminary Planning</p>
+                    <SubHeader>Additional Planning</SubHeader>
                     <Text>{PURPOSE.planning}</Text>
+                    {PURPOSE.planning_img && <>
+                        <Image height="1080" width="1920" objectFit="cover" quality="100" src={PURPOSE.planning_img} style={{ borderRadius: "14px" }} />
+                        <Caption>{PURPOSE.planning_img_caption}</Caption>
+                    </>}
                 </>}
             </div>}
 
 
             {/* add 2 photos for spotlight */}
             <HeaderLine header={"Spotlight"} />
-            <p>Killer Feature</p>
+            <SubHeader>Killer Feature</SubHeader>
             <Text>{SPOTLIGHT.killer_feature}</Text>
-            <p>Technical Hurdles</p>
+            {SPOTLIGHT.feature_img && <>
+                <Image height="1080" width="1920" objectFit="cover" quality="100" src={SPOTLIGHT.feature_img} style={{ borderRadius: "14px" }} />
+                <Caption>{SPOTLIGHT.feature_img_caption}</Caption>
+            </>}
+            <SubHeader>Technical Hurdles</SubHeader>
             <Text>{SPOTLIGHT.technical_hurdles}</Text>
-            <p>Solutions</p>
+            <SubHeader>Solutions</SubHeader>
             <Text>{SPOTLIGHT.solutions}</Text>
-            {SPOTLIGHT.solution_img !== "" && <Image height="1080" width="1920" objectFit="cover" quality="100" src={SPOTLIGHT.solution_img} style={{ borderRadius: "14px" }} />}
+            {SPOTLIGHT.solution_img !== "" && <>
+                <Image height="1080" width="1920" objectFit="cover" quality="100" src={SPOTLIGHT.solution_img} style={{ borderRadius: "14px" }} />
+                <Caption>{SPOTLIGHT.solution_img_caption}</Caption>
+            </>}
 
             {/* If the project is ongoing, use this section */}
-            {STATUS !== "" && <HeaderLine header={"Current Status"} />}
-            <div>{STATUS}</div>
+            {STATUS !== "" && <>
+                <HeaderLine header={"Current Status"} />
+                <div>{STATUS.text}</div>
+                {STATUS.img !== "" && <>
+                    <br></br>
+                    <Image height="1080" width="1920" objectFit="cover" quality="100" src={STATUS.img} style={{ borderRadius: "14px" }} />
+                    <Caption>{STATUS.img_caption}</Caption>
+                </>}
+            </>}
 
             <HeaderLine header={"Lessons Learned"} />
-            <p>What did I Learn?</p>
+            <SubHeader>What did I Learn?</SubHeader>
             <Text>{LESSONS.what}</Text>
             {LESSONS.good_choice !== "" && <div>
-                <p>Was Framework good Choice?</p>
+                <SubHeader>Was Framework good Choice?</SubHeader>
                 <Text>{LESSONS.good_choice}</Text>
             </div>}
             {LESSONS.how !== "" && <>
-                <p>How has this affected the work I have done since?</p>
+                <SubHeader>How has this affected the work I have done since?</SubHeader>
                 <Text>{LESSONS.how}</Text>
             </>}
 

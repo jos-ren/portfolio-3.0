@@ -6,6 +6,7 @@ import { useMediaQuery } from 'react-responsive'
 import SideBar from "../comps/SideBar";
 import TopBar from "../comps/TopBar";
 import { projects_data } from '../public/data.js';
+import { socials_data } from '../public/data.js';
 import { DarkModeSwitch } from 'react-toggle-dark-mode';
 import { useLoading, BallTriangle } from '@agney/react-loading';
 
@@ -26,14 +27,17 @@ function MyApp({ Component, pageProps }) {
   const isTablet = useMediaQuery({ query: '(max-width: 880px)' })
 
   let logo = "";
+  let link = "";
   let strokeColor = "black";
   let mode = "";
   if (colorTheme.value === "light-theme") {
     logo = "/icons/logo.svg";
+    link= "/icons/link.svg"
     strokeColor = "black";
     mode = false;
   } else if (colorTheme.value === "dark-theme") {
     logo = "/icons/logo_w.svg";
+    link= "/icons/link_w.svg"
     strokeColor = "white";
     mode = true;
   }
@@ -73,9 +77,10 @@ function MyApp({ Component, pageProps }) {
         <SideBar
           isOpen={isOpen}
           logo_src={logo}
+          link_src={link}
           onClick={() => { colorTheme.toggle() }}
-          onLinkClick={() => setIsOpen(false)}
-          data={projects_data}
+          projects_data={projects_data}
+          socials_data={socials_data}
           icon={
             <DarkModeSwitch
               checked={mode}
@@ -89,8 +94,10 @@ function MyApp({ Component, pageProps }) {
         {!isTablet && <SideBar
           isOpen={true}
           logo_src={logo}
+          link_src={link}
           onClick={() => { colorTheme.toggle() }}
-          data={projects_data}
+          projects_data={projects_data}
+          socials_data={socials_data}
           icon={
             <DarkModeSwitch
               checked={mode}
