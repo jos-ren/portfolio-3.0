@@ -32,7 +32,7 @@ export const projects_data = [
 		title: "Smart City Media",
 		desc: "Real Estate Web App serving 20,000+ geo-tagged photos",
 		icon: "/icons/scm.png",
-		header_media: "https://www.youtube.com/watch?v=pUTw9OWsBIw",
+		header_media: "https://youtu.be/WIzC-B0yrEM",
 		link: "https://smartcitymedia.com/",
 		twitter_link: "",
 		github_link: "",
@@ -96,7 +96,7 @@ export const projects_data = [
 		title: "BCIT CRM",
 		desc: "CRM with the options to text, email, and send updates to contacts",
 		icon: "/icons/bcit.png",
-		header_media: "https://www.youtube.com/watch?v=_MsXY94bp1M",
+		header_media: "https://www.youtube.com/watch?v=ctXTzx0o348",
 		link: "https://crm.techiesoftomorrow.com/",
 		twitter_link: "",
 		github_link: "",
@@ -120,7 +120,7 @@ export const projects_data = [
 		// • List of core functionalities / interesting features
 		introduction: [
 			{
-				summary: "This project was created as an in-house Customer Relationship Manager for multiple departments inside of BCIT. It's purpose is to manage large groups of contacts and provide a platform to communicate with them effectively.",
+				summary: "This project was created as an in-house Customer Relationship Manager for multiple departments inside of BCIT. Its purpose is to manage large groups of contacts and provide a platform to communicate with them effectively.",
 				images: [
 					{
 						img: "/screenshots/crm_dashboard.png",
