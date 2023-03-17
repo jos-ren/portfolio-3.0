@@ -30,7 +30,7 @@ export const projects_data = [
 	{
 		id: 0,
 		title: "Smart City Media",
-		desc: "Real Estate Web App serving 20,000+ geo-tagged photos",
+		desc: "Real Estate Web App serving 15,000+ geo-tagged photos",
 		icon: "/icons/scm.png",
 		header_media: "https://youtu.be/WIzC-B0yrEM",
 		link: "https://smartcitymedia.com/",

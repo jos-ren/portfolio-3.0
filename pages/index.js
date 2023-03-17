@@ -77,11 +77,11 @@ export default function Home() {
 			{/* <HeaderLine header="About Me"/> */}
 			<h1>About Me</h1>
 			{/* im a canadian full stack developer currently residing in the PNW! */}
-			<div>I'm a 22 year old Full Stack Developer with a passion for all things that live on the web!</div>
+			<div>{`I'm a 22 year old Full Stack Developer with a passion for all things that live on the web!`}</div>
 			<br/>
-			<div>I studied at BCIT and gained knowledge about both the <i>Development</i> process and how to <i>Design</i> responsive applications for today's digital world.</div>
+			<div>{`I studied at BCIT and gained knowledge about both the Development process and how to Design responsive applications for today's digital world.`}</div>
 			<br/> 
-			<div>When I'm not at my keyboard, you'll find me hiking up in the beautiful Mountains of the PNW, or down by the Sea paddleboarding with my dog.</div>
+			<div>{`When I'm not at my keyboard, you'll find me hiking up in the beautiful Mountains of the PNW, or down by the Sea paddleboarding with my dog.`}</div>
 			
 			{/* have a 2 / 3 format when 3 wide & a 2 / 2 / 1 when 2 wide */}
 			<h1 style={{ marginTop: "50px" }} >Projects</h1>
