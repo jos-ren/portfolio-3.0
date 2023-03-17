@@ -53,7 +53,7 @@ const SideBar = ({ icon, logo_src, onClick, projects_data, isOpen, onLinkClick, 
 
             <p style={{ marginLeft: "10px" }}>SOCIALS</p>
             {socials_data.map((o, index) => {
-                return <a key={index} onMouseEnter={() => setIsHovered(index)} onMouseLeave={() => setIsHovered(-1)} target="_blank" rel="noopener noreferrer" href="o.link" >
+                return <a key={index} onMouseEnter={() => setIsHovered(index)} onMouseLeave={() => setIsHovered(-1)} target="_blank" rel="noopener noreferrer" href={o.link} >
                     <SideHover text={o.title} link_src={link_src} isHovered={isHovered} index={index} />
                 </a>
             })}

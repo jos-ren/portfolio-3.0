@@ -77,13 +77,12 @@ export default function Home() {
 			{/* <HeaderLine header="About Me"/> */}
 			<h1>About Me</h1>
 			{/* im a canadian full stack developer currently residing in the PNW! */}
-			{`
-				I'm a Full Stack Developer, currently living in Surrey, BC. I enjoy creating projects that live on the internet, whether that be websites, applications, or anything in between. I always strive for my projects to provide real world value.
-				I’ve earned my diploma from the Digital Design and Development program at BCIT, where I’ve learned how to develop and design responsive, cross-platform applications.
-				I’m currently working as a Full Stack Developer at Techies of Tommorow, a tech talent incubator that empowers recent BC tech graduates to work on real industry projects that require high-quality and cost-effective solutions.
-				When I’m not spending my days coding and designing, you’ll probably find me riding my jeep out in the mountains, trying out new food with friends, or testing out my Nikon film camera. Feel free to checkout my projects below or browse to your heart's content!
-			`}
-
+			<div>{`I'm a 22 year old Full Stack Developer with a passion for all things that live on the web!`}</div>
+			<br/>
+			<div>{`I studied at BCIT and gained knowledge about both the Development process and how to Design responsive applications for today's digital world.`}</div>
+			<br/> 
+			<div>{`When I'm not at my keyboard, you'll find me hiking up in the beautiful Mountains of the PNW, or down by the Sea paddleboarding with my dog.`}</div>
+			
 			{/* have a 2 / 3 format when 3 wide & a 2 / 2 / 1 when 2 wide */}
 			<h1 style={{ marginTop: "50px" }} >Projects</h1>
 			<div style={
