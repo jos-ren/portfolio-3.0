@@ -22,7 +22,7 @@ export const socials_data = [
 	{
 		id: 4,
 		title: "Resume",
-		link: "https://drive.google.com/file/d/1MzXEtLKZ2h67UMKlzdBGnKA1JhoJGz-1/view?usp=sharing",
+		link: "https://drive.google.com/file/d/1jcYtA_5enJctvpimucD2ra8YdDjZ3Xbi/view?usp=sharing",
 	},
 ]
 
