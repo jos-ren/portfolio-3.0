@@ -12,7 +12,7 @@ export const socials_data = [
 	{
 		id: 2,
 		title: "Behance",
-		link: "https://www.behance.net/joshrenema",
+		link: "https://www.behance.net/josren",
 	},
 	{
 		id: 3,
