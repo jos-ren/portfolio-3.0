@@ -20,6 +20,9 @@ import ContactCard from "../comps/ContactCard";
 import HeaderLine from "../comps/HeaderLine"
 // import PhotoCard from "../comps/PhotoCard";
 
+// NOTES
+// add a year to each project
+// ...
 
 export default function Home() {
 
@@ -36,16 +39,6 @@ export default function Home() {
 
 	const [isEdu, setIsEdu] = useState(-1);
 	const [isTech, setIsTech] = useState(-1);
-
-	// useEffect(() => {
-	// 	console.log(`
-	// 	__.-._
-	// 	'-._"7'  welcome :)
-	// 	 /'.-c
-	// 	 |  /T
-	// 	_)_/LI
-	// 	`)
-	// });
 
 	// 3 cards
 	const isDesktop = useMediaQuery({ query: '(max-width: 1600px)' })
@@ -88,9 +81,9 @@ export default function Home() {
 			<div style={
 				isMobile ? { display: "grid", gridTemplateColumns: 'repeat(1, 1fr)', gridTemplateRows: '1fr', rowGap: '20px', columnGap: '20px' } :
 					isSmallDesktop || isTablet ? { display: "grid", gridTemplateColumns: 'repeat(2, 1fr)', gridTemplateRows: '1fr', rowGap: '20px', columnGap: '20px' } :
-						{ display: "grid", gridTemplateColumns: 'repeat(3, 1fr)', gridTemplateRows: '1fr', rowGap: '20px', columnGap: '20px' }
+						{ display: "grid", gridTemplateColumns: 'repeat(2, 1fr)', gridTemplateRows: '1fr', rowGap: '20px', columnGap: '20px' }
 			} >
-				{projects_data.map((o, index) => {
+				{projects_data.slice(0,4).map((o, index) => {
 					return <Link key={index} href={"/projects/" + index}>
 						<div>
 							<Card icon={o.icon} title={o.title} desc={o.desc} index={index} hasPill={true} type={o.type[0].source} background={o.type[0].background}/>

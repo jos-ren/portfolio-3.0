@@ -70,7 +70,7 @@ export const projects_data = [
 		spotlight: [
 			{
 				killer_feature: "The photo gallery feature where you would upload photos to our database, creates a lovely gallery to display photos to clients.",
-				feature_img:"",
+				feature_img: "",
 				technical_hurdles: "Some technical hurdles for this project would be learning how to use the AWS APIs. This was one of the first times using it and the documentation at times was hard to get through with all of the different queries which were available.",
 				solutions: "Once I had got acquainted with how it worked however, I found it alot easier to use and was proud of what I had learned.",
 				solution_img: "",
@@ -163,8 +163,8 @@ export const projects_data = [
 		spotlight: [
 			{
 				killer_feature: "Using Twilio's API to send out text messages to large groups of phone numbers was awesome. Once I had constructed the query and sent myself a message using it, It felt great because it was a tangible effect of the code which I created, sending a text to my phone.",
-				feature_img:"/screenshots/crm_twilio.png",
-				feature_img_caption:"Simple diagram of how Twilio works",
+				feature_img: "/screenshots/crm_twilio.png",
+				feature_img_caption: "Simple diagram of how Twilio works",
 				technical_hurdles: "This was my really delving into the backend and creating more complex queries. One of my tasks was creating the queries for the AWS SES (Simple Email Service). It would select an email address, subject and message; then send it as an email to them. After spending a couple days trying to get it to work I had hit a wall.",
 				solutions: "Asking for guidance from my teammates & mentor really helped me clarify this issue. Sometimes when you are staring at a problem so long, which you can't make heads or tails of, asking for another perspective can really bring in fresh ideas and break through.",
 				solution_img: "",
@@ -195,7 +195,68 @@ export const projects_data = [
 		],
 	},
 	{
-		id: 2,
+		id:2,
+		title: "Muvi",
+		desc: "Track your favourite shows all in one space.",
+		icon: "/icons/muvi.png",
+		header_media: "/screenshots/muvi_cover.png",
+		link: "https://josren-muvi.vercel.app",
+		github_link: "https://github.com/jos-ren/muvi",
+		twitter_link: "",
+		type: [{
+			source: "Personal",
+			background: "var(--green)",
+		}],
+		technologies: [
+			"React",
+			"Next.js",
+			"Node.js",
+			"TMDB API"
+		],
+		role: [
+			"Full Stack Developer"
+		],
+		introduction: [
+			{
+				summary: "Details coming soon... for now just check out the app! 👍 (top right corner)",
+				images: [""],
+				functions: [
+				],
+				members: [
+				]
+			},
+		],
+		purpose: [
+			{
+				why: "",
+				what: "",
+				design_desc: "",
+				design: [
+				],
+				planning: ""
+			},
+		],
+		spotlight: [
+			{
+				killer_feature: "",
+				feature_img: "",
+				technical_hurdles: "",
+				solutions: "",
+				solution_img: "",
+				solution_img_caption: "",
+			},
+		],
+		status: [""],
+		lessons: [
+			{
+				what: "",
+				good_choice: "",
+				how: ""
+			},
+		],
+	},
+	{
+		id: 3,
 		title: "Twitter Translate",
 		desc: "Python script which can translate any Tweet into French",
 		icon: "/icons/translate.png",
@@ -246,7 +307,7 @@ export const projects_data = [
 		spotlight: [
 			{
 				killer_feature: "Translating the text through Google Translate's API was my favorite part of this project. It was simple to use, and just required you to input the desired text, and the language you wanted to translate it to.",
-				feature_img:"",
+				feature_img: "",
 				technical_hurdles: "Since a tweet cannot be longer than 280 chars, sometimes when I translated from English to French, the translated text would be longer than 280. This would cut off some of the text and users would be missing some information.",
 				solutions: "To solve this issue, I decided to take the text that was cut off, and reply to my original tweet using it. This way all of the needed information would be translated and if it was over 280 chars, the remaining text would just be underneath the original tweet in a reply.",
 				solution_img: "",
@@ -262,7 +323,7 @@ export const projects_data = [
 		],
 	},
 	{
-		id: 3,
+		id: 4,
 		title: "Petsave",
 		desc: "Social media app for animal rehabilitation centers",
 		icon: "/icons/petsave.png",
@@ -317,7 +378,7 @@ export const projects_data = [
 		spotlight: [
 			{
 				killer_feature: "The best feature of the app would be the ability to post an image. It combined our knowledge of using a CRUD system with also using AWS S3 Buckets to store the images in the cloud.",
-				feature_img:"",
+				feature_img: "",
 				technical_hurdles: "The biggest hurdle we faced was figuring out the backend of our project. This was one of the first times which we had created a database which was capable of CRUD.",
 				solutions: "Solving this was a matter of studying how to create a database with CRUD functions/queries. At the same time that we were working on this project, in our class we were being taught about the backend. We first created a database diagram (shown below). From here we created an SQL query to create our database. Next was learning how to use axios to create backend functions for CRUD. Then we connected the backend functions into our frontend interface.",
 				solution_img: "/screenshots/petsave_db.png",
@@ -334,7 +395,7 @@ export const projects_data = [
 		],
 	},
 	{
-		id: 4,
+		id: 5,
 		title: "Pantro",
 		desc: "Pantry app which tracks food expiration dates",
 		icon: "/icons/pantro.png",
@@ -394,7 +455,7 @@ export const projects_data = [
 		spotlight: [
 			{
 				killer_feature: "Using the nutritional database API was the best feature of this app. It pulls nutritional facts data from it's database with calorie info, as well as all the other macro nutrients",
-				feature_img:"",
+				feature_img: "",
 				technical_hurdles: "I was pretty new to using APIs so sorting through the data and trying to display the correct information in the frontend was a bit of a struggle for me at first.",
 				solutions: "Through reading through the Nutrition API's documentation carefully and testing out queries, I was soon able to get the correct data where I wanted it. It was a struggle but with some patience I soon figured it out",
 				solution_img: "",
@@ -410,11 +471,6 @@ export const projects_data = [
 			},
 		],
 	},
-	// {
-	// 	title: "Poman",
-	// 	desc: "Foodie social network app",
-	// 	link: "https://www.youtube.com/watch?v=Rze68rEMxhk",
-	// },
 	// {
 	// 	title: "Get'em",
 	// 	desc: "Delivery app for everyday items",

@@ -89,7 +89,6 @@ function MyApp({ Component, pageProps }) {
             />
           }
         />
-
         {/* for desktop */}
         {!isTablet && <SideBar
           isOpen={true}
@@ -106,6 +105,7 @@ function MyApp({ Component, pageProps }) {
             />
           }
         />}
+
         {/* MAIN */}
         <div style={
           isTablet ? {
@@ -130,13 +130,13 @@ function MyApp({ Component, pageProps }) {
             padding: "0em 2em"
           }
         }>
-          <div className="fill"></div>
+          {/* <div className="fill"></div> */}
           {/* CONTENT */}
           <div className="content" style={{ padding: "6em 0", maxWidth: "800px" }
           }>
             <Component {...pageProps} />
           </div>
-          <div className="fill"></div>
+          {/* <div className="fill"></div> */}
         </div>
       </div>}
     </div >
