@@ -8,6 +8,6 @@ To develop my site, I used React and Styled Components to make a clean yet strai
 
 <h2>Live Site</h2>
 
-<a href="https://portfolio-3-0-omega.vercel.app/" target="_blank">Link Here</a>
+<a href="josren.ca" target="_blank">Link Here</a>
 
 <h2>Screenshot</h2>
