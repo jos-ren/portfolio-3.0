@@ -27,7 +27,7 @@ const Tile = ({ icon, isShown, name, index }) => {
         <Container>
             {isShown == index ?
                 <div className="hover-display">{name}</div> :
-                <Image height="40px" width="40px" objectFit="contain" src={icon} /> 
+                <Image unoptimized height="40px" width="40px" objectFit="contain" src={icon} /> 
             }
         </Container>
     );
