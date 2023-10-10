@@ -23,12 +23,11 @@ const Container = styled.button`
   font-weight: 600;
   letter-spacing: 2px;
   text-decoration: none;
-  // :hover{
-  //   // border: 1px solid blue;
-  //   position:relative;
-  //   bottom:1px;
-  //   box-shadow: 0 1px 3px -2px rgba(0,0,0,.1);
-  // }
+  :hover{
+    // border: 1px solid blue;
+    box-shadow: 0 1px 3px -2px rgba(0,0,0,.1);
+    background:var(--hover );
+  }
   &:focus {
     outline: 1px solid var(--button-focus);
   }

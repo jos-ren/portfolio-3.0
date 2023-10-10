@@ -15,6 +15,7 @@ import { interests_data } from '../public/data.js';
 
 // import components
 import Card from '../comps/Card';
+import ProjectCard from '../comps/ProjectCard';
 import Tile from '../comps/Tile';
 import ContactCard from "../comps/ContactCard";
 import HeaderLine from "../comps/HeaderLine"
@@ -32,25 +33,31 @@ export default function Home() {
 		classNames: ["light-theme", "dark-theme"],
 	});
 
+	let open = "";
 	let link = "";
+	let github = "";
+	let twitter = "";
+	let youtube = "";
 	if (colorTheme.value === "light-theme") {
+		open = "/icons/open.svg";
 		link = "/icons/link.svg";
+		github = "/icons/github.svg";
+		twitter = "/icons/twitter.svg";
+		youtube = "/icons/youtube.svg";
 	} else if (colorTheme.value === "dark-theme") {
+		open = "/icons/open_w.svg";
 		link = "/icons/link_w.svg";
+		github = "/icons/github_w.svg";
+		twitter = "/icons/twitter_w.svg";
+		youtube = "/icons/youtube_w.svg";
 	}
 
 	const [isEdu, setIsEdu] = useState(-1);
 	const [isTech, setIsTech] = useState(-1);
 
-	// 3 cards
-	const isDesktop = useMediaQuery({ query: '(max-width: 1600px)' })
-	// 2 card
-	const isSmallDesktop = useMediaQuery({ query: '(max-width: 1160px)' })
-	// sidebar changes to top
-	// still 2 cards
-	const isTablet = useMediaQuery({ query: '(max-width: 880px)' })
-	// 1 cards
-	const isMobile = useMediaQuery({ query: '(max-width: 425px)' })
+
+	const isTablet = useMediaQuery({ query: '(max-width: 1050px)' })
+	const isMobile = useMediaQuery({ query: '(max-width: 550px)' })
 
 	return (
 		<>
@@ -66,31 +73,43 @@ export default function Home() {
 			{isTablet && <p>Tablet</p>}
 			{isMobile && <p>Mobile</p>} */}
 
-			<Image unoptimized height="400" width="1000" objectFit="cover" quality="100" src={"/profile.jpg"} style={{ borderRadius: "14px" }} />
+			<Image unoptimized height="350" width="1000" objectFit="cover" quality="100" src={"/profile.jpg"} style={{ borderRadius: "14px" }} />
 
 			{/* about me */}
 			{/* <HeaderLine header="About Me"/> */}
 			<h1>About Me</h1>
-			{/* im a canadian full stack developer currently residing in the PNW! */}
-			<div>{`I'm a 22 year old Full Stack Developer with a passion for all things that live on the web!`}</div>
-			<br/>
+			<div>{`My name is Josh Renema and I'm a 22 year old Full Stack Developer with a passion for all things that live on the web!`}</div>
+			<br />
 			<div>{`I studied at BCIT and gained knowledge about both the Development process and how to Design responsive applications for today's digital world.`}</div>
-			<br/> 
-			<div>{`When I'm not at my keyboard, you'll find me hiking up in the beautiful Mountains of the PNW, or down by the Sea paddleboarding with my dog.`}</div>
-			
-			{/* have a 2 / 3 format when 3 wide & a 2 / 2 / 1 when 2 wide */}
+			<br />
+			<div>{`When I'm not at the keyboard, you'll find me hiking up in the beautiful mountains of BC, or down in the ocean paddleboarding with my dog.`}</div>
+
 			<h1 style={{ marginTop: "50px" }} >Projects</h1>
-			<div style={
-				isMobile ? { display: "grid", gridTemplateColumns: 'repeat(1, 1fr)', gridTemplateRows: '1fr', rowGap: '20px', columnGap: '20px' } :
-					isSmallDesktop || isTablet ? { display: "grid", gridTemplateColumns: 'repeat(2, 1fr)', gridTemplateRows: '1fr', rowGap: '20px', columnGap: '20px' } :
-						{ display: "grid", gridTemplateColumns: 'repeat(2, 1fr)', gridTemplateRows: '1fr', rowGap: '20px', columnGap: '20px' }
-			} >
-				{projects_data.slice(0,4).map((o, index) => {
-					return <Link key={index} href={"/projects/" + index}>
-						<div>
-							<Card icon={o.icon} title={o.title} desc={o.desc} index={index} hasPill={true} type={o.type[0].source} background={o.type[0].background}/>
-						</div>
-					</Link>
+			<div style={{ display: "grid", gridTemplateColumns: 'repeat(1, 1fr)', gridTemplateRows: '1fr', rowGap: '20px', columnGap: '20px' }} >
+				{projects_data.map((o, index) => {
+					return <div>
+						{
+							isTablet ?
+								<Card icon={o.icon} title={o.title} desc={o.desc} index={index} hasPill={true} type={o.type[0].source} background={o.type[0].background} /> :
+								<ProjectCard
+									thumb={o.thumbnail}
+									title={o.title}
+									desc={o.desc}
+									index={index}
+									type={o.type[0].source}
+									background={o.type[0].background}
+									link_icon={link}
+									github_icon={github}
+									twitter_icon={twitter}
+									youtube_icon={youtube}
+									link={o.link}
+									github_link={o.github_link}
+									twitter_link={o.twitter_link}
+									youtube_link={o.youtube_link}
+									more_details={o.more_details}
+								/>
+						}
+					</div>
 				})}
 			</div>
 
@@ -101,7 +120,7 @@ export default function Home() {
 			} >
 				{school_data.map((o, index) => {
 					return <a key={index} target="_blank" rel="noopener noreferrer" href={o.link} onMouseEnter={() => setIsEdu(index)} onMouseLeave={() => setIsEdu(-1)}>
-						<Card icon={o.icon} title={o.title} desc={o.desc} link={link} info={o.info} isShown={isEdu} index={index} />
+						<Card icon={o.icon} title={o.title} desc={o.desc} open_icon={open} info={o.info} isShown={isEdu} index={index} />
 					</a>
 				})}
 			</div>
@@ -123,7 +142,7 @@ export default function Home() {
 				</div> */}
 
 			<h1 style={{ marginTop: "40px" }}>Contact Me</h1>
-			<ContactCard isMobile={isTablet}/>
+			<ContactCard isMobile={isTablet} />
 		</>
 	)
 }
