@@ -25,7 +25,7 @@ const Container = styled.button`
 const SideButton = ({ img_src, text }) => {
     return (
         <Container>
-            <Image width={20} height={20} src={img_src} />
+            <Image unoptimized width={20} height={20} src={img_src} />
             <div style={{fontSize:"12pt", margin:"2px 0px 0px 16px", color:"var(--text)", fontFamily:"Inter"}}>
                 {text}
             </div>

@@ -23,6 +23,8 @@ import HeaderLine from "../comps/HeaderLine"
 // NOTES
 // add a year to each project
 // ...
+// view more for sidebar
+// socails just display logos?
 
 export default function Home() {
 
@@ -64,7 +66,7 @@ export default function Home() {
 			{isTablet && <p>Tablet</p>}
 			{isMobile && <p>Mobile</p>} */}
 
-			<Image height="400" width="1000" objectFit="cover" quality="100" src={"/profile.jpg"} style={{ borderRadius: "14px" }} />
+			<Image unoptimized height="400" width="1000" objectFit="cover" quality="100" src={"/profile.jpg"} style={{ borderRadius: "14px" }} />
 
 			{/* about me */}
 			{/* <HeaderLine header="About Me"/> */}

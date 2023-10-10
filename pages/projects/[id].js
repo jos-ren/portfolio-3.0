@@ -77,10 +77,10 @@ export default function Projects() {
                         <Button text="View Site" background="var(--tertiary)" color="var(--text)" />
                     </a>}
                     {DATA.twitter_link !== "" && <a target="_blank" rel="noopener noreferrer" href={DATA.twitter_link} >
-                        <IconButton icon={<Image src={twitter} height={20} width={20} />} />
+                        <IconButton icon={<Image unoptimized src={twitter} height={20} width={20} />} />
                     </a>}
                     {DATA.github_link !== "" && <a target="_blank" rel="noopener noreferrer" href={DATA.github_link} >
-                        <IconButton icon={<Image src={github} height={20} width={20} />} />
+                        <IconButton icon={<Image unoptimized src={github} height={20} width={20} />} />
                     </a>}
                 </div>
             </div>
@@ -88,7 +88,7 @@ export default function Projects() {
             {/* if no video, use image as a header*/}
             {"/" == DATA.header_media.split("", 1)[0] ?
                 <div style={{ borderRadius: "16px", overflow: "hidden" }}>
-                    <Image height="1080" width="1920" objectFit="cover" quality="100" src={DATA.header_media} style={{ borderRadius: "14px" }} />
+                    <Image unoptimized height="1080" width="1920" objectFit="cover" quality="100" src={DATA.header_media} style={{ borderRadius: "14px" }} />
                 </div> :
                 <div style={{ borderRadius: "16px", overflow: "hidden" }}>
                     <div className='player-wrapper'>
@@ -125,7 +125,7 @@ export default function Projects() {
             {INTRODUCTION.images[0] !== "" && <>
                 {INTRODUCTION.images.map((o, index) => {
                     return <div key={index}>
-                        <Image height="1080" width="1920" objectFit="cover" quality="100" src={o.img} style={{ borderRadius: "14px" }} />
+                        <Image unoptimized height="1080" width="1920" objectFit="cover" quality="100" src={o.img} style={{ borderRadius: "14px" }} />
                         <Caption>{o.caption}</Caption>
                     </div >
                 })}
@@ -150,7 +150,7 @@ export default function Projects() {
                     <Text>{PURPOSE.design_desc}</Text>
                     {PURPOSE.design.map((o, index) => {
                         return <div key={index}>
-                            <Image height="1080" width="1920" objectFit="cover" quality="100" src={o.img} style={{ borderRadius: "14px" }} />
+                            <Image unoptimized height="1080" width="1920" objectFit="cover" quality="100" src={o.img} style={{ borderRadius: "14px" }} />
                             <Caption>{o.caption}</Caption>
                         </div >
                     })}
@@ -160,7 +160,7 @@ export default function Projects() {
                     <SubHeader>Additional Planning</SubHeader>
                     <Text>{PURPOSE.planning}</Text>
                     {PURPOSE.planning_img && <>
-                        <Image height="1080" width="1920" objectFit="cover" quality="100" src={PURPOSE.planning_img} style={{ borderRadius: "14px" }} />
+                        <Image unoptimized height="1080" width="1920" objectFit="cover" quality="100" src={PURPOSE.planning_img} style={{ borderRadius: "14px" }} />
                         <Caption>{PURPOSE.planning_img_caption}</Caption>
                     </>}
                 </>}
@@ -172,7 +172,7 @@ export default function Projects() {
             <SubHeader>Killer Feature</SubHeader>
             <Text>{SPOTLIGHT.killer_feature}</Text>
             {SPOTLIGHT.feature_img && <>
-                <Image height="1080" width="1920" objectFit="cover" quality="100" src={SPOTLIGHT.feature_img} style={{ borderRadius: "14px" }} />
+                <Image unoptimized height="1080" width="1920" objectFit="cover" quality="100" src={SPOTLIGHT.feature_img} style={{ borderRadius: "14px" }} />
                 <Caption>{SPOTLIGHT.feature_img_caption}</Caption>
             </>}
             <SubHeader>Technical Hurdles</SubHeader>
@@ -180,7 +180,7 @@ export default function Projects() {
             <SubHeader>Solutions</SubHeader>
             <Text>{SPOTLIGHT.solutions}</Text>
             {SPOTLIGHT.solution_img !== "" && <>
-                <Image height="1080" width="1920" objectFit="cover" quality="100" src={SPOTLIGHT.solution_img} style={{ borderRadius: "14px" }} />
+                <Image unoptimized height="1080" width="1920" objectFit="cover" quality="100" src={SPOTLIGHT.solution_img} style={{ borderRadius: "14px" }} />
                 <Caption>{SPOTLIGHT.solution_img_caption}</Caption>
             </>}
 
@@ -190,7 +190,7 @@ export default function Projects() {
                 <div>{STATUS.text}</div>
                 {STATUS.img !== "" && <>
                     <br></br>
-                    <Image height="1080" width="1920" objectFit="cover" quality="100" src={STATUS.img} style={{ borderRadius: "14px" }} />
+                    <Image unoptimized height="1080" width="1920" objectFit="cover" quality="100" src={STATUS.img} style={{ borderRadius: "14px" }} />
                     <Caption>{STATUS.img_caption}</Caption>
                 </>}
             </>}

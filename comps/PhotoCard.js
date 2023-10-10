@@ -17,7 +17,7 @@ const Container = styled.div`
 const PhotoCard = ({ desc, image }) => {
     return (
         <Container>
-            <Image height="120" width="120" objectFit="cover" quality="100" src={image} />
+            <Image unoptimized height="120" width="120" objectFit="cover" quality="100" src={image} />
             <div style={{ fontSize: "12pt", marginTop: "5px" }}>{desc}</div>
         </Container>
     );
