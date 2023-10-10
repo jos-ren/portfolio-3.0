@@ -15,6 +15,4 @@ This is my personal portfolio website, I made it to display my work and personal
 
 <h2>Screenshot</h2>
 
-![image](https://user-images.githubusercontent.com/60946895/221374887-78843fd1-caca-4f74-a1ea-383eeb3f824c.png)
-
 
