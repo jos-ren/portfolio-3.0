@@ -71,7 +71,7 @@ export const projects_data = [
 	{
 		id: 1,
 		title: "BCIT CRM",
-		desc: "A basic Customer Relationship Manager with the options to text, email, as well as send updates to your contacts.",
+		desc: "A Customer Relationship Manager with the options to text, email, as well as send updates to your contacts.",
 		icon: "/icons/bcit.png",
 		header_media: "https://www.youtube.com/watch?v=ctXTzx0o348",
 		thumbnail: "/thumbs/crm_cover.jpg",
