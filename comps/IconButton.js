@@ -15,12 +15,13 @@ const Container = styled.button`
   border: 1px solid var(--border);
   :hover{
       box-shadow: 0 1px 3px -2px rgba(0,0,0,.1);
+      background:var(--hover );
   }
   `;
 
-const IconButton = ({ icon, onClick, margin }) => {
+const IconButton = ({ icon, onClick }) => {
   return (
-    <Container onClick={onClick} margin={margin}>
+    <Container onClick={onClick}>
       {icon}
     </Container>
   );

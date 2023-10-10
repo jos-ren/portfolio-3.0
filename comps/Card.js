@@ -22,12 +22,12 @@ const Container = styled.div`
     }
 `;
 
-const Card = ({ title, desc, icon, link, isShown, info, index, hasPill, type, background }) => {
+const Card = ({ title, desc, icon, open_icon, isShown, info, index, hasPill, type, background }) => {
     return (
         <Container>
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "start" }}>
                 <Image unoptimized height="50px" width="50px" objectFit="contain" src={icon} />
-                {isShown == index ? <Image  unoptimized height="20px" width="20px" objectFit="contain" src={link} /> : <></>}
+                {isShown == index ? <Image  unoptimized height="20px" width="20px" objectFit="contain" src={open_icon} /> : <></>}
                 {/* {hasPill && <Pill text={type} color="white" background={background} border={"none"} />} */}
                 {/* {hasPill && <Pill text={type} color={background} border={"1px solid " + background} />} */}
                 {hasPill && <Pill text={type} color={background} />}

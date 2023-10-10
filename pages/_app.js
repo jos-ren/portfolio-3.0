@@ -24,20 +24,20 @@ function MyApp({ Component, pageProps }) {
   
   const [isOpen, setIsOpen] = useState(false)
 
-  const isTablet = useMediaQuery({ query: '(max-width: 880px)' })
+  const isTablet = useMediaQuery({ query: '(max-width: 1050px)' })
 
   let logo = "";
-  let link = "";
+  let open = "";
   let strokeColor = "black";
   let mode = "";
   if (colorTheme.value === "light-theme") {
     logo = "/icons/logo.svg";
-    link= "/icons/link.svg"
+    open= "/icons/open.svg"
     strokeColor = "black";
     mode = false;
   } else if (colorTheme.value === "dark-theme") {
     logo = "/icons/logo_w.svg";
-    link= "/icons/link_w.svg"
+    open= "/icons/open_w.svg"
     strokeColor = "white";
     mode = true;
   }
@@ -77,7 +77,7 @@ function MyApp({ Component, pageProps }) {
         <SideBar
           isOpen={isOpen}
           logo_src={logo}
-          link_src={link}
+          link_src={open}
           onClick={() => { colorTheme.toggle() }}
           projects_data={projects_data}
           socials_data={socials_data}
@@ -93,7 +93,7 @@ function MyApp({ Component, pageProps }) {
         {!isTablet && <SideBar
           isOpen={true}
           logo_src={logo}
-          link_src={link}
+          link_src={open}
           onClick={() => { colorTheme.toggle() }}
           projects_data={projects_data}
           socials_data={socials_data}
@@ -132,7 +132,7 @@ function MyApp({ Component, pageProps }) {
         }>
           {/* <div className="fill"></div> */}
           {/* CONTENT */}
-          <div className="content" style={{ padding: "6em 0", maxWidth: "800px" }
+          <div className="content" style={{ padding: "6em 0", maxWidth: "900px" }
           }>
             <Component {...pageProps} />
           </div>

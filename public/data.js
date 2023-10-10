@@ -9,11 +9,11 @@ export const socials_data = [
 		title: "Linkedin",
 		link: "https://www.linkedin.com/in/josh-renema/",
 	},
-	{
-		id: 2,
-		title: "Behance",
-		link: "https://www.behance.net/josren",
-	},
+	// {
+	// 	id: 2,
+	// 	title: "Behance",
+	// 	link: "https://www.behance.net/joshrenema",
+	// },
 	{
 		id: 3,
 		title: "Email",
@@ -22,20 +22,135 @@ export const socials_data = [
 	{
 		id: 4,
 		title: "Resume",
-		link: "https://drive.google.com/file/d/1jcYtA_5enJctvpimucD2ra8YdDjZ3Xbi/view?usp=sharing",
+		link: "https://drive.google.com/file/d/1JkQNAdWT_Six3bjHBbbP6HKBeAsJGyzj/view?usp=sharing",
 	},
 ]
 
+// Project page ideas
+
+// Introduction
+// • High-level summary of what the project is
+// • List of core functionalities / interesting features
+
+// Purpose and Goal
+// • Why did you build this project? Why is it important to you?
+// • What was the expected outcome of the project?
+// • What were the initial designs?
+// • Any other preliminary planning that you did which helps build a narrative 
+
+//  Spotlight
+// • What is the “killer feature” of your project? What feature does it have that took the
+// most work, or was the most technically impressive? Some possible examples:
+// ◦ User authentication
+// ◦ A feed of items fetched from a database
+// ◦ A particularly tricky UI element (eg. autocomplete, calendar, drag-and-drop)
+// ◦ Anything you’re proud of!
+// • What were the technical hurdles that got in your way? Any major problems you hit
+// during development?
+// • How did you solve those problems? What was the solution? Go deep here, and write
+// with a developer in mind. 
+
+// Current status
+// • This section is optional. If the project is actively being used by real people, talk a little
+// bit about the current status, who uses it, why they use it, what they say to you about
+// it, stuff like that.
+// • If the project was contrived specifically for the portfolio, omit this section. 
+
+// Lessons Learned
+// • What did you learn doing this project? Feel free to list multiple things. Also feel free to
+// cover non-technical lessons. It’s great to talk about how you learned to use an
+// advanced feature of a framework or library, but it’s just as valuable to talk about
+// project-management experience, or things you learned about shipping projects.
+// • If you used a framework or other libraries/tools, was it a good choice? How did it
+// help? In which ways was it insufficient?
+// • How has this affected the work you’ve done since then? Real examples of how this
+// project built your knowledge for future projects is fantastic. 
+
 export const projects_data = [
+
+	{
+		id: 1,
+		title: "BCIT CRM",
+		desc: "A Customer Relationship Manager with the options to text, email, as well as send updates to your contacts.",
+		icon: "/icons/bcit.png",
+		header_media: "https://www.youtube.com/watch?v=ctXTzx0o348",
+		thumbnail: "/thumbs/crm_cover.jpg",
+		link: "https://crm.techiesoftomorrow.com/",
+		twitter_link: "",
+		github_link: "",
+		youtube_link: "https://www.youtube.com/watch?v=ctXTzx0o348",
+		more_details:true,
+		type: [{
+			source: "Work",
+			background: "var(--orange)",
+		}],
+		technologies: [
+			"React",
+			"Next.js",
+			"Node.js",
+			"Twilio",
+			"AWS SES",
+			"AWS RDS",
+		],
+		role: [
+			"Full Stack Developer"
+		],
+		introduction: [
+			{
+				summary: "This project was created as an in-house Customer Relationship Manager for multiple departments inside of BCIT. Its purpose is to manage large groups of contacts and provide a platform to communicate with them effectively.",
+				images: [
+					{
+						img: "/screenshots/crm_dashboard.png",
+						caption: "Dashboard Page",
+					},
+				],
+				functions: [
+					<li>Import and manage contacts</li>,
+					<li>Create a group of contacts</li>,
+					<li>Send out Emails to your groups</li>,
+					<li>Send out Text messages to your groups</li>,
+					<li>Task manager</li>,
+					<li>Dashboard to see an overview of activity</li>,
+					<li>Create a custom form to add new contacts</li>,
+				],
+				members: ""
+			},
+		],
+
+		purpose: [""],
+
+		spotlight: [
+			{
+				killer_feature: "Using Twilio's API to send out text messages to large groups of phone numbers was awesome. Once I had constructed the query and sent myself a message using it, It felt great because it was a tangible effect of the code which I created, sending a text to my phone.",
+				feature_img: "/screenshots/crm_twilio.png",
+				feature_img_caption: "Simple diagram of how Twilio works",
+				technical_hurdles: "This was my really delving into the backend and creating more complex queries. One of my tasks was creating the queries for the AWS SES (Simple Email Service). It would select an email address, subject and message; then send it as an email to them. After spending a couple days trying to get it to work I had hit a wall.",
+				solutions: "Asking for guidance from my teammates & mentor really helped me clarify this issue. Sometimes when you are staring at a problem so long, which you can't make heads or tails of, asking for another perspective can really bring in fresh ideas and break through.",
+				solution_img: "",
+			},
+		],
+
+		status: [""],
+		lessons: [
+			{
+				what: "Throughout this project, I learned when to ask for guidance, and to be a sponge for information ready to learn as much as you can. I learned how to code in the backend and create queries, how to use AWS' API to send emails, how to send text messages using Twilio's API, and so much more.",
+				good_choice: "",
+				how: ""
+			},
+		],
+	},
 	{
 		id: 0,
 		title: "Smart City Media",
-		desc: "Real Estate Web App serving 15,000+ geo-tagged photos",
+		desc: "Real Estate Web App serving 15,000+ geo-tagged photos. Serving aerial drone stock photos for property developers and realtors alike.",
 		icon: "/icons/scm.png",
 		header_media: "https://youtu.be/WIzC-B0yrEM",
+		thumbnail: "/thumbs/scm_cover.png",
 		link: "https://smartcitymedia.com/",
 		twitter_link: "",
 		github_link: "",
+		youtube_link: "https://youtu.be/WIzC-B0yrEM",
+		more_details:true,
 		type: [{
 			source: "Work",
 			background: "var(--orange)",
@@ -92,117 +207,17 @@ export const projects_data = [
 		],
 	},
 	{
-		id: 1,
-		title: "BCIT CRM",
-		desc: "CRM with the options to text, email, and send updates to contacts",
-		icon: "/icons/bcit.png",
-		header_media: "https://www.youtube.com/watch?v=ctXTzx0o348",
-		link: "https://crm.techiesoftomorrow.com/",
-		twitter_link: "",
-		github_link: "",
-		type: [{
-			source: "Work",
-			background: "var(--orange)",
-		}],
-		technologies: [
-			"React",
-			"Next.js",
-			"Node.js",
-			"Twilio",
-			"AWS SES",
-			"AWS RDS",
-		],
-		role: [
-			"Full Stack Developer"
-		],
-		// Introduction
-		// • High-level summary of what the project is
-		// • List of core functionalities / interesting features
-		introduction: [
-			{
-				summary: "This project was created as an in-house Customer Relationship Manager for multiple departments inside of BCIT. Its purpose is to manage large groups of contacts and provide a platform to communicate with them effectively.",
-				images: [
-					{
-						img: "/screenshots/crm_dashboard.png",
-						caption: "Dashboard Page",
-					},
-					// {
-					// 	img: "/screenshots/crm_contacts.png",
-					// 	caption: "Contacts Page",
-					// },
-				],
-				functions: [
-					<li>Import and manage contacts</li>,
-					<li>Create a group of contacts</li>,
-					<li>Send out Emails to your groups</li>,
-					<li>Send out Text messages to your groups</li>,
-					<li>Task manager</li>,
-					<li>Dashboard to see an overview of activity</li>,
-					<li>Create a custom form to add new contacts</li>,
-				],
-				members: ""
-			},
-		],
-		// Purpose and Goal
-		// • Why did you build this project? Why is it important to you?
-		// • What was the expected outcome of the project?
-		// • What were the initial designs?
-		// • Any other preliminary planning that you did which helps build a narrative 
-		purpose: [""],
-		//  Spotlight
-		// • What is the “killer feature” of your project? What feature does it have that took the
-		// most work, or was the most technically impressive? Some possible examples:
-		// ◦ User authentication
-		// ◦ A feed of items fetched from a database
-		// ◦ A particularly tricky UI element (eg. autocomplete, calendar, drag-and-drop)
-		// ◦ Anything you’re proud of!
-		// • What were the technical hurdles that got in your way? Any major problems you hit
-		// during development?
-		// • How did you solve those problems? What was the solution? Go deep here, and write
-		// with a developer in mind. 
-		spotlight: [
-			{
-				killer_feature: "Using Twilio's API to send out text messages to large groups of phone numbers was awesome. Once I had constructed the query and sent myself a message using it, It felt great because it was a tangible effect of the code which I created, sending a text to my phone.",
-				feature_img: "/screenshots/crm_twilio.png",
-				feature_img_caption: "Simple diagram of how Twilio works",
-				technical_hurdles: "This was my really delving into the backend and creating more complex queries. One of my tasks was creating the queries for the AWS SES (Simple Email Service). It would select an email address, subject and message; then send it as an email to them. After spending a couple days trying to get it to work I had hit a wall.",
-				solutions: "Asking for guidance from my teammates & mentor really helped me clarify this issue. Sometimes when you are staring at a problem so long, which you can't make heads or tails of, asking for another perspective can really bring in fresh ideas and break through.",
-				solution_img: "",
-			},
-		],
-		// Current status
-		// • This section is optional. If the project is actively being used by real people, talk a little
-		// bit about the current status, who uses it, why they use it, what they say to you about
-		// it, stuff like that.
-		// • If the project was contrived specifically for the portfolio, omit this section. 
-		status: [""],
-		// Lessons Learned
-		// • What did you learn doing this project? Feel free to list multiple things. Also feel free to
-		// cover non-technical lessons. It’s great to talk about how you learned to use an
-		// advanced feature of a framework or library, but it’s just as valuable to talk about
-		// project-management experience, or things you learned about shipping projects.
-		// • If you used a framework or other libraries/tools, was it a good choice? How did it
-		// help? In which ways was it insufficient?
-		// • How has this affected the work you’ve done since then? Real examples of how this
-		// project built your knowledge for future projects is fantastic. 
-		lessons: [
-			{
-				what: "Throughout this project, I learned when to ask for guidance, and to be a sponge for information ready to learn as much as you can. I learned how to code in the backend and create queries, how to use AWS' API to send emails, how to send text messages using Twilio's API, and so much more.",
-				good_choice: "",
-				how: ""
-				// how: "Since building this web app, I've become a lot more comfortable with AWS and their services."
-			},
-		],
-	},
-	{
-		id:2,
+		id: 2,
 		title: "Muvi",
-		desc: "Track your favourite shows all in one space.",
+		desc: "Track your favourite shows with ease. Muvi is for the analytical movie lover who wants to keep track of shows watched, rate them, as well as discover when the next episode will air.",
 		icon: "/icons/muvi.png",
-		header_media: "/screenshots/muvi_cover.png",
+		header_media: "/thumbs/muvi_cover.png",
+		thumbnail: "/thumbs/muvi_cover.png",
 		link: "https://josren-muvi.vercel.app",
 		github_link: "https://github.com/jos-ren/muvi",
 		twitter_link: "",
+		youtube_link: "",
+		more_details:false,
 		type: [{
 			source: "Personal",
 			background: "var(--green)",
@@ -258,12 +273,15 @@ export const projects_data = [
 	{
 		id: 3,
 		title: "Twitter Translate",
-		desc: "Python script which can translate any Tweet into French",
+		desc: "Python script which reads a tweet, translates it using Google Translate API, Then reposts it to Twitter",
 		icon: "/icons/translate.png",
 		header_media: "https://www.youtube.com/watch?v=SxiX59jA-1w",
+		thumbnail: "/thumbs/tt_cover.jpg",
 		link: "",
 		github_link: "https://github.com/jos-ren/twitter_translate",
 		twitter_link: "https://twitter.com/CS50P",
+		youtube_link: "https://www.youtube.com/watch?v=SxiX59jA-1w",
+		more_details:true,
 		type: [{
 			source: "Personal",
 			background: "var(--green)",
@@ -322,155 +340,157 @@ export const projects_data = [
 			},
 		],
 	},
-	{
-		id: 4,
-		title: "Petsave",
-		desc: "Social media app for animal rehabilitation centers",
-		icon: "/icons/petsave.png",
-		header_media: "/screenshots/petsave_cover.jpg",
-		link: "",
-		github_link: "https://github.com/jos-ren/petsave-frontend",
-		twitter_link: "",
-		type: [{
-			source: "Student",
-			background: "var(--blue)",
-		}],
-		technologies: [
-			"React",
-			"Axios",
-			"AWS S3"
-		],
-		role: [
-			"Full Stack Developer",
-			"UI Designer",
-		],
-		introduction: [
-			{
-				summary: "Petsave is a social media web app for Animal Rehabilitation Centers like the SPCA, etc. Users can post photos and connect with fellow animal lovers though this app. This was a student group project I created while studying at BCIT",
-				images: [""],
-				functions: [
-					<li>Login / Create an account</li>,
-					<li>Post photos</li>,
-					<li>Like and comment on posts</li>,
-					<li>Follow other users</li>,
-				],
-				members: [
-					<li>Cindy Park</li>,
-					<li>Brittany Mcdonald</li>,
-					<li>Yunyun Peng</li>,
-				]
-			},
-		],
-		purpose: [
-			{
-				why: "We as a group wanted to make a fun social media app for a charitable cause, all while improving our development and design skills.",
-				what: "A MVP where users could create accounts and post photos",
-				design_desc: "Through 2 weeks of user testing and redesigning we came up with this final UI using Figma. It includes Login, Home, Create Post pages and much more.",
-				design: [
-					{
-						img: "/screenshots/petsave_designs.png",
-						caption: "Final UI",
-					},
-				],
-				planning: ""
-			},
-		],
-		spotlight: [
-			{
-				killer_feature: "The best feature of the app would be the ability to post an image. It combined our knowledge of using a CRUD system with also using AWS S3 Buckets to store the images in the cloud.",
-				feature_img: "",
-				technical_hurdles: "The biggest hurdle we faced was figuring out the backend of our project. This was one of the first times which we had created a database which was capable of CRUD.",
-				solutions: "Solving this was a matter of studying how to create a database with CRUD functions/queries. At the same time that we were working on this project, in our class we were being taught about the backend. We first created a database diagram (shown below). From here we created an SQL query to create our database. Next was learning how to use axios to create backend functions for CRUD. Then we connected the backend functions into our frontend interface.",
-				solution_img: "/screenshots/petsave_db.png",
-				solution_img_caption: "Petsave's Database Diagram",
-			},
-		],
-		status: [""],
-		lessons: [
-			{
-				what: "Throughout this project I learned a great deal. From improving my frontend React knowledge, to creating a functional backend with images. One of the more important lessons I found was not actually a technical one though, This was the first time I had collaborated with a group to create a Web App start to finish. My communication and collaboration skills improved greatly.",
-				good_choice: "",
-				how: ""
-			},
-		],
-	},
-	{
-		id: 5,
-		title: "Pantro",
-		desc: "Pantry app which tracks food expiration dates",
-		icon: "/icons/pantro.png",
-		header_media: "/screenshots/pantro_cover.jpg",
-		link: "",
-		github_link: "https://github.com/jos-ren/bcitd3_pantro",
-		twitter_link: "",
-		type: [{
-			source: "Student",
-			background: "var(--blue)",
-		}],
-		technologies: [
-			"React",
-			"Next.js",
-			"Node.js",
-			"Heroku",
-			"Nutrition Database API"
-		],
-		role: [
-			"Full Stack Developer",
-			"UI Designer",
-		],
-		introduction: [
-			{
-				summary: "Pantro is a web app where users can track the expiration dates of the foods in their kitchen. This was a student group project I created while studying at BCIT.",
-				images: [""],
-				functions: [
-					<li>Track food expiration dates</li>,
-					<li>Add / remove food from your "pantry"</li>,
-					<li>Check the nutritional facts of your food</li>,
-				],
-				members: [
-					<li>Jordan Naranja</li>,
-					<li>Brittany Mcdonald</li>,
-					<li>Hanbin Park</li>,
-				]
-			},
-		],
-		purpose: [
-			{
-				why: "We decided to build this project because we were looking for something useful which we could see ourselves actually using. We all enjoyed cooking so we thought why not make an app which would be useful in this area",
-				what: "",
-				design_desc: "We wanted to make a simple app which was also very functional and easy to use for the end user. We first made a very rough draft of the expected pages. After much testing we settled on the final UI below.",
-				design: [
-					{
-						img: "/screenshots/pantro_designs_1.png",
-						caption: "Rough draft of the planned pages",
-					},
-					{
-						img: "/screenshots/pantro_designs_2.png",
-						caption: "Final UI after user testing, made in Figma",
-					},
-				],
-				planning: ""
-			},
-		],
-		spotlight: [
-			{
-				killer_feature: "Using the nutritional database API was the best feature of this app. It pulls nutritional facts data from it's database with calorie info, as well as all the other macro nutrients",
-				feature_img: "",
-				technical_hurdles: "I was pretty new to using APIs so sorting through the data and trying to display the correct information in the frontend was a bit of a struggle for me at first.",
-				solutions: "Through reading through the Nutrition API's documentation carefully and testing out queries, I was soon able to get the correct data where I wanted it. It was a struggle but with some patience I soon figured it out",
-				solution_img: "",
-				solution_img_caption: "",
-			},
-		],
-		status: [""],
-		lessons: [
-			{
-				what: "Through this project my knowledge of using axios to fetch data from 3rd party APIs was definitely strengthened. I also had a great time with my teamates coming up with the UI design and performing user testing on it.",
-				good_choice: "",
-				how: ""
-			},
-		],
-	},
+	// {
+	// 	id: 4,
+	// 	title: "Petsave",
+	// 	desc: "Social media app for animal rehabilitation centers",
+	// 	icon: "/icons/petsave.png",
+	// 	header_media: "/thumbs/petsave_cover.jpg",
+	// 	thumbnail:"/thumbs/petsave_cover.jpg",
+	// 	link: "",
+	// 	github_link: "https://github.com/jos-ren/petsave-frontend",
+	// 	twitter_link: "",
+	// 	type: [{
+	// 		source: "Student",
+	// 		background: "var(--blue)",
+	// 	}],
+	// 	technologies: [
+	// 		"React",
+	// 		"Axios",
+	// 		"AWS S3"
+	// 	],
+	// 	role: [
+	// 		"Full Stack Developer",
+	// 		"UI Designer",
+	// 	],
+	// 	introduction: [
+	// 		{
+	// 			summary: "Petsave is a social media web app for Animal Rehabilitation Centers like the SPCA, etc. Users can post photos and connect with fellow animal lovers though this app. This was a student group project I created while studying at BCIT",
+	// 			images: [""],
+	// 			functions: [
+	// 				<li>Login / Create an account</li>,
+	// 				<li>Post photos</li>,
+	// 				<li>Like and comment on posts</li>,
+	// 				<li>Follow other users</li>,
+	// 			],
+	// 			members: [
+	// 				<li>Cindy Park</li>,
+	// 				<li>Brittany Mcdonald</li>,
+	// 				<li>Yunyun Peng</li>,
+	// 			]
+	// 		},
+	// 	],
+	// 	purpose: [
+	// 		{
+	// 			why: "We as a group wanted to make a fun social media app for a charitable cause, all while improving our development and design skills.",
+	// 			what: "A MVP where users could create accounts and post photos",
+	// 			design_desc: "Through 2 weeks of user testing and redesigning we came up with this final UI using Figma. It includes Login, Home, Create Post pages and much more.",
+	// 			design: [
+	// 				{
+	// 					img: "/screenshots/petsave_designs.png",
+	// 					caption: "Final UI",
+	// 				},
+	// 			],
+	// 			planning: ""
+	// 		},
+	// 	],
+	// 	spotlight: [
+	// 		{
+	// 			killer_feature: "The best feature of the app would be the ability to post an image. It combined our knowledge of using a CRUD system with also using AWS S3 Buckets to store the images in the cloud.",
+	// 			feature_img: "",
+	// 			technical_hurdles: "The biggest hurdle we faced was figuring out the backend of our project. This was one of the first times which we had created a database which was capable of CRUD.",
+	// 			solutions: "Solving this was a matter of studying how to create a database with CRUD functions/queries. At the same time that we were working on this project, in our class we were being taught about the backend. We first created a database diagram (shown below). From here we created an SQL query to create our database. Next was learning how to use axios to create backend functions for CRUD. Then we connected the backend functions into our frontend interface.",
+	// 			solution_img: "/screenshots/petsave_db.png",
+	// 			solution_img_caption: "Petsave's Database Diagram",
+	// 		},
+	// 	],
+	// 	status: [""],
+	// 	lessons: [
+	// 		{
+	// 			what: "Throughout this project I learned a great deal. From improving my frontend React knowledge, to creating a functional backend with images. One of the more important lessons I found was not actually a technical one though, This was the first time I had collaborated with a group to create a Web App start to finish. My communication and collaboration skills improved greatly.",
+	// 			good_choice: "",
+	// 			how: ""
+	// 		},
+	// 	],
+	// },
+	// {
+	// 	id: 5,
+	// 	title: "Pantro",
+	// 	desc: "Pantry app which tracks food expiration dates",
+	// 	icon: "/icons/pantro.png",
+	// 	header_media: "/thumbs/pantro_cover.jpg",
+	// 	thumbnail:"/thumbs/pantro_cover.jpg",
+	// 	link: "",
+	// 	github_link: "https://github.com/jos-ren/bcitd3_pantro",
+	// 	twitter_link: "",
+	// 	type: [{
+	// 		source: "Student",
+	// 		background: "var(--blue)",
+	// 	}],
+	// 	technologies: [
+	// 		"React",
+	// 		"Next.js",
+	// 		"Node.js",
+	// 		"Heroku",
+	// 		"Nutrition Database API"
+	// 	],
+	// 	role: [
+	// 		"Full Stack Developer",
+	// 		"UI Designer",
+	// 	],
+	// 	introduction: [
+	// 		{
+	// 			summary: "Pantro is a web app where users can track the expiration dates of the foods in their kitchen. This was a student group project I created while studying at BCIT.",
+	// 			images: [""],
+	// 			functions: [
+	// 				<li>Track food expiration dates</li>,
+	// 				<li>Add / remove food from your "pantry"</li>,
+	// 				<li>Check the nutritional facts of your food</li>,
+	// 			],
+	// 			members: [
+	// 				<li>Jordan Naranja</li>,
+	// 				<li>Brittany Mcdonald</li>,
+	// 				<li>Hanbin Park</li>,
+	// 			]
+	// 		},
+	// 	],
+	// 	purpose: [
+	// 		{
+	// 			why: "We decided to build this project because we were looking for something useful which we could see ourselves actually using. We all enjoyed cooking so we thought why not make an app which would be useful in this area",
+	// 			what: "",
+	// 			design_desc: "We wanted to make a simple app which was also very functional and easy to use for the end user. We first made a very rough draft of the expected pages. After much testing we settled on the final UI below.",
+	// 			design: [
+	// 				{
+	// 					img: "/screenshots/pantro_designs_1.png",
+	// 					caption: "Rough draft of the planned pages",
+	// 				},
+	// 				{
+	// 					img: "/screenshots/pantro_designs_2.png",
+	// 					caption: "Final UI after user testing, made in Figma",
+	// 				},
+	// 			],
+	// 			planning: ""
+	// 		},
+	// 	],
+	// 	spotlight: [
+	// 		{
+	// 			killer_feature: "Using the nutritional database API was the best feature of this app. It pulls nutritional facts data from it's database with calorie info, as well as all the other macro nutrients",
+	// 			feature_img: "",
+	// 			technical_hurdles: "I was pretty new to using APIs so sorting through the data and trying to display the correct information in the frontend was a bit of a struggle for me at first.",
+	// 			solutions: "Through reading through the Nutrition API's documentation carefully and testing out queries, I was soon able to get the correct data where I wanted it. It was a struggle but with some patience I soon figured it out",
+	// 			solution_img: "",
+	// 			solution_img_caption: "",
+	// 		},
+	// 	],
+	// 	status: [""],
+	// 	lessons: [
+	// 		{
+	// 			what: "Through this project my knowledge of using axios to fetch data from 3rd party APIs was definitely strengthened. I also had a great time with my teamates coming up with the UI design and performing user testing on it.",
+	// 			good_choice: "",
+	// 			how: ""
+	// 		},
+	// 	],
+	// },
 	// {
 	// 	title: "Get'em",
 	// 	desc: "Delivery app for everyday items",
