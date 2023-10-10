@@ -87,7 +87,7 @@ export default function Home() {
 			<h1 style={{ marginTop: "50px" }} >Projects</h1>
 			<div style={{ display: "grid", gridTemplateColumns: 'repeat(1, 1fr)', gridTemplateRows: '1fr', rowGap: '20px', columnGap: '20px' }} >
 				{projects_data.map((o, index) => {
-					return <div>
+					return <div key={index}>
 						{
 							isTablet ?
 								<Card icon={o.icon} title={o.title} desc={o.desc} index={index} hasPill={true} type={o.type[0].source} background={o.type[0].background} /> :
