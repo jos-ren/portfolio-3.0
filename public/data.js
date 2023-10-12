@@ -19,11 +19,11 @@ export const socials_data = [
 		title: "Email",
 		link: "mailto:josh.renema@protonmail.com",
 	},
-	{
-		id: 4,
-		title: "Resume",
-		link: "https://drive.google.com/file/d/1JkQNAdWT_Six3bjHBbbP6HKBeAsJGyzj/view?usp=sharing",
-	},
+	// {
+	// 	id: 4,
+	// 	title: "Resume",
+	// 	link: "https://drive.google.com/file/d/1JkQNAdWT_Six3bjHBbbP6HKBeAsJGyzj/view?usp=sharing",
+	// },
 ]
 
 // Project page ideas
