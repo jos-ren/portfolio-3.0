@@ -67,7 +67,73 @@ export const socials_data = [
 // project built your knowledge for future projects is fantastic. 
 
 export const projects_data = [
-
+	{
+		id: 0,
+		title: "Smart City Media",
+		desc: "Real Estate Web App serving 15,000+ geo-tagged photos. Serving aerial drone stock photos for property developers and realtors alike.",
+		icon: "/icons/scm.png",
+		header_media: "https://youtu.be/WIzC-B0yrEM",
+		thumbnail: "/thumbs/scm_cover.png",
+		link: "https://smartcitymedia.com/",
+		twitter_link: "",
+		github_link: "",
+		youtube_link: "https://youtu.be/WIzC-B0yrEM",
+		more_details:true,
+		type: [{
+			source: "Work",
+			background: "var(--orange)",
+		}],
+		technologies: [
+			"React",
+			"Next.js",
+			"Node.js",
+			"AWS S3",
+			"AWS RDS",
+			"Mapbox",
+			"Shop",
+		],
+		role: [
+			"Full Stack Developer"
+		],
+		introduction: [
+			{
+				summary: "Smart City Media (SCM) is a Real Estate Web App which includes thousands of geotagged aerial photos. Essentially SCM is a stock photo marketplace for property drone shots.",
+				images: [""],
+				functions: [
+					<li>Mapbox browse page with 15,000+ geotagged photos</li>,
+					<li>Add photos to cart and purchase through 'Shop' API</li>,
+					<li>Upload Photos to database using AWS S3</li>,
+					<li>Database which uses AWS RDS</li>,
+					<li>Serverless CRUD in backend</li>
+				],
+				members: ""
+			},
+		],
+		purpose: [""],
+		spotlight: [
+			{
+				killer_feature: "The photo gallery feature where you would upload photos to our database, creates a lovely gallery to display photos to clients.",
+				feature_img: "",
+				technical_hurdles: "Some technical hurdles for this project would be learning how to use the AWS APIs. This was one of the first times using it and the documentation at times was hard to get through with all of the different queries which were available.",
+				solutions: "Once I had got acquainted with how it worked however, I found it alot easier to use and was proud of what I had learned.",
+				solution_img: "",
+			},
+		],
+		status: [
+			{
+				text: "Smart City is currently being used by thousands of users from Vancouver to LA, Toronto, and even Calgary. They have expanded their photo library to over 15,000 geotagged photos on their stock site.",
+				img: "/screenshots/scm_map.png",
+				img_caption: "A map of SCM's current geotagged photos"
+			}
+		],
+		lessons: [
+			{
+				what: "Throughout the course of this project I really expanded my backend skillset, creating queries, getting to know some of AWS' libraries, and reading through documentation. I also learned alot about collaboration and how to approach tasks with this in mind, dividing up work effectively in a team setting",
+				good_choice: "",
+				how: "Since I've left this project, I've used my new knowledge of building front end applications in React to build this portfolio! Having real world experience such as this has really expanded my knowledge as well as my collaboration skills greatly."
+			},
+		],
+	},
 	{
 		id: 1,
 		title: "BCIT CRM",
@@ -136,73 +202,6 @@ export const projects_data = [
 				what: "Throughout this project, I learned when to ask for guidance, and to be a sponge for information ready to learn as much as you can. I learned how to code in the backend and create queries, how to use AWS' API to send emails, how to send text messages using Twilio's API, and so much more.",
 				good_choice: "",
 				how: ""
-			},
-		],
-	},
-	{
-		id: 0,
-		title: "Smart City Media",
-		desc: "Real Estate Web App serving 15,000+ geo-tagged photos. Serving aerial drone stock photos for property developers and realtors alike.",
-		icon: "/icons/scm.png",
-		header_media: "https://youtu.be/WIzC-B0yrEM",
-		thumbnail: "/thumbs/scm_cover.png",
-		link: "https://smartcitymedia.com/",
-		twitter_link: "",
-		github_link: "",
-		youtube_link: "https://youtu.be/WIzC-B0yrEM",
-		more_details:true,
-		type: [{
-			source: "Work",
-			background: "var(--orange)",
-		}],
-		technologies: [
-			"React",
-			"Next.js",
-			"Node.js",
-			"AWS S3",
-			"AWS RDS",
-			"Mapbox",
-			"Shop",
-		],
-		role: [
-			"Full Stack Developer"
-		],
-		introduction: [
-			{
-				summary: "Smart City Media (SCM) is a Real Estate Web App which includes thousands of geotagged aerial photos. Essentially SCM is a stock photo marketplace for property drone shots.",
-				images: [""],
-				functions: [
-					<li>Mapbox browse page with 15,000+ geotagged photos</li>,
-					<li>Add photos to cart and purchase through 'Shop' API</li>,
-					<li>Upload Photos to database using AWS S3</li>,
-					<li>Database which uses AWS RDS</li>,
-					<li>Serverless CRUD in backend</li>
-				],
-				members: ""
-			},
-		],
-		purpose: [""],
-		spotlight: [
-			{
-				killer_feature: "The photo gallery feature where you would upload photos to our database, creates a lovely gallery to display photos to clients.",
-				feature_img: "",
-				technical_hurdles: "Some technical hurdles for this project would be learning how to use the AWS APIs. This was one of the first times using it and the documentation at times was hard to get through with all of the different queries which were available.",
-				solutions: "Once I had got acquainted with how it worked however, I found it alot easier to use and was proud of what I had learned.",
-				solution_img: "",
-			},
-		],
-		status: [
-			{
-				text: "Smart City is currently being used by thousands of users from Vancouver to LA, Toronto, and even Calgary. They have expanded their photo library to over 15,000 geotagged photos on their stock site.",
-				img: "/screenshots/scm_map.png",
-				img_caption: "A map of SCM's current geotagged photos"
-			}
-		],
-		lessons: [
-			{
-				what: "Throughout the course of this project I really expanded my backend skillset, creating queries, getting to know some of AWS' libraries, and reading through documentation. I also learned alot about collaboration and how to approach tasks with this in mind, dividing up work effectively in a team setting",
-				good_choice: "",
-				how: "Since I've left this project, I've used my new knowledge of building front end applications in React to build this portfolio! Having real world experience such as this has really expanded my knowledge as well as my collaboration skills greatly."
 			},
 		],
 	},
