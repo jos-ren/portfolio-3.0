@@ -9,6 +9,7 @@ import { projects_data } from '../public/data.js';
 import { socials_data } from '../public/data.js';
 import { DarkModeSwitch } from 'react-toggle-dark-mode';
 import { useLoading, BallTriangle } from '@agney/react-loading';
+import { Analytics } from '@vercel/analytics/react';
 
 if (typeof window !== 'undefined' && localStorage.colorTheme !== '"dark-theme"') {
   localStorage.setItem("colorTheme", '"light-theme"');
@@ -135,6 +136,7 @@ function MyApp({ Component, pageProps }) {
           <div className="content" style={{ padding: "6em 0", maxWidth: "900px" }
           }>
             <Component {...pageProps} />
+            <Analytics />
           </div>
           {/* <div className="fill"></div> */}
         </div>
