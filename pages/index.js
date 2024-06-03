@@ -78,7 +78,7 @@ export default function Home() {
 			{/* about me */}
 			{/* <HeaderLine header="About Me"/> */}
 			<h1>About Me</h1>
-			<div>{`My name is Josh Renema and I'm a 22 year old Full Stack Developer with a passion for all things that live on the web!`}</div>
+			<div>{`My name is Josh Renema and I'm a Full Stack Developer with a passion for all things that live on the web!`}</div>
 			<br />
 			<div>{`I studied at BCIT and gained knowledge about both the Development process and how to Design responsive applications for today's digital world.`}</div>
 			<br />
