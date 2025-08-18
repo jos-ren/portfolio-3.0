@@ -1,13 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Image from 'next/image'
 import styled from "styled-components";
 import { useRouter } from 'next/router'
-import useColorTheme from "use-color-theme";
+import useColorTheme from "../../hooks/useColorTheme";
 
 import { projects_data } from '../../public/data.js';
 
 import ReactPlayer from 'react-player'
-import { useMediaQuery } from 'react-responsive'
 
 import Pill from "../../comps/Pill"
 import Button from "../../comps/Button"
@@ -37,18 +36,48 @@ const Bullet = styled.div`
 export default function Projects() {
 
     const router = useRouter()
-
-    let DATA = projects_data[router.query.id]
-    let INTRODUCTION = projects_data[router.query.id].introduction[0]
-    let PURPOSE = projects_data[router.query.id].purpose[0]
-    let SPOTLIGHT = projects_data[router.query.id].spotlight[0]
-    let STATUS = projects_data[router.query.id].status[0]
-    let LESSONS = projects_data[router.query.id].lessons[0]
-    // console.log(INTRODUCTION.technologies)
-
+    const { id } = router.query
+    
     const colorTheme = useColorTheme("light-theme", {
         classNames: ["light-theme", "dark-theme"],
     });
+
+    // Check if router is ready and project exists
+    if (!router.isReady || !id) {
+        return (
+            <div style={{
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                minHeight: '50vh',
+                color: 'var(--primary)'
+            }}>
+                Loading...
+            </div>
+        )
+    }
+
+    const DATA = projects_data.find(project => project.id.toString() === id)
+    
+    if (!DATA) {
+        return (
+            <div style={{
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                minHeight: '50vh',
+                color: 'var(--primary)'
+            }}>
+                Project not found
+            </div>
+        )
+    }
+    const INTRODUCTION = DATA.introduction?.[0]
+    const PURPOSE = DATA.purpose?.[0]
+    const SPOTLIGHT = DATA.spotlight?.[0]
+    const STATUS = DATA.status?.[0]
+    const LESSONS = DATA.lessons?.[0]
+    // console.log(INTRODUCTION.technologies)
 
     let github = "";
     let twitter = "";
@@ -60,9 +89,6 @@ export default function Projects() {
         twitter = "/icons/twitter_w.svg";
     }
 
-    const isTablet = useMediaQuery({ query: '(max-width: 880px)' })
-    // 1 cards
-    const isMobile = useMediaQuery({ query: '(max-width: 425px)' })
 
     return (
 
@@ -242,4 +268,32 @@ export default function Projects() {
 
         </>
     )
+}
+
+export async function getStaticPaths() {
+    const paths = projects_data.map((project) => ({
+        params: { id: project.id.toString() }
+    }))
+
+    return {
+        paths,
+        fallback: false
+    }
+}
+
+export async function getStaticProps({ params }) {
+    const { id } = params
+    const project = projects_data.find(p => p.id.toString() === id)
+    
+    if (!project) {
+        return {
+            notFound: true
+        }
+    }
+
+    return {
+        props: {
+            project
+        }
+    }
 }

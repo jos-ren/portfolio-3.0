@@ -1,24 +1,19 @@
 import Image from 'next/image'
-import React, { useState, useEffect } from "react";
-import styled from "styled-components";
-import Link from 'next/link'
+import React, { useState } from "react";
 
 // Import 3rd party libraries
-import useColorTheme from "use-color-theme";
+import useColorTheme from "../hooks/useColorTheme";
 import { useMediaQuery } from 'react-responsive'
 
 // import data
 import { projects_data } from '../public/data.js';
 import { school_data } from '../public/data.js';
 import { icons_data } from '../public/data.js';
-import { interests_data } from '../public/data.js';
 
 // import components
 import Card from '../comps/Card';
 import ProjectCard from '../comps/ProjectCard';
 import Tile from '../comps/Tile';
-import ContactCard from "../comps/ContactCard";
-import HeaderLine from "../comps/HeaderLine"
 // import PhotoCard from "../comps/PhotoCard";
 
 // NOTES
