@@ -1,13 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Image from 'next/image'
 import styled from "styled-components";
 import { useRouter } from 'next/router'
-import useColorTheme from "use-color-theme";
+import useColorTheme from "../../hooks/useColorTheme";
 
 import { projects_data } from '../../public/data.js';
 
 import ReactPlayer from 'react-player'
-import { useMediaQuery } from 'react-responsive'
 
 import Pill from "../../comps/Pill"
 import Button from "../../comps/Button"
@@ -37,18 +36,48 @@ const Bullet = styled.div`
 export default function Projects() {
 
     const router = useRouter()
-
-    let DATA = projects_data[router.query.id]
-    let INTRODUCTION = projects_data[router.query.id].introduction[0]
-    let PURPOSE = projects_data[router.query.id].purpose[0]
-    let SPOTLIGHT = projects_data[router.query.id].spotlight[0]
-    let STATUS = projects_data[router.query.id].status[0]
-    let LESSONS = projects_data[router.query.id].lessons[0]
-    // console.log(INTRODUCTION.technologies)
-
+    const { id } = router.query
+    
     const colorTheme = useColorTheme("light-theme", {
         classNames: ["light-theme", "dark-theme"],
     });
+
+    // Check if router is ready and project exists
+    if (!router.isReady || !id) {
+        return (
+            <div style={{
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                minHeight: '50vh',
+                color: 'var(--primary)'
+            }}>
+                Loading...
+            </div>
+        )
+    }
+
+    const DATA = projects_data.find(project => project.id.toString() === id)
+    
+    if (!DATA) {
+        return (
+            <div style={{
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                minHeight: '50vh',
+                color: 'var(--primary)'
+            }}>
+                Project not found
+            </div>
+        )
+    }
+    const INTRODUCTION = DATA.introduction?.[0]
+    const PURPOSE = DATA.purpose?.[0]
+    const SPOTLIGHT = DATA.spotlight?.[0]
+    const STATUS = DATA.status?.[0]
+    const LESSONS = DATA.lessons?.[0]
+    // console.log(INTRODUCTION.technologies)
 
     let github = "";
     let twitter = "";
@@ -60,9 +89,6 @@ export default function Projects() {
         twitter = "/icons/twitter_w.svg";
     }
 
-    const isTablet = useMediaQuery({ query: '(max-width: 880px)' })
-    // 1 cards
-    const isMobile = useMediaQuery({ query: '(max-width: 425px)' })
 
     return (
 
@@ -77,20 +103,35 @@ export default function Projects() {
                         <Button text="View Site" background="var(--tertiary)" color="var(--text)" />
                     </a>}
                     {DATA.twitter_link !== "" && <a target="_blank" rel="noopener noreferrer" href={DATA.twitter_link} >
-                        <IconButton icon={<Image unoptimized src={twitter} height={20} width={20} />} />
+                        <IconButton icon={<Image src={twitter} height={20} width={20} alt="Twitter" />} />
                     </a>}
                     {DATA.github_link !== "" && <a target="_blank" rel="noopener noreferrer" href={DATA.github_link} >
-                        <IconButton icon={<Image unoptimized src={github} height={20} width={20} />} />
+                        <IconButton icon={<Image src={github} height={20} width={20} alt="GitHub" />} />
                     </a>}
                 </div>
             </div>
 
             {/* if no video, use image as a header*/}
             {"/" == DATA.header_media.split("", 1)[0] ?
-                <div style={{ borderRadius: "16px", overflow: "hidden" }}>
-                    <Image unoptimized height="1080" width="1920" objectFit="cover" quality="100" src={DATA.header_media} style={{ borderRadius: "14px" }} />
+                <div style={{
+                    borderRadius: "16px",
+                    overflow: "hidden",
+                    width: "100%",
+                    maxWidth: "900px",
+                    aspectRatio: "16/9", // This gives you 1920x1080 ratio
+                    position: "relative",
+                    margin: "0 auto"
+                }}>
+                    <Image
+                        fill
+                        style={{ objectFit: "cover" }}
+                        quality={100}
+                        src={DATA.header_media}
+                        alt={DATA.title + " header image"}
+                        sizes="(max-width: 425px) 100vw, (max-width: 768px) 90vw, (max-width: 1200px) 80vw, 900px"
+                    />
                 </div> :
-                <div style={{ borderRadius: "16px", overflow: "hidden" }}>
+                <div style={{ borderRadius: "16px", overflow: "hidden", maxWidth: "900px", margin: "0 auto" }}>
                     <div className='player-wrapper'>
                         <ReactPlayer url={DATA.header_media} controls={true} width={"100%"} height={"100%"} pip={false} className='react-player' />
                     </div>
@@ -121,11 +162,19 @@ export default function Projects() {
             <Text>{INTRODUCTION.summary}</Text>
             <SubHeader>Core Functionalities</SubHeader>
             {/* bullet points */}
-            <Bullet>{INTRODUCTION.functions}</Bullet>
+            <Bullet>
+                <ul>
+                    {INTRODUCTION.functions.map((func, index) => (
+                        <li key={index}>{func}</li>
+                    ))}
+                </ul>
+            </Bullet>
             {INTRODUCTION.images[0] !== "" && <>
                 {INTRODUCTION.images.map((o, index) => {
                     return <div key={index}>
-                        <Image unoptimized height="1080" width="1920" objectFit="cover" quality="100" src={o.img} style={{ borderRadius: "14px" }} />
+                        <div style={{ width: "100%", height: "400px", position: "relative", borderRadius: "14px", overflow: "hidden", marginBottom: "10px" }}>
+                            <Image fill style={{ objectFit: "cover" }} quality={100} src={o.img} alt={o.caption || "Project image"} sizes="(max-width: 768px) 100vw, 800px" />
+                        </div>
                         <Caption>{o.caption}</Caption>
                     </div >
                 })}
@@ -150,7 +199,9 @@ export default function Projects() {
                     <Text>{PURPOSE.design_desc}</Text>
                     {PURPOSE.design.map((o, index) => {
                         return <div key={index}>
-                            <Image unoptimized height="1080" width="1920" objectFit="cover" quality="100" src={o.img} style={{ borderRadius: "14px" }} />
+                            <div style={{ width: "100%", height: "400px", position: "relative", borderRadius: "14px", overflow: "hidden", marginBottom: "10px" }}>
+                                <Image fill style={{ objectFit: "cover" }} quality={100} src={o.img} alt={o.caption || "Design image"} sizes="(max-width: 768px) 100vw, 800px" />
+                            </div>
                             <Caption>{o.caption}</Caption>
                         </div >
                     })}
@@ -160,7 +211,9 @@ export default function Projects() {
                     <SubHeader>Additional Planning</SubHeader>
                     <Text>{PURPOSE.planning}</Text>
                     {PURPOSE.planning_img && <>
-                        <Image unoptimized height="1080" width="1920" objectFit="cover" quality="100" src={PURPOSE.planning_img} style={{ borderRadius: "14px" }} />
+                        <div style={{ width: "100%", height: "400px", position: "relative", borderRadius: "14px", overflow: "hidden", marginBottom: "10px" }}>
+                            <Image fill style={{ objectFit: "cover" }} quality={100} src={PURPOSE.planning_img} alt={PURPOSE.planning_img_caption || "Planning image"} sizes="(max-width: 768px) 100vw, 800px" />
+                        </div>
                         <Caption>{PURPOSE.planning_img_caption}</Caption>
                     </>}
                 </>}
@@ -172,7 +225,9 @@ export default function Projects() {
             <SubHeader>Killer Feature</SubHeader>
             <Text>{SPOTLIGHT.killer_feature}</Text>
             {SPOTLIGHT.feature_img && <>
-                <Image unoptimized height="1080" width="1920" objectFit="cover" quality="100" src={SPOTLIGHT.feature_img} style={{ borderRadius: "14px" }} />
+                <div style={{ width: "100%", height: "400px", position: "relative", borderRadius: "14px", overflow: "hidden", marginBottom: "10px" }}>
+                    <Image fill style={{ objectFit: "cover" }} quality={100} src={SPOTLIGHT.feature_img} alt="Feature spotlight image" sizes="(max-width: 768px) 100vw, 800px" />
+                </div>
                 <Caption>{SPOTLIGHT.feature_img_caption}</Caption>
             </>}
             <SubHeader>Technical Hurdles</SubHeader>
@@ -180,7 +235,9 @@ export default function Projects() {
             <SubHeader>Solutions</SubHeader>
             <Text>{SPOTLIGHT.solutions}</Text>
             {SPOTLIGHT.solution_img !== "" && <>
-                <Image unoptimized height="1080" width="1920" objectFit="cover" quality="100" src={SPOTLIGHT.solution_img} style={{ borderRadius: "14px" }} />
+                <div style={{ width: "100%", height: "400px", position: "relative", borderRadius: "14px", overflow: "hidden", marginBottom: "10px" }}>
+                    <Image fill style={{ objectFit: "cover" }} quality={100} src={SPOTLIGHT.solution_img} alt="Solution image" sizes="(max-width: 768px) 100vw, 800px" />
+                </div>
                 <Caption>{SPOTLIGHT.solution_img_caption}</Caption>
             </>}
 
@@ -190,7 +247,9 @@ export default function Projects() {
                 <div>{STATUS.text}</div>
                 {STATUS.img !== "" && <>
                     <br></br>
-                    <Image unoptimized height="1080" width="1920" objectFit="cover" quality="100" src={STATUS.img} style={{ borderRadius: "14px" }} />
+                    <div style={{ width: "100%", height: "400px", position: "relative", borderRadius: "14px", overflow: "hidden", marginBottom: "10px" }}>
+                        <Image fill style={{ objectFit: "cover" }} quality={100} src={STATUS.img} alt={STATUS.img_caption || "Status image"} sizes="(max-width: 768px) 100vw, 800px" />
+                    </div>
                     <Caption>{STATUS.img_caption}</Caption>
                 </>}
             </>}
@@ -209,4 +268,32 @@ export default function Projects() {
 
         </>
     )
+}
+
+export async function getStaticPaths() {
+    const paths = projects_data.map((project) => ({
+        params: { id: project.id.toString() }
+    }))
+
+    return {
+        paths,
+        fallback: false
+    }
+}
+
+export async function getStaticProps({ params }) {
+    const { id } = params
+    const project = projects_data.find(p => p.id.toString() === id)
+    
+    if (!project) {
+        return {
+            notFound: true
+        }
+    }
+
+    return {
+        props: {
+            project
+        }
+    }
 }

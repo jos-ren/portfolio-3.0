@@ -57,32 +57,30 @@ const ProjectCard = ({ title, desc, thumb, index, more_details, link, github_lin
                      style={more_details === false ? {position:"relative", right:"20px", display:"flex"} : {display:"flex"}}
                      >
                         {link !== "" && <a target="_blank" rel="noopener noreferrer" href={link} >
-                            <IconButton icon={<Image unoptimized src={link_icon} height={20} width={20} />} />
+                            <IconButton icon={<Image src={link_icon} height={20} width={20} alt="Link" />} />
                         </a>}
                         {github_link !== "" && <a target="_blank" rel="noopener noreferrer" href={github_link} >
-                            <IconButton icon={<Image unoptimized src={github_icon} height={20} width={20} />} />
+                            <IconButton icon={<Image src={github_icon} height={20} width={20} alt="GitHub" />} />
                         </a>}
                         {twitter_link !== "" && <a target="_blank" rel="noopener noreferrer" href={twitter_link} >
-                            <IconButton icon={<Image unoptimized src={twitter_icon} height={20} width={20} />} />
+                            <IconButton icon={<Image src={twitter_icon} height={20} width={20} alt="Twitter" />} />
                         </a>}
                         {youtube_link !== "" && <a target="_blank" rel="noopener noreferrer" href={youtube_link} >
-                            <IconButton icon={<Image unoptimized src={youtube_icon} height={20} width={20} />} />
+                            <IconButton icon={<Image src={youtube_icon} height={20} width={20} alt="YouTube" />} />
                         </a>}
                     </div>
                 </div>
             </div>
             {/* when smaller screen sizes just use icons and differnt layout */}
             {more_details !== false ? <Link key={index} href={"/projects/" + index} >
-                <div style={{ height: "180px", minWidth: "300px", cursor: "pointer" }} >
-                    <Image unoptimized height="180px" width="300px" src={thumb} objectFit="cover"
-                        style={{ borderRadius: "8px", }}
+                <div style={{ height: "180px", minWidth: "300px", cursor: "pointer", position: "relative", borderRadius: "8px", overflow: "hidden" }} >
+                    <Image fill src={thumb} style={{ objectFit: "cover" }} alt={title} sizes="300px"
                     />
                 </div>
             </Link> :
                 <a target="_blsank" rel="noopener noreferrer" href={link} >
-                    <div style={{ height: "180px", minWidth: "300px", cursor: "pointer" }} >
-                        <Image unoptimized height="180px" width="300px" src={thumb} objectFit="cover"
-                            style={{ borderRadius: "8px", }}
+                    <div style={{ height: "180px", minWidth: "300px", cursor: "pointer", position: "relative", borderRadius: "8px", overflow: "hidden" }} >
+                        <Image fill src={thumb} style={{ objectFit: "cover" }} alt={title} sizes="300px"
                         />
                     </div>
                 </a>}

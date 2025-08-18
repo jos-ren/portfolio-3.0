@@ -1,21 +1,16 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import Head from 'next/head'
 import '../styles/globals.css'
-import useColorTheme from "use-color-theme";
+import useColorTheme from "../hooks/useColorTheme";
 import { useMediaQuery } from 'react-responsive'
 import SideBar from "../comps/SideBar";
 import TopBar from "../comps/TopBar";
 import { projects_data } from '../public/data.js';
 import { socials_data } from '../public/data.js';
-import { DarkModeSwitch } from 'react-toggle-dark-mode';
 import { useLoading, BallTriangle } from '@agney/react-loading';
 import { Analytics } from '@vercel/analytics/react';
+import { DarkModeSwitch } from 'react-toggle-dark-mode';
 
-if (typeof window !== 'undefined' && localStorage.colorTheme !== '"dark-theme"') {
-  localStorage.setItem("colorTheme", '"light-theme"');
-} else if (typeof window !== 'undefined' && localStorage.colorTheme !== '"light-theme"') {
-  localStorage.setItem("colorTheme", '"dark-theme"');
-}
 
 function MyApp({ Component, pageProps }) {
 

@@ -26,8 +26,8 @@ const Card = ({ title, desc, icon, open_icon, isShown, info, index, hasPill, typ
     return (
         <Container>
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "start" }}>
-                <Image unoptimized height="50px" width="50px" objectFit="contain" src={icon} />
-                {isShown == index ? <Image  unoptimized height="20px" width="20px" objectFit="contain" src={open_icon} /> : <></>}
+                <Image height={50} width={50} style={{ objectFit: "contain" }} src={icon} alt={title} />
+                {isShown == index ? <Image height={20} width={20} style={{ objectFit: "contain" }} src={open_icon} alt="Open link" /> : <></>}
                 {/* {hasPill && <Pill text={type} color="white" background={background} border={"none"} />} */}
                 {/* {hasPill && <Pill text={type} color={background} border={"1px solid " + background} />} */}
                 {hasPill && <Pill text={type} color={background} />}
