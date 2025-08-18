@@ -10,27 +10,26 @@
   },
   "dependencies": {
     "@agney/react-loading": "^0.1.2",
-    "@vercel/analytics": "^1.1.1",
+    "@vercel/analytics": "^1.5.0",
     "dotenv": "^16.0.3",
-    "framer-motion": "^7.2.0",
-    "next": "^12.3.4",
-    "next-images": "^1.8.4",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "react-icons": "^4.6.0",
-    "react-loading-skeleton": "^3.1.1",
+    "framer-motion": "^12.23.12",
+    "next": "^15.4.6",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "react-icons": "^5.5.0",
+    "react-loading-skeleton": "^3.5.0",
     "react-player": "^2.11.2",
-    "react-responsive": "^9.0.2",
-    "react-spring": "^9.5.5",
+    "react-responsive": "^10.0.1",
+    "react-spring": "^10.0.1",
     "react-toggle-dark-mode": "^1.1.1",
     "react-useanimations": "^2.10.0",
     "react-youtube": "^10.0.0",
-    "styled-components": "^5.3.5",
+    "styled-components": "^6.1.19",
     "swiper": "^9.0.1",
     "use-color-theme": "^1.1.2"
   },
   "devDependencies": {
-    "eslint": "8.20.0",
-    "eslint-config-next": "12.2.3"
+    "eslint": "^9.33.0",
+    "eslint-config-next": "^15.4.6"
   }
 }

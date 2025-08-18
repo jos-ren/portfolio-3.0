@@ -100,11 +100,11 @@ export const projects_data = [
 				summary: "Smart City Media (SCM) is a Real Estate Web App which includes thousands of geotagged aerial photos. Essentially SCM is a stock photo marketplace for property drone shots.",
 				images: [""],
 				functions: [
-					<li>Mapbox browse page with 15,000+ geotagged photos</li>,
-					<li>Add photos to cart and purchase through 'Shop' API</li>,
-					<li>Upload Photos to database using AWS S3</li>,
-					<li>Database which uses AWS RDS</li>,
-					<li>Serverless CRUD in backend</li>
+					"Mapbox browse page with 15,000+ geotagged photos",
+					"Add photos to cart and purchase through 'Shop' API",
+					"Upload Photos to database using AWS S3",
+					"Database which uses AWS RDS",
+					"Serverless CRUD in backend"
 				],
 				members: ""
 			},
@@ -171,13 +171,13 @@ export const projects_data = [
 					},
 				],
 				functions: [
-					<li>Import and manage contacts</li>,
-					<li>Create a group of contacts</li>,
-					<li>Send out Emails to your groups</li>,
-					<li>Send out Text messages to your groups</li>,
-					<li>Task manager</li>,
-					<li>Dashboard to see an overview of activity</li>,
-					<li>Create a custom form to add new contacts</li>,
+					"Import and manage contacts",
+					"Create a group of contacts",
+					"Send out Emails to your groups",
+					"Send out Text messages to your groups",
+					"Task manager",
+					"Dashboard to see an overview of activity",
+					"Create a custom form to add new contacts"
 				],
 				members: ""
 			},
@@ -232,7 +232,7 @@ export const projects_data = [
 		],
 		introduction: [
 			{
-				summary: "Details coming soon... for now just check out the app! 👍 (top right corner)",
+				summary: "Track your favourite shows with ease. Muvi is for the analytical movie lover who wants to keep track of shows watched, rate them, as well as discover when the next episode will air. More details coming soon... for now just check out the app! 👍 (top right corner)",
 				images: [""],
 				functions: [
 				],
@@ -303,9 +303,9 @@ export const projects_data = [
 					}
 				],
 				functions: [
-					<li>READ Selected Twitter Tweet</li>,
-					<li>Translate tweet into desired language (French)</li>,
-					<li>POST translated text onto Twitter</li>
+					"READ Selected Twitter Tweet",
+					"Translate tweet into desired language (French)",
+					"POST translated text onto Twitter"
 				],
 				members: ""
 			},

@@ -23,14 +23,30 @@ const Container = styled.div`
     // width: ${(props) => props.isOpen ? "auto" : "333px"};
 `;
 
+const HoverableLink = styled.a`
+    border-radius: 6px;
+    
+    &:hover {
+        background: var(--hover);
+    }
+    `;
+
+const HoverableDiv = styled.div`
+    border-radius: 6px;
+    
+    &:hover {
+        background: var(--hover);
+    }
+    `;
+
 const SideBar = ({ icon, logo_src, onClick, projects_data, isOpen, onLinkClick, link_src, socials_data }) => {
     const [isHovered, setIsHovered] = useState(-1);
 
     return (
         <Container isOpen={isOpen}>
             <div style={{ display: "flex", width: '100%' }}>
-                <Link href="/">
-                    <div style={{ width: "100%" }} onClick={onLinkClick}>
+                <Link href="/" style={{ width: "100%" }}>
+                    <div onClick={onLinkClick}>
                         <SideButton img_src={logo_src} text={'Josh Renema'} />
                     </div>
                 </Link>
@@ -43,9 +59,9 @@ const SideBar = ({ icon, logo_src, onClick, projects_data, isOpen, onLinkClick, 
             {/* maybe have a "view more button after 4-5" */}
             {projects_data.map((o, index) => {
                 return <Link key={index} href={`/projects/${encodeURIComponent(o.id)}`} >
-                    <div onClick={onLinkClick}>
+                    <HoverableDiv onClick={onLinkClick}>
                         <SideHover text={o.title} img_src={o.icon} />
-                    </div>
+                    </HoverableDiv>
                 </Link>
             })}
 
@@ -53,9 +69,16 @@ const SideBar = ({ icon, logo_src, onClick, projects_data, isOpen, onLinkClick, 
 
             <p style={{ marginLeft: "10px" }}>SOCIALS</p>
             {socials_data.map((o, index) => {
-                return <a key={index} onMouseEnter={() => setIsHovered(index)} onMouseLeave={() => setIsHovered(-1)} target="_blank" rel="noopener noreferrer" href={o.link} >
-                    <SideHover text={o.title} link_src={link_src} isHovered={isHovered} index={index} />
-                </a>
+                return (
+                    <HoverableLink
+                        key={index}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href={o.link}
+                    >
+                        <SideHover text={o.title} link_src={link_src} />
+                    </HoverableLink>
+                )
             })}
 
             {/* perhaps add a "more" section. it can include interests, photography, etc */}
