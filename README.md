@@ -15,4 +15,6 @@ This is my personal portfolio website, I made it to display my work and personal
 
 <h2>Screenshot</h2>
 
+![image](https://github.com/jos-ren/portfolio-3.0/assets/60946895/d4889d8f-4aa8-4a38-b34b-0bb455971e68)
+
 

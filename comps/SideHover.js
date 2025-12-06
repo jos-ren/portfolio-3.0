@@ -1,10 +1,7 @@
-import React from 'react';
 import styled from "styled-components";
 import Image from 'next/image';
 
 const Container = styled.div`
-    // background-color: var(--tertiary);
-    // border: 1px solid var(--border);
     border-radius:6px;
     width:100%;
     height:40px;
@@ -13,15 +10,6 @@ const Container = styled.div`
     justify-content:space-between;
     padding: 0px 10px;
     cursor:pointer;
-    // transition: bottom .2s;
-    // transition-timing-function: ease-out;
-    // position:relative;
-    // bottom:0px;
-    :hover{
-    //     position:relative;
-    //     bottom:1px;
-        background: var(--hover);
-    }
 `;
 
 const SideHover = ({ img_src, text, isHovered, index, link_src }) => {
@@ -38,8 +26,8 @@ const SideHover = ({ img_src, text, isHovered, index, link_src }) => {
             }}>
                 {text}
             </div>
-            {img_src && <Image unoptimized width={20} height={20} src={img_src} />}
-            {isHovered == index && link_src && <Image unoptimized width={16} height={16} src={link_src} />}
+            {img_src && <Image width={20} height={20} src={img_src} alt={text} />}
+            {isHovered == index && link_src && <Image width={16} height={16} src={link_src} alt="Open link" />}
         </Container >
     );
 }

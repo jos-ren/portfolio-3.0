@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from "styled-components";
 import Image from 'next/image';
 
@@ -19,14 +18,14 @@ const Container = styled.button`
         // position:relative;
         // bottom:1px;
         box-shadow: 0 1px 3px -2px rgba(0,0,0,.1);
-        background: var(--hover);
+        // background: var(--hover);
     }
 `;
 
 const SideButton = ({ img_src, text }) => {
     return (
         <Container>
-            <Image unoptimized width={20} height={20} src={img_src} />
+            <Image width={20} height={20} src={img_src} alt={text} />
             <div style={{fontSize:"12pt", margin:"2px 0px 0px 16px", color:"var(--text)", fontFamily:"Inter"}}>
                 {text}
             </div>

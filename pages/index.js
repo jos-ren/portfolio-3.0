@@ -1,24 +1,19 @@
 import Image from 'next/image'
-import React, { useState, useEffect } from "react";
-import styled from "styled-components";
-import Link from 'next/link'
+import React, { useState } from "react";
 
 // Import 3rd party libraries
-import useColorTheme from "use-color-theme";
+import useColorTheme from "../hooks/useColorTheme";
 import { useMediaQuery } from 'react-responsive'
 
 // import data
 import { projects_data } from '../public/data.js';
 import { school_data } from '../public/data.js';
 import { icons_data } from '../public/data.js';
-import { interests_data } from '../public/data.js';
 
 // import components
 import Card from '../comps/Card';
 import ProjectCard from '../comps/ProjectCard';
 import Tile from '../comps/Tile';
-import ContactCard from "../comps/ContactCard";
-import HeaderLine from "../comps/HeaderLine"
 // import PhotoCard from "../comps/PhotoCard";
 
 // NOTES
@@ -73,7 +68,9 @@ export default function Home() {
 			{isTablet && <p>Tablet</p>}
 			{isMobile && <p>Mobile</p>} */}
 
-			<Image unoptimized height="350" width="1000" objectFit="cover" quality="100" src={"/profile.jpg"} style={{ borderRadius: "14px" }} />
+			<div style={{ width: "100%", maxWidth: "1000px", height: "350px", position: "relative", borderRadius: "14px", overflow: "hidden" }}>
+				<Image fill style={{ objectFit: "cover" }} quality={100} src={"/profile.jpg"} alt="Josh Renema profile photo" priority sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1000px" />
+			</div>
 
 			{/* about me */}
 			{/* <HeaderLine header="About Me"/> */}
@@ -141,8 +138,8 @@ export default function Home() {
 					})}
 				</div> */}
 
-			<h1 style={{ marginTop: "40px" }}>Contact Me</h1>
-			<ContactCard isMobile={isTablet} />
+			{/* <h1 style={{ marginTop: "40px" }}>Contact Me</h1>
+			<ContactCard isMobile={isTablet} /> */}
 		</>
 	)
 }
